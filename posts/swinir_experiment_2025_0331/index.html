@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html><head lang="en">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>SwinIR Experiment Summary — March 31, 2025 - Hank Tech Lab</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="🧪 SwinIR Experiment Summary — March 31, 2025
+1. Environment Setup OS: Ubuntu 24.04.2 LTS (noble) lsb_release -a Python: 3.12.3 python3 --version GPU: NVIDIA GeForce RTX 4090 Driver: 570.124.06 CUDA: 12.8 nvidia-smi PyTorch: 2.5.1&#43;cu121 CUDA Available: True import torch print(torch.__version__) print(torch.cuda.is_available()) 2. Project Setup Installed Python venv and created environment: sudo apt install python3.12-venv $ python3 -m venv ~/venvs/swinir $ source ~/venvs/swinir/bin/activate
+Installed PyTorch (CUDA 12.1): pip install torch torchvision --index-url https://download." />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="SwinIR Experiment Summary — March 31, 2025" />
+<meta property="og:description" content="🧪 SwinIR Experiment Summary — March 31, 2025
+1. Environment Setup OS: Ubuntu 24.04.2 LTS (noble) lsb_release -a Python: 3.12.3 python3 --version GPU: NVIDIA GeForce RTX 4090 Driver: 570.124.06 CUDA: 12.8 nvidia-smi PyTorch: 2.5.1&#43;cu121 CUDA Available: True import torch print(torch.__version__) print(torch.cuda.is_available()) 2. Project Setup Installed Python venv and created environment: sudo apt install python3.12-venv $ python3 -m venv ~/venvs/swinir $ source ~/venvs/swinir/bin/activate
+Installed PyTorch (CUDA 12.1): pip install torch torchvision --index-url https://download." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hank-tech.github.io/posts/swinir_experiment_2025_0331/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2025-03-31T00:00:00+00:00" />
+<meta property="article:modified_time" content="2025-03-31T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="SwinIR Experiment Summary — March 31, 2025"/>
+<meta name="twitter:description" content="🧪 SwinIR Experiment Summary — March 31, 2025
+1. Environment Setup OS: Ubuntu 24.04.2 LTS (noble) lsb_release -a Python: 3.12.3 python3 --version GPU: NVIDIA GeForce RTX 4090 Driver: 570.124.06 CUDA: 12.8 nvidia-smi PyTorch: 2.5.1&#43;cu121 CUDA Available: True import torch print(torch.__version__) print(torch.cuda.is_available()) 2. Project Setup Installed Python venv and created environment: sudo apt install python3.12-venv $ python3 -m venv ~/venvs/swinir $ source ~/venvs/swinir/bin/activate
+Installed PyTorch (CUDA 12.1): pip install torch torchvision --index-url https://download."/>
+
+        <link href="https://hank-tech.github.io/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://hank-tech.github.io/css/main.6a0f23ea50fd34b46fee262a5a68e17d458c51a2bc99ba1ba018065de6b180c3.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://hank-tech.github.io/css/dark.50b57e12d401420df23965fed157368aba37b76df0ecefd0b1ecd4da664f01a0.css"  disabled />
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://hank-tech.github.io/">Hank Tech Lab</a>
+	</div>
+	<nav>
+		
+		<a href="/posts/">Posts</a>
+		
+		| <span id="dark-mode-toggle" onclick="toggleTheme()"><svg class="feather">
+   <use href="/svg/feather-sprite.51cf5647cb1987f769b616558f2620fd9423d72058490231b391bf6aa3744b55.svg#sun" />
+</svg></span>
+		<script src="https://hank-tech.github.io/js/themetoggle.js"></script>
+		
+	</nav>
+</header>
+
+<main>
+  <article>
+    <div class="post-container">
+      
+      <div class="post-content">
+        <div class="title">
+          <h1 class="title">SwinIR Experiment Summary — March 31, 2025</h1>
+          <div class="meta">Posted on Mar 31, 2025</div>
+        </div>
+        
+        <section class="body">
+          <p>🧪 SwinIR Experiment Summary — March 31, 2025</p>
+<h2 id="1-environment-setup">1. Environment Setup</h2>
+<ul>
+<li>OS: Ubuntu 24.04.2 LTS (noble)</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>lsb_release -a
+</span></span></code></pre></div><ul>
+<li>Python: 3.12.3</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python3 --version
+</span></span></code></pre></div><ul>
+<li>GPU: NVIDIA GeForce RTX 4090
+<ul>
+<li>Driver: 570.124.06</li>
+<li>CUDA: 12.8</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nvidia-smi
+</span></span></code></pre></div><ul>
+<li>PyTorch: 2.5.1+cu121
+<ul>
+<li>CUDA Available: True</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> torch
+</span></span><span style="display:flex;"><span>print(torch<span style="color:#f92672">.</span>__version__)
+</span></span><span style="display:flex;"><span>print(torch<span style="color:#f92672">.</span>cuda<span style="color:#f92672">.</span>is_available())
+</span></span></code></pre></div><h2 id="2-project-setup">2. Project Setup</h2>
+<ul>
+<li>Installed Python venv and created environment:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install python3.12-venv
+</span></span></code></pre></div><p>$ python3 -m venv ~/venvs/swinir
+$ source ~/venvs/swinir/bin/activate</p>
+<ul>
+<li>Installed PyTorch (CUDA 12.1):</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+</span></span></code></pre></div><ul>
+<li>Cloned SwinIR repo and installed dependencies:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/JingyunLiang/SwinIR.git
+</span></span><span style="display:flex;"><span>cd SwinIR
+</span></span><span style="display:flex;"><span>pip install numpy opencv-python matplotlib tqdm yacs timm einops
+</span></span></code></pre></div><h2 id="3-inference--set5-benchmark">3. Inference — Set5 Benchmark</h2>
+<p>Lightweight SR (Scale ×2):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python main_test_swinir.py --task lightweight_sr --scale <span style="color:#ae81ff">2</span> --training_patch_size <span style="color:#ae81ff">64</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  --model_path model_zoo/swinir/002_lightweightSR_DIV2K_s64w8_SwinIR-S_x2.pth <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  --folder_lq testsets/Set5/LR_bicubic/X2 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  --folder_gt testsets/Set5/HR
+</span></span></code></pre></div><p>Results (×2):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>- Average PSNR/SSIM (RGB): 35.95 dB / 0.9445
+</span></span><span style="display:flex;"><span>- Average PSNR/SSIM (Y):   38.14 dB / 0.9611
+</span></span></code></pre></div><p>Lightweight SR (Scale ×4):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>- Average PSNR/SSIM (RGB): 30.52 dB / 0.8679
+</span></span><span style="display:flex;"><span>- Average PSNR/SSIM (Y):   32.44 dB / 0.8976
+</span></span></code></pre></div><p>Per-Image PSNR_Y/SSIM_Y (×2):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>- bird      → 43.28 dB / 0.9906
+</span></span><span style="display:flex;"><span>- baby      → 38.94 dB / 0.9681
+</span></span><span style="display:flex;"><span>- butterfly → 35.75 dB / 0.9795
+</span></span><span style="display:flex;"><span>- head      → 36.07 dB / 0.8922
+</span></span><span style="display:flex;"><span>- woman     → 36.65 dB / 0.9752
+</span></span></code></pre></div><h2 id="4-time-spent">4. Time Spent</h2>
+<p>✅ Estimated Duration: 1–2 days<br>
+✅ Actual Time Spent: ~2 hours</p>
+<p>💡 Tools like ChatGPT significantly accelerated setup and debugging.<br>
+This time savings allows greater focus on core research (e.g., VQ and domain-specific knowledge).</p>
+
+        </section>
+        <div class="post-tags">
+          
+          
+          <nav class="nav tags">
+            <ul class="tags">
+              
+              <li><a href="/tags/swinir">swinir</a></li>
+              
+              <li><a href="/tags/super-resolution">super-resolution</a></li>
+              
+              <li><a href="/tags/pytorch">pytorch</a></li>
+              
+            </ul>
+          </nav>
+          
+          
+        </div>
+      </div>
+
+      
+      
+    </div>
+
+    </article>
+</main>
+<footer>
+  <div style="display:flex"></div>
+  <div class="footer-info">
+    2025  <a
+      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+
+</div>
+    </body>
+</html>

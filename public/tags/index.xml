@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Hank Tech Lab</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://hank-tech.github.io/tags/</link>
     <description>Recent content in Tags on Hank Tech Lab</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 31 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://hank-tech.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Pytorch</title>
-      <link>http://localhost:1313/tags/pytorch/</link>
+      <link>https://hank-tech.github.io/tags/pytorch/</link>
       <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/pytorch/</guid>
+      <guid>https://hank-tech.github.io/tags/pytorch/</guid>
       <description></description>
     </item>
     <item>
       <title>Super-Resolution</title>
-      <link>http://localhost:1313/tags/super-resolution/</link>
+      <link>https://hank-tech.github.io/tags/super-resolution/</link>
       <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/super-resolution/</guid>
+      <guid>https://hank-tech.github.io/tags/super-resolution/</guid>
       <description></description>
     </item>
     <item>
       <title>Swinir</title>
-      <link>http://localhost:1313/tags/swinir/</link>
+      <link>https://hank-tech.github.io/tags/swinir/</link>
       <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/swinir/</guid>
+      <guid>https://hank-tech.github.io/tags/swinir/</guid>
       <description></description>
     </item>
   </channel>

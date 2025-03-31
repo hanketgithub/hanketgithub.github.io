@@ -1,0 +1,19 @@
+baseURL = "https://hank-tech.github.io/"
+languageCode = "en-us"
+title = "Hank Tech Lab"
+theme = "archie"
+
+[params]
+mode = "toggle" # dark/light toggle enabled
+useCDN = false
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 1
+
+[markup]
+  [markup.highlight]
+    style = "monokai"

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html><head lang="en"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>SwinIR Experiment Log (2025/03/31) - Hank Tech Lab</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="🧠 Environment Check python3 --version nvidia-smi lsb_release -a 🧪 Results Image PSNR (Y) SSIM (Y) baby 33.83 dB 0.8948 bird 35.37 dB 0.9472 butterfly 29.18 dB 0.9319 head 33.00 dB 0.7982 woman 30.84 dB 0.9163 Average 32.44 dB 0.8976 📂 Model Path model_zoo/swinir/002_lightweightSR_DIV2K_s64w8_SwinIR-S_x2.pth " />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="SwinIR Experiment Log (2025/03/31)" />
+<meta property="og:description" content="🧠 Environment Check python3 --version nvidia-smi lsb_release -a 🧪 Results Image PSNR (Y) SSIM (Y) baby 33.83 dB 0.8948 bird 35.37 dB 0.9472 butterfly 29.18 dB 0.9319 head 33.00 dB 0.7982 woman 30.84 dB 0.9163 Average 32.44 dB 0.8976 📂 Model Path model_zoo/swinir/002_lightweightSR_DIV2K_s64w8_SwinIR-S_x2.pth " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/posts/swinir_experiment_2025/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2025-03-31T00:00:00+00:00" />
+<meta property="article:modified_time" content="2025-03-31T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="SwinIR Experiment Log (2025/03/31)"/>
+<meta name="twitter:description" content="🧠 Environment Check python3 --version nvidia-smi lsb_release -a 🧪 Results Image PSNR (Y) SSIM (Y) baby 33.83 dB 0.8948 bird 35.37 dB 0.9472 butterfly 29.18 dB 0.9319 head 33.00 dB 0.7982 woman 30.84 dB 0.9163 Average 32.44 dB 0.8976 📂 Model Path model_zoo/swinir/002_lightweightSR_DIV2K_s64w8_SwinIR-S_x2.pth "/>
+
+        <link href="http://localhost:1313/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="http://localhost:1313/css/main.6a0f23ea50fd34b46fee262a5a68e17d458c51a2bc99ba1ba018065de6b180c3.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="http://localhost:1313/css/dark.50b57e12d401420df23965fed157368aba37b76df0ecefd0b1ecd4da664f01a0.css"  disabled />
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="http://localhost:1313/">Hank Tech Lab</a>
+	</div>
+	<nav>
+		
+		<a href="/posts/">Posts</a>
+		
+		| <span id="dark-mode-toggle" onclick="toggleTheme()"><svg class="feather">
+   <use href="/svg/feather-sprite.51cf5647cb1987f769b616558f2620fd9423d72058490231b391bf6aa3744b55.svg#sun" />
+</svg></span>
+		<script src="http://localhost:1313/js/themetoggle.js"></script>
+		
+	</nav>
+</header>
+
+<main>
+  <article>
+    <div class="post-container">
+      
+      <div class="post-content">
+        <div class="title">
+          <h1 class="title">SwinIR Experiment Log (2025/03/31)</h1>
+          <div class="meta">Posted on Mar 31, 2025</div>
+        </div>
+        
+        <section class="body">
+          <h2 id="-environment-check">🧠 Environment Check</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python3 --version
+</span></span><span style="display:flex;"><span>nvidia-smi
+</span></span><span style="display:flex;"><span>lsb_release -a
+</span></span></code></pre></div><h2 id="-results">🧪 Results</h2>
+<table>
+<thead>
+<tr>
+<th>Image</th>
+<th>PSNR (Y)</th>
+<th>SSIM (Y)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>baby</td>
+<td>33.83 dB</td>
+<td>0.8948</td>
+</tr>
+<tr>
+<td>bird</td>
+<td>35.37 dB</td>
+<td>0.9472</td>
+</tr>
+<tr>
+<td>butterfly</td>
+<td>29.18 dB</td>
+<td>0.9319</td>
+</tr>
+<tr>
+<td>head</td>
+<td>33.00 dB</td>
+<td>0.7982</td>
+</tr>
+<tr>
+<td>woman</td>
+<td>30.84 dB</td>
+<td>0.9163</td>
+</tr>
+<tr>
+<td><strong>Average</strong></td>
+<td>32.44 dB</td>
+<td>0.8976</td>
+</tr>
+</tbody>
+</table>
+<h2 id="-model-path">📂 Model Path</h2>
+<pre tabindex="0"><code>model_zoo/swinir/002_lightweightSR_DIV2K_s64w8_SwinIR-S_x2.pth
+</code></pre>
+        </section>
+        <div class="post-tags">
+          
+          
+          <nav class="nav tags">
+            <ul class="tags">
+              
+              <li><a href="/tags/swinir">swinir</a></li>
+              
+              <li><a href="/tags/super-resolution">super-resolution</a></li>
+              
+              <li><a href="/tags/pytorch">pytorch</a></li>
+              
+            </ul>
+          </nav>
+          
+          
+        </div>
+      </div>
+
+      
+      
+    </div>
+
+    </article>
+</main>
+<footer>
+  <div style="display:flex"></div>
+  <div class="footer-info">
+    2025  <a
+      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+</div>
+    </body>
+</html>

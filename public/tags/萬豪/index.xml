@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hank Tech Lab</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on Hank Tech Lab</description>
+    <title>萬豪 on Hank Tech Lab</title>
+    <link>http://localhost:1313/tags/%E8%90%AC%E8%B1%AA/</link>
+    <description>Recent content in 萬豪 on Hank Tech Lab</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 31 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/%E8%90%AC%E8%B1%AA/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>【羅馬假期】St. Regis Rome 值得住嗎？</title>
       <link>http://localhost:1313/travel/stregis_rome_full_post/</link>
       <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/travel/stregis_rome_full_post/</guid>
       <description>絕對值得 它是是萬豪在羅馬最高端的酒店！&#xA;🟢 亮點服務貼心：從 Check-in 到客房服務，全程尊榮感升等房超大間：套房券成功升等早餐超讚：現點現做美味蛋捲，每天都可點不同口味，長住也吃不膩Lumen 晚餐棒：服務小姐親切熱情，只要去過一次就會記得名字&#xA;🔴 缺點貴！沒有泳池，喜歡泡水的可能會失望沒有 Lounge，但餐飲體驗彌補了一些&#xA;適合誰？💳 Marriott 萬豪忠誠會員，想兌換點數的人🎩 想體驗 César Ritz 經典設計的人🏛️ 來羅馬度假，但不需要泳池 &amp;amp; Lounge 的人，因為你打算去許願池裸泳 🤣&#xA;預訂 &amp;amp; Check-in 體驗 這間 St. Regis Rome 酒店是利用萬豪 App 直訂，再押上五張套房券. 我原本訂的是 Classic Room，跳兩級升到 Imperial King Room，算是相當不錯了.&#xA;Check in 櫃檯比較簡單一些，但是還是由櫃檯親自帶去房間，當然也有詳盡的介紹. 總之是符合 FHR 的期望.&#xA;Imperial King Room 310 這間 Imperial King Room 310 是角落房，空間極為寬敞。雖然名為「Room」，但房間的大小，可能會讓某些『Suite』感到汗顏 🤣，只差沒有獨立隔間。然而，正因為沒有隔間，讓整個空間顯得更加開闊。&#xA;兩扇巨大的窗戶讓陽光毫無保留地灑入室內，使整間房間更加明亮通透。&#xA;這間房幾乎無可挑剔——擁有大玄關、全尺寸舒適沙發，以及三間獨立衛浴（浴缸、馬桶、淋浴間），格局方正無柱，設計感十足。Ritz 先生的作品 一向如此大氣端正，身處其中，無論是休息還是度假，都能感受到純粹的奢華享受。&#xA;房間主體是白底點綴淡藍, 相當高雅. 挑高的樓層上掛了一個歐式吊燈, 融合現代感又有復古味, 非常難得.&#xA;餐飲 入住 St. Regis Rome 期間，酒店內的 Marriott Bonvoy 會員數量不少，因此早餐時段的 Buffet 經常滿座，也讓拍攝變得困難。這裡要大力推薦大廚 Cristiano, 有著高明的技術, 還會記得客人昨天點了什麼, 甚至你在 omelette 裡面加了什麼都記得.</description>
-    </item>
-    <item>
-      <title>SwinIR Experiment Summary — March 31, 2025</title>
-      <link>http://localhost:1313/tech/swinir_experiment_2025_0331/</link>
-      <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tech/swinir_experiment_2025_0331/</guid>
-      <description>🧪 SwinIR Experiment Summary — March 31, 2025&#xA;1. Environment Setup OS: Ubuntu 24.04.2 LTS (noble) lsb_release -a Python: 3.12.3 python3 --version GPU: NVIDIA GeForce RTX 4090 Driver: 570.124.06 CUDA: 12.8 nvidia-smi PyTorch: 2.5.1+cu121 CUDA Available: True import torch print(torch.__version__) print(torch.cuda.is_available()) 2. Project Setup Installed Python venv and created environment: sudo apt install python3.12-venv $ python3 -m venv ~/venvs/swinir $ source ~/venvs/swinir/bin/activate&#xA;Installed PyTorch (CUDA 12.1): pip install torch torchvision --index-url https://download.</description>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,38 @@
+{{ define "main" }}
+
+<div class="site-description">
+  {{- if isset .Site.Params "subtitle" -}}
+  <p>{{ .Site.Params.Subtitle | .Page.RenderString }}</p>
+  {{- end -}}
+</div>
+
+<!-- 自訂分類導覽 -->
+<h2>📌 Travel 🧳</h2>
+<ul>
+  {{ range first 5 (where .Site.RegularPages "Section" "travel") }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+  {{ end }}
+</ul>
+
+<h2>📌 Tech 💻</h2>
+<ul>
+  {{ range first 5 (where .Site.RegularPages "Section" "tech") }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+  {{ end }}
+</ul>
+
+<!-- 原主題文章列表 -->
+{{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+{{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
+{{ range $paginator.Pages }}
+<section class="list-item">
+  <h1 class="title"><a href="{{ .RelPermalink }}">{{.Title}}</a></h1>
+  <time>{{ dateFormat ":date_medium" .Date }}{{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }}</time>
+  <br>{{ template "partials/pagedescription.html" . }}
+  <a class="readmore" href="{{ .RelPermalink }}">Read more ⟶</a>
+</section>
+{{ end }}
+
+{{ template "partials/paginator.html" . }}
+
+{{ end }}

@@ -3,7 +3,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-04-07T00:00:00+00:00</lastmod>
+    <lastmod>2025-04-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/misc/</loc>
+    <lastmod>2025-04-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/misc/investment_log/</loc>
+    <lastmod>2025-04-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tech/hdmi_aux/</loc>
+    <lastmod>2025-04-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tech/</loc>
+    <lastmod>2025-04-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/travel/</loc>
     <lastmod>2025-04-07T00:00:00+00:00</lastmod>
@@ -36,9 +48,6 @@
     <lastmod>2025-03-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-03-31T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tech/</loc>
     <lastmod>2025-03-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/%E7%BE%85%E9%A6%AC/</loc>

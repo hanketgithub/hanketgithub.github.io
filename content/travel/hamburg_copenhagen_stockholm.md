@@ -1,6 +1,6 @@
 ---
 title: "北歐行程 (2025-04-24 ~ 2025-05-03)"
-date: 2025-04-15
+date: 2025-04-08
 tags: ["FHR", "北歐"]
 categories: ["飯店體驗"]
 draft: false

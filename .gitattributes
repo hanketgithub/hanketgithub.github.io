@@ -1,0 +1,13 @@
+# Always use LF line endings for text files
+* text=auto eol=lf
+
+# Explicit settings for important Hugo files
+*.md   text eol=lf
+*.html text eol=lf
+*.toml text eol=lf
+*.yaml text eol=lf
+*.yml  text eol=lf
+*.css  text eol=lf
+*.js   text eol=lf
+*.scss text eol=lf
+

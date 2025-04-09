@@ -54,6 +54,8 @@
 <h2>📌 Tech 💻</h2>
 <ul>
   
+    <li><a href="/tech/hugo/">🛠️ 新機 GitHub SSH Clone &#43; Hugo 環境 Setup 小抄</a></li>
+  
     <li><a href="/tech/hdmi_aux/">HDMI AUX Data</a></li>
   
     <li><a href="/tech/swinir_experiment_2025_0331/">SwinIR Experiment Summary — March 31, 2025</a></li>
@@ -70,6 +72,36 @@
 
 
 
+
+<section class="list-item">
+  <h1 class="title"><a href="/tech/hugo/">🛠️ 新機 GitHub SSH Clone &#43; Hugo 環境 Setup 小抄</a></h1>
+  <time>Apr 9, 2025</time>
+  <br><div class="description">
+	
+	<h2 id="目標">目標</h2>
+<p>快速在新機設定 GitHub SSH，<br>
+將 Hugo 專案 clone 到 <code>~/Projects/</code> 目錄下。</p>
+<hr>
+<h2 id="1-確認-ssh-金鑰是否已存在">1. 確認 SSH 金鑰是否已存在</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls -al ~/.ssh
+</span></span></code></pre></div><p>有看到 id_ed25519 / id_ed25519.pub 就可以跳到 Step 3</p>
+<p>如果沒有，執行：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keygen -t ed25519 -C hanketgithub@email.com
+</span></span></code></pre></div><p>一路按 Enter，不用改檔名或密碼。</p>
+<h2 id="2-將公鑰加到-github-帳戶">2. 將公鑰加到 GitHub 帳戶</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat ~/.ssh/id_ed25519.pub
+</span></span></code></pre></div><p>複製那一整行內容 ➔ 到 GitHub：</p>
+<p>Settings → SSH and GPG keys → New SSH key ➔ 貼上。</p>
+<p>Title 建議：「MacBook 2025」</p>
+<h3 id="3-測試-ssh-連線是否成功">3. 測試 SSH 連線是否成功</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -T git@github.com
+</span></span></code></pre></div><p>看到：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Hi hanketgithub! You<span style="color:#960050;background-color:#1e0010">&#39;</span>ve successfully authenticated, but GitHub does not provide shell access.
+</span></span></code></pre></div><p>✅ 表示 SSH OK！</p>&hellip;
+	
+</div>
+  <a class="readmore" href="/tech/hugo/">Read more ⟶</a>
+</section>
 
 <section class="list-item">
   <h1 class="title"><a href="/tech/hdmi_aux/">HDMI AUX Data</a></h1>

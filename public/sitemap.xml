@@ -32,16 +32,10 @@
     <loc>http://localhost:1313/travel/london_paris_tokyo/</loc>
     <lastmod>2025-04-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/travel/london_paris_tokyo_1/</loc>
-    <lastmod>2025-04-10T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/%E5%B7%B4%E9%BB%8E/</loc>
     <lastmod>2025-04-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/%E6%9D%B1%E4%BA%AC/</loc>
-    <lastmod>2025-04-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/%E8%8B%B1%E5%9C%8B/</loc>
     <lastmod>2025-04-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/%E9%A3%AF%E5%BA%97%E9%AB%94%E9%A9%97/</loc>
@@ -97,5 +91,7 @@
   </url><url>
     <loc>http://localhost:1313/tags/%E8%90%AC%E8%B1%AA/</loc>
     <lastmod>2025-03-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/misc/untitled/</loc>
   </url>
 </urlset>

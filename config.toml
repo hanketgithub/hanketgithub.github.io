@@ -17,3 +17,6 @@ useCDN = false
 [markup]
   [markup.highlight]
     style = "monokai"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

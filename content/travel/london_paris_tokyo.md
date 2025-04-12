@@ -6,6 +6,25 @@ categories: ["飯店體驗"]
 draft: false
 ---
 
+| Date | Activity |
+| ----- | --- |
+| 03/26 | BR87 |
+| 03/27 | Paris |
+| 03/28 | Paris |
+| 03/29 | Paris |
+| 03/30 | Paris -> London |
+| 03/31 | London |
+| 04/01 | London |
+| 04/02 | London |
+| 04/03 | London |
+| 04/04 | London |
+| 04/05 | London |
+| 04/06 | London -> Tokyo |
+| 04/07 | Tokyo |
+| 04/08 | Tokyo |
+| 04/09 | Tokyo |
+
+
 ## Paris Itinerary (2026-03-26 ~ 2026-04-09)
 *Base Hotel: ???*
 

@@ -1,5 +1,5 @@
 ---
-title: "🛠️ 新機 GitHub SSH Clone + Hugo 環境 Setup 小抄"
+title: "新機 GitHub SSH Clone + Hugo 環境 Setup 小抄"
 date: 2025-04-09
 tags: [""]
 draft: false

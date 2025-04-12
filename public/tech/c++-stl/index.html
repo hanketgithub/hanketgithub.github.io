@@ -270,10 +270,10 @@ for (auto &amp;[k, v] : mp) {
 }
 </code></pre><h2 id="priority-queue">Priority Queue</h2>
 <p>// Max Heap
-priority_queue<!-- raw HTML omitted --> mx;
-priority_queue&lt;int, vector<!-- raw HTML omitted -->, less<!-- raw HTML omitted -->&gt; mx;</p>
+priority_queue<int> mx;
+priority_queue&lt;int, vector<int>, less<int>&gt; mx;</p>
 <p>// Min Heap
-priority_queue&lt;int, vector<!-- raw HTML omitted -->, greater<!-- raw HTML omitted -->&gt; mi;
+priority_queue&lt;int, vector<int>, greater<int>&gt; mi;
 mi.push(5);
 mi.push(1);
 mi.push(3);
@@ -305,8 +305,8 @@ pq.pop();
 auto [w, dst] = pq.top() -&gt; w is 5, dst is 1
 pq.pop();</p>
 <p>Sample implements;</p>
-<p>vector<!-- raw HTML omitted --> dist(n, INT_MAX/2);</p>
-<p>int PFS(vector&lt; vector<!-- raw HTML omitted --> &gt; &amp;gf, int src, int dst, vector<!-- raw HTML omitted --> &amp;dist) {
+<p>vector<int> dist(n, INT_MAX/2);</p>
+<p>int PFS(vector&lt; vector<int> &gt; &amp;gf, int src, int dst, vector<int> &amp;dist) {
 auto compar = [](const PII &amp;a, const PII &amp;b) { // return true if &lsquo;a&rsquo; has lower priority
 if (a.first != b.first) {
 return !(a.first &lt; b.first);
@@ -315,7 +315,7 @@ else {
 return !(a.second &lt; b.second);
 }
 };
-priority_queue&lt;PII, vector<!-- raw HTML omitted -->, decltype(compar)&gt; pq; // { distance, next }
+priority_queue&lt;PII, vector<PII>, decltype(compar)&gt; pq; // { distance, next }
 pq.push( {0, 0} );</p>
 <p>while (!pq.empty()) {
 auto [distance, cur] = pq.top(); pq.pop();</p>
@@ -332,13 +332,13 @@ for (auto nxt : gf[cur]) {
 <p>return -1;
 }</p>
 <h2 id="union-find">Union Find</h2>
-<p>int FindRoot(int v, vector<!-- raw HTML omitted --> &amp;root) {
+<p>int FindRoot(int v, vector<int> &amp;root) {
 if (root[v] != v) {
 root[v] = FindRoot(root[v], root); // Path compression
 }
 return root[v];
 }</p>
-<p>void Union(int p, int q, vector<!-- raw HTML omitted --> &amp;root) {
+<p>void Union(int p, int q, vector<int> &amp;root) {
 int rp = FindRoot(p, root);
 int rq = FindRoot(q, root);</p>
 <p>if (rp != rq) {
@@ -350,11 +350,11 @@ root[rp] = rq;
 }
 }
 }</p>
-<p>vector<!-- raw HTML omitted --> root(n);</p>
+<p>vector<int> root(n);</p>
 <p>for (int i = 0; i &lt; n; i++) { root[i] = i; }</p>
 <h2 id="queue">Queue</h2>
 <p>Declaration:
-queue<!-- raw HTML omitted --> q;</p>
+queue<int> q;</p>
 <p>Add:
 q.push(v);</p>
 <p>Remove:
@@ -365,7 +365,7 @@ int v = q.front();</p>
 bool isEmpty = q.empty();</p>
 <h2 id="deque">Deque</h2>
 <p>Declaration:
-deque<!-- raw HTML omitted --> deq;</p>
+deque<int> deq;</p>
 <p>Add:
 deq.push_front(v);
 deq.push_back(v);</p>
@@ -377,7 +377,7 @@ int first = deq.front();
 int last = deq.back();</p>
 <h2 id="stack">Stack</h2>
 <p>Declaration:
-stack<!-- raw HTML omitted --> st;</p>
+stack<int> st;</p>
 <p>Add:
 st.push(v);</p>
 <p>Remove:
@@ -451,7 +451,7 @@ public:
 };
 </code></pre><h2 id="misc">Misc</h2>
 <p>lambda function - an embedded function without name</p>
-<p>vector<!-- raw HTML omitted --> A;</p>
+<p>vector<int> A;</p>
 <p>// Now sort from large to small
 bool compar(int a, int b) { return a &gt; b; }
 sort(A.begin(), A.end(), compar);</p>
@@ -462,9 +462,9 @@ void cb(int n) { cout &laquo; n &laquo; endl; }</p>
 <p>thread t(cb, n);</p>
 <p>thread t([](int n) { cout &laquo; n &laquo; endl; }, n);</p>
 <p>Unique Pointer
-unique_ptr<!-- raw HTML omitted --> p = make_unique<!-- raw HTML omitted -->();</p>
+unique_ptr<MyClass> p = make_unique<MyClass>();</p>
 <p>Shared Pointer
-shared_ptr<!-- raw HTML omitted --> p = make_shared<!-- raw HTML omitted -->();</p>
+shared_ptr<MyClass> p = make_shared<MyClass>();</p>
 <p>Member Initializer List -</p>
 <p>struct X {
 int c;
@@ -486,8 +486,8 @@ Safe:
 <p>Meanless:
 /: (a / b) % MOD is not ( (a % MOD) / (b % MOD) ). But (a / b) is not going to overflow.</p>
 <p>Prime:
-vector<!-- raw HTML omitted --> isPrime(limit+5, true);</p>
-<p>void PrimeSieve(vector<!-- raw HTML omitted --> &amp;isPrime, int limit) {
+vector<bool> isPrime(limit+5, true);</p>
+<p>void PrimeSieve(vector<bool> &amp;isPrime, int limit) {
 isPrime[0] = false;
 isPrime[1] = false;</p>
 <p>for (int p = 2; p &lt;= sqrt(limit); p++) {

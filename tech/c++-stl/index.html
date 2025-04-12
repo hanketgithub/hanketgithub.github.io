@@ -128,9 +128,9 @@ for (auto &amp;[k, v] : mp) {
   // k is key, v is value
 }
 </code></pre><h2 id=priority-queue>Priority Queue</h2><p>// Max Heap
-priority_queue mx;
-priority_queue&lt;int, vector, less> mx;</p><p>// Min Heap
-priority_queue&lt;int, vector, greater> mi;
+priority_queue<int> mx;
+priority_queue&lt;int, vector<int>, less<int>> mx;</p><p>// Min Heap
+priority_queue&lt;int, vector<int>, greater<int>> mi;
 mi.push(5);
 mi.push(1);
 mi.push(3);
@@ -148,7 +148,7 @@ pq.pop();
 auto [w, dst] = pq.top() -> w is 3, dst is 5
 pq.pop();
 auto [w, dst] = pq.top() -> w is 5, dst is 1
-pq.pop();</p><p>Sample implements;</p><p>vector dist(n, INT_MAX/2);</p><p>int PFS(vector&lt; vector > &amp;gf, int src, int dst, vector &amp;dist) {
+pq.pop();</p><p>Sample implements;</p><p>vector<int> dist(n, INT_MAX/2);</p><p>int PFS(vector&lt; vector<int> > &amp;gf, int src, int dst, vector<int> &amp;dist) {
 auto compar = [](const PII &amp;a, const PII &amp;b) { // return true if &lsquo;a&rsquo; has lower priority
 if (a.first != b.first) {
 return !(a.first &lt; b.first);
@@ -157,7 +157,7 @@ else {
 return !(a.second &lt; b.second);
 }
 };
-priority_queue&lt;PII, vector, decltype(compar)> pq; // { distance, next }
+priority_queue&lt;PII, vector<pii>, decltype(compar)> pq; // { distance, next }
 pq.push( {0, 0} );</p><p>while (!pq.empty()) {
 auto [distance, cur] = pq.top(); pq.pop();</p><pre><code>if (dist[cur] != INT_MAX/2) { continue; } // visited
 dist[cur] = distance;
@@ -168,12 +168,12 @@ for (auto nxt : gf[cur]) {
   pq.push( { distance+1, nxt } );
 }
 </code></pre><p>}</p><p>return -1;
-}</p><h2 id=union-find>Union Find</h2><p>int FindRoot(int v, vector &amp;root) {
+}</p><h2 id=union-find>Union Find</h2><p>int FindRoot(int v, vector<int> &amp;root) {
 if (root[v] != v) {
 root[v] = FindRoot(root[v], root); // Path compression
 }
 return root[v];
-}</p><p>void Union(int p, int q, vector &amp;root) {
+}</p><p>void Union(int p, int q, vector<int> &amp;root) {
 int rp = FindRoot(p, root);
 int rq = FindRoot(q, root);</p><p>if (rp != rq) {
 if (rp &lt; rq) {
@@ -183,20 +183,20 @@ else {
 root[rp] = rq;
 }
 }
-}</p><p>vector root(n);</p><p>for (int i = 0; i &lt; n; i++) { root[i] = i; }</p><h2 id=queue>Queue</h2><p>Declaration:
-queue q;</p><p>Add:
+}</p><p>vector<int> root(n);</p><p>for (int i = 0; i &lt; n; i++) { root[i] = i; }</p><h2 id=queue>Queue</h2><p>Declaration:
+queue<int> q;</p><p>Add:
 q.push(v);</p><p>Remove:
 q.pop();</p><p>Peek:
 int v = q.front();</p><p>Emptiness:
 bool isEmpty = q.empty();</p><h2 id=deque>Deque</h2><p>Declaration:
-deque deq;</p><p>Add:
+deque<int> deq;</p><p>Add:
 deq.push_front(v);
 deq.push_back(v);</p><p>Remove:
 deq.pop_front();
 deq.pop_back();</p><p>Peek:
 int first = deq.front();
 int last = deq.back();</p><h2 id=stack>Stack</h2><p>Declaration:
-stack st;</p><p>Add:
+stack<int> st;</p><p>Add:
 st.push(v);</p><p>Remove:
 st.pop();</p><p>Peek:
 st.top();</p><h2 id=convert-integer-to-string>Convert integer to string:</h2><p>int a = 135;
@@ -261,13 +261,13 @@ public:
     delete root;
   }
 };
-</code></pre><h2 id=misc>Misc</h2><p>lambda function - an embedded function without name</p><p>vector A;</p><p>// Now sort from large to small
+</code></pre><h2 id=misc>Misc</h2><p>lambda function - an embedded function without name</p><p>vector<int> A;</p><p>// Now sort from large to small
 bool compar(int a, int b) { return a > b; }
 sort(A.begin(), A.end(), compar);</p><p>// lambda
 sort(A.begin(), A.end(), [](int a, int b) { return a > b; })</p><p>// lamba used in callback
 void cb(int n) { cout &#171; n &#171; endl; }</p><p>thread t(cb, n);</p><p>thread t([](int n) { cout &#171; n &#171; endl; }, n);</p><p>Unique Pointer
-unique_ptr p = make_unique();</p><p>Shared Pointer
-shared_ptr p = make_shared();</p><p>Member Initializer List -</p><p>struct X {
+unique_ptr<myclass> p = make_unique<myclass>();</p><p>Shared Pointer
+shared_ptr<myclass> p = make_shared<myclass>();</p><p>Member Initializer List -</p><p>struct X {
 int c;
 int d;
 };</p><p>class T {
@@ -281,7 +281,7 @@ Safe:
 *: (a * b) % MOD -> ( (a % MOD) * (b % MOD) ) % MOD</p><p>Need process:
 -: (a - b) % MOD -> (a - b + MOD) % MOD)</p><p>Meanless:
 /: (a / b) % MOD is not ( (a % MOD) / (b % MOD) ). But (a / b) is not going to overflow.</p><p>Prime:
-vector isPrime(limit+5, true);</p><p>void PrimeSieve(vector &amp;isPrime, int limit) {
+vector<bool> isPrime(limit+5, true);</p><p>void PrimeSieve(vector<bool> &amp;isPrime, int limit) {
 isPrime[0] = false;
 isPrime[1] = false;</p><p>for (int p = 2; p &lt;= sqrt(limit); p++) {
 if (isPrime[p]) {

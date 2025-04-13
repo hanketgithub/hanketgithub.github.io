@@ -9,6 +9,9 @@ draft: false
 歡迎回家！這裡是我的快速入口頁面。
 
 ---
+## 部落格
+- <a href="https://hanketgithub.github.io/" target="_blank">Hank Tech Lab</a>
+- <a href="https://hanketgoog.blogspot.com/" target="_blank">FHR 水質檢驗所</a>
 
 ## 🛒 購物
 
@@ -22,5 +25,6 @@ draft: false
 
 ## 🏨 酒店集團
 
-- [Marriott](https://www.marriott.com/)
-- <a href="https://hanketgoog.blogspot.com/" target="_blank">FHR 水質檢驗所</a>
+- <a href="https://www.marriott.com/" target="_blank">Marriott</a>
+- <a href="https://www.marriott.com/" target="_blank">Mandarin Oriental</a>
+

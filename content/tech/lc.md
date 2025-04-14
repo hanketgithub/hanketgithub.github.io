@@ -4,7 +4,18 @@ date: 2025-04-14
 draft: false
 ---
 
-# 🎯 2025-04-14 LeetCode 每日打卡 RPG
+# Apr
+
+| Date  | Score |
+| ----- | ----: |
+| 4/14  | 22    |
+| 4/15  | 22    |
+| 4/16  | 22    |
+| 4/17  | 22    |
+| 4/18  | 22    |
+| 4/19  | 22    |
+| 4/20  | 22    |
+
 
 ## 今天你的刷題活動打卡 ✅
 
@@ -17,6 +28,12 @@ draft: false
 <input type="checkbox" id="medium_solved"> 解 Medium 題 (+15)<br>
 <input type="checkbox" id="hard_solved"> 解 Hard 題 (+60)<br>
 
+### 🎯 今日比賽型活動
+
+<input type="radio" name="contest_type" id="contest_official" value="official" checked> 正式 Weekly Contest<br>
+<input type="radio" name="contest_type" id="contest_mock" value="mock"> 模擬考 Mock Contest (5折)<br>
+<input type="radio" name="contest_type" id="contest_none" value="none"> 無比賽參加<br>
+
 ### 🏆 Weekly Contest 解題數
 
 <select id="weekly_contest_solved">
@@ -27,13 +44,9 @@ draft: false
   <option value="4">解出 4 題 (+500)</option>
 </select>
 
-### 🎯 今日比賽型活動
-
-<input type="radio" name="contest_type" id="contest_official" value="official" checked> 正式 Weekly Contest<br>
-<input type="radio" name="contest_type" id="contest_mock" value="mock"> 模擬考 Mock Contest (5折)<br>
-<input type="radio" name="contest_type" id="contest_none" value="none"> 無比賽參加<br>
-
 <br>
+<br>
+
 <button type="button" onclick="calculateLCPoints()">結算今日成績</button>
 
 </form>
@@ -60,39 +73,42 @@ function calculateLCPoints() {
   else if (contestSolved === 4) { contestPoints = 500; }
 
   // 判斷正式/模擬/無參加
-  const contestType = document.querySelector('input[name=\"contest_type\"]:checked').value;
-  let contestMessage = \"\";
-  if (contestType === \"mock\") {
+  const contestType = document.querySelector('input[name="contest_type"]:checked').value;
+  let contestMessage = "";
+  
+  if (contestType === "official") {
+    contestMessage = "征戰正式戰場，氣勢如虹！🏆";
+  } else if (contestType === "mock") {
     contestPoints = Math.floor(contestPoints * 0.5); // 模擬考打五折
-    contestMessage = \"模擬戰場訓練，未來主力！🛡️\";
-  } else if (contestType === \"official\") {
-    contestMessage = \"征戰正式戰場，氣勢如虹！🏆\";
-  } else {
-    contestPoints = 0;
-    contestMessage = \"休息是為了走更長遠的路！🌱\";
+    contestMessage = "模擬戰場訓練，未來主力！🛡️";
+  } else if (contestType === "none") {
+    // 沒有參加任何比賽，只顯示鼓勵訊息
+    contestMessage = "休息是為了走更長遠的路！🌱";
+    contestPoints = 0;  // **只有當 contest_type 是 none 時才硬設 0**
   }
 
   points += contestPoints;
 
   // 顯示總分
-  document.getElementById('lc-result').innerText = \"今日 LC 活動總分：\" + points + \" 分\";
+  document.getElementById('lc-result').innerText = "今日 LC 活動總分：" + points + " 分";
 
   // 決定頭銜
-  let title = \"\";
-  if (points >= 200) {
-    title = \"少林心經 📜🧘‍♂️\";
-  } else if (points >= 130) {
-    title = \"易筋經 🧘‍♂️\";
+  let title = "";
+  if (points >= 300) {
+    title = "少林心經 📜🧘‍♂️";
+  } else if (points >= 200) {
+    title = "易筋經 🧘‍♂️";
   } else if (points >= 80) {
-    title = \"一拍兩散掌 🫳💥\";
+    title = "一拍兩散掌 🫳💥";
   } else if (points >= 30) {
-    title = \"大力金剛掌 💪\";
+    title = "大力金剛掌 💪";
   } else if (points > 0) {
-    title = \"羅漢拳 🥋\";
+    title = "羅漢拳 🥋";
   } else {
-    title = \"尚未入門的小師弟 🌱\";
+    title = "尚未入門的小師弟 🌱";
   }
 
-  document.getElementById('lc-title').innerText = \"今日頭銜：\" + title + \"\\n\" + contestMessage;
+  document.getElementById('lc-title').innerHTML = 
+    "今日頭銜：" + title  + "<br>" + contestMessage;
 }
 </script>

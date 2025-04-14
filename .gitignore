@@ -1,2 +1,23 @@
+# Windows 系統垃圾
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Mac 系統垃圾（萬一有 Mac 共用）
 .DS_Store
-**/.DS_Store
+.AppleDouble
+.LSOverride
+
+# Hugo Build Output
+public/
+resources/
+
+# VSCode/IDE 設定檔
+.vscode/
+.idea/
+*.code-workspace
+
+# 其他常見
+*.log
+*.tmp
+*.bak

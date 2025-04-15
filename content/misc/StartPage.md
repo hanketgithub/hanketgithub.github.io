@@ -26,5 +26,5 @@ draft: false
 ## 🏨 酒店集團
 
 - <a href="https://www.marriott.com/" target="_blank">Marriott</a>
-- <a href="https://www.marriott.com/" target="_blank">Mandarin Oriental</a>
+- <a href="https://www.mandarinoriental.com/" target="_blank">Mandarin Oriental</a>
 

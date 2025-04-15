@@ -10,9 +10,9 @@
     <atom:link href="http://localhost:1313/tags/c++/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>C&#43;&#43; STL</title>
-      <link>http://localhost:1313/tech/c&#43;&#43;-stl/</link>
+      <link>http://localhost:1313/tech/cpp_std/</link>
       <pubDate>Thu, 10 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tech/c&#43;&#43;-stl/</guid>
+      <guid>http://localhost:1313/tech/cpp_std/</guid>
       <description>&lt;h2 id=&#34;binary-search&#34;&gt;Binary Search&lt;/h2&gt;&#xA;&lt;h3 id=&#34;int-version&#34;&gt;int version&lt;/h3&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;while (L &amp;lt; R) {&#xA;  int M = L + (R-L)/2;&#xA;  if (check(M)) { return M; }&#xA;  else if (A[M] &amp;lt; target) { L = M+1; }&#xA;  else { R = M; }&#xA;}&#xA;return L;&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;double-version&#34;&gt;double version&lt;/h3&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;while (R - L &amp;gt; 1e-6) {&#xA;  double M = L + (R-L) / 2.0;&#xA;  if (M &amp;lt; target) { L = M; }&#xA;  else { R = M; }&#xA;}&#xA;return L;&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;L X X X M X T X R&lt;/p&gt;</description>
     </item>
   </channel>

@@ -6,21 +6,28 @@ draft: false
 
 <a href="https://leetcode.com/" target="_blank">LeetCode</a>
 
-# Apr
+## Apr
+| Mon | Tue | Wed | Thu | Fri | Sat | Sun |  
+| --------- | --------- | --------- | --------- | --------- | --------- | --------- |
+| 14 (32)   | 15 (17)  | 16 (XXX)  | 17 (XXX)  | 18 (XXX)  | 19 (XXX)  | 20 (XXX)  |
+| 21 (XXX)  | 22 (XXX)  | 23 (XXX)  | 24 (XXX)  | 25 (XXX)  | 26 (XXX)  | 27 (XXX)  |
+| 28 (XXX)  | 29 (XXX)  | 30 (XXX)  |
 
-| Date  | Score |
-| ----- | ----: |
-| 4/14  | 32    |
-| 4/15  | 22    |
-| 4/16  | 22    |
-| 4/17  | 22    |
-| 4/18  | 22    |
-| 4/19  | 22    |
-| 4/20  | 22    |
-| 4/21  | 22    |
-| 4/22  | 22    |
+## May
+| Mon | Tue | Wed | Thu | Fri | Sat | Sun |  
+| --------- | --------- | --------- | --------- | --------- | --------- | --------- |
+|           |           |           | 1 (XXX)   | 2 (XXX)   | 3 (XXX)   | 4 (XXX)   |
+| 5 (XXX)   | 6 (XXX)  | 7 (XXX)    | 8 (XXX)   | 9 (XXX)   | 10 (XXX)  | 11 (XXX) |
+| 12 (XXX)  | 13 (XXX) | 14 (XXX)   | 15 (XXX)  | 16 (XXX)  | 17 (XXX)  | 18 (XXX) |
+| 19 (XXX)  | 20 (XXX) | 21 (XXX)   | 22 (XXX)  | 23 (XXX)  | 24 (XXX)  | 25 (XXX) |
+| 26 (XXX)  | 27 (XXX) | 28 (XXX)   | 29 (XXX)  | 30 (XXX)  | 31 (XXX)  |
 
 
+
+#### <a href="https://leetcode.com/problems/maximum-total-damage-with-spell-casting/" target="_blank">3186 Maximum Total Damage With Spell Casting, 1840</a>
+- 4/15
+- Figure out why previous solution doesn't work. Lack consideration of 1 case. Pay attention to consider all!
+- Follow up: what if power[i] - range?
 
 ## 今天你的刷題活動打卡 ✅
 

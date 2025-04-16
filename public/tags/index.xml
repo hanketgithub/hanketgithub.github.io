@@ -106,5 +106,54 @@
       <guid>http://localhost:1313/tags/%E8%90%AC%E8%B1%AA/</guid>
       <description></description>
     </item>
+    <item>
+      <title>BR65</title>
+      <link>http://localhost:1313/tags/br65/</link>
+      <pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/br65/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Business Class</title>
+      <link>http://localhost:1313/tags/business-class/</link>
+      <pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/business-class/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>EVA Air</title>
+      <link>http://localhost:1313/tags/eva-air/</link>
+      <pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/eva-air/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>希臘</title>
+      <link>http://localhost:1313/tags/%E5%B8%8C%E8%87%98/</link>
+      <pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E5%B8%8C%E8%87%98/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>維也納</title>
+      <link>http://localhost:1313/tags/%E7%B6%AD%E4%B9%9F%E7%B4%8D/</link>
+      <pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E7%B6%AD%E4%B9%9F%E7%B4%8D/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>轉機</title>
+      <link>http://localhost:1313/tags/%E8%BD%89%E6%A9%9F/</link>
+      <pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E8%BD%89%E6%A9%9F/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>飛行紀錄</title>
+      <link>http://localhost:1313/tags/%E9%A3%9B%E8%A1%8C%E7%B4%80%E9%8C%84/</link>
+      <pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E9%A3%9B%E8%A1%8C%E7%B4%80%E9%8C%84/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

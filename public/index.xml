@@ -6,8 +6,15 @@
     <description>Recent content on Hank Tech Lab</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 14 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 16 Apr 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BR71 &#43; BR72餐飲深度解析：香檳、夏布利、瑪歌、麗絲玲的高空四重奏</title>
+      <link>http://localhost:1313/travel/br71_hamburg/</link>
+      <pubDate>Wed, 16 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/travel/br71_hamburg/</guid>
+      <description>從香檳到牛排，從夏布利到雷司令，這不只是一份長榮 BR71 + 72 的餐飲紀錄，而是一場在高空中展開的味覺交響。</description>
+    </item>
     <item>
       <title>LeetCode 每日打卡 RPG 🎯💻</title>
       <link>http://localhost:1313/tech/lc/</link>

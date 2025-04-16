@@ -1,20 +1,19 @@
 ---
-title: "【愛琴海之夢】長榮 BR65 商務艙 & 奧地利轉機實錄：飛往希臘的尊榮之旅"
+title: "【飛行體驗】愛琴海之夢 長榮 BR65 商務艙 & 奧地利轉機實錄：飛往希臘的尊榮之旅"
 date: 2023-04-21
 tags: ["EVA Air", "BR65", "Business Class", "轉機", "維也納", "希臘", "飛行紀錄"]
 categories: ["航空旅行"]
 draft: false
 ---
 
-[](https://www.flickr.com/photos/188685716@N03/50032616617/in/datetaken-public/)![BR_789_s](https://live.staticflickr.com/65535/50032616617_efa59b7f80_w.jpg)
+![BR_789_s](https://live.staticflickr.com/65535/50032616617_efa59b7f80_w.jpg)
 
 ## [2023-04-21]
 
 本次要去希臘度假, 因此訂了維也納機場轉機到希臘雅典的行程. 之前已經搭乘過一樣的航程兩次, 777 跟 787 的紀錄都有. 由於對維也納機場印象良好, 因此這次選擇在奧地利轉機. 如果有前往東歐的行程的話, 我會再次推薦從維也納轉機.
 
-關於長榮 787 商務艙的內裝質感等, 可以參考2019這一篇, 這邊就不多做介紹. 對於長榮直飛歐洲的商務艙, 我個人相當的推薦, 因為長榮直飛巴黎, 維也納, 米蘭跟慕尼黑的時間帶非常完美. 週五下班後, 可以趕上午夜出發的飛機, 然後享受機上服務, 酒足飯飽後可一路躺平, 等著讓歐洲溫和的晨光喚醒頭腦. 中午前, 就可進市區開始跑行程了, 一刻也不浪費. 回程的話則是早上六點, 如果在機上有睡飽的話可以直接進辦公室. 如果假期短一些的話, 直飛歐洲的商務艙在時間價值上是強力推薦的呦~
+關於長榮 787 商務艙的內裝質感等, 可以參考2019<a href="https://hanketgoog.blogspot.com/2019/08/eva-air-787-9-tpe-vie-br65.html" target="_blank">這一篇</a>, 這邊就不多做介紹. 對於長榮直飛歐洲的商務艙, 我個人相當的推薦, 因為長榮直飛巴黎, 維也納, 米蘭跟慕尼黑的時間帶非常完美. 週五下班後, 可以趕上午夜出發的飛機, 然後享受機上服務, 酒足飯飽後可一路躺平, 等著讓歐洲溫和的晨光喚醒頭腦. 中午前, 就可進市區開始跑行程了, 一刻也不浪費. 回程的話則是早上六點, 如果在機上有睡飽的話可以直接進辦公室. 如果假期短一些的話, 直飛歐洲的商務艙在時間價值上是強力推薦的呦~
 
-[這一篇](https://hanketgoog.blogspot.com/2019/08/eva-air-787-9-tpe-vie-br65.html)
 
 | Item  | Data  |
 | ----- | ----- |
@@ -35,7 +34,7 @@ draft: false
 
 新款的硬殼過夜包也是採用行李箱造型. 低調奢華的星耀黑與 787 的新商務艙搭配, 似乎刻意營造出高貴典雅的尊榮感.
 
-[](https://www.flickr.com/photos/188685716@N03/52862058538/in/datetaken-public/)![205A8441](https://live.staticflickr.com/65535/52862058538_892979ce48_c.jpg)
+![205A8441](https://live.staticflickr.com/65535/52862058538_892979ce48_c.jpg)
 質感跟 Rimowa 一樣.
 
 然而, 可別以爲它中看不中用, 其實裏面有不少有用的小物:
@@ -59,7 +58,7 @@ draft: false
 
 這次有三樣小物是與 Ferragamo 聯名, 分別是臉部噴霧, 護唇膏, 跟乳液. 在機上其實這個臉部噴霧挺好用的. 機上特別乾, 需要時拿起來噴一噴感覺很舒服.
 
-[](https://www.flickr.com/photos/188685716@N03/52861822549/in/datetaken-public/)![205A9005](https://live.staticflickr.com/65535/52861822549_89c0892bca_c.jpg)
+![205A9005](https://live.staticflickr.com/65535/52861822549_89c0892bca_c.jpg)
 Bianco Di Carrara 香水系列的保養品
 
 這個 SF 小化妝包的品質我覺得跟 Rimowa 的簡直一模一樣! 而且內容物也升級了. 長榮還是有用心呀.
@@ -70,55 +69,55 @@ Bianco Di Carrara 香水系列的保養品
 
 首先上的是小點. 味道普通, 但是平凡的味道搭配香檳, 反而讓香檳的獨特性提高了一個層次.
 
-[](https://www.flickr.com/photos/188685716@N03/52862129503/in/datetaken-public/)![205A8409](https://live.staticflickr.com/65535/52862129503_757df1a477_c.jpg)
+![205A8409](https://live.staticflickr.com/65535/52862129503_757df1a477_c.jpg)
 香檳才是主角
 
 這道鴨肝生鮭魚千片前菜做得還不錯. 清爽可口, 擺盤也好看.
 
-[](https://www.flickr.com/photos/188685716@N03/52861858284/in/datetaken-public/)![205A8415](https://live.staticflickr.com/65535/52861858284_b86349bf1a_c.jpg)
+![205A8415](https://live.staticflickr.com/65535/52861858284_b86349bf1a_c.jpg)
 超乎期待的前菜
 
 主菜的部分我覺得居然有點失望. 上次米蘭首航我坐的是經濟艙, 那份主餐真是難忘, 因此對這份主餐的期待可能過高. 但說實話, 牛肉的部分我覺得居然沒有比經濟餐要高明多少! 也就贏在擺盤了吧.
 
-[](https://www.flickr.com/photos/188685716@N03/52861858294/in/datetaken-public/)![205A8416](https://live.staticflickr.com/65535/52861858294_ef58ebcbcf_c.jpg)
+![205A8416](https://live.staticflickr.com/65535/52861858294_ef58ebcbcf_c.jpg)
 跟經濟艙的水平差不多. 一樣好吃.
 
 飯後甜點就不多說了. 本人不吃甜點, 多點一杯香檳比較實際.
 
-[](https://www.flickr.com/photos/188685716@N03/52862081935/in/datetaken-public/)![205A8419](https://live.staticflickr.com/65535/52862081935_c80050aa04_c.jpg)
+![205A8419](https://live.staticflickr.com/65535/52862081935_c80050aa04_c.jpg)
 飯後甜點
 
 ## [加映] BR66 餐食
 
 首先上的是香檳配小點. 主角仍然是香檳.
 
-[](https://www.flickr.com/photos/188685716@N03/52878198196/in/datetaken-public/)![IMG_2314](https://live.staticflickr.com/65535/52878198196_4aba9492a7_c.jpg)
+![IMG_2314](https://live.staticflickr.com/65535/52878198196_4aba9492a7_c.jpg)
 
 金黃色的香檳與溫和的陽光
 
 這道前菜做得挺好吃. 有龍蝦, 酪梨醬, 乳酪, 跟蘆筍. 長榮的前菜是不是一直都比主菜亮眼啊?!
 
-[](https://www.flickr.com/photos/188685716@N03/52877618112/in/datetaken-public/)![IMG_2316](https://live.staticflickr.com/65535/52877618112_a7287ac93a_c.jpg)
+![IMG_2316](https://live.staticflickr.com/65535/52877618112_a7287ac93a_c.jpg)
 
 精彩的前菜
 
 這道是隱藏菜色, 並不是每天都會出, 那就是奧地利上空的美景. 香檳配美景, 感覺又上了一個檔次~
 
-[](https://www.flickr.com/photos/188685716@N03/52878358044/in/datetaken-public/)![IMG_2318](https://live.staticflickr.com/65535/52878358044_2eef03a356_c.jpg)
+![IMG_2318](https://live.staticflickr.com/65535/52878358044_2eef03a356_c.jpg)
 約一萬英尺的景色
 
-[](https://www.flickr.com/photos/188685716@N03/52877618077/in/datetaken-public/)![IMG_2320](https://live.staticflickr.com/65535/52877618077_ba4304419a_c.jpg)
+![IMG_2320](https://live.staticflickr.com/65535/52877618077_ba4304419a_c.jpg)
 味道還不壞的胡蘿菠湯. 溫度高
 
-[](https://www.flickr.com/photos/188685716@N03/52878578600/in/datetaken-public/)![IMG_2322](https://live.staticflickr.com/65535/52878578600_3161a2f56b_c.jpg)
+![IMG_2322](https://live.staticflickr.com/65535/52878578600_3161a2f56b_c.jpg)
 很平凡的沙拉
 
 這道主菜就是英國威靈頓牛排. 老實說不是很喜歡. 牛肉部分還可以, 但不是很喜歡麵皮 跟碎牛肉. 坦白說一塊牛排好好煎一下, 放點玫瑰鹽就是最好的了...
 
-[](https://www.flickr.com/photos/188685716@N03/52878198306/in/datetaken-public/)![IMG_2324](https://live.staticflickr.com/65535/52878198306_6a086a0c56_c.jpg)
+![IMG_2324](https://live.staticflickr.com/65535/52878198306_6a086a0c56_c.jpg)
 主餐有點不喜歡呀~
 
-[](https://www.flickr.com/photos/188685716@N03/52878357889/in/datetaken-public/)![IMG_2325](https://live.staticflickr.com/65535/52878357889_be3a913e47_c.jpg)
+![IMG_2325](https://live.staticflickr.com/65535/52878357889_be3a913e47_c.jpg)
 還不錯的飯後水果
 
 BR66 居然比 BR65 多出兩道菜, 分別是熱湯跟沙拉! 最後的點心也是 snack bar 推車! 有點不懂外站怎麼會比較豐盛呢?

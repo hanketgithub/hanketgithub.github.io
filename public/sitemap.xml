@@ -2,10 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/tags/br71/</loc>
+    <loc>http://localhost:1313/travel/br71_hamburg/</loc>
     <lastmod>2025-04-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/travel/br71_hamburg/</loc>
+    <loc>http://localhost:1313/tags/br71/</loc>
     <lastmod>2025-04-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
@@ -26,10 +26,10 @@
     <loc>http://localhost:1313/tags/%E5%95%86%E5%8B%99%E8%89%99/</loc>
     <lastmod>2025-04-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/%E6%97%85%E8%A1%8C%E7%AD%86%E8%A8%98/</loc>
+    <loc>http://localhost:1313/categories/%E6%97%85%E9%80%94%E4%B8%AD%E7%9A%84%E5%91%B3%E8%A6%BA/</loc>
     <lastmod>2025-04-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/%E6%97%85%E9%80%94%E4%B8%AD%E7%9A%84%E5%91%B3%E8%A6%BA/</loc>
+    <loc>http://localhost:1313/tags/%E9%A3%9B%E8%A1%8C%E9%AB%94%E9%A9%97/</loc>
     <lastmod>2025-04-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/%E9%A4%90%E9%85%92%E6%90%AD%E9%85%8D/</loc>

@@ -35,17 +35,11 @@ draft: false
 新款的硬殼過夜包也是採用行李箱造型. 低調奢華的星耀黑與 787 的新商務艙搭配, 似乎刻意營造出高貴典雅的尊榮感.
 
 ![205A8441](https://live.staticflickr.com/65535/52862058538_892979ce48_c.jpg)
+
 質感跟 Rimowa 一樣.
 
 然而, 可別以爲它中看不中用, 其實裏面有不少有用的小物:
 
-- 牙刷
-- 牙膏
-- 身體乳液
-- 護唇膏
-- 臉部噴霧
-- 眼罩
-- 梳子
 - 牙刷
 - 牙膏
 - 身體乳液
@@ -59,6 +53,7 @@ draft: false
 這次有三樣小物是與 Ferragamo 聯名, 分別是臉部噴霧, 護唇膏, 跟乳液. 在機上其實這個臉部噴霧挺好用的. 機上特別乾, 需要時拿起來噴一噴感覺很舒服.
 
 ![205A9005](https://live.staticflickr.com/65535/52861822549_89c0892bca_c.jpg)
+
 Bianco Di Carrara 香水系列的保養品
 
 這個 SF 小化妝包的品質我覺得跟 Rimowa 的簡直一模一樣! 而且內容物也升級了. 長榮還是有用心呀.
@@ -70,21 +65,25 @@ Bianco Di Carrara 香水系列的保養品
 首先上的是小點. 味道普通, 但是平凡的味道搭配香檳, 反而讓香檳的獨特性提高了一個層次.
 
 ![205A8409](https://live.staticflickr.com/65535/52862129503_757df1a477_c.jpg)
+
 香檳才是主角
 
 這道鴨肝生鮭魚千片前菜做得還不錯. 清爽可口, 擺盤也好看.
 
 ![205A8415](https://live.staticflickr.com/65535/52861858284_b86349bf1a_c.jpg)
+
 超乎期待的前菜
 
 主菜的部分我覺得居然有點失望. 上次米蘭首航我坐的是經濟艙, 那份主餐真是難忘, 因此對這份主餐的期待可能過高. 但說實話, 牛肉的部分我覺得居然沒有比經濟餐要高明多少! 也就贏在擺盤了吧.
 
 ![205A8416](https://live.staticflickr.com/65535/52861858294_ef58ebcbcf_c.jpg)
+
 跟經濟艙的水平差不多. 一樣好吃.
 
 飯後甜點就不多說了. 本人不吃甜點, 多點一杯香檳比較實際.
 
 ![205A8419](https://live.staticflickr.com/65535/52862081935_c80050aa04_c.jpg)
+
 飯後甜點
 
 ## [加映] BR66 餐食
@@ -104,20 +103,25 @@ Bianco Di Carrara 香水系列的保養品
 這道是隱藏菜色, 並不是每天都會出, 那就是奧地利上空的美景. 香檳配美景, 感覺又上了一個檔次~
 
 ![IMG_2318](https://live.staticflickr.com/65535/52878358044_2eef03a356_c.jpg)
+
 約一萬英尺的景色
 
 ![IMG_2320](https://live.staticflickr.com/65535/52877618077_ba4304419a_c.jpg)
+
 味道還不壞的胡蘿菠湯. 溫度高
 
 ![IMG_2322](https://live.staticflickr.com/65535/52878578600_3161a2f56b_c.jpg)
+
 很平凡的沙拉
 
 這道主菜就是英國威靈頓牛排. 老實說不是很喜歡. 牛肉部分還可以, 但不是很喜歡麵皮 跟碎牛肉. 坦白說一塊牛排好好煎一下, 放點玫瑰鹽就是最好的了...
 
 ![IMG_2324](https://live.staticflickr.com/65535/52878198306_6a086a0c56_c.jpg)
+
 主餐有點不喜歡呀~
 
 ![IMG_2325](https://live.staticflickr.com/65535/52878357889_be3a913e47_c.jpg)
+
 還不錯的飯後水果
 
 BR66 居然比 BR65 多出兩道菜, 分別是熱湯跟沙拉! 最後的點心也是 snack bar 推車! 有點不懂外站怎麼會比較豐盛呢?
@@ -147,20 +151,24 @@ BR66 居然比 BR65 多出兩道菜, 分別是熱湯跟沙拉! 最後的點心�
 
 基本上椅距算是比較小的. 兩小時忍一下就好.
 
-[](https://www.flickr.com/photos/188685716@N03/52882814569/in/datetaken-public/)![IMG_2273](https://live.staticflickr.com/65535/52882814569_4c0a5e7cd7_c.jpg)
+![IMG_2273](https://live.staticflickr.com/65535/52882814569_4c0a5e7cd7_c.jpg)
+
 椅距多過一個拳頭
 
 座椅維護的並不是太好. 雖然機齡只有三年, 但看起來已經有 7, 8 年的歷史. 看得出來使用率真的很高. 但還是比美國國內線好很多.
 
-[](https://www.flickr.com/photos/188685716@N03/52883063893/in/datetaken-public/)![IMG_2084](https://live.staticflickr.com/65535/52883063893_ac8cb174fc_c.jpg)
+![IMG_2084](https://live.staticflickr.com/65535/52883063893_ac8cb174fc_c.jpg)
+
 有點歷史感的皮椅
 
 也有附上簡易午餐. 可以填一下肚子, 味道還不壞. 歐洲外食可不便宜啊~
 
-[](https://www.flickr.com/photos/188685716@N03/52882621241/in/datetaken-public/)![IMG_2087](https://live.staticflickr.com/65535/52882621241_0eb8b290cf_c.jpg)
+![IMG_2087](https://live.staticflickr.com/65535/52882621241_0eb8b290cf_c.jpg)
+
 有三明治, 能量棒, 跟一杯 coffee
 
-[](https://www.flickr.com/photos/188685716@N03/52882044287/in/datetaken-public/)![IMG_2089](https://live.staticflickr.com/65535/52882044287_3cb80ce7f2_c.jpg)
+![IMG_2089](https://live.staticflickr.com/65535/52882044287_3cb80ce7f2_c.jpg)
+
 雅典機場用接駁車
 
 ## 總結
@@ -169,5 +177,6 @@ BR66 居然比 BR65 多出兩道菜, 分別是熱湯跟沙拉! 最後的點心�
 
 算是轉機順利圓滿. 這條路線就給大家做為參考摟~
 
-[](https://www.flickr.com/photos/188685716@N03/52878645583/in/datetaken-public/)![route_br65](https://live.staticflickr.com/65535/52878645583_4a76fa1484_c.jpg)
+![route_br65](https://live.staticflickr.com/65535/52878645583_4a76fa1484_c.jpg)
+
 跟四年前走的路線差不多, 無法走北極路線了嗎?

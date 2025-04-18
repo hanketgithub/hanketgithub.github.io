@@ -6,6 +6,13 @@ categories: ["歐洲"]
 draft: false
 ---
 
+| Mon | Tue | Wed | Thu | Fri | Sat | Sun |
+| --- | --- | --- | --- | --- | --- | --- |
+|     |     | 4/23 TPE -> MUC | 4/24 MUC -> HAM | 4/25 Hamburg | 4/26 Hamburg -> Copenhagen | 4/27 Copenhagen |
+| 4/28 Copenhagen | 4/29 Copenhangen -> Stockholm | 4/30 Stockholm | 5/1 Stockholm | 5/2 HAM -> MUC | 5/3 MUC -> TPE | |
+
+
+
 ## BR71, TPE -> MUC, 2310-0725(+1)
 ### 🥂 開胃美饌（九孔鮑 / 烏魚子 / 黑蒜醬）
 - **建議酒款**：香檳 Laurent-Perrier Grand Siècle

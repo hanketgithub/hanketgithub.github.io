@@ -8,12 +8,12 @@ draft: false
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 | --- | --- | --- | --- | --- | --- | --- |
-|                   |                               | 4/23 TPE -> MUC   | 4/24 MUC -> HAM | 4/25 Hamburg    | 4/26 Hamburg -> Copenhagen    | 4/27 Copenhagen |
-| 4/28 Copenhagen   | 4/29 Copenhangen -> Stockholm | 4/30 Stockholm    | 5/1 Stockholm | 5/2 HAM -> MUC    | 5/3 MUC -> TPE    |           |
+|                 |                                  | 4/23 TPE →       | 4/24 MUC → HAM   | 4/25 Hamburg   | 4/26 Hamburg → Copenhagen | 4/27 Copenhagen |
+| 4/28 Copenhagen | 4/29 Copenhangen → Stockholm    | 4/30 Stockholm    | 5/1 Stockholm     | 5/2 HAM → MUC | 5/3 MUC →                 | TPE             |
 
 
 
-## BR71, TPE -> MUC, 2310-0725(+1)
+## BR71, TPE → MUC, 2310-0725(+1)
 ### 🥂 開胃美饌（九孔鮑 / 烏魚子 / 黑蒜醬）
 - **建議酒款**：香檳 Laurent-Perrier Grand Siècle
 - **備註**：請略冰（10–12°C），先上，搭配蔥薑海鮮開胃效果佳。黑蒜醬的濃郁由氣泡與酸度中和。
@@ -34,7 +34,7 @@ draft: false
 嚴選麵包由世界麵包冠軍王鵬傑監製
 
 
-## BR72, MUC -> TPE, 1200-0635(+1)
+## BR72, MUC → TPE, 1200-0635(+1)
 ### 餐前小品：蘆筍燻鴨捲、櫻桃番茄及莫札瑞拉巧點
 
 | 項目 | 搭配酒款 | 搭配理由 |
@@ -186,8 +186,9 @@ Weingut Von Hövel酒莊是摩澤爾中部 (Mosel-Saar-Ruwe) 地區的優質葡�
 | 08:00–09:00  | 早餐                                         |                                  |
 | 10:00–12:00  | 羅森堡城堡（Rosenborg Castle）參觀           | 看皇冠珠寶                       |
 | 12:00–13:30  | 午餐＋花園野餐                               | 王家花園戶外 café                |
-| 14:00–16:00  | 腓特烈花園 Frederiksberg 園區散步            | 舒適大片綠地                     |
-| 16:00~       | 飯店休息 / Spa                               |                                  |
+| 14:00–15:00  | 腓特烈花園 Frederiksberg 園區散步            | 舒適大片綠地                     |
+| 15:00-16:30  | Copenhagen Zoo                               | Polar Bear                       |
+| 16:30~       | 飯店休息 / Spa                               |                                  |
 
 
 ### Day 4 — 2025-04-29 (Tue) | 早上出發前往斯德哥爾摩

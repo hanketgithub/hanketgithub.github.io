@@ -121,27 +121,6 @@
       <description></description>
     </item>
     <item>
-      <title>美國</title>
-      <link>http://localhost:1313/tags/%E7%BE%8E%E5%9C%8B/</link>
-      <pubDate>Tue, 08 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E7%BE%8E%E5%9C%8B/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>芝加哥</title>
-      <link>http://localhost:1313/tags/%E8%8A%9D%E5%8A%A0%E5%93%A5/</link>
-      <pubDate>Tue, 08 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E8%8A%9D%E5%8A%A0%E5%93%A5/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>西雅圖</title>
-      <link>http://localhost:1313/tags/%E8%A5%BF%E9%9B%85%E5%9C%96/</link>
-      <pubDate>Tue, 08 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E8%A5%BF%E9%9B%85%E5%9C%96/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Pytorch</title>
       <link>http://localhost:1313/tags/pytorch/</link>
       <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>

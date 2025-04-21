@@ -288,9 +288,12 @@ mp.erase(first, last); // remove all b/t first and last
 ```
 
 ### Check if {key} exists:
+
+```
 mp.find(key);
-I. exists: mp.find(key) != mp.end()
-II. not exist: mp.find(key) == mp.end();
+- Exists: mp.find(key) != mp.end()
+- Not exist: mp.find(key) == mp.end();
+```
 
 ### Foreach:
 
@@ -322,28 +325,42 @@ it = prev(it); // it points to mp[6]
 
 ## Map(Unsorted)
 ### Declaration:
+
+```
 unordered_map<int, int> mp;
+```
 
 ### Add:
+
+```
 mp.insert( { key, val } ); // make a pair and insert
 mp[key] = val;
+```
 
 ### Remove:
+```
 mp.erase(key);
+```
 
 ### Check if {key, value} exists:
+```
 mp.find(key);
-I. exists: mp.find(key) != mp.end()
-II. not exist: mp.find(key) == mp.end();
+- Exists: mp.find(key) != mp.end()
+- Not exist: mp.find(key) == mp.end();
+```
 
 ### Check Key:
+```
 mp.count(key);
+```
 
 ### For Loop:
+```
 for (unordered_map<int, int>::iterator iter = mp.begin(); iter != mp.end(); iter++) {
   int key = iter->first;
   int val = iter->second;
 }
+```
 
 ### Foreach:
 
@@ -360,7 +377,7 @@ for (auto &[k, v] : mp) {
 
 
 ## Priority Queue
-
+```
 // Max Heap
 priority_queue<int> mx;
 priority_queue<int, vector<int>, less<int>> mx;
@@ -375,25 +392,27 @@ mi.pop();
 mi.top(); -> 3
 mi.pop();
 mi.top(); -> 5
-
+```
 
 Custom comparator:
 - The comparator answers the question: Is 'a' of lower priority than 'b'?
 - true: 'b' has higher priority.
 - This reverses the usual intuition: to give a higher priority, we need to return false when 'a' is “larger.”
 
+
 sort {l, r} such that larger r than smaller l
 
+```
 auto compar = [](const PII &a, const PII &b) {
   if (a.second != b.second) { a.second < b.second; }
   else { a.first > b.first; }
 };
-
+```
 
 
 ## Dijkstra
+```
 priority_queue< PII, vector< PII >, greater<> > pq;
-
 
 pq.push( { 5, 1 } ); // weight 5, dst node 1
 pq.push( { 3, 2 } ); // weight 3, dst node 2
@@ -405,9 +424,11 @@ auto [w, dst] = pq.top() -> w is 3, dst is 5
 pq.pop();
 auto [w, dst] = pq.top() -> w is 5, dst is 1
 pq.pop();
+```
 
 Sample implements;
 
+```
 vector<int> dist(n, INT_MAX/2);
 
 int PFS(vector< vector<int> > &gf, int src, int dst, vector<int> &dist) {
@@ -437,9 +458,10 @@ int PFS(vector< vector<int> > &gf, int src, int dst, vector<int> &dist) {
 
   return -1;
 }
-
+```
 
 ## Union Find
+```
 int FindRoot(int v, vector<int> &root) {
   if (root[v] != v) {
     root[v] = FindRoot(root[v], root); // Path compression
@@ -464,64 +486,88 @@ void Union(int p, int q, vector<int> &root) {
 vector<int> root(n);
 
 for (int i = 0; i < n; i++) { root[i] = i; }
-
+```
 
 
 ## Queue
 Declaration:
+```
 queue<int> q;
+```
 
 Add:
+```
 q.push(v);
+```
 
 Remove:
+```
 q.pop();
+```
 
 Peek:
+```
 int v = q.front();
+```
 
 Emptiness:
+```
 bool isEmpty = q.empty();
-
+```
 
 
 ## Deque
 Declaration:
+```
 deque<int> deq;
+```
 
 Add:
+```
 deq.push_front(v);
 deq.push_back(v);
+```
 
 Remove:
+```
 deq.pop_front();
 deq.pop_back();
+```
 
 Peek:
+```
 int first = deq.front();
 int last = deq.back();
-
+```
 
 
 ## Stack
 Declaration:
+```
 stack<int> st;
+```
 
 Add:
+```
 st.push(v);
+```
 
 Remove:
+```
 st.pop();
+```
 
 Peek:
+```
 st.top();
-
+```
 
 
 ## Convert integer to string:
+```
 int a = 135;
 string s = to_string(a);
-
+```
 
 
 ## Trie
@@ -594,6 +640,7 @@ public:
 ## Misc
 lambda function - an embedded function without name
 
+```
 vector<int> A;
 
 // Now sort from large to small
@@ -611,20 +658,22 @@ thread t(cb, n);
 
 
 thread t([](int n) { cout << n << endl; }, n);
-
+```
 
 
 Unique Pointer
+```
 unique_ptr<MyClass> p = make_unique<MyClass>();
-
+```
 
 Shared Pointer
+```
 shared_ptr<MyClass> p = make_shared<MyClass>();
-
+```
 
 
 Member Initializer List -
-
+```
 struct X {
   int c;
   int d;
@@ -638,21 +687,26 @@ class T {
   T() : a(-1), b(0), x{3, 4} {
   }
 }
-
+```
 
 Overflow, MOD
 Safe:
+```
 +: (a + b) % MOD -> ( (a % MOD) + (b % MOD) ) % MOD
 *: (a * b) % MOD -> ( (a % MOD) * (b % MOD) ) % MOD
+```
 
 Need process:
+```
 -: (a - b) % MOD -> (a - b + MOD) % MOD)
-
+```
 Meanless:
+```
 /: (a / b) % MOD is not ( (a % MOD) / (b % MOD) ). But (a / b) is not going to overflow.
-
+```
 
 Prime:
+```
 vector<bool> isPrime(limit+5, true);
 
 void PrimeSieve(vector<bool> &isPrime, int limit) {
@@ -667,3 +721,4 @@ void PrimeSieve(vector<bool> &isPrime, int limit) {
     }
   }
 }
+```

@@ -8,9 +8,9 @@ draft: false
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 | --- | --- | --- | --- | --- | --- | --- |
-|               |                   | 3/25 BR87 TPE →  | CDG            | 3/27 Paris     | 3/28 Paris  | 3/29 Paris → London |
-| 3/30 London   | 3/31 London       | 4/1 London        | 4/2 London     | 4/3 London     | 4/4 London  | 4/5 London           |
-| 4/6 LHR →    | HND               | 4/8 Tokyo         | 4/9 NRT → TPE |
+|             |             | 3/25 TPE →  | 3/26 CDG       | 3/27 Paris  | 3/28 Paris  | 3/29 Paris → London |
+| 3/30 London | 3/31 London | 4/1 London   | 4/2 London     | 4/3 London  | 4/4 London  | 4/5 London           |
+| 4/6 LHR →  | 4/7 HND     | 4/8 Tokyo    | 4/9 NRT → TPE |
 
 ## Paris Itinerary (2026-03-26 ~ 2026-03-29)
 *Base Hotel: ???*

@@ -18,17 +18,12 @@ draft: false
 
 ---
 
-### Day 1 - 2025-05-24 (Sat) | ??
+### Day 1 - 2025-05-24 (Sat) |
 
 | Time         | Activity                                                       |
 |--------------|----------------------------------------------------------------|
-| 10:00        | Arrive at Hamburg Airport (HAM)                                |
-| 11:30–12:00  | S-Bahn or taxi to The Fontenay, check-in or drop bag           |
-| 12:00–13:00  | Hotel welcome drink & short rest                               |
-| 13:00–14:30  | Alster lake walk — Binnenalster & lakeside promenade          |
-| 14:30–16:00  | Jungfernstieg → Neuer Wall → Rathaus (市政廳區散步+拍照)     |
-| 16:00–17:30  | Speicherstadt 紅磚倉庫群 + Elbphilharmonie 外觀                |
-| 18:00~       | Return to Fontenay, enjoy Spa or Lounge / Dinner               |
+| ??:??        | Arrive at SEA                               |
+
 
 
 ### Day 2 - 2025-05-25 (Sun) | ?? + UA XXXX

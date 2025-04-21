@@ -94,9 +94,10 @@ ms.erase(ms.find(3)) // {2,3,5}
 mp[key] = val;
 </code></pre><h3 id=remove-3>Remove:</h3><pre tabindex=0><code>mp.erase(key);
 mp.erase(first, last); // remove all b/t first and last
-</code></pre><h3 id=check-if-key-exists>Check if {key} exists:</h3><p>mp.find(key);
-I. exists: mp.find(key) != mp.end()
-II. not exist: mp.find(key) == mp.end();</p><h3 id=foreach-2>Foreach:</h3><pre tabindex=0><code>for (auto iter : mp) {
+</code></pre><h3 id=check-if-key-exists>Check if {key} exists:</h3><pre tabindex=0><code>mp.find(key);
+- Exists: mp.find(key) != mp.end()
+- Not exist: mp.find(key) == mp.end();
+</code></pre><h3 id=foreach-2>Foreach:</h3><pre tabindex=0><code>for (auto iter : mp) {
   int key = iter.first;
   int val = iter.second;
 }
@@ -113,13 +114,19 @@ T = 7
 
 auto it = mp.upper_bound(T); // points to mp[9]
 it = prev(it); // it points to mp[6]
-</code></pre><h2 id=mapunsorted>Map(Unsorted)</h2><h3 id=declaration-4>Declaration:</h3><p>unordered_map&lt;int, int> mp;</p><h3 id=add-4>Add:</h3><p>mp.insert( { key, val } ); // make a pair and insert
-mp[key] = val;</p><h3 id=remove-4>Remove:</h3><p>mp.erase(key);</p><h3 id=check-if-key-value-exists>Check if {key, value} exists:</h3><p>mp.find(key);
-I. exists: mp.find(key) != mp.end()
-II. not exist: mp.find(key) == mp.end();</p><h3 id=check-key>Check Key:</h3><p>mp.count(key);</p><h3 id=for-loop-1>For Loop:</h3><p>for (unordered_map&lt;int, int>::iterator iter = mp.begin(); iter != mp.end(); iter++) {
-int key = iter->first;
-int val = iter->second;
-}</p><h3 id=foreach-3>Foreach:</h3><pre tabindex=0><code>for (auto iter : mp) {
+</code></pre><h2 id=mapunsorted>Map(Unsorted)</h2><h3 id=declaration-4>Declaration:</h3><pre tabindex=0><code>unordered_map&lt;int, int&gt; mp;
+</code></pre><h3 id=add-4>Add:</h3><pre tabindex=0><code>mp.insert( { key, val } ); // make a pair and insert
+mp[key] = val;
+</code></pre><h3 id=remove-4>Remove:</h3><pre tabindex=0><code>mp.erase(key);
+</code></pre><h3 id=check-if-key-value-exists>Check if {key, value} exists:</h3><pre tabindex=0><code>mp.find(key);
+- Exists: mp.find(key) != mp.end()
+- Not exist: mp.find(key) == mp.end();
+</code></pre><h3 id=check-key>Check Key:</h3><pre tabindex=0><code>mp.count(key);
+</code></pre><h3 id=for-loop-1>For Loop:</h3><pre tabindex=0><code>for (unordered_map&lt;int, int&gt;::iterator iter = mp.begin(); iter != mp.end(); iter++) {
+  int key = iter-&gt;first;
+  int val = iter-&gt;second;
+}
+</code></pre><h3 id=foreach-3>Foreach:</h3><pre tabindex=0><code>for (auto iter : mp) {
   int key = iter.first;
   int val = iter.second;
 }
@@ -127,80 +134,108 @@ int val = iter->second;
 for (auto &amp;[k, v] : mp) {
   // k is key, v is value
 }
-</code></pre><h2 id=priority-queue>Priority Queue</h2><p>// Max Heap
-priority_queue<int> mx;
-priority_queue&lt;int, vector<int>, less<int>> mx;</p><p>// Min Heap
-priority_queue&lt;int, vector<int>, greater<int>> mi;
+</code></pre><h2 id=priority-queue>Priority Queue</h2><pre tabindex=0><code>// Max Heap
+priority_queue&lt;int&gt; mx;
+priority_queue&lt;int, vector&lt;int&gt;, less&lt;int&gt;&gt; mx;
+
+// Min Heap
+priority_queue&lt;int, vector&lt;int&gt;, greater&lt;int&gt;&gt; mi;
 mi.push(5);
 mi.push(1);
 mi.push(3);
-mi.top(); -> 1
+mi.top(); -&gt; 1
 mi.pop();
-mi.top(); -> 3
+mi.top(); -&gt; 3
 mi.pop();
-mi.top(); -> 5</p><p>Custom comparator:</p><ul><li>The comparator answers the question: Is &lsquo;a&rsquo; of lower priority than &lsquo;b&rsquo;?</li><li>true: &lsquo;b&rsquo; has higher priority.</li><li>This reverses the usual intuition: to give a higher priority, we need to return false when &lsquo;a&rsquo; is “larger.”</li></ul><p>sort {l, r} such that larger r than smaller l</p><p>auto compar = [](const PII &amp;a, const PII &amp;b) {
-if (a.second != b.second) { a.second &lt; b.second; }
-else { a.first > b.first; }
-};</p><h2 id=dijkstra>Dijkstra</h2><p>priority_queue&lt; PII, vector&lt; PII >, greater&lt;> > pq;</p><p>pq.push( { 5, 1 } ); // weight 5, dst node 1
-pq.push( { 3, 2 } ); // weight 3, dst node 2
-pq.push( { 3, 5 } ); // weight 3, dst node 5</p><p>auto [w, dst] = pq.top() -> w is 3, dst is 2
-pq.pop();
-auto [w, dst] = pq.top() -> w is 3, dst is 5
-pq.pop();
-auto [w, dst] = pq.top() -> w is 5, dst is 1
-pq.pop();</p><p>Sample implements;</p><p>vector<int> dist(n, INT_MAX/2);</p><p>int PFS(vector&lt; vector<int> > &amp;gf, int src, int dst, vector<int> &amp;dist) {
-auto compar = [](const PII &amp;a, const PII &amp;b) { // return true if &lsquo;a&rsquo; has lower priority
-if (a.first != b.first) {
-return !(a.first &lt; b.first);
-}
-else {
-return !(a.second &lt; b.second);
-}
+mi.top(); -&gt; 5
+</code></pre><p>Custom comparator:</p><ul><li>The comparator answers the question: Is &lsquo;a&rsquo; of lower priority than &lsquo;b&rsquo;?</li><li>true: &lsquo;b&rsquo; has higher priority.</li><li>This reverses the usual intuition: to give a higher priority, we need to return false when &lsquo;a&rsquo; is “larger.”</li></ul><p>sort {l, r} such that larger r than smaller l</p><pre tabindex=0><code>auto compar = [](const PII &amp;a, const PII &amp;b) {
+  if (a.second != b.second) { a.second &lt; b.second; }
+  else { a.first &gt; b.first; }
 };
-priority_queue&lt;PII, vector<pii>, decltype(compar)> pq; // { distance, next }
-pq.push( {0, 0} );</p><p>while (!pq.empty()) {
-auto [distance, cur] = pq.top(); pq.pop();</p><pre><code>if (dist[cur] != INT_MAX/2) { continue; } // visited
-dist[cur] = distance;
+</code></pre><h2 id=dijkstra>Dijkstra</h2><pre tabindex=0><code>priority_queue&lt; PII, vector&lt; PII &gt;, greater&lt;&gt; &gt; pq;
 
-if (cur == dst) { return distance; }
+pq.push( { 5, 1 } ); // weight 5, dst node 1
+pq.push( { 3, 2 } ); // weight 3, dst node 2
+pq.push( { 3, 5 } ); // weight 3, dst node 5
 
-for (auto nxt : gf[cur]) {
-  pq.push( { distance+1, nxt } );
+auto [w, dst] = pq.top() -&gt; w is 3, dst is 2
+pq.pop();
+auto [w, dst] = pq.top() -&gt; w is 3, dst is 5
+pq.pop();
+auto [w, dst] = pq.top() -&gt; w is 5, dst is 1
+pq.pop();
+</code></pre><p>Sample implements;</p><pre tabindex=0><code>vector&lt;int&gt; dist(n, INT_MAX/2);
+
+int PFS(vector&lt; vector&lt;int&gt; &gt; &amp;gf, int src, int dst, vector&lt;int&gt; &amp;dist) {
+  auto compar = [](const PII &amp;a, const PII &amp;b) { // return true if &#39;a&#39; has lower priority
+    if (a.first != b.first) {
+      return !(a.first &lt; b.first);
+    }
+    else {
+      return !(a.second &lt; b.second);
+    }
+  };
+  priority_queue&lt;PII, vector&lt;PII&gt;, decltype(compar)&gt; pq; // { distance, next }
+  pq.push( {0, 0} );
+
+  while (!pq.empty()) {
+    auto [distance, cur] = pq.top(); pq.pop();
+
+    if (dist[cur] != INT_MAX/2) { continue; } // visited
+    dist[cur] = distance;
+
+    if (cur == dst) { return distance; }
+
+    for (auto nxt : gf[cur]) {
+      pq.push( { distance+1, nxt } );
+    }
+  }
+
+  return -1;
 }
-</code></pre><p>}</p><p>return -1;
-}</p><h2 id=union-find>Union Find</h2><p>int FindRoot(int v, vector<int> &amp;root) {
-if (root[v] != v) {
-root[v] = FindRoot(root[v], root); // Path compression
+</code></pre><h2 id=union-find>Union Find</h2><pre tabindex=0><code>int FindRoot(int v, vector&lt;int&gt; &amp;root) {
+  if (root[v] != v) {
+    root[v] = FindRoot(root[v], root); // Path compression
+  }
+  return root[v];
 }
-return root[v];
-}</p><p>void Union(int p, int q, vector<int> &amp;root) {
-int rp = FindRoot(p, root);
-int rq = FindRoot(q, root);</p><p>if (rp != rq) {
-if (rp &lt; rq) {
-root[rq] = rp;
+
+void Union(int p, int q, vector&lt;int&gt; &amp;root) {
+  int rp = FindRoot(p, root);
+  int rq = FindRoot(q, root);
+
+  if (rp != rq) {
+    if (rp &lt; rq) {
+      root[rq] = rp;
+    }
+    else {
+      root[rp] = rq;
+    }
+  }
 }
-else {
-root[rp] = rq;
-}
-}
-}</p><p>vector<int> root(n);</p><p>for (int i = 0; i &lt; n; i++) { root[i] = i; }</p><h2 id=queue>Queue</h2><p>Declaration:
-queue<int> q;</p><p>Add:
-q.push(v);</p><p>Remove:
-q.pop();</p><p>Peek:
-int v = q.front();</p><p>Emptiness:
-bool isEmpty = q.empty();</p><h2 id=deque>Deque</h2><p>Declaration:
-deque<int> deq;</p><p>Add:
-deq.push_front(v);
-deq.push_back(v);</p><p>Remove:
-deq.pop_front();
-deq.pop_back();</p><p>Peek:
-int first = deq.front();
-int last = deq.back();</p><h2 id=stack>Stack</h2><p>Declaration:
-stack<int> st;</p><p>Add:
-st.push(v);</p><p>Remove:
-st.pop();</p><p>Peek:
-st.top();</p><h2 id=convert-integer-to-string>Convert integer to string:</h2><p>int a = 135;
-string s = to_string(a);</p><h2 id=trie>Trie</h2><pre tabindex=0><code>#define WIDTH 256
+
+vector&lt;int&gt; root(n);
+
+for (int i = 0; i &lt; n; i++) { root[i] = i; }
+</code></pre><h2 id=queue>Queue</h2><p>Declaration:</p><pre tabindex=0><code>queue&lt;int&gt; q;
+</code></pre><p>Add:</p><pre tabindex=0><code>q.push(v);
+</code></pre><p>Remove:</p><pre tabindex=0><code>q.pop();
+</code></pre><p>Peek:</p><pre tabindex=0><code>int v = q.front();
+</code></pre><p>Emptiness:</p><pre tabindex=0><code>bool isEmpty = q.empty();
+</code></pre><h2 id=deque>Deque</h2><p>Declaration:</p><pre tabindex=0><code>deque&lt;int&gt; deq;
+</code></pre><p>Add:</p><pre tabindex=0><code>deq.push_front(v);
+deq.push_back(v);
+</code></pre><p>Remove:</p><pre tabindex=0><code>deq.pop_front();
+deq.pop_back();
+</code></pre><p>Peek:</p><pre tabindex=0><code>int first = deq.front();
+int last = deq.back();
+</code></pre><h2 id=stack>Stack</h2><p>Declaration:</p><pre tabindex=0><code>stack&lt;int&gt; st;
+</code></pre><p>Add:</p><pre tabindex=0><code>st.push(v);
+</code></pre><p>Remove:</p><pre tabindex=0><code>st.pop();
+</code></pre><p>Peek:</p><pre tabindex=0><code>st.top();
+</code></pre><h2 id=convert-integer-to-string>Convert integer to string:</h2><pre tabindex=0><code>int a = 135;
+string s = to_string(a);
+</code></pre><h2 id=trie>Trie</h2><pre tabindex=0><code>#define WIDTH 256
 
 
 class TrieNode {
@@ -261,33 +296,55 @@ public:
     delete root;
   }
 };
-</code></pre><h2 id=misc>Misc</h2><p>lambda function - an embedded function without name</p><p>vector<int> A;</p><p>// Now sort from large to small
-bool compar(int a, int b) { return a > b; }
-sort(A.begin(), A.end(), compar);</p><p>// lambda
-sort(A.begin(), A.end(), [](int a, int b) { return a > b; })</p><p>// lamba used in callback
-void cb(int n) { cout &#171; n &#171; endl; }</p><p>thread t(cb, n);</p><p>thread t([](int n) { cout &#171; n &#171; endl; }, n);</p><p>Unique Pointer
-unique_ptr<myclass> p = make_unique<myclass>();</p><p>Shared Pointer
-shared_ptr<myclass> p = make_shared<myclass>();</p><p>Member Initializer List -</p><p>struct X {
-int c;
-int d;
-};</p><p>class T {
-int a;
-int b;
-struct X x;</p><p>T() : a(-1), b(0), x{3, 4} {
+</code></pre><h2 id=misc>Misc</h2><p>lambda function - an embedded function without name</p><pre tabindex=0><code>vector&lt;int&gt; A;
+
+// Now sort from large to small
+bool compar(int a, int b) { return a &gt; b; }
+sort(A.begin(), A.end(), compar);
+
+// lambda
+sort(A.begin(), A.end(), [](int a, int b) { return a &gt; b; })
+
+
+// lamba used in callback
+void cb(int n) { cout &lt;&lt; n &lt;&lt; endl; }
+
+thread t(cb, n);
+
+
+thread t([](int n) { cout &lt;&lt; n &lt;&lt; endl; }, n);
+</code></pre><p>Unique Pointer</p><pre tabindex=0><code>unique_ptr&lt;MyClass&gt; p = make_unique&lt;MyClass&gt;();
+</code></pre><p>Shared Pointer</p><pre tabindex=0><code>shared_ptr&lt;MyClass&gt; p = make_shared&lt;MyClass&gt;();
+</code></pre><p>Member Initializer List -</p><pre tabindex=0><code>struct X {
+  int c;
+  int d;
+};
+
+class T {
+  int a;
+  int b;
+  struct X x;
+
+  T() : a(-1), b(0), x{3, 4} {
+  }
 }
-}</p><p>Overflow, MOD
-Safe:
-+: (a + b) % MOD -> ( (a % MOD) + (b % MOD) ) % MOD
-*: (a * b) % MOD -> ( (a % MOD) * (b % MOD) ) % MOD</p><p>Need process:
--: (a - b) % MOD -> (a - b + MOD) % MOD)</p><p>Meanless:
-/: (a / b) % MOD is not ( (a % MOD) / (b % MOD) ). But (a / b) is not going to overflow.</p><p>Prime:
-vector<bool> isPrime(limit+5, true);</p><p>void PrimeSieve(vector<bool> &amp;isPrime, int limit) {
-isPrime[0] = false;
-isPrime[1] = false;</p><p>for (int p = 2; p &lt;= sqrt(limit); p++) {
-if (isPrime[p]) {
-for (int x = p * p; x &lt;= limit; x += p) {
-isPrime[x] = false;
+</code></pre><p>Overflow, MOD
+Safe:</p><pre tabindex=0><code>+: (a + b) % MOD -&gt; ( (a % MOD) + (b % MOD) ) % MOD
+*: (a * b) % MOD -&gt; ( (a % MOD) * (b % MOD) ) % MOD
+</code></pre><p>Need process:</p><pre tabindex=0><code>-: (a - b) % MOD -&gt; (a - b + MOD) % MOD)
+</code></pre><p>Meanless:</p><pre tabindex=0><code>/: (a / b) % MOD is not ( (a % MOD) / (b % MOD) ). But (a / b) is not going to overflow.
+</code></pre><p>Prime:</p><pre tabindex=0><code>vector&lt;bool&gt; isPrime(limit+5, true);
+
+void PrimeSieve(vector&lt;bool&gt; &amp;isPrime, int limit) {
+  isPrime[0] = false;
+  isPrime[1] = false;
+
+  for (int p = 2; p &lt;= sqrt(limit); p++) {
+    if (isPrime[p]) {
+      for (int x = p * p; x &lt;= limit; x += p) {
+        isPrime[x] = false;
+      }
+    }
+  }
 }
-}
-}
-}</p></section><div class=post-tags><nav class="nav tags"><ul class=tags><li><a href=/tags/c++>c++</a></li></ul></nav></div></div></div></article></main><footer><div style=display:flex></div><div class=footer-info>2025 <a href=https://github.com/athul/archie>Archie Theme</a> | Built with <a href=https://gohugo.io>Hugo</a></div></footer></div></body></html>
+</code></pre></section><div class=post-tags><nav class="nav tags"><ul class=tags><li><a href=/tags/c++>c++</a></li></ul></nav></div></div></div></article></main><footer><div style=display:flex></div><div class=footer-info>2025 <a href=https://github.com/athul/archie>Archie Theme</a> | Built with <a href=https://gohugo.io>Hugo</a></div></footer></div></body></html>

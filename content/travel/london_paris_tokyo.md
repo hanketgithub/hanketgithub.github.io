@@ -8,9 +8,11 @@ draft: false
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 | --- | --- | --- | --- | --- | --- | --- |
+|               |                   | 3/25 BR87 TPE →  | CDG            | 3/27 Paris     | 3/28 Paris  | 3/29 Paris → London |
+| 3/30 London   | 3/31 London       | 4/1 London        | 4/2 London     | 4/3 London     | 4/4 London  | 4/5 London           |
+| 4/6 LHR →    | HND               | 4/8 Tokyo         | 4/9 NRT → TPE |
 
-
-## Paris Itinerary (2026-03-26 ~ 2026-04-09)
+## Paris Itinerary (2026-03-26 ~ 2026-03-29)
 *Base Hotel: ???*
 
 ---
@@ -20,15 +22,13 @@ draft: false
 | Time         | Activity                                               | Remark                          |
 |--------------|--------------------------------------------------------| ------------------------------- |
 | 08:30        | Arrive at CDG                                          |                                 |
-| 12:00–13:45  | To Hotel, check-in or drop bag         |                                 |
+| 12:00–13:45  | To Hotel, check-in or drop bag                         |                                 |
 
 
 ### Day 2 - 2026-03-27 (Fri) |
 
 | Time         | Activity                                               | Remark                          |
 |--------------|------------------------------------------------------- | ------------------------------- |
-| 07:30–08:30  | The Tokyo Station Hotel 早餐                           |                                 |
-| 10:00–15:30  | JL43 to London                                         |                                 |
 
 
 ### Day 3 - 2026-03-28 (Sat) |
@@ -37,7 +37,7 @@ draft: false
 ### Day 4 - 2026-03-29 (Sun) |
 
 
-## 🏙 London Itinerary（2026-03-30 ~ 2026-04-06）
+## 🏙 London Itinerary（2026-03-29 ~ 2026-04-06）
 *Base Hotel: Brown Hotel*
 
 ---
@@ -98,7 +98,7 @@ draft: false
 | 08:00–09:00  | 早餐                                                   |                                 |
 
 
-## 🇸🇪 Tokyo Itinerary（2026-04-07 ~ 2026-04-09）
+## Tokyo Itinerary（2026-04-07 ~ 2026-04-09）
 *Base Hotel: ???*
 
 ---
@@ -117,7 +117,7 @@ draft: false
 | 08:00–09:00  | 早餐                                                   |                                 |
 
 
-### Day 4 — 2026-04-19（Thu） | 搭機日
+### Day 4 — 2026-04-09（Thu） | 搭機日
 
 | Time         | Activity                                               | Remark                          |
 |--------------|------------------------------------------------------- | ------------------------------- |

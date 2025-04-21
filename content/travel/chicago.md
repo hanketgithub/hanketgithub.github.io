@@ -9,12 +9,12 @@ draft: false
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 | --- | --- | --- | --- | --- | --- | --- |
 |           |               |               |               | 5/23 TPE → SEA  | 5/24 Seattle  | 5/25 SEA →  |
-| 5/26 ORD  | 5/27 Chicago  | 5/28 Chicago  | 5/29 Chicago  | 5/30 ORD → | 5/31 HND    | 6/1 Tokyo   |
-| 6/2 Tokyo | 6/3 Tokyo     | 6/4 NRT → TPE |
+| 5/26 ORD  | 5/27 Chicago  | 5/28 Chicago  | 5/29 Chicago  | 5/30 ORD →      | 5/31 HND      | 6/1 Tokyo    |
+| 6/2 Tokyo | 6/3 Tokyo     | 6/4 NRT → TPE| 
 
 
 ## Seattle Itinerary (2025-05-23 ~ 2025-05-25)
-*Base Hotel: Hyatt*
+*Base Hotel: Hyatt Southport*
 
 ---
 

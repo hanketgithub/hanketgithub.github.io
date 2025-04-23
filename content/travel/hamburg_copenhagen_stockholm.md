@@ -9,7 +9,7 @@ draft: false
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 | --- | --- | --- | --- | --- | --- | --- |
 |                 |                                | 4/23 TPE →       | 4/24 MUC → HAM   | 4/25 Hamburg   | 4/26 Hamburg → Copenhagen | 4/27 Copenhagen |
-| 4/28 Copenhagen | 4/29 Copenhangen → Stockholm  | 4/30 Stockholm    | 5/1 Stockholm     | 5/2 HAM → MUC | 5/3 MUC →                 | TPE             |
+| 4/28 Copenhagen | 4/29 Copenhangen → Stockholm  | 4/30 Stockholm    | 5/1 Stockholm     | 5/2 HAM → MUC | 5/3 MUC →                 | 5/4 TPE         |
 
 
 ## Hamburg Itinerary (2025-04-24 ~ 2025-04-26)
@@ -19,7 +19,7 @@ draft: false
 
 ### Day 1 - 2025-04-24 (Thu) | Arrival & City Walk
 
-9 - 15°C, 
+10 - 17°C, 
 
 搭 S1 從 HAM 直達 Jungfernstieg, 30 min; Jungfernstieg 走路 20 min 至 Fontenay.
 

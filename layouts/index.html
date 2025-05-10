@@ -7,16 +7,16 @@
 </div>
 
 <!-- 自訂分類導覽 -->
-<h2>📌 Travel 🧳</h2>
+<h2>📌 Tech 💻</h2>
 <ul>
-  {{ range first 5 (where .Site.RegularPages "Section" "travel") }}
+  {{ range first 5 (where .Site.RegularPages "Section" "tech") }}
     <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
   {{ end }}
 </ul>
 
-<h2>📌 Tech 💻</h2>
+<h2>📌 Travel 🧳</h2>
 <ul>
-  {{ range first 5 (where .Site.RegularPages "Section" "tech") }}
+  {{ range first 5 (where .Site.RegularPages "Section" "travel") }}
     <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
   {{ end }}
 </ul>

@@ -47,6 +47,21 @@
     <loc>http://localhost:1313/travel/tokyo/</loc>
     <lastmod>2025-05-05T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/%E7%BE%8E%E5%9C%8B/</loc>
+    <lastmod>2025-05-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/travel/chicago/</loc>
+    <lastmod>2025-05-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/%E7%BE%8E%E6%B4%B2/</loc>
+    <lastmod>2025-05-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E8%8A%9D%E5%8A%A0%E5%93%A5/</loc>
+    <lastmod>2025-05-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E8%A5%BF%E9%9B%85%E5%9C%96/</loc>
+    <lastmod>2025-05-05T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/categories/%E9%A3%AF%E5%BA%97%E9%AB%94%E9%A9%97/</loc>
     <lastmod>2025-05-05T00:00:00+00:00</lastmod>
   </url><url>
@@ -126,21 +141,6 @@
     <lastmod>2025-04-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/%E7%91%9E%E5%85%B8/</loc>
-    <lastmod>2025-04-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/%E7%BE%8E%E5%9C%8B/</loc>
-    <lastmod>2025-04-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/travel/chicago/</loc>
-    <lastmod>2025-04-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/%E7%BE%8E%E6%B4%B2/</loc>
-    <lastmod>2025-04-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/%E8%8A%9D%E5%8A%A0%E5%93%A5/</loc>
-    <lastmod>2025-04-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/%E8%A5%BF%E9%9B%85%E5%9C%96/</loc>
     <lastmod>2025-04-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/travel/sunrise/</loc>

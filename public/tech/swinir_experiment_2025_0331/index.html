@@ -3,74 +3,19 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>SwinIR Experiment Summary — March 31, 2025 - Hank Tech Lab</title><meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="🧪 SwinIR Experiment Summary — March 31, 2025
-1. Environment Setup
-
-OS: Ubuntu 24.04.2 LTS (noble)
-
-lsb_release -a
-
-Python: 3.12.3
-
-python3 --version
-
-GPU: NVIDIA GeForce RTX 4090
-
-Driver: 570.124.06
-CUDA: 12.8
-
-
-
-nvidia-smi
-
-PyTorch: 2.5.1&#43;cu121
-
-CUDA Available: True
-
-
-
-import torch
-print(torch.__version__)
-print(torch.cuda.is_available())
-2. Project Setup
-
-Installed Python venv and created environment:
-
-sudo apt install python3.12-venv
-$ python3 -m venv ~/venvs/swinir
-$ source ~/venvs/swinir/bin/activate
-
-Installed PyTorch (CUDA 12.1):
-
-pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
-
-Cloned SwinIR repo and installed dependencies:
-
-git clone https://github.com/JingyunLiang/SwinIR.git
-cd SwinIR
-pip install numpy opencv-python matplotlib tqdm yacs timm einops
-3. Inference — Set5 Benchmark
-Lightweight SR (Scale ×2):" />
+1. Environment Setup OS: Ubuntu 24.04.2 LTS (noble) lsb_release -a Python: 3.12.3 python3 --version GPU: NVIDIA GeForce RTX 4090 Driver: 570.124.06 CUDA: 12.8 nvidia-smi PyTorch: 2.5.1&#43;cu121 CUDA Available: True import torch print(torch.__version__) print(torch.cuda.is_available()) 2. Project Setup Install Python venv and create environment: sudo apt install python3.12-venv python3 -m venv ~/venvs/swinir source ~/venvs/swinir/bin/activate Install PyTorch (CUDA 12.1): pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121 Clone SwinIR repo and install dependencies: git clone https://github." />
 	<meta property="og:image" content=""/>
-	<meta property="og:url" content="http://localhost:1313/tech/swinir_experiment_2025_0331/">
-  <meta property="og:site_name" content="Hank Tech Lab">
-  <meta property="og:title" content="SwinIR Experiment Summary — March 31, 2025">
-  <meta property="og:description" content="🧪 SwinIR Experiment Summary — March 31, 2025
-1. Environment Setup OS: Ubuntu 24.04.2 LTS (noble) lsb_release -a Python: 3.12.3 python3 --version GPU: NVIDIA GeForce RTX 4090 Driver: 570.124.06 CUDA: 12.8 nvidia-smi PyTorch: 2.5.1&#43;cu121 CUDA Available: True import torch print(torch.__version__) print(torch.cuda.is_available()) 2. Project Setup Installed Python venv and created environment: sudo apt install python3.12-venv $ python3 -m venv ~/venvs/swinir $ source ~/venvs/swinir/bin/activate
-Installed PyTorch (CUDA 12.1): pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121 Cloned SwinIR repo and installed dependencies: git clone https://github.com/JingyunLiang/SwinIR.git cd SwinIR pip install numpy opencv-python matplotlib tqdm yacs timm einops 3. Inference — Set5 Benchmark Lightweight SR (Scale ×2):">
-  <meta property="og:locale" content="en_us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="tech">
-    <meta property="article:published_time" content="2025-03-31T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-03-31T00:00:00+00:00">
-    <meta property="article:tag" content="Swinir">
-    <meta property="article:tag" content="Super-Resolution">
-    <meta property="article:tag" content="Pytorch">
+	<meta property="og:title" content="SwinIR Experiment Summary — March 31, 2025" />
+<meta property="og:description" content="🧪 SwinIR Experiment Summary — March 31, 2025
+1. Environment Setup OS: Ubuntu 24.04.2 LTS (noble) lsb_release -a Python: 3.12.3 python3 --version GPU: NVIDIA GeForce RTX 4090 Driver: 570.124.06 CUDA: 12.8 nvidia-smi PyTorch: 2.5.1&#43;cu121 CUDA Available: True import torch print(torch.__version__) print(torch.cuda.is_available()) 2. Project Setup Install Python venv and create environment: sudo apt install python3.12-venv python3 -m venv ~/venvs/swinir source ~/venvs/swinir/bin/activate Install PyTorch (CUDA 12.1): pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121 Clone SwinIR repo and install dependencies: git clone https://github." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/tech/swinir_experiment_2025_0331/" /><meta property="article:section" content="tech" />
+<meta property="article:published_time" content="2025-03-31T00:00:00+00:00" />
+<meta property="article:modified_time" content="2025-03-31T00:00:00+00:00" />
 
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="SwinIR Experiment Summary — March 31, 2025">
-  <meta name="twitter:description" content="🧪 SwinIR Experiment Summary — March 31, 2025
-1. Environment Setup OS: Ubuntu 24.04.2 LTS (noble) lsb_release -a Python: 3.12.3 python3 --version GPU: NVIDIA GeForce RTX 4090 Driver: 570.124.06 CUDA: 12.8 nvidia-smi PyTorch: 2.5.1&#43;cu121 CUDA Available: True import torch print(torch.__version__) print(torch.cuda.is_available()) 2. Project Setup Installed Python venv and created environment: sudo apt install python3.12-venv $ python3 -m venv ~/venvs/swinir $ source ~/venvs/swinir/bin/activate
-Installed PyTorch (CUDA 12.1): pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121 Cloned SwinIR repo and installed dependencies: git clone https://github.com/JingyunLiang/SwinIR.git cd SwinIR pip install numpy opencv-python matplotlib tqdm yacs timm einops 3. Inference — Set5 Benchmark Lightweight SR (Scale ×2):">
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="SwinIR Experiment Summary — March 31, 2025"/>
+<meta name="twitter:description" content="🧪 SwinIR Experiment Summary — March 31, 2025
+1. Environment Setup OS: Ubuntu 24.04.2 LTS (noble) lsb_release -a Python: 3.12.3 python3 --version GPU: NVIDIA GeForce RTX 4090 Driver: 570.124.06 CUDA: 12.8 nvidia-smi PyTorch: 2.5.1&#43;cu121 CUDA Available: True import torch print(torch.__version__) print(torch.cuda.is_available()) 2. Project Setup Install Python venv and create environment: sudo apt install python3.12-venv python3 -m venv ~/venvs/swinir source ~/venvs/swinir/bin/activate Install PyTorch (CUDA 12.1): pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121 Clone SwinIR repo and install dependencies: git clone https://github."/>
 
         <link href="http://localhost:1313/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
 	
@@ -152,17 +97,17 @@ Installed PyTorch (CUDA 12.1): pip install torch torchvision --index-url https:/
 </span></span><span style="display:flex;"><span>print(torch<span style="color:#f92672">.</span>cuda<span style="color:#f92672">.</span>is_available())
 </span></span></code></pre></div><h2 id="2-project-setup">2. Project Setup</h2>
 <ul>
-<li>Installed Python venv and created environment:</li>
+<li>Install Python venv and create environment:</li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install python3.12-venv
-</span></span></code></pre></div><p>$ python3 -m venv ~/venvs/swinir
-$ source ~/venvs/swinir/bin/activate</p>
-<ul>
-<li>Installed PyTorch (CUDA 12.1):</li>
+</span></span><span style="display:flex;"><span>python3 -m venv ~/venvs/swinir
+</span></span><span style="display:flex;"><span>source ~/venvs/swinir/bin/activate
+</span></span></code></pre></div><ul>
+<li>Install PyTorch (CUDA 12.1):</li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
 </span></span></code></pre></div><ul>
-<li>Cloned SwinIR repo and installed dependencies:</li>
+<li>Clone SwinIR repo and install dependencies:</li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/JingyunLiang/SwinIR.git
 </span></span><span style="display:flex;"><span>cd SwinIR

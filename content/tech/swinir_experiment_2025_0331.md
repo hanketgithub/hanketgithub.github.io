@@ -34,19 +34,19 @@ print(torch.cuda.is_available())
 ```
 
 ## 2. Project Setup
-- Installed Python venv and created environment:
+- Install Python venv and create environment:
 ```bash
 sudo apt install python3.12-venv
+python3 -m venv ~/venvs/swinir
+source ~/venvs/swinir/bin/activate
 ```
-  $ python3 -m venv ~/venvs/swinir
-  $ source ~/venvs/swinir/bin/activate
 
-- Installed PyTorch (CUDA 12.1):
+- Install PyTorch (CUDA 12.1):
 ```bash
 pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
 ```
 
-- Cloned SwinIR repo and installed dependencies:
+- Clone SwinIR repo and install dependencies:
 ```bash
 git clone https://github.com/JingyunLiang/SwinIR.git
 cd SwinIR

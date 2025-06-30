@@ -49,8 +49,6 @@ Tomi no Oka Koshu 以柔和的酸與清澈的氣息輕輕托起湯的鮮味，�
 **推薦酒款**：`Salon 2013`
 **說明**：毛豆凍與鮭魚卵鹹香可考慮甲州的柑橘調與爽利酸度，鱸魚亦能與清爽白酒優雅共鳴。但真正的高潮是雞肉牛蒡炊飯 —— 在高空中香氣尤其奔放，牛蒡的土壤氣息與雞脂香完美釋出。此時若轉回 Salon 2013，細緻酵母與榛果香竟與炊飯氣味疊加、氣泡帶香上行，形成一種香氣隨氣泡升至高空的錯覺 —— 儘管，當時我們真的就在高空中。當下差點站起來鼓掌，這就是飛行中的餐酒魔法時刻。
 
-<a data-flickr-embed="true" href="https://www.flickr.com/photos/188685716@N03/54623003646/in/datetaken-public/" title="205A2006"><img src="https://live.staticflickr.com/65535/54623003646_d6fdaf10bc_c.jpg" width="800" height="534" alt="205A2006"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-
 ![205A2006](https://live.staticflickr.com/65535/54623003646_d6fdaf10bc_c.jpg)
 
 ---

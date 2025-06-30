@@ -40,8 +40,6 @@ Tomi no Oka Koshu 以柔和的酸與清澈的氣息輕輕托起湯的鮮味，�
 **推薦酒款**：無
 **說明**：和牛菲力太軟，沙拉酸，似乎無法找到好搭配。酒款無論白、紅、香檳皆無法與胡麻醬的濃厚與沙拉的酸味取得協調，實屬難以匹配之道。此段如略去反而更佳。
 
-<a data-flickr-embed="true" href="https://www.flickr.com/photos/188685716@N03/54623219448/in/datetaken-public/" title="205A2005"><img src="https://live.staticflickr.com/65535/54623219448_bd09a75e64_c.jpg" width="800" height="534" alt="205A2005"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-
 ![205A2005](https://live.staticflickr.com/65535/54623219448_bd09a75e64_c.jpg)
 
 ---

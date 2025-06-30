@@ -23,19 +23,26 @@ draft: false
 ---
 
 ## 🛏️ Deluxe King Room 2506
+[![205A1898](https://live.staticflickr.com/65535/54623753184_b11c304992_c.jpg)](https://www.flickr.com/photos/188685716@N03/54389400561/in/album-72177720324443611)
 
-[![205A0614](https://live.staticflickr.com/65535/54389400561_8890400785_c.jpg)](https://www.flickr.com/photos/188685716@N03/54389400561/in/album-72177720324443611)
+房間格局方正、無柱挑高，空間極大，走的是沉穩內斂的商務風，配上厚地毯與溫暖木質元素，寧靜舒適。
 
-房間格局方正、無柱挑高，空間極大，走的是沉穩內斂的商務風，配上厚地毯與溫暖木質元素，寧靜舒適。  
+[![205A1902](https://live.staticflickr.com/65535/54622663977_6cce15196f_c.jpg)](https://www.flickr.com/photos/188685716@N03/54389400561/in/album-72177720324443611)
+
 床的品質出乎意料地好，據說使用的是 500 針床品，觸感與 MO（Mandarin Oriental）幾乎不分上下。
 
+[![205A1909](https://live.staticflickr.com/65535/54623547081_81971d0276_c.jpg)](https://www.flickr.com/photos/188685716@N03/54389400561/in/album-72177720324443611)
+
 原本對小廚房沒抱期待，結果每天都用來洗 Trader Joe's 的莓果，晚上泡完澡還能冰一瓶氣泡水，實用度意外地高。
+
+[![205A1905](https://live.staticflickr.com/65535/54622664157_d747dba4cf_c.jpg)](https://www.flickr.com/photos/188685716@N03/54389400561/in/album-72177720324443611)
 
 唯一小可惜是房型沒升級至 River View，大片落地窗看出去風景較普通。如果面向芝加哥河，整體體驗會更上層樓。
 
 ---
 
 ## 🥣 早餐：$60 FHR Daily Credit
+[![IMG_4860](https://live.staticflickr.com/65535/54623752329_58496645be_c.jpg)](https://www.flickr.com/photos/188685716@N03/54389400561/in/album-72177720324443611)
 
 Trump 沒有提供傳統「免費早餐」，但每天給 $60 餐飲額度，基本上一人吃得非常夠。  
 我特別喜歡他們的水果優格燕麥，水果非常新鮮，每天早上來一碗，精神都 reset 過了。
@@ -50,10 +57,13 @@ Trump 沒有提供傳統「免費早餐」，但每天給 $60 餐飲額度，基
 ---
 
 ## 🧖‍♂️ SPA 是最大亮點之一
+[![IMG_0056](https://live.staticflickr.com/65535/54623546566_8d6e2db0bf_c.jpg)](https://www.flickr.com/photos/188685716@N03/54389400561/in/album-72177720324443611)
 
 Trump Hotel 的 SPA 區絕對是芝加哥市區中最頂級的一線，空間寬敞、採光極好，大片玻璃正對芝加哥河景。  
 整體風格是現代法式優雅，我甚至看到幾位客人穿著浴袍在 Lounge 沙發開會，宛如私人會所。  
 **關鍵詞三個字：安靜、乾淨、放鬆。**
+
+[![IMG_0065](https://live.staticflickr.com/65535/54623546641_2eeeece6d4_c.jpg)](https://www.flickr.com/photos/188685716@N03/54389400561/in/album-72177720324443611)
 
 ---
 

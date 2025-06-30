@@ -12,9 +12,11 @@ tags: ["JL09", "JAL First Class", "Wine Pairing", "Champagne", "日本航空"]
 
 ## 🥢 一、前菜：小皿五彩
 
-**內容**：竹筍佐香味噌、穴子山椒煮、牛蒡天婦羅、鮑魚白和、厚燒玉子佐海老與魚子醬、合鴨佐梅子  
+**內容**：穴子山椒煮、鮑魚白和、厚燒玉子佐海老與魚子醬、竹筍佐香味噌、合鴨佐梅子  
 **推薦酒款**：`Salon 2013`  
 **說明**：這道由多樣風味組成的前菜盤，結合了香味噌、山椒、白和、梅子與天婦羅油香，若以清酒或甲州應對，容易顧此失彼。Salon 2013 的酵母熟香與細緻氣泡，能巧妙串聯甘口與鹹味、海鮮與禽類之間的變化，提供一種如舞步般穿梭其中的節奏感。特別是鮑魚白和與玉子海老的蛋白質質地，與 Salon 中段的奶油與堅果氣息共鳴，提升整體立體感，是高空中極為少見的「全方位前菜解決方案」。
+
+![205A1998](https://live.staticflickr.com/65535/54623315945_212b678017_c.jpg)
 
 ---
 
@@ -29,12 +31,18 @@ tags: ["JL09", "JAL First Class", "Wine Pairing", "Champagne", "日本航空"]
 Tomi no Oka Koshu 以柔和的酸與清澈的氣息輕輕托起湯的鮮味，喝完後湯在喉中仍有濃稠餘韻，完整無缺。
 但當我換成 Salon 2013，它的氣泡與酵母香就像從側面插入的切割刀，不僅打斷湯的滑順入喉，還將龍蝦旨味覆蓋在堅果與烘烤香下，失去了那原本應該靜靜延伸的高潮。
 
+![205A2004](https://live.staticflickr.com/65535/54622122557_c43b1699b5_c.jpg)
+
 ---
 
 ## 🥩 三、向付：牛菲力炙燒佐胡麻醬
 
 **推薦酒款**：無
 **說明**：和牛菲力太軟，沙拉酸，似乎無法找到好搭配。酒款無論白、紅、香檳皆無法與胡麻醬的濃厚與沙拉的酸味取得協調，實屬難以匹配之道。此段如略去反而更佳。
+
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/188685716@N03/54623219448/in/datetaken-public/" title="205A2005"><img src="https://live.staticflickr.com/65535/54623219448_bd09a75e64_c.jpg" width="800" height="534" alt="205A2005"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+![205A2005](https://live.staticflickr.com/65535/54623219448_bd09a75e64_c.jpg)
 
 ---
 
@@ -43,16 +51,24 @@ Tomi no Oka Koshu 以柔和的酸與清澈的氣息輕輕托起湯的鮮味，�
 **推薦酒款**：`Salon 2013`
 **說明**：毛豆凍與鮭魚卵鹹香可考慮甲州的柑橘調與爽利酸度，鱸魚亦能與清爽白酒優雅共鳴。但真正的高潮是雞肉牛蒡炊飯 —— 在高空中香氣尤其奔放，牛蒡的土壤氣息與雞脂香完美釋出。此時若轉回 Salon 2013，細緻酵母與榛果香竟與炊飯氣味疊加、氣泡帶香上行，形成一種香氣隨氣泡升至高空的錯覺 —— 儘管，當時我們真的就在高空中。當下差點站起來鼓掌，這就是飛行中的餐酒魔法時刻。
 
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/188685716@N03/54623003646/in/datetaken-public/" title="205A2006"><img src="https://live.staticflickr.com/65535/54623003646_d6fdaf10bc_c.jpg" width="800" height="534" alt="205A2006"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+![205A2006](https://live.staticflickr.com/65535/54623003646_d6fdaf10bc_c.jpg)
+
 ---
 
 ## 🍜 五、起司盤
 
-**建議**：`Salon 2013`。  
+**推薦酒款**：`Salon 2013`。  
 **說明**：多種起司與 Salon 2013 搭配出各種變化，能凸顯起司的風味與鹹香，尤其是熟成系與奶香系皆能在香檳的酵母氣息中找到呼應。Salon 的優雅氣泡與中段堅果調性，可在不搶味的情況下強化起司本身的脂香與口感，成為一道意外契合的「奶香 × 酵母香」協奏曲。
+
+![205A2007](https://live.staticflickr.com/65535/54623313840_dc84a8e5f5_c.jpg)
 
 ---
 
 ## 🍡 六、甜品：抹茶寒天與紅豆甜品
 
-**建議**：`宇治煎茶`。  
+**推薦**：`宇治煎茶`。  
 **說明**：抹茶的苦澀與紅豆微甜不易與葡萄酒或香檳平衡，清茶最能凸顯日式甜品特色。
+
+![205A2009](https://live.staticflickr.com/65535/54623209269_2e1bd9ac6b_c.jpg)

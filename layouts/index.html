@@ -7,21 +7,28 @@
 </div>
 
 <!-- 自訂分類導覽 -->
-<h2>📌 Air 💻</h2>
+<h2>📌 Air</h2>
 <ul>
   {{ range first 5 (where .Site.RegularPages "Section" "airlines") }}
     <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
   {{ end }}
 </ul>
 
-<h2>📌 Tech 💻</h2>
+<h2>📌 Hotel</h2>
+<ul>
+  {{ range first 5 (where .Site.RegularPages "Section" "hotel") }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+  {{ end }}
+</ul>
+
+<h2>📌 Tech</h2>
 <ul>
   {{ range first 5 (where .Site.RegularPages "Section" "tech") }}
     <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
   {{ end }}
 </ul>
 
-<h2>📌 Travel 🧳</h2>
+<h2>📌 Travel</h2>
 <ul>
   {{ range first 10 (where .Site.RegularPages "Section" "travel") }}
     <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>

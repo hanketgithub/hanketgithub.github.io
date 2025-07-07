@@ -80,3 +80,10 @@ summary: "從香檳到牛排，從夏布利到雷司令，這不只是一份長�
 除了備品拿好拿滿，善用機上的 wine pairing，也是一次有趣的味覺探索。
 
 高空雖然讓味覺變得遲鈍，但如果懂得搭配，這不只是一頓飯，而是一場自己的味蕾交響。
+
+
+### 2018 Weingut von Hovel Oberemmeler Hutte Monopollage Riesling Kabinett, Mosel, Germany
+摩澤爾中部 Weingut von Hovel 酒莊的 Oberemmeler Hutte 獨佔園葡萄釀造
+
+### 2022 Famille Brocard Chablis Vieilles Vignes, France
+夏布利

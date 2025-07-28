@@ -5,6 +5,8 @@ tags: ["VCU"]
 draft: false
 ---
 
+---
+
 ## Fetch ES Output 機制總覽（2025-07-23）
 
 在使用 `AL_Encoder_Process()` 將 frame 推入 encoder 後，ES bitstream 並非主動呼叫 API 回傳，而是透過 **callback 機制**觸發推送完成的編碼結果。

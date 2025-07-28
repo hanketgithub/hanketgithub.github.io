@@ -124,11 +124,8 @@
   <time>Jul 25, 2025</time>
   <br><div class="description">
 	
-	<h1 id="vcu-開發進度總結截至-2025-07-25">VCU 開發進度總結（截至 2025-07-25）</h1>
-<hr>
-<h2 id="fetch-es-output-機制總覽2025-07-23">Fetch ES Output 機制總覽（2025-07-23）</h2>
-<p>在使用 <code>AL_Encoder_Process()</code> 將 frame 推入 encoder 後，ES bitstream 並非主動呼叫 API 回傳，而是透過 <strong>callback 機制</strong>主動推送完成的編碼結果。</p>
-<hr>
+	<h2 id="fetch-es-output-機制總覽2025-07-23">Fetch ES Output 機制總覽（2025-07-23）</h2>
+<p>在使用 <code>AL_Encoder_Process()</code> 將 frame 推入 encoder 後，ES bitstream 並非主動呼叫 API 回傳，而是透過 <strong>callback 機制</strong>觸發推送完成的編碼結果。</p>
 <h3 id="callback-實作範例">Callback 實作範例</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">myEndEncoding</span>(<span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span>userParam, AL_TBuffer <span style="color:#f92672">*</span>pStream, AL_TBuffer <span style="color:#66d9ef">const</span> <span style="color:#f92672">*</span>pSrc, <span style="color:#66d9ef">int</span> iLayerID)
 </span></span><span style="display:flex;"><span>{

@@ -5,15 +5,9 @@ tags: ["VCU"]
 draft: false
 ---
 
-# VCU 開發進度總結（截至 2025-07-25）
-
----
-
 ## Fetch ES Output 機制總覽（2025-07-23）
 
-在使用 `AL_Encoder_Process()` 將 frame 推入 encoder 後，ES bitstream 並非主動呼叫 API 回傳，而是透過 **callback 機制**主動推送完成的編碼結果。
-
----
+在使用 `AL_Encoder_Process()` 將 frame 推入 encoder 後，ES bitstream 並非主動呼叫 API 回傳，而是透過 **callback 機制**觸發推送完成的編碼結果。
 
 ### Callback 實作範例
 
@@ -120,10 +114,6 @@ if (!isOk) {
 
 ---
 
-✅ **此機制已成功驗證，建議納入 encoding pipeline 的後處理模組。**
-
----
-
 ## AL_Encoder_PutStreamBuffer() failed, bitstream buffer needs pMetaData（2025-07-17）
 
 **錯誤訊息**：
@@ -148,7 +138,7 @@ lib_rtos.c:39: Rtos_AssertWithMessage: Assertion `false' failed.
 **原先假設**：`AL_TEncSettings` 設定有誤，與 `exe_encoder` 對齊後仍失敗。
 **真正原因**：使用了錯誤的 allocator。
   ```cpp
-  AL_TAllocator* pAllocator = AL_GetDefaultAllocator(); // ❌ 僅為 malloc()，非 DMA
+  AL_TAllocator *pAllocator = AL_GetDefaultAllocator(); // ❌ 僅為 malloc()，非 DMA
   ```
 **分析**：
 - 該 allocator 分配的是 host heap memory，硬體無法 DMA 存取。
@@ -156,7 +146,7 @@ lib_rtos.c:39: Rtos_AssertWithMessage: Assertion `false' failed.
 
 **正確做法**：
   ```cpp
-  AL_TAllocator* pAllocator = AL_DmaAlloc_Create("/dev/allegroIP"); // ✅
+  AL_TAllocator *pAllocator = AL_DmaAlloc_Create("/dev/allegroIP"); // ✅
   ```
   - 該函式透過 driver 分配 DMA buffer（實體記憶體），並用 `mmap()` 映射到 host，可安全交由 encoder 使用。
 

@@ -1,6 +1,6 @@
 ---
 title: "VCU 開發進度總結 — 2025-08-01"
-date: 2025-08-01
+date: 2025-07-30
 tags: ["VCU"]
 draft: false
 ---

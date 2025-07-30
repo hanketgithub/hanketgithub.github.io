@@ -1,9 +1,63 @@
 ---
-title: "VCU 開發進度總結 — 2025-07-25"
-date: 2025-07-25
+title: "VCU 開發進度總結 — 2025-08-01"
+date: 2025-08-01
 tags: ["VCU"]
 draft: false
 ---
+
+## 更新概要（2025-07-30）
+
+已確認 Allegro encoder callback 無法繼續產出 ES 是因為未在 callback 中呼叫 `AL_Encoder_PutStreamBuffer()` 歸還使用過的 bitstream buffer。此行為違反一般 callback 使用常識，但確實為必要操作。
+
+---
+
+## Fetch ES Output 機制修正（2025-07-30）
+
+原本的 callback 實作錯誤，導致 encoder 卡住無法繼續輸出 ES。經查證，必須在 callback return 前 **明確呼叫 `AL_Encoder_PutStreamBuffer()`** 歸還 bitstream buffer，encoder 才能繼續使用該 buffer 進行編碼。
+
+### 修正後範例：
+
+```cpp
+void myEndEncoding(void *userParam, AL_TBuffer *pStream, AL_TBuffer const *pSrc, int iLayerID)
+{
+  uint8_t *data = AL_Buffer_GetData(pStream);
+
+  AL_TPictureMetaData *pPicMeta = (AL_TPictureMetaData *) AL_Buffer_GetMetaData(pStream, AL_META_TYPE_PICTURE);
+  printf("Picture Type %s %s\n", PictTypeToString(pPicMeta->eType).c_str(), pPicMeta->bSkipped ? "is skipped" : "");
+
+  AL_TStreamMetaData *pStreamMeta = (AL_TStreamMetaData *) AL_Buffer_GetMetaData(pStream, AL_META_TYPE_STREAM);
+  for (uint16_t i = 0; i < pStreamMeta->uNumSection; i++) {
+    AL_TStreamSection section = pStreamMeta->pSections[i];
+    printf("Section %d: size=%d layer=%d, type=%s\n",
+           i, section.uLength, iLayerID, SectionFlagToString(section.eFlags).c_str());
+  }
+
+  // 必須在 callback 中還原 buffer，否則 encoder 會卡住
+  bool bRet = AL_Encoder_PutStreamBuffer(__hEnc__, pStream);
+  if (!bRet) {
+    printf("AL_Encoder_PutStreamBuffer must always succeed\n");
+  }
+}
+```
+
+### 註解
+
+這種做法令人費解。一般而言若使用 malloc 分配 buffer，應在呼叫 callback 後在呼叫端 free：
+
+```c
+uint8_t *buf = malloc(100);
+callback(buf);
+free(buf);  // 呼叫端負責釋放
+```
+
+但 Allegro SDK 的模式卻是：
+```cpp
+AL_TBuffer *pStream = ...; // 由 encoder 填寫完的 bitstream buffer
+callback(pStream);         // callback 內部要歸還 pStream ???
+```
+
+這種設計不符合 callback 的一般用法邏輯，屬於設計隱晦的 API 行為，需額外註明。
+
 
 ---
 

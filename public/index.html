@@ -79,7 +79,7 @@
 <h2>📌 Tech</h2>
 <ul>
   
-    <li><a href="/tech/vcu_progress/">VCU 開發進度總結 — 2025-07-25</a></li>
+    <li><a href="/tech/vcu_progress/">VCU 開發進度總結 — 2025-08-01</a></li>
   
     <li><a href="/tech/lc/">LeetCode 每日打卡 RPG 🎯💻</a></li>
   
@@ -107,6 +107,8 @@
 <h2>📌 Misc </h2>
 <ul>
   
+    <li><a href="/misc/%E7%AD%86%E8%A8%98%E6%9C%AC%E9%81%B8%E6%93%87%E6%8C%87%E5%8D%97/">筆記本選擇指南</a></li>
+  
     <li><a href="/misc/eye_care/">視力存摺</a></li>
   
     <li><a href="/misc/startpage/">Startpage</a></li>
@@ -120,63 +122,119 @@
 
 
 <section class="list-item">
-  <h1 class="title"><a href="/tech/vcu_progress/">VCU 開發進度總結 — 2025-07-25</a></h1>
-  <time>Jul 25, 2025</time>
+  <h1 class="title"><a href="/tech/vcu_progress/">VCU 開發進度總結 — 2025-08-01</a></h1>
+  <time>Jul 1, 2025</time>
   <br><div class="description">
 	
-	<hr>
-<h2 id="fetch-es-output-機制總覽2025-07-23">Fetch ES Output 機制總覽（2025-07-23）</h2>
-<p>在使用 <code>AL_Encoder_Process()</code> 將 frame 推入 encoder 後，ES bitstream 並非主動呼叫 API 回傳，而是透過 <strong>callback 機制</strong>觸發推送完成的編碼結果。</p>
-<h3 id="callback-實作範例">Callback 實作範例</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">myEndEncoding</span>(<span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span>userParam, AL_TBuffer <span style="color:#f92672">*</span>pStream, AL_TBuffer <span style="color:#66d9ef">const</span> <span style="color:#f92672">*</span>pSrc, <span style="color:#66d9ef">int</span> iLayerID)
-</span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">uint8_t</span> <span style="color:#f92672">*</span>data <span style="color:#f92672">=</span> AL_Buffer_GetData(pStream);
+	<h2 id="編譯步驟"><strong>編譯步驟</strong>：</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 設定 cross compile 環境</span>
+</span></span><span style="display:flex;"><span>source ~/VEGA2200/trunk/xilinx_sdk_r5_vega6000/sdk/environment-setup-cortexa72-cortexa53-xilinx-linux
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// 解析 Picture metadata
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  AL_TPictureMetaData <span style="color:#f92672">*</span>pPicMeta <span style="color:#f92672">=</span> (AL_TPictureMetaData <span style="color:#f92672">*</span>) AL_Buffer_GetMetaData(pStream, AL_META_TYPE_PICTURE);
-</span></span><span style="display:flex;"><span>  printf(<span style="color:#e6db74">&#34;Picture Type %s %s</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>,
-</span></span><span style="display:flex;"><span>         PictTypeToString(pPicMeta<span style="color:#f92672">-&gt;</span>eType).c_str(),
-</span></span><span style="display:flex;"><span>         pPicMeta<span style="color:#f92672">-&gt;</span>bSkipped <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;is skipped&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 進入正確版本的 source tree</span>
+</span></span><span style="display:flex;"><span>cd ~/vcu-ctrl-sw-xlnx_rel_v2025.1
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// 解析 Stream metadata
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  AL_TStreamMetaData <span style="color:#f92672">*</span>pStreampMeta <span style="color:#f92672">=</span> (AL_TStreamMetaData <span style="color:#f92672">*</span>) AL_Buffer_GetMetaData(pStream, AL_META_TYPE_STREAM);
-</span></span><span style="display:flex;"><span>  printf(<span style="color:#e6db74">&#34;sections = %d / %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, pStreampMeta<span style="color:#f92672">-&gt;</span>uNumSection, pStreampMeta<span style="color:#f92672">-&gt;</span>uMaxNumSection);
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 編譯</span>
+</span></span><span style="display:flex;"><span>make -j8
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">uint16_t</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> pStreampMeta<span style="color:#f92672">-&gt;</span>uNumSection; i<span style="color:#f92672">++</span>) {
-</span></span><span style="display:flex;"><span>    AL_TStreamSection section <span style="color:#f92672">=</span> pStreampMeta<span style="color:#f92672">-&gt;</span>pSections[i];
-</span></span><span style="display:flex;"><span>    printf(<span style="color:#e6db74">&#34;section %d: size = %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, i, section.uLength);
-</span></span><span style="display:flex;"><span>    hexprint(<span style="color:#e6db74">&#34;XX&#34;</span>, <span style="color:#f92672">&amp;</span>data[section.uOffset], min(section.uLength, <span style="color:#ae81ff">64</span>));
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h3 id="綁定-callback-到-encoder">綁定 callback 到 encoder</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>AL_CB_EndEncoding endEncodingCb <span style="color:#f92672">=</span> {
-</span></span><span style="display:flex;"><span>  .func <span style="color:#f92672">=</span> myEndEncoding,
-</span></span><span style="display:flex;"><span>};
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>AL_Encoder_Create(..., endEncodingCb);
-</span></span></code></pre></div><ul>
-<li><code>AL_CB_EndEncoding</code> 是 Allegro 定義的 callback 包裝結構。</li>
-<li><code>.func</code> 即為綁定的函式指標。</li>
-</ul>
-<h3 id="補充說明">補充說明</h3>
-<ul>
-<li>Bitstream 實際內容透過 <code>AL_TStreamMetaData</code> 描述，可能包含多個 section。</li>
-<li>每個 section 都由 <code>uOffset</code>（於 AL_Buffer 資料區內的起始位置）與 <code>uLength</code>（長度）組成。</li>
-<li>若要串接封裝（封為 .h265 / .mp4）或分析 bitstream，可直接由此處複製資料。</li>
-</ul>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 確認輸出檔案型態</span>
+</span></span><span style="display:flex;"><span>file bin/AL_Encoder.exe
+</span></span></code></pre></div><hr>
+<h2 id="更新概要2025-08-01">更新概要（2025-08-01）</h2>
+<p>Send Input Frame Trace.</p>
 <hr>
-<h2 id="attach-metadatabitstream-buffer2025-07-23">Attach MetaData：Bitstream Buffer（2025-07-23）</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>printf(<span style="color:#e6db74">&#34;AL_MAX_SECTION=%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, AL_MAX_SECTION);
-</span></span><span style="display:flex;"><span>AL_TStreamMetaData <span style="color:#f92672">*</span>pStreamMeta <span style="color:#f92672">=</span> AL_StreamMetaData_Create(AL_MAX_SECTION);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">bool</span> isOk <span style="color:#f92672">=</span> AL_Buffer_AddMetaData(pBsBuf, (AL_TMetaData <span style="color:#f92672">*</span>) pStreamMeta);
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>isOk) {
-</span></span><span style="display:flex;"><span>  printf(<span style="color:#e6db74">&#34;Failed to attach metadata to bitstream buffer</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
-</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>  printf(<span style="color:#e6db74">&#34;%d ok!</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, __LINE__);
+<h2 id="send-input-frame-trace2025-08-01">Send Input Frame Trace（2025-08-01）</h2>
+<p><code>exe_encoder</code> 主邏輯在 <code>SafeChannelMain()</code> 裡：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">while</span> (...) {
+</span></span><span style="display:flex;"><span>  LayerResources<span style="color:#f92672">::</span>SendInput(...);
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p><a href="#al_encoder_putstreambuffer-failed-bitstream-buffer-needs-pmetadata2025-07-17">解決 issue</a></p>&hellip;
+</span></span></code></pre></div><hr>
+<h3 id="-function-call-trace">🔁 Function Call Trace</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>SafeChannelMain()
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">└─</span> LayerResources<span style="color:#f92672">::</span>SendInput(cfg, enc.get(), traceHooker)
+</span></span><span style="display:flex;"><span>   <span style="color:#960050;background-color:#1e0010">└─</span> sendInputFileTo(
+</span></span><span style="display:flex;"><span>        frameReader,
+</span></span><span style="display:flex;"><span>        SrcBufPool,
+</span></span><span style="display:flex;"><span>        SrcYuv.get(),
+</span></span><span style="display:flex;"><span>        cfg,
+</span></span><span style="display:flex;"><span>        FileInfo,
+</span></span><span style="display:flex;"><span>        pSrcConv.get(),
+</span></span><span style="display:flex;"><span>        firstSink,
+</span></span><span style="display:flex;"><span>        iPictCount,
+</span></span><span style="display:flex;"><span>        iReadCount
+</span></span><span style="display:flex;"><span>      )
+</span></span><span style="display:flex;"><span>      <span style="color:#960050;background-color:#1e0010">└─</span> GetSrcFrame(
+</span></span><span style="display:flex;"><span>           iReadCount,
+</span></span><span style="display:flex;"><span>           iPictCount,
+</span></span><span style="display:flex;"><span>           frameReader,
+</span></span><span style="display:flex;"><span>           FileInfo,
+</span></span><span style="display:flex;"><span>           SrcBufPool,
+</span></span><span style="display:flex;"><span>           Yuv,
+</span></span><span style="display:flex;"><span>           tChParam,
+</span></span><span style="display:flex;"><span>           cfg,
+</span></span><span style="display:flex;"><span>           pSrcConv
+</span></span><span style="display:flex;"><span>         )
+</span></span><span style="display:flex;"><span>         <span style="color:#960050;background-color:#1e0010">└─</span> ReadSourceFrame(SrcBufPool, Yuv, frameReader, tUpdatedDim, pSrcConv)
+</span></span><span style="display:flex;"><span>            <span style="color:#960050;background-color:#1e0010">└─</span> ReadSourceFrameBuffer(pBuffer, conversionBuffer, frameReader, tUpdatedDim, pSrcConv)
+</span></span><span style="display:flex;"><span>               <span style="color:#960050;background-color:#1e0010">├─</span> <span style="color:#66d9ef">if</span> conversion needed:
+</span></span><span style="display:flex;"><span>               <span style="color:#960050;background-color:#1e0010">│</span>    <span style="color:#960050;background-color:#1e0010">├─</span> frameReader<span style="color:#f92672">-&gt;</span>ReadFrame(conversionBuffer)
+</span></span><span style="display:flex;"><span>               <span style="color:#960050;background-color:#1e0010">│</span>    <span style="color:#960050;background-color:#1e0010">└─</span> pSrcConv<span style="color:#f92672">-&gt;</span>ConvertSrcBuf(conversionBuffer, pBuffer)
+</span></span><span style="display:flex;"><span>               <span style="color:#960050;background-color:#1e0010">└─</span> <span style="color:#66d9ef">else</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#960050;background-color:#1e0010">└─</span> frameReader<span style="color:#f92672">-&gt;</span>ReadFrame(pBuffer)
+</span></span></code></pre></div><hr>
+<h3 id="-input-components-說明">🧩 Input Components 說明</h3>
+<table>
+  <thead>
+      <tr>
+          <th>變數名</th>
+          <th>類型 / 來源</th>
+          <th>備註</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>frameReader</code></td>
+          <td><code>unique_ptr&lt;FrameReader&gt;</code></td>
+          <td>Instance variable（UnCompFrameReader）</td>
+      </tr>
+      <tr>
+          <td><code>SrcBufPool</code></td>
+          <td><code>PixMapBufPool</code></td>
+          <td>DMA allocator buffer pool</td>
+      </tr>
+      <tr>
+          <td><code>Yuv</code></td>
+          <td><code>AL_TBuffer *</code></td>
+          <td>使用 <code>SrcYuv.get()</code>（default allocator）</td>
+      </tr>
+      <tr>
+          <td><code>pSrcConv</code></td>
+          <td><code>IConvSrc *</code></td>
+          <td>若需轉換格式，實體為 <code>CYuvSrcConv</code></td>
+      </tr>
+      <tr>
+          <td><code>firstSink</code></td>
+          <td><code>IFrameSink *</code></td>
+          <td>encoder sink；<code>enc.get()</code></td>
+      </tr>
+      <tr>
+          <td><code>iPictCount</code></td>
+          <td><code>int</code></td>
+          <td>frame 計數器</td>
+      </tr>
+      <tr>
+          <td><code>iReadCount</code></td>
+          <td><code>int</code></td>
+          <td>read 計數器</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h3 id="-來源建構流程">🏗️ 來源建構流程</h3>
+<ul>
+<li>
+<p><code>frameReader</code><br>
+→ <code>LayerResources::InitializeFrameReader()</code><br>
+→ 類型：<code>UnCompFrameReader</code></p>&hellip;
 	
 </div>
   <a class="readmore" href="/tech/vcu_progress/">Read more ⟶</a>

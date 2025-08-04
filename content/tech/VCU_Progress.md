@@ -66,7 +66,7 @@ while (...) {
 
 ### 🔁 Function Call Trace
 
-```
+```cpp
 SafeChannelMain()
 └─ LayerResources::SendInput(cfg, enc.get(), traceHooker)
    └─ sendInputFileTo(

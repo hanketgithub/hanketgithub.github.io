@@ -23,11 +23,34 @@ draft: false
 
 ---
 
-## 更新概要（2025-08-01）
+## 更新概要（2025-08-04）
 
-Send Input Frame Trace.
+格式轉換.
 
 ---
+
+### 格式轉換（2025-08-04）
+
+`CYuvSrcConv::ConvertSrcBuf(AL_TBuffer const *pSrcIn, AL_TBuffer *pSrcOut)`
+
+- 根據 `pSrcOut` 的 FOURCC，選擇對應的轉換 case  
+  例如，若輸出為 NV12，將執行：
+  ```cpp
+  case FOURCC(NV12):
+    return convertToNV12(pSrcIn, tFourCCIn, pSrcOut);
+  ```
+
+- `convertToNV12(AL_TBuffer const* pSrcIn, TFourCC inFourCC, AL_TBuffer* pSrcOut)`  
+  根據輸入格式 `inFourCC`，選擇對應的轉換邏輯，例如：
+  ```cpp
+  case FOURCC(I420):
+    return I420_To_NV12(pSrcIn, pSrcOut);
+  ```
+
+- 最終將透過對應函式將輸入格式轉為 NV12。
+
+---
+
 
 ## Send Input Frame Trace（2025-08-01）
 

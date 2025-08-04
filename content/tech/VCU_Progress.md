@@ -5,9 +5,27 @@ tags: ["VCU"]
 draft: false
 ---
 
-## 更新概要（2025-07-30）
+## **編譯步驟**：
 
-已確認 Allegro encoder callback 機制會卡住是因為未在 callback 中呼叫 `AL_Encoder_PutStreamBuffer()` 歸還使用過的 bitstream buffer。此行為違反一般 callback 使用常識，但確實為必要操作，否則 encoder 將無法繼續產出 ES。
+  ```bash
+  # 設定 cross compile 環境
+  source ~/VEGA2200/trunk/xilinx_sdk_r5_vega6000/sdk/environment-setup-cortexa72-cortexa53-xilinx-linux
+
+  # 進入正確版本的 source tree
+  cd ~/vcu-ctrl-sw-xlnx_rel_v2025.1
+
+  # 編譯
+  make -j8
+
+  # 確認輸出檔案型態
+  file bin/AL_Encoder.exe
+  ```
+
+---
+
+## 更新概要（2025-08-01）
+
+Send Input Frame Trace.
 
 ---
 

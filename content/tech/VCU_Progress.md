@@ -1,13 +1,110 @@
 ---
 title: "VCU 開發進度總結 — 2025-08-01"
-date: 2025-07-30
+date: 2025-07-01
 tags: ["VCU"]
 draft: false
 ---
 
 ## 更新概要（2025-07-30）
 
-已確認 Allegro encoder callback 無法繼續產出 ES 是因為未在 callback 中呼叫 `AL_Encoder_PutStreamBuffer()` 歸還使用過的 bitstream buffer。此行為違反一般 callback 使用常識，但確實為必要操作。
+已確認 Allegro encoder callback 機制會卡住是因為未在 callback 中呼叫 `AL_Encoder_PutStreamBuffer()` 歸還使用過的 bitstream buffer。此行為違反一般 callback 使用常識，但確實為必要操作，否則 encoder 將無法繼續產出 ES。
+
+---
+
+## Send Input Frame Trace（2025-08-01）
+
+`exe_encoder` 主邏輯在 `SafeChannelMain()` 裡：
+
+```cpp
+while (...) {
+  LayerResources::SendInput(...);
+}
+```
+
+---
+
+### 🔁 Function Call Trace
+
+```
+SafeChannelMain()
+└─ LayerResources::SendInput(cfg, enc.get(), traceHooker)
+   └─ sendInputFileTo(
+        frameReader,
+        SrcBufPool,
+        SrcYuv.get(),
+        cfg,
+        FileInfo,
+        pSrcConv.get(),
+        firstSink,
+        iPictCount,
+        iReadCount
+      )
+      └─ GetSrcFrame(
+           iReadCount,
+           iPictCount,
+           frameReader,
+           FileInfo,
+           SrcBufPool,
+           Yuv,
+           tChParam,
+           cfg,
+           pSrcConv
+         )
+         └─ ReadSourceFrame(SrcBufPool, Yuv, frameReader, tUpdatedDim, pSrcConv)
+            └─ ReadSourceFrameBuffer(pBuffer, conversionBuffer, frameReader, tUpdatedDim, pSrcConv)
+               ├─ if conversion needed:
+               │    ├─ frameReader->ReadFrame(conversionBuffer)
+               │    └─ pSrcConv->ConvertSrcBuf(conversionBuffer, pBuffer)
+               └─ else:
+                    └─ frameReader->ReadFrame(pBuffer)
+```
+
+---
+
+### 🧩 Input Components 說明
+
+| 變數名        | 類型 / 來源                            | 備註                                     |
+|---------------|----------------------------------------|------------------------------------------|
+| `frameReader` | `unique_ptr<FrameReader>`              | Instance variable（UnCompFrameReader）    |
+| `SrcBufPool`  | `PixMapBufPool`                        | DMA allocator buffer pool                 |
+| `Yuv`         | `AL_TBuffer *`                         | 使用 `SrcYuv.get()`（default allocator） |
+| `pSrcConv`    | `IConvSrc *`                           | 若需轉換格式，實體為 `CYuvSrcConv`       |
+| `firstSink`   | `IFrameSink *`                         | encoder sink；`enc.get()`                 |
+| `iPictCount`  | `int`                                  | frame 計數器                              |
+| `iReadCount`  | `int`                                  | read 計數器                               |
+
+---
+
+### 🏗️ 來源建構流程
+
+- `frameReader`  
+  → `LayerResources::InitializeFrameReader()`  
+  → 類型：`UnCompFrameReader`
+
+- `pSrcConv`  
+  → `AllocateSrcConverter()`  
+  → 若格式不同，return `make_unique<CYuvSrcConv>`
+
+- `SrcYuv`  
+  → `AllocateConversionBuffer(...)`  
+  → 僅在需要 format conversion 時配置
+
+---
+
+### 📂 Read 行為細節
+
+- **若無需格式轉換**：
+
+  ```cpp
+  frameReader->ReadFrame(pBuffer);
+  ```
+
+- **若需格式轉換（例如 I420 → NV12）**：
+
+  ```cpp
+  frameReader->ReadFrame(conversionBuffer);
+  pSrcConv->ConvertSrcBuf(conversionBuffer, pBuffer);
+  ```
 
 ---
 

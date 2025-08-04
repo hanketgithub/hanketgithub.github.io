@@ -21,38 +21,38 @@ while (...) { LayerResources::SendInput(...); } 🔁 Function Call Trace SafeCha
 </span></span></code></pre></div><hr><h2 id=更新概要2025-08-01>更新概要（2025-08-01）</h2><p>Send Input Frame Trace.</p><hr><h2 id=send-input-frame-trace2025-08-01>Send Input Frame Trace（2025-08-01）</h2><p><code>exe_encoder</code> 主邏輯在 <code>SafeChannelMain()</code> 裡：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cpp data-lang=cpp><span style=display:flex><span><span style=color:#66d9ef>while</span> (...) {
 </span></span><span style=display:flex><span>  LayerResources<span style=color:#f92672>::</span>SendInput(...);
 </span></span><span style=display:flex><span>}
-</span></span></code></pre></div><hr><h3 id=-function-call-trace>🔁 Function Call Trace</h3><pre tabindex=0><code>SafeChannelMain()
-└─ LayerResources::SendInput(cfg, enc.get(), traceHooker)
-   └─ sendInputFileTo(
-        frameReader,
-        SrcBufPool,
-        SrcYuv.get(),
-        cfg,
-        FileInfo,
-        pSrcConv.get(),
-        firstSink,
-        iPictCount,
-        iReadCount
-      )
-      └─ GetSrcFrame(
-           iReadCount,
-           iPictCount,
-           frameReader,
-           FileInfo,
-           SrcBufPool,
-           Yuv,
-           tChParam,
-           cfg,
-           pSrcConv
-         )
-         └─ ReadSourceFrame(SrcBufPool, Yuv, frameReader, tUpdatedDim, pSrcConv)
-            └─ ReadSourceFrameBuffer(pBuffer, conversionBuffer, frameReader, tUpdatedDim, pSrcConv)
-               ├─ if conversion needed:
-               │    ├─ frameReader-&gt;ReadFrame(conversionBuffer)
-               │    └─ pSrcConv-&gt;ConvertSrcBuf(conversionBuffer, pBuffer)
-               └─ else:
-                    └─ frameReader-&gt;ReadFrame(pBuffer)
-</code></pre><hr><h3 id=-input-components-說明>🧩 Input Components 說明</h3><table><thead><tr><th>變數名</th><th>類型 / 來源</th><th>備註</th></tr></thead><tbody><tr><td><code>frameReader</code></td><td><code>unique_ptr&lt;FrameReader></code></td><td>Instance variable（UnCompFrameReader）</td></tr><tr><td><code>SrcBufPool</code></td><td><code>PixMapBufPool</code></td><td>DMA allocator buffer pool</td></tr><tr><td><code>Yuv</code></td><td><code>AL_TBuffer *</code></td><td>使用 <code>SrcYuv.get()</code>（default allocator）</td></tr><tr><td><code>pSrcConv</code></td><td><code>IConvSrc *</code></td><td>若需轉換格式，實體為 <code>CYuvSrcConv</code></td></tr><tr><td><code>firstSink</code></td><td><code>IFrameSink *</code></td><td>encoder sink；<code>enc.get()</code></td></tr><tr><td><code>iPictCount</code></td><td><code>int</code></td><td>frame 計數器</td></tr><tr><td><code>iReadCount</code></td><td><code>int</code></td><td>read 計數器</td></tr></tbody></table><hr><h3 id=-來源建構流程>🏗️ 來源建構流程</h3><ul><li><p><code>frameReader</code><br>→ <code>LayerResources::InitializeFrameReader()</code><br>→ 類型：<code>UnCompFrameReader</code></p></li><li><p><code>pSrcConv</code><br>→ <code>AllocateSrcConverter()</code><br>→ 若格式不同，return <code>make_unique&lt;CYuvSrcConv></code></p></li><li><p><code>SrcYuv</code><br>→ <code>AllocateConversionBuffer(...)</code><br>→ 僅在需要 format conversion 時配置</p></li></ul><hr><h3 id=-read-行為細節>📂 Read 行為細節</h3><ul><li><p><strong>若無需格式轉換</strong>：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cpp data-lang=cpp><span style=display:flex><span>frameReader<span style=color:#f92672>-&gt;</span>ReadFrame(pBuffer);
+</span></span></code></pre></div><hr><h3 id=-function-call-trace>🔁 Function Call Trace</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cpp data-lang=cpp><span style=display:flex><span>SafeChannelMain()
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>└─</span> LayerResources<span style=color:#f92672>::</span>SendInput(cfg, enc.get(), traceHooker)
+</span></span><span style=display:flex><span>   <span style=color:#960050;background-color:#1e0010>└─</span> sendInputFileTo(
+</span></span><span style=display:flex><span>        frameReader,
+</span></span><span style=display:flex><span>        SrcBufPool,
+</span></span><span style=display:flex><span>        SrcYuv.get(),
+</span></span><span style=display:flex><span>        cfg,
+</span></span><span style=display:flex><span>        FileInfo,
+</span></span><span style=display:flex><span>        pSrcConv.get(),
+</span></span><span style=display:flex><span>        firstSink,
+</span></span><span style=display:flex><span>        iPictCount,
+</span></span><span style=display:flex><span>        iReadCount
+</span></span><span style=display:flex><span>      )
+</span></span><span style=display:flex><span>      <span style=color:#960050;background-color:#1e0010>└─</span> GetSrcFrame(
+</span></span><span style=display:flex><span>           iReadCount,
+</span></span><span style=display:flex><span>           iPictCount,
+</span></span><span style=display:flex><span>           frameReader,
+</span></span><span style=display:flex><span>           FileInfo,
+</span></span><span style=display:flex><span>           SrcBufPool,
+</span></span><span style=display:flex><span>           Yuv,
+</span></span><span style=display:flex><span>           tChParam,
+</span></span><span style=display:flex><span>           cfg,
+</span></span><span style=display:flex><span>           pSrcConv
+</span></span><span style=display:flex><span>         )
+</span></span><span style=display:flex><span>         <span style=color:#960050;background-color:#1e0010>└─</span> ReadSourceFrame(SrcBufPool, Yuv, frameReader, tUpdatedDim, pSrcConv)
+</span></span><span style=display:flex><span>            <span style=color:#960050;background-color:#1e0010>└─</span> ReadSourceFrameBuffer(pBuffer, conversionBuffer, frameReader, tUpdatedDim, pSrcConv)
+</span></span><span style=display:flex><span>               <span style=color:#960050;background-color:#1e0010>├─</span> <span style=color:#66d9ef>if</span> conversion needed:
+</span></span><span style=display:flex><span>               <span style=color:#960050;background-color:#1e0010>│</span>    <span style=color:#960050;background-color:#1e0010>├─</span> frameReader<span style=color:#f92672>-&gt;</span>ReadFrame(conversionBuffer)
+</span></span><span style=display:flex><span>               <span style=color:#960050;background-color:#1e0010>│</span>    <span style=color:#960050;background-color:#1e0010>└─</span> pSrcConv<span style=color:#f92672>-&gt;</span>ConvertSrcBuf(conversionBuffer, pBuffer)
+</span></span><span style=display:flex><span>               <span style=color:#960050;background-color:#1e0010>└─</span> <span style=color:#66d9ef>else</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>                    <span style=color:#960050;background-color:#1e0010>└─</span> frameReader<span style=color:#f92672>-&gt;</span>ReadFrame(pBuffer)
+</span></span></code></pre></div><hr><h3 id=-input-components-說明>🧩 Input Components 說明</h3><table><thead><tr><th>變數名</th><th>類型 / 來源</th><th>備註</th></tr></thead><tbody><tr><td><code>frameReader</code></td><td><code>unique_ptr&lt;FrameReader></code></td><td>Instance variable（UnCompFrameReader）</td></tr><tr><td><code>SrcBufPool</code></td><td><code>PixMapBufPool</code></td><td>DMA allocator buffer pool</td></tr><tr><td><code>Yuv</code></td><td><code>AL_TBuffer *</code></td><td>使用 <code>SrcYuv.get()</code>（default allocator）</td></tr><tr><td><code>pSrcConv</code></td><td><code>IConvSrc *</code></td><td>若需轉換格式，實體為 <code>CYuvSrcConv</code></td></tr><tr><td><code>firstSink</code></td><td><code>IFrameSink *</code></td><td>encoder sink；<code>enc.get()</code></td></tr><tr><td><code>iPictCount</code></td><td><code>int</code></td><td>frame 計數器</td></tr><tr><td><code>iReadCount</code></td><td><code>int</code></td><td>read 計數器</td></tr></tbody></table><hr><h3 id=-來源建構流程>🏗️ 來源建構流程</h3><ul><li><p><code>frameReader</code><br>→ <code>LayerResources::InitializeFrameReader()</code><br>→ 類型：<code>UnCompFrameReader</code></p></li><li><p><code>pSrcConv</code><br>→ <code>AllocateSrcConverter()</code><br>→ 若格式不同，return <code>make_unique&lt;CYuvSrcConv></code></p></li><li><p><code>SrcYuv</code><br>→ <code>AllocateConversionBuffer(...)</code><br>→ 僅在需要 format conversion 時配置</p></li></ul><hr><h3 id=-read-行為細節>📂 Read 行為細節</h3><ul><li><p><strong>若無需格式轉換</strong>：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cpp data-lang=cpp><span style=display:flex><span>frameReader<span style=color:#f92672>-&gt;</span>ReadFrame(pBuffer);
 </span></span></code></pre></div></li><li><p><strong>若需格式轉換（例如 I420 → NV12）</strong>：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cpp data-lang=cpp><span style=display:flex><span>frameReader<span style=color:#f92672>-&gt;</span>ReadFrame(conversionBuffer);
 </span></span><span style=display:flex><span>pSrcConv<span style=color:#f92672>-&gt;</span>ConvertSrcBuf(conversionBuffer, pBuffer);
 </span></span></code></pre></div></li></ul><hr><h2 id=fetch-es-output-機制修正2025-07-30>Fetch ES Output 機制修正（2025-07-30）</h2><p>原本的 callback 實作錯誤，導致 encoder 卡住無法繼續輸出 ES。經查證，必須在 callback return 前 <strong>明確呼叫 <code>AL_Encoder_PutStreamBuffer()</code></strong> 歸還 bitstream buffer，encoder 才能繼續使用該 buffer 進行編碼。</p><h3 id=修正後範例>修正後範例：</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cpp data-lang=cpp><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>myEndEncoding</span>(<span style=color:#66d9ef>void</span> <span style=color:#f92672>*</span>userParam, AL_TBuffer <span style=color:#f92672>*</span>pStream, AL_TBuffer <span style=color:#66d9ef>const</span> <span style=color:#f92672>*</span>pSrc, <span style=color:#66d9ef>int</span> iLayerID)

@@ -49,15 +49,7 @@ draft: false
 
 ---
 
-### 4. 固定 IP 與雙場景切換
-- 在 macOS **網路位置 (Locations)** 建立：
-  - 公司 NAS → 固定 IP（例：192.168.50.10）
-  - 家 NAS → 固定 IP（例：192.168.1.10）
-- 到不同地點切換位置即可使用固定 IP 連線
-
----
-
-### 5. Thunderbolt Networking（可選加速）
+### 4. Thunderbolt Networking（可選加速）
 1. 用 TB4 線直連 M3 MBP ↔ Windows / Linux  
 2. Mac 端 Thunderbolt Bridge 設固定 IP（例：10.0.2.1）  
 3. Windows / Linux 端同網段 IP（例：10.0.2.2）  
@@ -66,7 +58,5 @@ draft: false
 ---
 
 ## 📌 實際效果
-- 到公司插網路 → 切換到「公司 NAS」位置 → Windows/Linux 馬上能用  
-- 回家切換到「家 NAS」位置 → 家中裝置立即可用  
 - 完全不需要考慮 filesystem 相容性  
 - 保留 APFS 的快照與安全性功能  

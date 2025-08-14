@@ -79,6 +79,8 @@
 <h2>📌 Tech</h2>
 <ul>
   
+    <li><a href="/tech/mbp_apfs_smb_bridge_guide/">使用 Mac 作為 Virtual File System</a></li>
+  
     <li><a href="/tech/vcu_progress/">VCU 開發進度總結 — 2025-08-01</a></li>
   
     <li><a href="/tech/lc/">LeetCode 每日打卡 RPG 🎯💻</a></li>
@@ -86,8 +88,6 @@
     <li><a href="/tech/cpp_std/">C&#43;&#43; STL</a></li>
   
     <li><a href="/tech/hugo_setup/">新機 GitHub SSH Clone &#43; Hugo 環境 Setup 小抄</a></li>
-  
-    <li><a href="/tech/hdmi_aux/">HDMI AUX Data</a></li>
   
 </ul>
 
@@ -122,6 +122,84 @@
 
 
 <section class="list-item">
+  <h1 class="title"><a href="/tech/mbp_apfs_smb_bridge_guide/">使用 Mac 作為 Virtual File System</a></h1>
+  <time>Aug 10, 2025</time>
+  <br><div class="description">
+	
+	<h1 id="-核心目標">🎯 核心目標</h1>
+<ul>
+<li>用現有 <strong>M3 MacBook Pro</strong> 直接當「APFS → SMB/NFS 跨平台橋接器」</li>
+<li>讓 <strong>Windows / Linux</strong> 都能讀寫 APFS 卷宗，而不需在意底層檔案系統相容性</li>
+</ul>
+<hr>
+<h2 id="-為什麼保留-mbp-而不是換-mac-mini">💡 為什麼保留 MBP 而不是換 Mac mini</h2>
+<ul>
+<li>有螢幕與鍵盤，隨時可管理、排錯</li>
+<li>目前設定已可直接跨平台存取</li>
+</ul>
+<hr>
+<h2 id="-建議設定方案雙場景">⚙ 建議設定方案（雙場景）</h2>
+<h3 id="1-在-m3-mbp-上設定檔案共享">1. 在 M3 MBP 上設定檔案共享</h3>
+<ol>
+<li>System Settings → General → <strong>Sharing</strong> → 開啟 <strong>File Sharing</strong></li>
+<li>Options → 勾選 <strong>Sharing &hellip; SMB</strong>，並勾選你的使用者帳號（輸入密碼啟用）</li>
+<li>將 <strong>LaCie SSD（APFS）</strong> 加入共享清單，設定需要的帳號為 <strong>Read &amp; Write</strong> 權限</li>
+</ol>
+<hr>
+<h3 id="2-windows-連線方法">2. Windows 連線方法</h3>
+<ul>
+<li><strong>檔案總管</strong>：
+<pre tabindex="0"><code>\\&lt;MBP_IP&gt;
+</code></pre>範例：
+<pre tabindex="0"><code>\\172.17.6.88
+</code></pre></li>
+<li>登入時：
+<ul>
+<li>使用者：hank（不加 @domain）</li>
+<li>密碼：macOS 登入密碼</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="3-linux-連線方法">3. Linux 連線方法</h3>
+<ol start="2">
+<li>檔案總管 GUI：
+<pre tabindex="0"><code>smb://172.17.6.88
+</code></pre></li>
+</ol>
+<hr>
+<h3 id="4-固定-ip-與雙場景切換">4. 固定 IP 與雙場景切換</h3>
+<ul>
+<li>在 macOS <strong>網路位置 (Locations)</strong> 建立：
+<ul>
+<li>公司 NAS → 固定 IP（例：192.168.50.10）</li>
+<li>家 NAS → 固定 IP（例：192.168.1.10）</li>
+</ul>
+</li>
+<li>到不同地點切換位置即可使用固定 IP 連線</li>
+</ul>
+<hr>
+<h3 id="5-thunderbolt-networking可選加速">5. Thunderbolt Networking（可選加速）</h3>
+<ol>
+<li>用 TB4 線直連 M3 MBP ↔ Windows / Linux</li>
+<li>Mac 端 Thunderbolt Bridge 設固定 IP（例：10.0.2.1）</li>
+<li>Windows / Linux 端同網段 IP（例：10.0.2.2）</li>
+<li>按上面 SMB 方法連線，速度可達 900–1500MB/s</li>
+</ol>
+<hr>
+<h2 id="-實際效果">📌 實際效果</h2>
+<ul>
+<li>到公司插網路 → 切換到「公司 NAS」位置 → Windows/Linux 馬上能用</li>
+<li>回家切換到「家 NAS」位置 → 家中裝置立即可用</li>
+<li>完全不需要考慮 filesystem 相容性</li>
+<li>保留 APFS 的快照與安全性功能</li>
+</ul>&hellip;
+	
+</div>
+  <a class="readmore" href="/tech/mbp_apfs_smb_bridge_guide/">Read more ⟶</a>
+</section>
+
+<section class="list-item">
   <h1 class="title"><a href="/tech/vcu_progress/">VCU 開發進度總結 — 2025-08-01</a></h1>
   <time>Jul 1, 2025</time>
   <br><div class="description">
@@ -139,102 +217,31 @@
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 確認輸出檔案型態</span>
 </span></span><span style="display:flex;"><span>file bin/AL_Encoder.exe
 </span></span></code></pre></div><hr>
-<h2 id="更新概要2025-08-01">更新概要（2025-08-01）</h2>
-<p>Send Input Frame Trace.</p>
+<h2 id="更新概要2025-08-04">更新概要（2025-08-04）</h2>
+<p>格式轉換.</p>
 <hr>
-<h2 id="send-input-frame-trace2025-08-01">Send Input Frame Trace（2025-08-01）</h2>
-<p><code>exe_encoder</code> 主邏輯在 <code>SafeChannelMain()</code> 裡：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">while</span> (...) {
-</span></span><span style="display:flex;"><span>  LayerResources<span style="color:#f92672">::</span>SendInput(...);
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><hr>
-<h3 id="-function-call-trace">🔁 Function Call Trace</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>SafeChannelMain()
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">└─</span> LayerResources<span style="color:#f92672">::</span>SendInput(cfg, enc.get(), traceHooker)
-</span></span><span style="display:flex;"><span>   <span style="color:#960050;background-color:#1e0010">└─</span> sendInputFileTo(
-</span></span><span style="display:flex;"><span>        frameReader,
-</span></span><span style="display:flex;"><span>        SrcBufPool,
-</span></span><span style="display:flex;"><span>        SrcYuv.get(),
-</span></span><span style="display:flex;"><span>        cfg,
-</span></span><span style="display:flex;"><span>        FileInfo,
-</span></span><span style="display:flex;"><span>        pSrcConv.get(),
-</span></span><span style="display:flex;"><span>        firstSink,
-</span></span><span style="display:flex;"><span>        iPictCount,
-</span></span><span style="display:flex;"><span>        iReadCount
-</span></span><span style="display:flex;"><span>      )
-</span></span><span style="display:flex;"><span>      <span style="color:#960050;background-color:#1e0010">└─</span> GetSrcFrame(
-</span></span><span style="display:flex;"><span>           iReadCount,
-</span></span><span style="display:flex;"><span>           iPictCount,
-</span></span><span style="display:flex;"><span>           frameReader,
-</span></span><span style="display:flex;"><span>           FileInfo,
-</span></span><span style="display:flex;"><span>           SrcBufPool,
-</span></span><span style="display:flex;"><span>           Yuv,
-</span></span><span style="display:flex;"><span>           tChParam,
-</span></span><span style="display:flex;"><span>           cfg,
-</span></span><span style="display:flex;"><span>           pSrcConv
-</span></span><span style="display:flex;"><span>         )
-</span></span><span style="display:flex;"><span>         <span style="color:#960050;background-color:#1e0010">└─</span> ReadSourceFrame(SrcBufPool, Yuv, frameReader, tUpdatedDim, pSrcConv)
-</span></span><span style="display:flex;"><span>            <span style="color:#960050;background-color:#1e0010">└─</span> ReadSourceFrameBuffer(pBuffer, conversionBuffer, frameReader, tUpdatedDim, pSrcConv)
-</span></span><span style="display:flex;"><span>               <span style="color:#960050;background-color:#1e0010">├─</span> <span style="color:#66d9ef">if</span> conversion needed:
-</span></span><span style="display:flex;"><span>               <span style="color:#960050;background-color:#1e0010">│</span>    <span style="color:#960050;background-color:#1e0010">├─</span> frameReader<span style="color:#f92672">-&gt;</span>ReadFrame(conversionBuffer)
-</span></span><span style="display:flex;"><span>               <span style="color:#960050;background-color:#1e0010">│</span>    <span style="color:#960050;background-color:#1e0010">└─</span> pSrcConv<span style="color:#f92672">-&gt;</span>ConvertSrcBuf(conversionBuffer, pBuffer)
-</span></span><span style="display:flex;"><span>               <span style="color:#960050;background-color:#1e0010">└─</span> <span style="color:#66d9ef">else</span><span style="color:#f92672">:</span>
-</span></span><span style="display:flex;"><span>                    <span style="color:#960050;background-color:#1e0010">└─</span> frameReader<span style="color:#f92672">-&gt;</span>ReadFrame(pBuffer)
-</span></span></code></pre></div><hr>
-<h3 id="-input-components-說明">🧩 Input Components 說明</h3>
-<table>
-  <thead>
-      <tr>
-          <th>變數名</th>
-          <th>類型 / 來源</th>
-          <th>備註</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>frameReader</code></td>
-          <td><code>unique_ptr&lt;FrameReader&gt;</code></td>
-          <td>Instance variable（UnCompFrameReader）</td>
-      </tr>
-      <tr>
-          <td><code>SrcBufPool</code></td>
-          <td><code>PixMapBufPool</code></td>
-          <td>DMA allocator buffer pool</td>
-      </tr>
-      <tr>
-          <td><code>Yuv</code></td>
-          <td><code>AL_TBuffer *</code></td>
-          <td>使用 <code>SrcYuv.get()</code>（default allocator）</td>
-      </tr>
-      <tr>
-          <td><code>pSrcConv</code></td>
-          <td><code>IConvSrc *</code></td>
-          <td>若需轉換格式，實體為 <code>CYuvSrcConv</code></td>
-      </tr>
-      <tr>
-          <td><code>firstSink</code></td>
-          <td><code>IFrameSink *</code></td>
-          <td>encoder sink；<code>enc.get()</code></td>
-      </tr>
-      <tr>
-          <td><code>iPictCount</code></td>
-          <td><code>int</code></td>
-          <td>frame 計數器</td>
-      </tr>
-      <tr>
-          <td><code>iReadCount</code></td>
-          <td><code>int</code></td>
-          <td>read 計數器</td>
-      </tr>
-  </tbody>
-</table>
-<hr>
-<h3 id="-來源建構流程">🏗️ 來源建構流程</h3>
+<h3 id="格式轉換2025-08-04">格式轉換（2025-08-04）</h3>
+<p><code>CYuvSrcConv::ConvertSrcBuf(AL_TBuffer const *pSrcIn, AL_TBuffer *pSrcOut)</code></p>
 <ul>
 <li>
-<p><code>frameReader</code><br>
-→ <code>LayerResources::InitializeFrameReader()</code><br>
-→ 類型：<code>UnCompFrameReader</code></p>&hellip;
+<p>根據 <code>pSrcOut</code> 的 FOURCC，選擇對應的轉換 case<br>
+例如，若輸出為 NV12，將執行：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">case</span> <span style="color:#a6e22e">FOURCC</span>(NV12)<span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> convertToNV12(pSrcIn, tFourCCIn, pSrcOut);
+</span></span></code></pre></div></li>
+<li>
+<p><code>convertToNV12(AL_TBuffer const* pSrcIn, TFourCC inFourCC, AL_TBuffer* pSrcOut)</code><br>
+根據輸入格式 <code>inFourCC</code>，選擇對應的轉換邏輯，例如：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">case</span> <span style="color:#a6e22e">FOURCC</span>(I420)<span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> I420_To_NV12(pSrcIn, pSrcOut);
+</span></span></code></pre></div></li>
+<li>
+<p>最終將透過對應函式將輸入格式轉為 NV12。</p>
+</li>
+</ul>
+<hr>
+<h2 id="send-input-frame-trace2025-08-01">Send Input Frame Trace（2025-08-01）</h2>
+<p><code>exe_encoder</code> 主邏輯在 <code>SafeChannelMain()</code> 裡：</p>&hellip;
 	
 </div>
   <a class="readmore" href="/tech/vcu_progress/">Read more ⟶</a>

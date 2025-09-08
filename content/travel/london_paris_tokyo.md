@@ -13,7 +13,7 @@ draft: false
 | 4/6 LHR →  | 4/7 HND     | 4/8 Tokyo    | 4/9 NRT → TPE |
 
 ## Paris Itinerary (2026-03-26 ~ 2026-03-29)
-*Base Hotel: ???*
+*Base Hotel: Renaissance Paris Republique Hotel*
 
 ---
 
@@ -22,13 +22,15 @@ draft: false
 | Time         | Activity                                               | Remark                          |
 |--------------|--------------------------------------------------------| ------------------------------- |
 | 08:30        | Arrive at CDG                                          |                                 |
-| 12:00–13:45  | To Hotel, check-in or drop bag                         |                                 |
+| 12:00–13:45  | To Peninsula, check-in or drop bag                     |                                 |
 
 
 ### Day 2 - 2026-03-27 (Fri) |
 
 | Time         | Activity                                               | Remark                          |
 |--------------|------------------------------------------------------- | ------------------------------- |
+| 09:00-10:00  | The Peninsula Paris breakfast                          |                                 |
+| 16:30        | Check in Renaissance                                   |                                 |
 
 
 ### Day 3 - 2026-03-28 (Sat) |
@@ -41,6 +43,7 @@ draft: false
 
 | Time         | Activity                                               | Remark                          |
 |--------------|------------------------------------------------------- | ------------------------------- |
+
 
 
 ## 🏙 London Itinerary（2026-03-29 ~ 2026-04-06）

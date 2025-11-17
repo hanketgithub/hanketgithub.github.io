@@ -7,7 +7,7 @@ draft: false
 # Jensen Huang：
 
 > *“From a cynic's perspective, they say even if you build, they(the user) may not come;  
-> from an optimist's perspective, they say but if you don't build, they can't come.”*
+> from an optimist's perspective, they say but if <u>you don't build, they can't come.”</u>*
 
 **狂熊心得：**  
 這個不做那個也不做的人一'世'無成。

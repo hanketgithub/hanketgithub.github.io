@@ -35,12 +35,23 @@
   {{ end }}
 </ul>
 
+<h2>📌 狂熊戰鑒</h2>
+<ul>
+  {{ range first 5 (where .Site.RegularPages "Section" "codex") }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+  {{ end }}
+</ul>
+
 <h2>📌 Misc </h2>
 <ul>
   {{ range first 5 (where .Site.RegularPages "Section" "misc") }}
     <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
   {{ end }}
 </ul>
+
+
+
+
 
 <!-- 原主題文章列表 -->
 {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}

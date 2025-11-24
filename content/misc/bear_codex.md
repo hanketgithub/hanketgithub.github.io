@@ -1,5 +1,5 @@
 ---
-title: "狂熊語錄戰鑑：名人洞見集"
+title: "《狂熊戰鑒》第三部：名人洞見集"
 date: 2025-11-17
 draft: false
 ---
@@ -9,7 +9,6 @@ draft: false
 > *“From a cynic's perspective, they say even if you build, they(the user) may not come;  
 > from an optimist's perspective, they say but if <u>you don't build, they can't come.”</u>*
 
-**狂熊心得：**  
 這個不做那個也不做的人一'世'無成。
 
 ---

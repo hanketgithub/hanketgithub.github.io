@@ -7,6 +7,13 @@
 </div>
 
 <!-- 自訂分類導覽 -->
+<h2>📌 Todo </h2>
+<ul>
+  {{ range first 5 (where .Site.RegularPages "Section" "todo") }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+  {{ end }}
+</ul>
+
 <h2>📌 Air</h2>
 <ul>
   {{ range first 5 (where .Site.RegularPages "Section" "airlines") }}

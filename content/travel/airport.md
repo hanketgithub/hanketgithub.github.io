@@ -41,6 +41,20 @@ date: 2025-12-01
 
 ---
 
+## LHR
+### Heathrow Express
+- 15 min
+- luggage friendly
+- £10 for 30 Days advance. £25 standard.
+
+### Elizabeth Line
+- 28 min
+- luggage ok
+- £13.90
+
+
+---
+
 ## 總結
 - CDG 就是車. 其他的別想!
 

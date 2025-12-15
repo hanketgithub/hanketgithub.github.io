@@ -19,8 +19,8 @@ date: 2025-12-01
 ---
 
 ## CDG
-- Taxi: Fixed rate. 右岸 €56. 但是有可能被壞蛋加收.
-- Hotel Car: Raffles 免費 (2026-03-??)
+- Taxi: Fixed rate. 右岸 €56. 但是有可能被壞司機加收.
+- Hotel Car: Raffles 免費 (2026-03)
 - RER: 扒手多. 與當地人擠. 不推
 - CDG Express: 預計 2027
 

@@ -9,20 +9,20 @@ draft: false
 2. 在 `Dockerfile` 所在目錄建立新的 image，使用以下指令進行 build，完成後可用 `docker images` 確認 image 是否成功建立。
 
 ```bash
-docker build -t xyz .
-docker images
+$ docker build -t xyz .
+$ docker images
 ```
 
 3. 使用以下指令啟動 container，指定固定名稱 `kuma`，並將 host 的 `$HOME` 目錄掛載到 container 內相同路徑，方便重複進入同一個開發環境且保留所有使用者資料。
 
 ```bash
-docker run -it -v "$HOME:$HOME" --name kuma xyz
+$ docker run -it -v "$HOME:$HOME" --name kuma xyz
 ```
 
 4. 重啟 container。
 
 ```bash
-docker start -ai kuma
+$ docker start -ai kuma
 ```
 
 

@@ -168,9 +168,67 @@
 <li>使用以下指令啟動 container，指定固定名稱 <code>kuma</code>，並將 host 的 <code>$HOME</code> 目錄掛載到 container 內相同路徑，方便重複進入同一個開發環境且保留所有使用者資料。</li>
 </ol>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker run -it -v <span style="color:#e6db74">&#34;</span>$HOME<span style="color:#e6db74">:</span>$HOME<span style="color:#e6db74">&#34;</span> --name kuma xyz
-</span></span></code></pre></div><p><code>--name kuma</code> 讓你之後可以直接用</p>
+</span></span></code></pre></div><ol start="4">
+<li>重啟 container。</li>
+</ol>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker start -ai kuma
-</span></span></code></pre></div><p>重新啟動 container</p>&hellip;
+</span></span></code></pre></div><hr>
+<p>PS: Dockerfile 範例</p>
+<pre tabindex="0"><code># -----------------------------------------------------------------------------
+# Dockerfile for a reproducible Ubuntu 22.04 development environment
+#
+# Purpose:
+#   - Provide a clean, predictable build environment
+#   - Avoid host OS dependency issues
+#   - Intended for interactive development and build, not production runtime
+# -----------------------------------------------------------------------------
+#
+# Build image:
+#   $ docker build -t xyz .
+#
+# List images:
+#   $ docker images
+#
+# Run container (interactive shell):
+#   $ docker run -it -v &#34;$HOME:$HOME&#34; xyz
+#
+# Notes:
+#   - $HOME is bind-mounted to preserve user files and SSH config
+#   - Container is expected to be used as a dev shell
+#
+
+FROM ubuntu:22.04
+
+# Base packages required by PetaLinux / Yocto build environment
+RUN apt update
+RUN apt install -y vim
+RUN apt install -y \
+  bc build-essential net-tools xterm autoconf libtool \
+  python3 less rsync texinfo zlib1g-dev gcc-multilib \
+  libncurses5-dev libtinfo5 libtinfo6 zstd
+
+# Locale setup to avoid encoding-related toolchain issues
+RUN apt install -y locales
+RUN locale-gen en_US.UTF-8
+
+# Force /bin/sh to point to bash
+RUN [&#34;/bin/bash&#34;, &#34;-lc&#34;, &#34;rm -f /bin/sh &amp;&amp; ln -s /bin/bash /bin/sh&#34;]
+
+ENV SHELL=/bin/bash
+ENV LANG=en_US.UTF-8
+ENV LC_ALL=en_US.UTF-8
+
+# Create non-root user for build consistency
+# Avoid building as root to match real-world dev environment
+RUN useradd -m hank
+RUN echo &#34;hank:advantech&#34; | chpasswd
+
+USER hank
+WORKDIR /home/hank
+
+# Default to interactive bash shell
+CMD [&#34;bash&#34;]
+</code></pre>&hellip;
 	
 </div>
   <a class="readmore" href="/tech/docker/">Read more ⟶</a>

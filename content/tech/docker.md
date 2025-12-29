@@ -19,10 +19,8 @@ docker images
 docker run -it -v "$HOME:$HOME" --name kuma xyz
 ```
 
-`--name kuma` 讓你之後可以直接用  
+4. 重啟 container。
 
 ```bash
 docker start -ai kuma
 ```
-
-重新啟動 container

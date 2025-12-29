@@ -65,11 +65,12 @@ draft: false
   
   
   
-### To Use   
-- [ ] Tenuta Ganga di Lupo 2026-08-05 (849 mg/kg)
-- [ ] FINCA CORTIJO GUADIANA SUMMER 2026-10-08  
+### To Use
+- [ ] Finca Cortijo Guadiana Summer 2026-10-08
 - [ ] La Riserva BIO Riserva Bio (558 mg/kg)
-- [ ] MASSERIA LEONE
+- [ ] Frantoio Paolocci (500 mg/kg)  
+
+
 
 ---
 

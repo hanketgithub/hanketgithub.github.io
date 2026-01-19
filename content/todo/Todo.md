@@ -1,6 +1,6 @@
 ---
 title: "Todo"
-date: 2025-12-01
+date: 2026-01-01
 draft: false
 ---
 
@@ -58,9 +58,9 @@ draft: false
 - [ ] 秀泰 x 1 - Dated  
 - [ ] 秀泰 x 9 - 2026-07-31  
 - [ ] Hilton Pt - 7826  
-- [ ] 旭集 x 1  
+- [ ] 旭集 x 2  
 - [ ] 旭集 下午茶 x 3  
-- [ ] Marriott 85k FNA - 88k London Marriott County Hall  
+- [ ] Marriott 85k FNA - 
 - [ ] Marriott Gift Card USD 1000  
   
   

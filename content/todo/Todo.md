@@ -69,7 +69,7 @@ draft: false
 - [ ] Finca Cortijo Guadiana Summer 2026-10-08
 - [ ] La Riserva BIO Riserva Bio (558 mg/kg)
 - [ ] Frantoio Paolocci (500 mg/kg)  
-
+- [ ] Sabor D'oro (526 mg/kg)  
 
 
 ---

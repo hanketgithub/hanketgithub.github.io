@@ -2,13 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/tags/docker/</loc>
-    <lastmod>2025-12-10T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2026-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/fhr/</loc>
+    <lastmod>2026-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-12-10T00:00:00+00:00</lastmod>
+    <lastmod>2026-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/todo/todo/</loc>
+    <lastmod>2026-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/todo/</loc>
+    <lastmod>2026-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/travel/</loc>
+    <lastmod>2026-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E6%9D%B1%E4%BA%AC/</loc>
+    <lastmod>2026-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/travel/tokyo_2026_q1/</loc>
+    <lastmod>2026-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E7%AE%B1%E6%A0%B9/</loc>
+    <lastmod>2026-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/%E9%A3%AF%E5%BA%97%E9%AB%94%E9%A9%97/</loc>
+    <lastmod>2026-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/docker/</loc>
     <lastmod>2025-12-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tech/</loc>
@@ -23,37 +50,10 @@
     <loc>http://localhost:1313/codex/</loc>
     <lastmod>2025-12-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-12-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/fhr/</loc>
-    <lastmod>2025-12-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/todo/todo/</loc>
-    <lastmod>2025-12-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/todo/</loc>
-    <lastmod>2025-12-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/travel/</loc>
-    <lastmod>2025-12-01T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/todo/%E5%90%89%E6%97%A5/</loc>
     <lastmod>2025-12-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/%E6%9D%B1%E4%BA%AC/</loc>
-    <lastmod>2025-12-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/travel/tokyo_2026_q1/</loc>
-    <lastmod>2025-12-01T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/travel/airport/</loc>
-    <lastmod>2025-12-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/%E7%AE%B1%E6%A0%B9/</loc>
-    <lastmod>2025-12-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/%E9%A3%AF%E5%BA%97%E9%AB%94%E9%A9%97/</loc>
     <lastmod>2025-12-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/codex/bear_codex_7/</loc>

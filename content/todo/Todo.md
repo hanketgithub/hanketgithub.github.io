@@ -66,7 +66,7 @@ draft: false
   
   
   
-### To Use
+### 橄欖油
 - [ ] Sabor D'oro (526 mg/kg)  2026-02-02 ~ 
 - [ ] La Riserva BIO Riserva Bio (558 mg/kg)
 - [ ] Frantoio Paolocci (500 mg/kg)  
@@ -138,17 +138,17 @@ draft: false
 | 2023-03-01  | BR 72355 miles 23/03 extends to 24/09 | 100%     | 月中                                     |
 |             | 用完 Aesop 乾洗手                     | 100%     |                                          |
 |             | 吃完 葉黃素                           | 100%     |                                          |
-|             | Sort Nara trip                        | 100% |  |
-|             | 吃完 MoveFree                         | 100% |  |
-|             | Book Read: 知性之旅希臘               | 100% |  |
-|             | eslite 香氛抵用                       | 100% | 忍冬 |
-|             | Sell LV Pocket Organizer              | 100% |  |
-|             | 處理入口鞋櫃                          | 100% | 死角非常髒 |
-|             |                                       |  |  |
-| 2023-04-01  | 申請國際駕照                          | 100% |  |
-|             | 申請 Platinum Challenge | 100% |  |
-|             | Amanzoe | 100% |  |
-|             | 天空之城 Kalambaka | 100% |  |
+|             | Sort Nara trip                        | 100%     |                                          |
+|             | 吃完 MoveFree                         | 100%     |                                          |
+|             | Book Read: 知性之旅希臘               | 100%     |                                          |
+|             | eslite 香氛抵用                       | 100%     | 忍冬                                     |
+|             | Sell LV Pocket Organizer              | 100%     |                                          |
+|             | 處理入口鞋櫃                          | 100%     | 死角非常髒                               |
+|             |                                       |          |                                          |
+| 2023-04-01  | 申請國際駕照                          | 100%     |                                          |
+|             | 申請 Platinum Challenge               | 100%     |                                          |
+|             | Amanzoe                               | 100%     |                                          |
+|             | 天空之城 Kalambaka                    | 100%     |                                          |
 |             |  |  |  |
 | 2023-05-01  | Book Read: 有時你會覺得寂寞那並非全無道理 | 100% |  |
 |             | Marriott Platinum | 100% | Give up challenge and get Brilliant card |

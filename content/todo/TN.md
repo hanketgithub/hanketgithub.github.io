@@ -18,6 +18,11 @@ draft: false
 - [ ] Regular 1/2 Short Trip MD Cream, using
 - [ ] Regular 1/2 Short Trip 牛皮紙
 - [ ] Regular 黑色牛皮紙
+- [ ] Regular NRT
+- [ ] Regular Tokyo Station
+- [ ] Regular Love and Trip #01, using
+- [ ] Regular Love and Trip #02
+- [ ] Regular Eslite
 - [x] Regular 003 Blank #01
 - [x] Regular 003 Blank #03
 - [ ] Passport 002 Grid #02, using

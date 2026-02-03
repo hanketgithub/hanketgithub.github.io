@@ -4,20 +4,28 @@ date: 2026-02-01
 draft: false
 ---
 
-# TN Inserts
+
+## TN Inserts  
 - [ ] Regular 002 Grid #01, using
-- [ ] Regular 003 Blank #02, using
+- [ ] Regular 003 Blank #02, using  
+- [ ] Regular 003 Blank #04
 - [ ] Regular 014 牛皮紙 #01, using
 - [ ] Regular 025 MD Cream #01, using
 - [ ] Regular 025 MD Cream #02
 - [ ] Regular 025 MD Cream #03
 - [ ] Regular 026 Dot Grid #01, using
+- [ ] Regular 2026 Diary, using
+- [ ] Regular 1/2 Short Trip MD Cream, using
+- [ ] Regular 1/2 Short Trip 牛皮紙
+- [ ] Regular 黑色牛皮紙
 - [x] Regular 003 Blank #01
 - [x] Regular 003 Blank #03
-
 - [ ] Passport 002 Grid #02, using
 - [ ] Passport 003 Blank #01
 - [ ] Passport 009 牛皮紙 #01, using
+- [ ] Passport 005 薄紙, using
+- [ ] Passport 水彩紙
+- [ ] Passport 1/2 Short Trip 牛皮紙
 - [x] Passport 002 Grid #01
 
 
@@ -30,7 +38,7 @@ draft: false
 - [x] Red - Japan
 - [ ] NRT
 - [ ] Tokyo Station
-- [ ] Statbucks Roaster
+- [ ] Statbucks Roastery
 - [ ] Kyoto
 
 

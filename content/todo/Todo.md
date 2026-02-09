@@ -37,10 +37,6 @@ draft: false
 - [ ] Dingbats A6 象 方格 x 5  
 - [ ] Dingbats A6 熊 方格 Using  
 - [ ] Dingbats A6 熊 方格  
-- [ ] Traveler's Passport 002 - Using  
-- [ ] Traveler's Passport 005 - Used 2 page  
-- [ ] Traveler's Passport 014 - Used 1 page  
-- [ ] Traveler's Passport 015 - Used 20 page  
 - [ ] 中村 新書判  
 - [ ] 中村 B5 x 15  
 - [ ] Fabriano A5 black 橫線 - Italy 日記  
@@ -150,24 +146,24 @@ draft: false
 |             | Amanzoe                               | 100%     |                                          |
 |             | 天空之城 Kalambaka                    | 100%     |                                          |
 |             |  |  |  |
-| 2023-05-01  | Book Read: 有時你會覺得寂寞那並非全無道理 | 100% |  |
-|             | Marriott Platinum | 100% | Give up challenge and get Brilliant card |
+| 2023-05-01  | Book Read: 有時你會覺得寂寞那並非全無道理  | 100% |  |
+|             | Marriott Platinum                     | 100%     | Give up challenge and get Brilliant card |
 |             |  |  |  |
-| 2023-06-30  | Book Read: 羅馬四季 | 100% |  |
+| 2023-06-30  | Book Read: 羅馬四季                   | 100%     |                                          |
 |             |  |  |  |
-| 2023-07-04  | HBsAg → 55 | 100% | 49 |
-| 2023-07-31  | Book Read: 穿越黑暗的道路 | 100% |  |
+| 2023-07-04  | HBsAg → 55                           | 100%     | 49                                       |
+| 2023-07-31  | Book Read: 穿越黑暗的道路             | 100%     |                                          |
 |             |  |  |  |
-| 2023-08-31  | Marriott Brillant 95k 開卡禮 | 100% |  |
-|             | Book Read: 從前從前有間古書店 | 100% |  |
+| 2023-08-31  | Marriott Brillant 95k 開卡禮          | 100%     |                                          |
+|             | Book Read: 從前從前有間古書店         | 100%     |                                          |
 |             |  |  |  |
-| 2023-09-30  | Book Read: 蒙格之道 | 100% |  |
-|             | Book Read: 大不列顛碎碎念 | 100% |  |
-|             | Book Read: 洛克菲勒給兒子的 38 封信 | 100% |  |
+| 2023-09-30  | Book Read: 蒙格之道                   | 100%     |                                          |
+|             | Book Read: 大不列顛碎碎念             | 100%     |                                          |
+|             | Book Read: 洛克菲勒給兒子的 38 封信   | 100%     |                                          |
 |             |  |  |  |
-| 2023-10-31  | Book Read: 洛克菲勒給兒子的 30 封信 | 100% |  |
-|             | DV 2025 | 100% |  |
-|             | Amanzoe Blog | 100% |  |
+| 2023-10-31  | Book Read: 洛克菲勒給兒子的 30 封信   | 100%     |                                          |
+|             | DV 2025                               | 100%     |                                          |
+|             | Amanzoe Blog                          | 100%     |                                          |
 |             |  |  |  |
-| 2023-12-31  | HBsAg → 25 | 100% | 17 |
+| 2023-12-31  | HBsAg → 25                           | 100%     | 17                                       |
   

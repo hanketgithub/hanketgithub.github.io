@@ -1,8 +1,16 @@
 ---
 title: "TMP"
-date: 2026-02-01
+date: 2026-02-05
 draft: false
 ---
+
+## Shopping List
+- Tokyo Station Starter Kit ¥ 6160
+- Tokyo Station Charm ¥ 770
+- Marunouchi Insert ¥ 500
+- Leather zipper case ¥ 7920, passport size ¥ 5940
+- 2026 月間 ¥ 792
+
 
 
 ## TN Inserts  

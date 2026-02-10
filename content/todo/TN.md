@@ -6,8 +6,8 @@ draft: false
 
 ## Shopping List
 - Tokyo Station Starter Kit ¥ 6160
-- Tokyo Station Charm ¥ 770
-- Marunouchi Insert ¥ 500
+- Tokyo Station Brass Tag ¥ 770
+- Marunouchi Insert ¥ 506
 - Leather zipper case ¥ 7920, passport size ¥ 5940
 - 2026 月間 ¥ 792
 

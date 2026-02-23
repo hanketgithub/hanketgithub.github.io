@@ -5,11 +5,8 @@ draft: false
 ---
 
 ## Shopping List
-- Tokyo Station Starter Kit ¥ 6160
-- Tokyo Station Brass Tag ¥ 770
 - Marunouchi Insert ¥ 506
-- Leather zipper case ¥ 7920, passport size ¥ 5940
-- 2026 月間 ¥ 792
+- Leather zipper case ¥ 7920
 
 
 
@@ -23,8 +20,8 @@ draft: false
 - [ ] Regular 025 MD Cream #03
 - [ ] Regular 026 Dot Grid #01, using
 - [ ] Regular 2026 Diary, using
-- [ ] Regular 1/2 Short Trip MD Cream, using
-- [ ] Regular 1/2 Short Trip 牛皮紙
+- [x] Regular 1/2 Short Trip MD Cream
+- [x] Regular 1/2 Short Trip 牛皮紙
 - [ ] Regular 黑色牛皮紙
 - [ ] Regular NRT
 - [ ] Regular Tokyo Station
@@ -47,13 +44,19 @@ draft: false
 - [x] Cream - Daily
 - [x] Black - Office
 - [x] Olive - Europe
-- [x] Blue - US, UK, ...
+- [x] Blue - US, UK, NZ
 - [x] Red - Japan
 - [ ] NRT
-- [ ] Tokyo Station
-- [ ] Statbucks Roastery
+- [x] Tokyo Station
+- [x] Statbucks Roastery
 - [ ] Kyoto
 
+
+# TF Tokyo Station
+1. 新大谷 → 赤坂見附, 步行約 8–12 分鐘
+2. 赤坂見附 → 東京站, 搭 丸之內線（M Line）, 約 10 分鐘
+3. 重要: 上手扶梯後 刷右側閘門出去(八重州, 丸之內南北口); 絕不可刷左側!
+4. 之後順丸之內北口方向, all set!
 
 
 # 橄欖油

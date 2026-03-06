@@ -23,8 +23,8 @@ draft: false
 - [x] Regular 1/2 Short Trip MD Cream
 - [x] Regular 1/2 Short Trip 牛皮紙
 - [ ] Regular 黑色牛皮紙
-- [ ] Regular NRT
-- [ ] Regular Tokyo Station
+- [ ] Regular NRT, using
+- [ ] Regular Tokyo Station, using
 - [ ] Regular Love and Trip #01, using
 - [ ] Regular Love and Trip #02
 - [ ] Regular Eslite
@@ -36,6 +36,7 @@ draft: false
 - [ ] Passport 005 薄紙, using
 - [ ] Passport 水彩紙
 - [ ] Passport 1/2 Short Trip 牛皮紙
+- [ ] Passport 2026 Diary, using
 - [x] Passport 002 Grid #01
 
 
@@ -47,7 +48,7 @@ draft: false
 - [x] Blue - US, UK, NZ
 - [x] Red - Japan
 - [ ] NRT
-- [x] Tokyo Station
+- [x] Brown Tokyo Station
 - [x] Statbucks Roastery
 - [ ] Kyoto
 

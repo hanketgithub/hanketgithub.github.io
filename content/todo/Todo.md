@@ -7,7 +7,7 @@ draft: false
 ## Mission  
 - [ ] Zoe - Raffles pickup
 - [ ] 小數點 transfer Jal: 480 point -> 1400 miles, 4/30
-- [ ] ANA 85000 miles -> currently 81488 + 2582 = 84070  
+- [ ] ANA 85000 miles -> currently 82479 + 7575 = 90054  
 - [x] BR Upg EC 2026-02-28
 
 

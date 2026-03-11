@@ -6,27 +6,69 @@
     <description>Recent content in Tags on Hank Tech Lab</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>FHR</title>
       <link>http://localhost:1313/tags/fhr/</link>
-      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/fhr/</guid>
       <description></description>
     </item>
     <item>
       <title>東京</title>
       <link>http://localhost:1313/tags/%E6%9D%B1%E4%BA%AC/</link>
-      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/%E6%9D%B1%E4%BA%AC/</guid>
       <description></description>
     </item>
     <item>
       <title>箱根</title>
       <link>http://localhost:1313/tags/%E7%AE%B1%E6%A0%B9/</link>
-      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/%E7%AE%B1%E6%A0%B9/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>BR87</title>
+      <link>http://localhost:1313/tags/br87/</link>
+      <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/br87/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>EVA Air</title>
+      <link>http://localhost:1313/tags/eva-air/</link>
+      <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/eva-air/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>商務艙</title>
+      <link>http://localhost:1313/tags/%E5%95%86%E5%8B%99%E8%89%99/</link>
+      <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E5%95%86%E5%8B%99%E8%89%99/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>飛行體驗</title>
+      <link>http://localhost:1313/tags/%E9%A3%9B%E8%A1%8C%E9%AB%94%E9%A9%97/</link>
+      <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E9%A3%9B%E8%A1%8C%E9%AB%94%E9%A9%97/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>餐酒搭配</title>
+      <link>http://localhost:1313/tags/%E9%A4%90%E9%85%92%E6%90%AD%E9%85%8D/</link>
+      <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E9%A4%90%E9%85%92%E6%90%AD%E9%85%8D/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>香檳</title>
+      <link>http://localhost:1313/tags/%E9%A6%99%E6%AA%B3/</link>
+      <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E9%A6%99%E6%AA%B3/</guid>
       <description></description>
     </item>
     <item>
@@ -111,41 +153,6 @@
       <link>http://localhost:1313/tags/br72/</link>
       <pubDate>Wed, 16 Apr 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/br72/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>EVA Air</title>
-      <link>http://localhost:1313/tags/eva-air/</link>
-      <pubDate>Wed, 16 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/eva-air/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>商務艙</title>
-      <link>http://localhost:1313/tags/%E5%95%86%E5%8B%99%E8%89%99/</link>
-      <pubDate>Wed, 16 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E5%95%86%E5%8B%99%E8%89%99/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>飛行體驗</title>
-      <link>http://localhost:1313/tags/%E9%A3%9B%E8%A1%8C%E9%AB%94%E9%A9%97/</link>
-      <pubDate>Wed, 16 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E9%A3%9B%E8%A1%8C%E9%AB%94%E9%A9%97/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>餐酒搭配</title>
-      <link>http://localhost:1313/tags/%E9%A4%90%E9%85%92%E6%90%AD%E9%85%8D/</link>
-      <pubDate>Wed, 16 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E9%A4%90%E9%85%92%E6%90%AD%E9%85%8D/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>香檳</title>
-      <link>http://localhost:1313/tags/%E9%A6%99%E6%AA%B3/</link>
-      <pubDate>Wed, 16 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E9%A6%99%E6%AA%B3/</guid>
       <description></description>
     </item>
     <item>

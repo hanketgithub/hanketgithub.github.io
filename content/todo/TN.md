@@ -1,5 +1,5 @@
 ---
-title: "TMP"
+title: "TN"
 date: 2026-02-05
 draft: false
 ---
@@ -7,10 +7,11 @@ draft: false
 ## Shopping List
 - Marunouchi Insert ¥ 506
 - Leather zipper case ¥ 7920
+- Superior Labor handbag
+- Stamps
 
 
-
-## TN Inserts  
+## TN Inserts - Regular  
 - [ ] Regular 002 Grid #01, using
 - [ ] Regular 003 Blank #02, using  
 - [ ] Regular 003 Blank #04
@@ -20,23 +21,27 @@ draft: false
 - [ ] Regular 025 MD Cream #03
 - [ ] Regular 026 Dot Grid #01, using
 - [ ] Regular 2026 Diary, using
-- [x] Regular 1/2 Short Trip MD Cream
-- [x] Regular 1/2 Short Trip 牛皮紙
 - [ ] Regular 黑色牛皮紙
 - [ ] Regular NRT, using
-- [ ] Regular Tokyo Station, using
+- [ ] Regular Marunouchi, using
 - [ ] Regular Love and Trip #01, using
 - [ ] Regular Love and Trip #02
 - [ ] Regular Eslite
+- [x] Regular 1/2 Short Trip MD Cream
+- [x] Regular 1/2 Short Trip 牛皮紙
 - [x] Regular 003 Blank #01
 - [x] Regular 003 Blank #03
-- [ ] Passport 002 Grid #02, using
+
+
+
+## TN Inserts - Passport
 - [ ] Passport 003 Blank #01
 - [ ] Passport 009 牛皮紙 #01, using
 - [ ] Passport 005 薄紙, using
 - [ ] Passport 水彩紙
 - [ ] Passport 1/2 Short Trip 牛皮紙
 - [ ] Passport 2026 Diary, using
+- [x] Passport 002 Grid #02
 - [x] Passport 002 Grid #01
 
 
@@ -50,7 +55,8 @@ draft: false
 - [ ] NRT
 - [x] Brown Tokyo Station
 - [x] Statbucks Roastery
-- [ ] Kyoto
+- [x] Kyoto
+
 
 
 # TF Tokyo Station
@@ -60,11 +66,19 @@ draft: false
 4. 之後順丸之內北口方向, all set!
 
 
+
 # 橄欖油
 - [ ] Sabor D'oro (526 mg/kg)  2026-02-02 ~ 2026-??-??
 - [ ] La Riserva BIO Riserva Bio (558 mg/kg)
 - [ ] Frantoio Paolocci (500 mg/kg)  
 - [x] Finca Cortijo Guadiana Summer 2025-10-08 ~ 2026-01-28
+
+
+
+# 橄欖油 - to buy
+- [ ] Ganga Lupo (954 mg/kg)
+- [ ] Hacienda Vadolivo (596 mg/kg)
+- [ ] 30TH HARVEST – Olio Visconti (520 mg/kg)
 
 
 

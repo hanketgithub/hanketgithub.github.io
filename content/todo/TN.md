@@ -12,37 +12,53 @@ draft: false
 
 
 ## TN Inserts - Regular  
-- [ ] Regular 002 Grid #01, using
-- [ ] Regular 003 Blank #02, using  
-- [ ] Regular 003 Blank #04
-- [ ] Regular 014 牛皮紙 #01, using
-- [ ] Regular 025 MD Cream #01, using
-- [ ] Regular 025 MD Cream #02
-- [ ] Regular 025 MD Cream #03
-- [ ] Regular 026 Dot Grid #01, using
-- [ ] Regular 2026 Diary, using
-- [ ] Regular 黑色牛皮紙
-- [ ] Regular NRT, using
-- [ ] Regular Marunouchi, using
-- [ ] Regular Love and Trip #01, using
-- [ ] Regular Love and Trip #02
-- [ ] Regular Eslite
-- [x] Regular 1/2 Short Trip MD Cream
-- [x] Regular 1/2 Short Trip 牛皮紙
-- [x] Regular 003 Blank #01
-- [x] Regular 003 Blank #03
+- [ ] 002 Grid #01, using (Black)
+- [ ] 003 Blank #02, using  (Tokyo Station)
+- [ ] 003 Blank #04
+- [ ] 014 牛皮紙 #01, using (Cream)
+- [ ] 014 牛皮紙 #02
+- [ ] 025 MD Cream #01, using (Cream)
+- [ ] 025 MD Cream #02, using (Blue)
+- [ ] 025 MD Cream #03
+- [ ] 026 Dot Grid #01, using
+- [ ] 2026 Diary, using
+- [ ] 黑色牛皮紙 #01
+- [ ] Tiffany 牛皮紙 #01 (Blue)
+- [ ] Blank Tokyo
+- [ ] Green Tea Leaf
+- [ ] Dot Grid SUBX
+- [ ] Kraft SBUX
+- [ ] MD Cream NRT, using
+- [ ] MD Cream Marunouchi, using
+- [ ] MD Cream Love and Trip #01, using (Olive)
+- [ ] MD Cream Love and Trip #02
+- [ ] MD Cream Metro #01
+- [ ] MD Cream SBUX #01
+- [ ] MD Cream Train #01
+- [ ] MD Cream Train #02
+- [ ] 1/2 Short Trip MD Cream #02
+- [ ] MD Cream Kyoto #01 (Kyoto)
+- [ ] MD Cream Eslite
+- [x] 1/2 Short Trip MD Cream #01
+- [x] 1/2 Short Trip 牛皮紙
+- [x] 003 Blank #01
+- [x] 003 Blank #03
 
 
 
 ## TN Inserts - Passport
-- [ ] Passport 003 Blank #01
-- [ ] Passport 009 牛皮紙 #01, using
-- [ ] Passport 005 薄紙, using
-- [ ] Passport 水彩紙
-- [ ] Passport 1/2 Short Trip 牛皮紙
-- [ ] Passport 2026 Diary, using
-- [x] Passport 002 Grid #02
-- [x] Passport 002 Grid #01
+- [ ] 003 Blank #01, using
+- [ ] 003 Blank #02
+- [ ] 005 薄紙, using
+- [ ] 009 牛皮紙 #01, using
+- [ ] 014 Dot Grid, using
+- [ ] 015 水彩紙
+- [ ] 1/2 Short Trip 牛皮紙
+- [ ] MD Cream 東京地下鐵
+- [ ] MD Cream SBUX
+- [ ] 2026 Diary, using
+- [x] 002 Grid #01
+- [x] 002 Grid #02
 
 
 
@@ -54,8 +70,8 @@ draft: false
 - [x] Red - Japan
 - [ ] NRT
 - [x] Brown Tokyo Station
-- [x] Statbucks Roastery
-- [x] Kyoto
+- [x] Cream SBUX
+- [x] Blue Kyoto
 
 
 

@@ -8,7 +8,7 @@ draft: false
 - Marunouchi Insert ¥ 506
 - Leather zipper case ¥ 7920
 - Superior Labor handbag
-- Stamps
+- 黃銅鋼筆
 
 
 ## TN Inserts - Regular  
@@ -69,8 +69,8 @@ draft: false
 - [x] Blue - US, UK, NZ
 - [x] Red - Japan
 - [ ] NRT
-- [x] Brown Tokyo Station
-- [x] Cream SBUX
+- [x] Tokyo Station
+- [x] Cream sbux
 - [x] Blue Kyoto
 
 
@@ -84,9 +84,9 @@ draft: false
 
 
 # 橄欖油
-- [ ] Sabor D'oro (526 mg/kg)  2026-02-02 ~ 2026-??-??
 - [ ] La Riserva BIO Riserva Bio (558 mg/kg)
 - [ ] Frantoio Paolocci (500 mg/kg)  
+- [x] Sabor D'oro (526 mg/kg)  2026-02-02 ~ 2026-03-22
 - [x] Finca Cortijo Guadiana Summer 2025-10-08 ~ 2026-01-28
 
 

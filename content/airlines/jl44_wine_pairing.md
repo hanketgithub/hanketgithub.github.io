@@ -1,6 +1,6 @@
 ---
 title: "【飛行體驗】JL44 頭等艙懷石料理 × Champagne Pairing：744 到 Salon 的節奏設計"
-date: 2026-04-01
+date: 2026-03-01
 tags: ["JL44", "JAL First Class", "Wine Pairing", "Champagne", "日本航空"]
 ---
 

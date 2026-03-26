@@ -5,7 +5,6 @@ draft: false
 ---
 
 ## Mission  
-- [ ] Zoe - Raffles pickup
 - [ ] 小數點 transfer Jal: 480 point -> 1400 miles, 4/30
 - [ ] ANA 85000 miles -> currently 82479 + 7575 = 90054  
 - [x] BR Upg EC 2026-02-28
@@ -61,14 +60,6 @@ draft: false
 - [ ] Marriott 85k FNA - 王子畫廊
 - [ ] Marriott Gift Card USD 1000  
   
-  
-  
-### 橄欖油
-- [ ] Sabor D'oro (526 mg/kg)  2026-02-02 ~ 
-- [ ] La Riserva BIO Riserva Bio (558 mg/kg)
-- [ ] Frantoio Paolocci (500 mg/kg)  
-- [x] Finca Cortijo Guadiana Summer 2025-10-08 ~ 2026-01-28
-
 
 ---
 

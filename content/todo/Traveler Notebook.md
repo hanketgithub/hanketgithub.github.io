@@ -1,14 +1,14 @@
 ---
 title: "TN"
-date: 2026-02-05
+date: 2026-04-05
 draft: false
 ---
 
 ## Shopping List
-- Marunouchi Insert ¥ 506
-- Leather zipper case ¥ 7920
+- 蓋章
+- NRT inserts
 - Superior Labor handbag
-- 黃銅鋼筆
+
 
 
 ## TN Inserts - Regular  
@@ -30,6 +30,7 @@ draft: false
 - [ ] Kraft SBUX
 - [ ] MD Cream NRT, using
 - [ ] MD Cream Marunouchi, using
+- [ ] MD Cream Marunouchi
 - [ ] MD Cream Love and Trip #01, using (Olive)
 - [ ] MD Cream Love and Trip #02
 - [ ] MD Cream Metro #01
@@ -50,6 +51,7 @@ draft: false
 - [ ] 003 Blank #01, using
 - [ ] 003 Blank #02
 - [ ] 005 薄紙, using
+- [ ] 005 薄紙
 - [ ] 009 牛皮紙 #01, using
 - [ ] 014 Dot Grid, using
 - [ ] 015 水彩紙

@@ -5,14 +5,15 @@ date: 2025-12-01
 
 ## HND
 - 往新大谷: 京急搭至新橋. 轉 Taxi / Ginza line.
-
+- 新大谷 → HND: Fixed rate taxi 7510 jpy.
+- ANA Lounge 簡直是菜市場. 人超多.
 
 ---
 
 ## NRT
 - NRT Express 快又穩. 60 min 直達東京站.
-- 若住紀尾井町 又前往 NRT 可利用利木津 120 min 直達機場無需轉搭地鐵. 最晚 15:30 發車 17:30 抵達.
-- NRT T1 ANA Suite 在 Gate 52 附近. 上樓. 非常不容易找到 一開始定位要精準 否則要繞很久
+- 若住紀尾井町前往 NRT 可利用利木津 120 min 直達機場無需轉搭地鐵. 最晚 15:30 發車 17:30 抵達.
+- NRT T1 ANA Suite Lounge 在 Gate 52 附近. 上樓. 非常不容易找到 一開始定位要精準 否則要繞很久
 
 ---
 

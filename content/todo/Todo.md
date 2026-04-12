@@ -5,7 +5,6 @@ draft: false
 ---
 
 ## Mission  
-- [ ] 小數點 transfer Jal: 480 point -> 1400 miles, 4/30
 - [ ] ANA 85000 miles -> currently 82479 + 7575 = 90054  
 - [x] BR Upg EC 2026-02-28
 
@@ -57,8 +56,8 @@ draft: false
 - [ ] Hilton Pt - 7826  
 - [ ] 旭集 x 2  
 - [ ] 旭集 下午茶 x 3  
-- [ ] Marriott 85k FNA - 王子畫廊
 - [ ] Marriott Gift Card USD 1000  
+- [x] Marriott 85k FNA - 王子畫廊
   
 
 ---
@@ -67,7 +66,7 @@ draft: false
 
 | Date       | Task                   | Progress | Remark |
 | ---------- | ---------------------- | -------- | ------ |
-| 2026-01-31 | Book Read: 1984        | 0%     |        |
+| 2026-01-31 | Book Read: 1984        | 0%       |        |
 
 
 ---

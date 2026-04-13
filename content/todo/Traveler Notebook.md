@@ -15,17 +15,17 @@ draft: false
 - [ ] 014 牛皮紙 #02
 - [ ] 025 MD Cream #01, using (Cream)
 - [ ] 025 MD Cream #03
-- [ ] 026 Dot Grid #01, using
 - [ ] 2026 Diary, using
 - [ ] 黑色牛皮紙 #01
 - [ ] Tiffany 牛皮紙 #01 (Blue)
 - [ ] Blank Tokyo
 - [ ] Green Tea Leaf
-- [ ] Dot Grid SUBX
+- [ ] Dot Grid SBUX
 - [ ] Kraft SBUX
-- [ ] MD Cream NRT, using
-- [ ] MD Cream Marunouchi, using
-- [ ] MD Cream Marunouchi
+- [ ] MD Cream NRT #01, using
+- [ ] MD Cream NRT #02
+- [ ] MD Cream Marunouchi #01, using
+- [ ] MD Cream Marunouchi #02
 - [ ] MD Cream Love and Trip #01, using (Olive)
 - [ ] MD Cream Love and Trip #02
 - [ ] MD Cream Metro #01
@@ -40,6 +40,8 @@ draft: false
 - [x] 003 Blank #01
 - [x] 003 Blank #03
 - [x] 025 MD Cream #02
+- [x] 026 Dot Grid #01
+
 
 
 ## TN Inserts - Passport

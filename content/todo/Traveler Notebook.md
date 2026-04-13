@@ -5,10 +5,6 @@ draft: false
 ---
 
 ## Shopping List
-- 蓋章
-- NRT inserts
-- Superior Labor handbag
-
 
 
 ## TN Inserts - Regular  
@@ -18,7 +14,6 @@ draft: false
 - [ ] 014 牛皮紙 #01, using (Cream)
 - [ ] 014 牛皮紙 #02
 - [ ] 025 MD Cream #01, using (Cream)
-- [ ] 025 MD Cream #02, using (Blue)
 - [ ] 025 MD Cream #03
 - [ ] 026 Dot Grid #01, using
 - [ ] 2026 Diary, using
@@ -44,7 +39,7 @@ draft: false
 - [x] 1/2 Short Trip 牛皮紙
 - [x] 003 Blank #01
 - [x] 003 Blank #03
-
+- [x] 025 MD Cream #02
 
 
 ## TN Inserts - Passport
@@ -56,6 +51,7 @@ draft: false
 - [ ] 014 Dot Grid, using
 - [ ] 015 水彩紙
 - [ ] 1/2 Short Trip 牛皮紙
+- [ ] MD Cream NRT
 - [ ] MD Cream 東京地下鐵
 - [ ] MD Cream SBUX
 - [ ] 2026 Diary, using
@@ -70,7 +66,7 @@ draft: false
 - [x] Olive - Europe
 - [x] Blue - US, UK, NZ
 - [x] Red - Japan
-- [ ] NRT
+- [x] NRT
 - [x] Tokyo Station
 - [x] Cream sbux
 - [x] Blue Kyoto
@@ -87,7 +83,7 @@ draft: false
 
 # 橄欖油
 - [ ] La Riserva BIO Riserva Bio (558 mg/kg)
-- [ ] Frantoio Paolocci (500 mg/kg)  
+- [ ] Frantoio Paolocci (500 mg/kg)  2026-04-14 ~ 2026-
 - [x] Sabor D'oro (526 mg/kg)  2026-02-02 ~ 2026-03-22
 - [x] Finca Cortijo Guadiana Summer 2025-10-08 ~ 2026-01-28
 

@@ -84,15 +84,15 @@ draft: false
 
 
 # 橄欖油
-- [ ] La Riserva BIO Riserva Bio (558 mg/kg)
+- [ ] La Riserva BIO Riserva Bio (558 mg/kg) 2026-04-14 ~ 2026-
 - [ ] Frantoio Paolocci (500 mg/kg)  2026-04-14 ~ 2026-
+- [ ] Ganga Lupo (954 mg/kg)
 - [x] Sabor D'oro (526 mg/kg)  2026-02-02 ~ 2026-03-22
 - [x] Finca Cortijo Guadiana Summer 2025-10-08 ~ 2026-01-28
 
 
 
 # 橄欖油 - to buy
-- [ ] Ganga Lupo (954 mg/kg)
 - [ ] Hacienda Vadolivo (596 mg/kg)
 - [ ] 30TH HARVEST – Olio Visconti (520 mg/kg)
 

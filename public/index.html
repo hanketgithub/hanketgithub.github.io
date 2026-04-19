@@ -94,6 +94,8 @@
 <h2>📌 Tech</h2>
 <ul>
   
+    <li><a href="/tech/embedded/">Embedded Question</a></li>
+  
     <li><a href="/tech/docker/">使用 docker 作為 petalinux build</a></li>
   
     <li><a href="/tech/vcu_progress/">VCU 開發進度總結 — 2025-08-01</a></li>
@@ -101,8 +103,6 @@
     <li><a href="/tech/lc/">LeetCode 每日打卡 RPG 🎯💻</a></li>
   
     <li><a href="/tech/cpp_std/">C&#43;&#43; STL</a></li>
-  
-    <li><a href="/tech/hugo_setup/">新機 GitHub SSH Clone &#43; Hugo 環境 Setup 小抄</a></li>
   
 </ul>
 
@@ -156,6 +156,31 @@
 
 
 <section class="list-item">
+  <h1 class="title"><a href="/tech/embedded/">Embedded Question</a></h1>
+  <time>Apr 15, 2026</time>
+  <br><div class="description">
+	
+	<h1 id="interrupt">Interrupt</h1>
+<h2 id="為何無法在-interrupt-handler-用-sleep-mutex-io-等會造成-context-switch-的-system-call">為何無法在 interrupt handler 用 sleep, mutex, I/O 等會造成 context switch 的 system call?</h2>
+<p>因為 sleep, mutex 會造成 schedule() 被呼叫</p>
+<p>以下的 code 是不管用的, 雖然 schedule() 可造成 save context -&gt; switch to next task -&gt; restore context, 但此招對於 interrupt handler 無效. 理由是 Linux 裡的 context switch 實作是針對 process, 而 interrupt handler 並非 process, 因此並無法產生 task 來輪排做剩下的工作.</p>
+<pre tabindex="0"><code>static irqreturn_t interrupt_handler()
+{
+  printk(KERN_INFO &#34;This is top half&#34;);
+
+  sleep() -&gt; schedule(); // just for fun, try to produce context switch
+
+  printk(KERN_INFO &#34;This is bottom half&#34;);
+
+  return IRQ_HANDLED;
+}
+</code></pre><p>因此, 真的要做以上的動作(在 interrupt handler 裡面做一些事 -&gt; 讓其他 task 跑一下 -&gt; 再回來 interrupt handler 剩下想做的), 應該使用 schedule_work() 來代替 scheudle(). 這樣就會將 interrupt handler 剩下的事情正確 create task, 並排進 work_queue.</p>&hellip;
+	
+</div>
+  <a class="readmore" href="/tech/embedded/">Read more ⟶</a>
+</section>
+
+<section class="list-item">
   <h1 class="title"><a href="/tech/docker/">使用 docker 作為 petalinux build</a></h1>
   <time>Dec 10, 2025</time>
   <br><div class="description">
@@ -168,16 +193,16 @@
 <p>在 <code>Dockerfile</code> 所在目錄建立新的 image，使用以下指令進行 build，完成後可用 <code>docker images</code> 確認 image 是否成功建立。</p>
 </li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker build -t xyz .
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker build -t xyz .
 </span></span><span style="display:flex;"><span>$ docker images
 </span></span></code></pre></div><ol start="3">
 <li>使用以下指令啟動 container，指定固定名稱 <code>kuma</code>，並將 host 的 <code>$HOME</code> 目錄掛載到 container 內相同路徑，方便重複進入同一個開發環境且保留所有使用者資料。</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker run -it -v <span style="color:#e6db74">&#34;</span>$HOME<span style="color:#e6db74">:</span>$HOME<span style="color:#e6db74">&#34;</span> --name kuma xyz
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker run -it -v <span style="color:#e6db74">&#34;</span>$HOME<span style="color:#e6db74">:</span>$HOME<span style="color:#e6db74">&#34;</span> --name kuma xyz
 </span></span></code></pre></div><ol start="4">
 <li>重啟 container。</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker start -ai kuma
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker start -ai kuma
 </span></span></code></pre></div><hr>
 <p>PS: Dockerfile 範例</p>
 <pre tabindex="0"><code># -----------------------------------------------------------------------------
@@ -246,7 +271,7 @@ CMD [&#34;bash&#34;]
   <br><div class="description">
 	
 	<h2 id="編譯步驟"><strong>編譯步驟</strong>：</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 設定 cross compile 環境</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 設定 cross compile 環境</span>
 </span></span><span style="display:flex;"><span>source ~/VEGA2200/trunk/xilinx_sdk_r5_vega6000/sdk/environment-setup-cortexa72-cortexa53-xilinx-linux
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 進入正確版本的 source tree</span>
@@ -267,13 +292,13 @@ CMD [&#34;bash&#34;]
 <li>
 <p>根據 <code>pSrcOut</code> 的 FOURCC，選擇對應的轉換 case<br>
 例如，若輸出為 NV12，將執行：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">case</span> <span style="color:#a6e22e">FOURCC</span>(NV12)<span style="color:#f92672">:</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">case</span> <span style="color:#a6e22e">FOURCC</span>(NV12)<span style="color:#f92672">:</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> convertToNV12(pSrcIn, tFourCCIn, pSrcOut);
 </span></span></code></pre></div></li>
 <li>
 <p><code>convertToNV12(AL_TBuffer const* pSrcIn, TFourCC inFourCC, AL_TBuffer* pSrcOut)</code><br>
 根據輸入格式 <code>inFourCC</code>，選擇對應的轉換邏輯，例如：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">case</span> <span style="color:#a6e22e">FOURCC</span>(I420)<span style="color:#f92672">:</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">case</span> <span style="color:#a6e22e">FOURCC</span>(I420)<span style="color:#f92672">:</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> I420_To_NV12(pSrcIn, pSrcOut);
 </span></span></code></pre></div></li>
 <li>
@@ -453,20 +478,20 @@ return L;
 將 Hugo 專案 clone 到 <code>~/Projects/</code> 目錄下。</p>
 <hr>
 <h2 id="1-確認-ssh-金鑰是否已存在">1. 確認 SSH 金鑰是否已存在</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls -al ~/.ssh
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls -al ~/.ssh
 </span></span></code></pre></div><p>有看到 id_ed25519 / id_ed25519.pub 就可以跳到 Step 3</p>
 <p>如果沒有，執行：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keygen -t ed25519 -C hanketgithub@email.com
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keygen -t ed25519 -C hanketgithub@email.com
 </span></span></code></pre></div><p>一路按 Enter，不用改檔名或密碼。</p>
 <h2 id="2-將公鑰加到-github-帳戶">2. 將公鑰加到 GitHub 帳戶</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat ~/.ssh/id_ed25519.pub
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat ~/.ssh/id_ed25519.pub
 </span></span></code></pre></div><p>複製那一整行內容 ➔ 到 GitHub：</p>
 <p>Settings → SSH and GPG keys → New SSH key ➔ 貼上。</p>
 <p>Title 建議：「MacBook 2025」</p>
 <h3 id="3-測試-ssh-連線是否成功">3. 測試 SSH 連線是否成功</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -T git@github.com
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -T git@github.com
 </span></span></code></pre></div><p>看到：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Hi hanketgithub! You<span style="color:#960050;background-color:#1e0010">&#39;</span>ve successfully authenticated, but GitHub does not provide shell access.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Hi hanketgithub! You<span style="color:#960050;background-color:#1e0010">&#39;</span>ve successfully authenticated, but GitHub does not provide shell access.
 </span></span></code></pre></div><p>✅ 表示 SSH OK！</p>&hellip;
 	
 </div>
@@ -726,11 +751,11 @@ return L;
 <ul>
 <li>OS: Ubuntu 24.04.2 LTS (noble)</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>lsb_release -a
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>lsb_release -a
 </span></span></code></pre></div><ul>
 <li>Python: 3.12.3</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python3 --version
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python3 --version
 </span></span></code></pre></div><ul>
 <li>GPU: NVIDIA GeForce RTX 4090
 <ul>
@@ -739,7 +764,7 @@ return L;
 </ul>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nvidia-smi
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nvidia-smi
 </span></span></code></pre></div><ul>
 <li>PyTorch: 2.5.1+cu121
 <ul>
@@ -747,24 +772,24 @@ return L;
 </ul>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> torch
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> torch
 </span></span><span style="display:flex;"><span>print(torch<span style="color:#f92672">.</span>__version__)
 </span></span><span style="display:flex;"><span>print(torch<span style="color:#f92672">.</span>cuda<span style="color:#f92672">.</span>is_available())
 </span></span></code></pre></div><h2 id="2-project-setup">2. Project Setup</h2>
 <ul>
 <li>Install Python venv and create environment:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install python3.12-venv
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install python3.12-venv
 </span></span><span style="display:flex;"><span>python3 -m venv ~/venvs/swinir
 </span></span><span style="display:flex;"><span>source ~/venvs/swinir/bin/activate
 </span></span></code></pre></div><ul>
 <li>Install PyTorch (CUDA 12.1):</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
 </span></span></code></pre></div><ul>
 <li>Clone SwinIR repo and install dependencies:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/JingyunLiang/SwinIR.git
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/JingyunLiang/SwinIR.git
 </span></span><span style="display:flex;"><span>cd SwinIR
 </span></span><span style="display:flex;"><span>pip install numpy opencv-python matplotlib tqdm yacs timm einops
 </span></span></code></pre></div><h2 id="3-inference--set5-benchmark">3. Inference — Set5 Benchmark</h2>

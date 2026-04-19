@@ -124,11 +124,11 @@ Lightweight SR (Scale ×2):" />
 <ul>
 <li>OS: Ubuntu 24.04.2 LTS (noble)</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>lsb_release -a
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>lsb_release -a
 </span></span></code></pre></div><ul>
 <li>Python: 3.12.3</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python3 --version
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python3 --version
 </span></span></code></pre></div><ul>
 <li>GPU: NVIDIA GeForce RTX 4090
 <ul>
@@ -137,7 +137,7 @@ Lightweight SR (Scale ×2):" />
 </ul>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nvidia-smi
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nvidia-smi
 </span></span></code></pre></div><ul>
 <li>PyTorch: 2.5.1+cu121
 <ul>
@@ -145,40 +145,40 @@ Lightweight SR (Scale ×2):" />
 </ul>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> torch
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> torch
 </span></span><span style="display:flex;"><span>print(torch<span style="color:#f92672">.</span>__version__)
 </span></span><span style="display:flex;"><span>print(torch<span style="color:#f92672">.</span>cuda<span style="color:#f92672">.</span>is_available())
 </span></span></code></pre></div><h2 id="2-project-setup">2. Project Setup</h2>
 <ul>
 <li>Install Python venv and create environment:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install python3.12-venv
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install python3.12-venv
 </span></span><span style="display:flex;"><span>python3 -m venv ~/venvs/swinir
 </span></span><span style="display:flex;"><span>source ~/venvs/swinir/bin/activate
 </span></span></code></pre></div><ul>
 <li>Install PyTorch (CUDA 12.1):</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
 </span></span></code></pre></div><ul>
 <li>Clone SwinIR repo and install dependencies:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/JingyunLiang/SwinIR.git
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/JingyunLiang/SwinIR.git
 </span></span><span style="display:flex;"><span>cd SwinIR
 </span></span><span style="display:flex;"><span>pip install numpy opencv-python matplotlib tqdm yacs timm einops
 </span></span></code></pre></div><h2 id="3-inference--set5-benchmark">3. Inference — Set5 Benchmark</h2>
 <p>Lightweight SR (Scale ×2):</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python main_test_swinir.py --task lightweight_sr --scale <span style="color:#ae81ff">2</span> --training_patch_size <span style="color:#ae81ff">64</span> <span style="color:#ae81ff">\
-</span></span></span><span style="display:flex;"><span>  --model_path model_zoo/swinir/002_lightweightSR_DIV2K_s64w8_SwinIR-S_x2.pth <span style="color:#ae81ff">\
-</span></span></span><span style="display:flex;"><span>  --folder_lq testsets/Set5/LR_bicubic/X2 <span style="color:#ae81ff">\
-</span></span></span><span style="display:flex;"><span>  --folder_gt testsets/Set5/HR
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python main_test_swinir.py --task lightweight_sr --scale <span style="color:#ae81ff">2</span> --training_patch_size <span style="color:#ae81ff">64</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  --model_path model_zoo/swinir/002_lightweightSR_DIV2K_s64w8_SwinIR-S_x2.pth <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  --folder_lq testsets/Set5/LR_bicubic/X2 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  --folder_gt testsets/Set5/HR
 </span></span></code></pre></div><p>Results (×2):</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>- Average PSNR/SSIM (RGB): 35.95 dB / 0.9445
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>- Average PSNR/SSIM (RGB): 35.95 dB / 0.9445
 </span></span><span style="display:flex;"><span>- Average PSNR/SSIM (Y):   38.14 dB / 0.9611
 </span></span></code></pre></div><p>Lightweight SR (Scale ×4):</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>- Average PSNR/SSIM (RGB): 30.52 dB / 0.8679
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>- Average PSNR/SSIM (RGB): 30.52 dB / 0.8679
 </span></span><span style="display:flex;"><span>- Average PSNR/SSIM (Y):   32.44 dB / 0.8976
 </span></span></code></pre></div><p>Per-Image PSNR_Y/SSIM_Y (×2):</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>- bird      → 43.28 dB / 0.9906
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>- bird      → 43.28 dB / 0.9906
 </span></span><span style="display:flex;"><span>- baby      → 38.94 dB / 0.9681
 </span></span><span style="display:flex;"><span>- butterfly → 35.75 dB / 0.9795
 </span></span><span style="display:flex;"><span>- head      → 36.07 dB / 0.8922

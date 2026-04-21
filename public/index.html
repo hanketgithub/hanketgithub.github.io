@@ -96,9 +96,9 @@
   
     <li><a href="/tech/embedded/">Embedded Question</a></li>
   
-    <li><a href="/tech/docker/">使用 docker 作為 petalinux build</a></li>
+    <li><a href="/tech/vcu_progress/">VCU 開發進度總結 — 2026-04-01</a></li>
   
-    <li><a href="/tech/vcu_progress/">VCU 開發進度總結 — 2025-08-01</a></li>
+    <li><a href="/tech/docker/">使用 docker 作為 petalinux build</a></li>
   
     <li><a href="/tech/lc/">LeetCode 每日打卡 RPG 🎯💻</a></li>
   
@@ -170,20 +170,39 @@
 <h2 id="為何無法在-interrupt-handler-用-sleep-mutex-io-等會造成-context-switch-的-system-call">為何無法在 interrupt handler 用 sleep, mutex, I/O 等會造成 context switch 的 system call?</h2>
 <p>因為 sleep, mutex 會造成 schedule() 被呼叫</p>
 <p>以下的 code 是不管用的, 雖然 schedule() 可造成 save context -&gt; switch to next task -&gt; restore context, 但此招對於 interrupt handler 無效. 理由是 Linux 裡的 context switch 實作是針對 process, 而 interrupt handler 並非 process, 因此並無法產生 task 來輪排做剩下的工作.</p>
-<pre tabindex="0"><code>static irqreturn_t interrupt_handler()
-{
-  printk(KERN_INFO &#34;This is top half&#34;);
-
-  sleep() -&gt; schedule(); // just for fun, try to produce context switch
-
-  printk(KERN_INFO &#34;This is bottom half&#34;);
-
-  return IRQ_HANDLED;
-}
-</code></pre><p>因此, 真的要做以上的動作(在 interrupt handler 裡面做一些事 -&gt; 讓其他 task 跑一下 -&gt; 再回來 interrupt handler 剩下想做的), 應該使用 schedule_work() 來代替 scheudle(). 這樣就會將 interrupt handler 剩下的事情正確 create task, 並排進 work_queue.</p>&hellip;
+<p>In order to resume bottom half of ISR, a context must be placed in task queue. However, in Linux, interrupt does not have context. Therefore, once ISR is switched out, it can not be switched in and resumed.</p>&hellip;
 	
 </div>
   <a class="readmore" href="/tech/embedded/">Read more ⟶</a>
+</section>
+
+<section class="list-item">
+  <h1 class="title"><a href="/tech/vcu_progress/">VCU 開發進度總結 — 2026-04-01</a></h1>
+  <time>Apr 1, 2026</time>
+  <br><div class="description">
+	
+	<h2 id="編譯步驟"><strong>編譯步驟</strong>：</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Setup cross compile environment</span>
+</span></span><span style="display:flex;"><span>$ source ~/vega3006_zynq/xilinx_sdk_r5_vega3006/sdk/environment-setup-cortexa72-cortexa53-xilinx-linux
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 進入正確版本的 source tree</span>
+</span></span><span style="display:flex;"><span>$ cd ~/veg3006_linux_dev/vcu-ctrl-sw-xlnx_rel_v2025.1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 編譯</span>
+</span></span><span style="display:flex;"><span>$ make -j8
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check binary format</span>
+</span></span><span style="display:flex;"><span>$ file bin/AL_Encoder.exe
+</span></span><span style="display:flex;"><span>bin/AL_Encoder.exe: ELF 64-bit LSB pie executable, ARM aarch64, version <span style="color:#ae81ff">1</span> <span style="color:#f92672">(</span>GNU/Linux<span style="color:#f92672">)</span>, dynamically linked, interpreter /lib/ld-linux-aarch64.so.1, BuildID<span style="color:#f92672">[</span>sha1<span style="color:#f92672">]=</span>60c7aab8c2506fecbb00e0200aa072ca73393cab, <span style="color:#66d9ef">for</span> GNU/Linux 3.14.0, with debug_info, not stripped
+</span></span></code></pre></div><hr>
+<h2 id="更新概要2026-04-20">更新概要（2026-04-20）</h2>
+<p>理解 stream_app 裡 VCU 如何接收 input source frame.</p>
+<hr>
+<h3 id="stream_app-裡-vcu-如何接收-input-source-frame2026-04-20">stream_app 裡 VCU 如何接收 input source frame?（2026-04-20）</h3>
+<p>短答: fpga 並未直接送 input source frame 給 VCU, VCU 該 encode 哪張 frame, 完全靠自己猜出來.</p>&hellip;
+	
+</div>
+  <a class="readmore" href="/tech/vcu_progress/">Read more ⟶</a>
 </section>
 
 <section class="list-item">
@@ -269,36 +288,6 @@ CMD [&#34;bash&#34;]
 	
 </div>
   <a class="readmore" href="/tech/docker/">Read more ⟶</a>
-</section>
-
-<section class="list-item">
-  <h1 class="title"><a href="/tech/vcu_progress/">VCU 開發進度總結 — 2025-08-01</a></h1>
-  <time>Jul 1, 2025</time>
-  <br><div class="description">
-	
-	<h2 id="編譯步驟"><strong>編譯步驟</strong>：</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 設定 cross compile 環境</span>
-</span></span><span style="display:flex;"><span>source ~/VEGA2200/trunk/xilinx_sdk_r5_vega6000/sdk/environment-setup-cortexa72-cortexa53-xilinx-linux
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 進入正確版本的 source tree</span>
-</span></span><span style="display:flex;"><span>cd ~/vcu-ctrl-sw-xlnx_rel_v2025.1
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 編譯</span>
-</span></span><span style="display:flex;"><span>make -j8
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 確認輸出檔案型態</span>
-</span></span><span style="display:flex;"><span>file bin/AL_Encoder.exe
-</span></span></code></pre></div><hr>
-<h2 id="更新概要2026-04-20">更新概要（2026-04-20）</h2>
-<p>理解 stream_app 裡 VCU 如何接收 input source frame.</p>
-<hr>
-<h3 id="stream_app-裡-vcu-如何接收-input-source-frame2026-04-20">stream_app 裡 VCU 如何接收 input source frame?（2026-04-20）</h3>
-<p>短答: fpga 並未直接送 input source frame 給 VCU, VCU 該 encode 哪張 frame, 完全靠自己猜出來.</p>
-<p>主要的 function 是 <code>fill_from_mem()</code>. 當它 return 時, VCU 會自動 encode 下一個 buffer.</p>
-<p>換言之, 假如有 4 個 <code>buf[0] - [3]</code>, 若 VCU 最後 encode 了 <code>buf[1]</code>, 那當 <code>fill_from_mem()</code> return, 它便會 encode <code>buf[2]</code>.</p>&hellip;
-	
-</div>
-  <a class="readmore" href="/tech/vcu_progress/">Read more ⟶</a>
 </section>
 
 <section class="list-item">

@@ -53,8 +53,9 @@ draft: false
 - [ ] 威秀 x 4 - Dated  
 - [ ] 秀泰 x 1 - Dated  
 - [ ] 秀泰 x 9 - 2026-07-31  
-- [ ] Hilton Pt - 7826  
+- [ ] Hilton Pt - ?????  
 - [ ] 旭集 x 2  
+- [ ] 旭集 x 3 Dated
 - [ ] 旭集 下午茶 x 3  
 - [ ] Marriott Gift Card USD 1000  
 - [x] Marriott 85k FNA - 王子畫廊

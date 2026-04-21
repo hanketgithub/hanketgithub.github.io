@@ -14,7 +14,10 @@ draft: false
 
 以下的 code 是不管用的, 雖然 schedule() 可造成 save context -> switch to next task -> restore context, 但此招對於 interrupt handler 無效. 理由是 Linux 裡的 context switch 實作是針對 process, 而 interrupt handler 並非 process, 因此並無法產生 task 來輪排做剩下的工作.
 
-```
+In order to resume bottom half of ISR, a context must be placed in task queue. However, in Linux, interrupt does not have context. Therefore, once ISR is switched out, it can not be switched in and resumed.
+
+
+```cpp
 static irqreturn_t interrupt_handler()
 {
   printk(KERN_INFO "This is top half");
@@ -29,7 +32,8 @@ static irqreturn_t interrupt_handler()
 
 
 因此, 真的要做以上的動作(在 interrupt handler 裡面做一些事 -> 讓其他 task 跑一下 -> 再回來 interrupt handler 剩下想做的), 應該使用 schedule_work() 來代替 scheudle(). 這樣就會將 interrupt handler 剩下的事情正確 create task, 並排進 work_queue.
-```
+
+```cpp
 INIT_WORK(&my_work, bottom_half_work);  // associate my_work & bottom_half_work
 
 
@@ -63,6 +67,8 @@ static irqreturn_t interrupt_handler(int irq, void *dev_id)
 若選擇 1, 感覺相當 expensive. ISR 的頻率可能相當高, 整個 task queue 可能會爆炸!
 再來 無論你在 ISR 做不做 sleep, context blk 都已經實作了.
 
+The point is, you can design context for ISR doesn't mean you should. This problem has already addressed by other elegant solutions.
+
 
 ## 如何處理 interrupt nesting. 
 
@@ -74,7 +80,7 @@ A. 當一個 ISR 還沒執行完, 另一個相同 interrupt 進入 CPU.
 
 請看以下 code:
 
-```
+```cpp
 int fpga_frame_write_complete_cnt;
 
 static irqreturn_t interrupt_handler()
@@ -91,7 +97,7 @@ static irqreturn_t interrupt_handler()
 
 冷靜的思考一下我們究竟要 fpga_frame_write_complete_cnt 做什麼? 事實上無非就是想知道是否有新的 frame 被寫入. 我們可以重新設計這段 code, 讓 ISR 只單純處理 event, 而真正的 frame counter 則紀錄在別處 如 register, memory.
 
-```
+```cpp
 static irqreturn_t interrupt_handler()
 {
   int x = chkFrameCounter(); // could be hw register, other memory address
@@ -106,3 +112,70 @@ static irqreturn_t interrupt_handler()
 
 
 B. 一個高 priority interrupt 打斷低 priority interrupt?
+
+
+
+# Lock
+
+## Semaphore
+
+假設此張卡片最高可同時執行 16 channels, 可能會設計成這樣的 service:
+
+```cpp
+int availableChs = 16;
+
+mutex lock;
+
+int worker() {
+  mutex_lock(&lock);
+  
+  if (availableChs == 0) {
+    mutex_unlock(&lock);
+    return -1;
+  }
+  else {
+    availableChs--;
+    
+    encodeTask();
+    
+    mutex_unlock(&lock);
+    return 0;
+  }
+}
+```
+
+Caller:
+
+```cpp
+while (worker() != 0) {
+  sleep(1);
+}
+```
+
+or conditional variable 來避免固定時間等待.
+
+然而 Semaphore comes to rescure:
+
+```cpp
+Semaphore availableChs(16);
+
+int worker() {
+  availableChs.wait();
+  
+  encodeTask();
+  
+  availableChs.signal();
+}
+```
+
+Semaphore does: lock, conditional wait, and counter.
+
+
+# Memory
+
+## text
+
+## bss, data
+
+## stack, heap
+

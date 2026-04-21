@@ -17,6 +17,15 @@
     <loc>http://localhost:1313/todo/</loc>
     <lastmod>2026-04-05T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/vcu/</loc>
+    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tech/vcu_progress/</loc>
+    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/airlines/br87_wine_pairing/</loc>
     <lastmod>2026-03-09T00:00:00+00:00</lastmod>
   </url><url>
@@ -30,9 +39,6 @@
     <lastmod>2026-03-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/eva-air/</loc>
-    <lastmod>2026-03-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2026-03-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/%E5%95%86%E5%8B%99%E8%89%99/</loc>
@@ -118,12 +124,6 @@
   </url><url>
     <loc>http://localhost:1313/misc/%E7%AD%86%E8%A8%98%E6%9C%AC%E9%81%B8%E6%93%87%E6%8C%87%E5%8D%97/</loc>
     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/vcu/</loc>
-    <lastmod>2025-07-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tech/vcu_progress/</loc>
-    <lastmod>2025-07-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/hotel/trump_chicago/</loc>
     <lastmod>2025-05-31T00:00:00+00:00</lastmod>

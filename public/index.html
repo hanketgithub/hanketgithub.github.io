@@ -104,6 +104,12 @@
   
     <li><a href="/tech/cpp_std/">C&#43;&#43; STL</a></li>
   
+    <li><a href="/tech/hugo_setup/">新機 GitHub SSH Clone &#43; Hugo 環境 Setup 小抄</a></li>
+  
+    <li><a href="/tech/hdmi_aux/">HDMI AUX Data</a></li>
+  
+    <li><a href="/tech/swinir_experiment_2025_0331/">SwinIR Experiment Summary — March 31, 2025</a></li>
+  
 </ul>
 
 <h2>📌 Travel</h2>
@@ -283,31 +289,13 @@ CMD [&#34;bash&#34;]
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 確認輸出檔案型態</span>
 </span></span><span style="display:flex;"><span>file bin/AL_Encoder.exe
 </span></span></code></pre></div><hr>
-<h2 id="更新概要2025-08-04">更新概要（2025-08-04）</h2>
-<p>格式轉換.</p>
+<h2 id="更新概要2026-04-20">更新概要（2026-04-20）</h2>
+<p>理解 stream_app 裡 VCU 如何接收 input source frame.</p>
 <hr>
-<h3 id="格式轉換2025-08-04">格式轉換（2025-08-04）</h3>
-<p><code>CYuvSrcConv::ConvertSrcBuf(AL_TBuffer const *pSrcIn, AL_TBuffer *pSrcOut)</code></p>
-<ul>
-<li>
-<p>根據 <code>pSrcOut</code> 的 FOURCC，選擇對應的轉換 case<br>
-例如，若輸出為 NV12，將執行：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">case</span> <span style="color:#a6e22e">FOURCC</span>(NV12)<span style="color:#f92672">:</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> convertToNV12(pSrcIn, tFourCCIn, pSrcOut);
-</span></span></code></pre></div></li>
-<li>
-<p><code>convertToNV12(AL_TBuffer const* pSrcIn, TFourCC inFourCC, AL_TBuffer* pSrcOut)</code><br>
-根據輸入格式 <code>inFourCC</code>，選擇對應的轉換邏輯，例如：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">case</span> <span style="color:#a6e22e">FOURCC</span>(I420)<span style="color:#f92672">:</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> I420_To_NV12(pSrcIn, pSrcOut);
-</span></span></code></pre></div></li>
-<li>
-<p>最終將透過對應函式將輸入格式轉為 NV12。</p>
-</li>
-</ul>
-<hr>
-<h2 id="send-input-frame-trace2025-08-01">Send Input Frame Trace（2025-08-01）</h2>
-<p><code>exe_encoder</code> 主邏輯在 <code>SafeChannelMain()</code> 裡：</p>&hellip;
+<h3 id="stream_app-裡-vcu-如何接收-input-source-frame2026-04-20">stream_app 裡 VCU 如何接收 input source frame?（2026-04-20）</h3>
+<p>短答: fpga 並未直接送 input source frame 給 VCU, VCU 該 encode 哪張 frame, 完全靠自己猜出來.</p>
+<p>主要的 function 是 <code>fill_from_mem()</code>. 當它 return 時, VCU 會自動 encode 下一個 buffer.</p>
+<p>換言之, 假如有 4 個 <code>buf[0] - [3]</code>, 若 VCU 最後 encode 了 <code>buf[1]</code>, 那當 <code>fill_from_mem()</code> return, 它便會 encode <code>buf[2]</code>.</p>&hellip;
 	
 </div>
   <a class="readmore" href="/tech/vcu_progress/">Read more ⟶</a>

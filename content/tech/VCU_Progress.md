@@ -1,6 +1,6 @@
 ---
-title: "VCU 開發進度總結 — 2025-08-01"
-date: 2025-07-01
+title: "VCU 開發進度總結 — 2026-04-01"
+date: 2026-04-01
 tags: ["VCU"]
 draft: false
 ---
@@ -23,11 +23,31 @@ draft: false
 
 ---
 
-## 更新概要（2025-08-04）
+## 更新概要（2026-04-20）
 
-格式轉換.
+理解 stream_app 裡 VCU 如何接收 input source frame.
 
 ---
+
+### stream_app 裡 VCU 如何接收 input source frame?（2026-04-20）
+
+短答: fpga 並未直接送 input source frame 給 VCU, VCU 該 encode 哪張 frame, 完全靠自己猜出來.
+
+主要的 function 是 `fill_from_mem()`. 當它 return 時, VCU 會自動 encode 下一個 buffer.
+
+換言之, 假如有 4 個 `buf[0] - [3]`, 若 VCU 最後 encode 了 `buf[1]`, 那當 `fill_from_mem()` return, 它便會 encode `buf[2]`.
+
+因此, 核心問題就是, 何時 VCU 可以 encode 下一張? 答案就是當 fpga 完成至少一次寫入, 也就是 frame_write_cnt 增加.
+
+  ```cpp
+  while ( write_frame_num <= read_frame_num ) {
+    // wait until fpga write new frame
+    GetRxVideoFrameTransmitCnt(write_frame_num);
+  }
+  ```
+
+此 snippet 就是最主要等待 fpga 寫入的 logic. 當它跳出, `fill_from_mem()` 便可 return.
+
 
 ### 格式轉換（2025-08-04）
 

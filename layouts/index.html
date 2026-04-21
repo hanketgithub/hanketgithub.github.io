@@ -9,28 +9,28 @@
 <!-- 自訂分類導覽 -->
 <h2>📌 Todo </h2>
 <ul>
-  {{ range first 5 (where .Site.RegularPages "Section" "todo") }}
+  {{ range first 10 (where .Site.RegularPages "Section" "todo") }}
     <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
   {{ end }}
 </ul>
 
 <h2>📌 Air</h2>
 <ul>
-  {{ range first 5 (where .Site.RegularPages "Section" "airlines") }}
+  {{ range first 10 (where .Site.RegularPages "Section" "airlines") }}
     <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
   {{ end }}
 </ul>
 
 <h2>📌 Hotel</h2>
 <ul>
-  {{ range first 5 (where .Site.RegularPages "Section" "hotel") }}
+  {{ range first 10 (where .Site.RegularPages "Section" "hotel") }}
     <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
   {{ end }}
 </ul>
 
 <h2>📌 Tech</h2>
 <ul>
-  {{ range first 5 (where .Site.RegularPages "Section" "tech") }}
+  {{ range first 10 (where .Site.RegularPages "Section" "tech") }}
     <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
   {{ end }}
 </ul>
@@ -44,14 +44,14 @@
 
 <h2>📌 狂熊戰鑒</h2>
 <ul>
-  {{ range first 5 (where .Site.RegularPages "Section" "codex") }}
+  {{ range first 10 (where .Site.RegularPages "Section" "codex") }}
     <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
   {{ end }}
 </ul>
 
 <h2>📌 Misc </h2>
 <ul>
-  {{ range first 5 (where .Site.RegularPages "Section" "misc") }}
+  {{ range first 10 (where .Site.RegularPages "Section" "misc") }}
     <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
   {{ end }}
 </ul>

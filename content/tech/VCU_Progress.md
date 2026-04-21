@@ -8,17 +8,18 @@ draft: false
 ## **編譯步驟**：
 
   ```bash
-  # 設定 cross compile 環境
-  source ~/VEGA2200/trunk/xilinx_sdk_r5_vega6000/sdk/environment-setup-cortexa72-cortexa53-xilinx-linux
+  # Setup cross compile environment
+  $ source ~/vega3006_zynq/xilinx_sdk_r5_vega3006/sdk/environment-setup-cortexa72-cortexa53-xilinx-linux
 
   # 進入正確版本的 source tree
-  cd ~/vcu-ctrl-sw-xlnx_rel_v2025.1
+  $ cd ~/veg3006_linux_dev/vcu-ctrl-sw-xlnx_rel_v2025.1
 
   # 編譯
-  make -j8
+  $ make -j8
 
-  # 確認輸出檔案型態
-  file bin/AL_Encoder.exe
+  # Check binary format
+  $ file bin/AL_Encoder.exe
+  bin/AL_Encoder.exe: ELF 64-bit LSB pie executable, ARM aarch64, version 1 (GNU/Linux), dynamically linked, interpreter /lib/ld-linux-aarch64.so.1, BuildID[sha1]=60c7aab8c2506fecbb00e0200aa072ca73393cab, for GNU/Linux 3.14.0, with debug_info, not stripped
   ```
 
 ---

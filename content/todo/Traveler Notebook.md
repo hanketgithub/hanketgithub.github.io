@@ -16,8 +16,8 @@ draft: false
 - [ ] 025 MD Cream #01, using (Cream)
 - [ ] 025 MD Cream #03
 - [ ] 2026 Diary, using
-- [ ] 黑色牛皮紙 #01
-- [ ] Tiffany 牛皮紙 #01 (Blue)
+- [ ] 牛皮紙 黑色 #01
+- [ ] 牛皮紙 Tiffany #01, using (Blue)
 - [ ] Blank Tokyo
 - [ ] Green Tea Leaf
 - [ ] Dot Grid SBUX
@@ -45,6 +45,7 @@ draft: false
 
 
 ## TN Inserts - Passport
+- [ ] 002 Grid #03
 - [ ] 003 Blank #01, using
 - [ ] 003 Blank #02
 - [ ] 005 薄紙, using

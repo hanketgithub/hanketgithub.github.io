@@ -179,3 +179,12 @@ Semaphore does: lock, conditional wait, and counter.
 
 ## stack, heap
 
+
+# RTOS
+
+## Task
+RTOS 裡的 task 與 Linux 最大的不同點, 在於 memory. 由於 MPU 沒有 MMU, 因此也沒有所謂 virtual memory.
+
+所有的 task 共享一個 memory space. 因此可能寫壞別的 task 的 stack, heap, bss, data.
+
+RTOS program 更接近一個 multi-threaded program. 每個 task 就是一個 thread.

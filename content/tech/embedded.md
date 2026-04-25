@@ -188,3 +188,64 @@ RTOS 裡的 task 與 Linux 最大的不同點, 在於 memory. 由於 MPU 沒有 
 所有的 task 共享一個 memory space. 因此可能寫壞別的 task 的 stack, heap, bss, data.
 
 RTOS program 更接近一個 multi-threaded program. 每個 task 就是一個 thread.
+
+
+# Ring Buffer
+
+## Implementation
+### Counter 法: 自然, 直覺
+
+```cpp
+#define SZ 4
+typedef struct {
+  int r_idx;
+  int w_idx;
+  char queue[SZ];
+  
+  int counter;
+} ring_buffer_t;
+
+int read_data(ring_buffer_t &buf, char &ret) {
+  if (buf.counter == 0) { return -1; }
+
+  ret = buf.queue[ buf.r_idx ];
+  buf.r_idx = (buf.r_idx + 1) % SZ;
+  buf.counter--;
+
+  return 0;
+}
+
+int write_data(ring_buffer_t &buf, char c) {
+  if (buf.counter == SZ) {
+    return -1;
+  }
+
+  buf.queue[ buf.w_idx ] = c;
+  buf.w_idx = (buf.w_idx + 1) % SZ;
+  buf.counter++;
+
+  return 0;
+}
+```
+
+### 缺一格法: 無需 counter. 所以無需保護 counter
+
+```cpp
+int read_data(ring_buffer_t &buf, char &ret) {
+  if ( buf.r_idx == buf.w_idx ) { return -1; }
+  
+  ret = buf.queue[ buf.r_idx ];
+  buf.r_idx = (buf.r_idx + 1) % SZ;
+
+  return 0;
+}
+
+int write_data(ring_buffer_t &buf, char c) {
+  if ( (buf.w_idx + 1) % SZ == buf.r_idx ) { return -1; }
+  
+  buf.queue[ buf.w_idx ] = c;
+  buf.w_idx = (buf.w_idx + 1) % SZ;
+
+  return 0;
+}
+```

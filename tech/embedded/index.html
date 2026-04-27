@@ -78,7 +78,57 @@ In order to resume bottom half of ISR, a context must be placed in task queue.">
 </span></span></code></pre></div><p>Caller:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cpp data-lang=cpp><span style=display:flex><span><span style=color:#66d9ef>while</span> (worker() <span style=color:#f92672>!=</span> <span style=color:#ae81ff>0</span>) {
 </span></span><span style=display:flex><span>  sleep(<span style=color:#ae81ff>1</span>);
 </span></span><span style=display:flex><span>}
-</span></span></code></pre></div><p>or conditional variable 來避免固定時間等待.</p><p>然而 Semaphore comes to rescure:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cpp data-lang=cpp><span style=display:flex><span>Semaphore <span style=color:#a6e22e>availableChs</span>(<span style=color:#ae81ff>16</span>);
+</span></span></code></pre></div><p>or conditional variable 來避免固定時間等待.</p><p>使用 conditional variable:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cpp data-lang=cpp><span style=display:flex><span><span style=color:#66d9ef>int</span> resourceCnt <span style=color:#f92672>=</span> <span style=color:#ae81ff>16</span>;
+</span></span><span style=display:flex><span>cond_t cond;
+</span></span><span style=display:flex><span>mutex_t lock;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>mutex_lock(<span style=color:#f92672>&amp;</span>lock); <span style=color:#75715e>// lock 1
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>while</span> (<span style=color:#ae81ff>1</span>) {
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> (resourceCnt <span style=color:#f92672>&gt;</span> <span style=color:#ae81ff>0</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>else</span> {
+</span></span><span style=display:flex><span>    cond_wait(<span style=color:#f92672>&amp;</span>cond, <span style=color:#f92672>&amp;</span>lock);
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>resourceCnt<span style=color:#f92672>--</span>;
+</span></span><span style=display:flex><span>mutex_unlock(<span style=color:#f92672>&amp;</span>lock); <span style=color:#75715e>// unlock 1
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span>encodeTask();
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>mutex_lock(<span style=color:#f92672>&amp;</span>lock); <span style=color:#75715e>// lock 2
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>resourceCnt<span style=color:#f92672>++</span>;
+</span></span><span style=display:flex><span>cond_signal(<span style=color:#f92672>&amp;</span>cond);
+</span></span><span style=display:flex><span>mutex_unlock(<span style=color:#f92672>&amp;</span>lock); <span style=color:#75715e>// unlock 2
+</span></span></span></code></pre></div><pre tabindex=0><code>Thread A                                  Thread B
+-----------------------------------------------------------------------
+mutex_lock(&amp;lock);                        mutex_lock(&amp;lock); // blocked
+// own lock
+
+resourceCnt--;
+mutex_unlock(&amp;lock);                      mutex_lock() returns
+                                          // B now owns lock
+
+encodeTask();                             if (resourceCnt == 0) {
+                                            cond_wait(&amp;cond, &amp;lock);
+                                            // atomically:
+                                            // 1. release lock
+                                            // 2. sleep
+                                          }
+
+mutex_lock(&amp;lock);
+// A owns lock again
+
+resourceCnt++;
+cond_signal(&amp;cond);                       // B is awakened
+                                          // but cond_wait does not return yet
+                                          // because B must re-acquire lock first
+
+mutex_unlock(&amp;lock);                      // lock released by A
+                                          // B re-acquires lock
+                                          // cond_wait returns
+</code></pre><p>然而 Semaphore comes to rescure:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cpp data-lang=cpp><span style=display:flex><span>Semaphore <span style=color:#a6e22e>availableChs</span>(<span style=color:#ae81ff>16</span>);
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>int</span> <span style=color:#a6e22e>worker</span>() {
 </span></span><span style=display:flex><span>  availableChs.wait();
@@ -87,7 +137,7 @@ In order to resume bottom half of ISR, a context must be placed in task queue.">
 </span></span><span style=display:flex><span>  
 </span></span><span style=display:flex><span>  availableChs.signal();
 </span></span><span style=display:flex><span>}
-</span></span></code></pre></div><p>Semaphore does: lock, conditional wait, and counter.</p><h1 id=memory>Memory</h1><h2 id=text>text</h2><h2 id=bss-data>bss, data</h2><h2 id=stack-heap>stack, heap</h2><h1 id=rtos>RTOS</h1><h2 id=task>Task</h2><p>RTOS 裡的 task 與 Linux 最大的不同點, 在於 memory. 由於 MPU 沒有 MMU, 因此也沒有所謂 virtual memory.</p><p>所有的 task 共享一個 memory space. 因此可能寫壞別的 task 的 stack, heap, bss, data.</p><p>RTOS program 更接近一個 multi-threaded program. 每個 task 就是一個 thread.</p><h1 id=ring-buffer>Ring Buffer</h1><h2 id=implementation>Implementation</h2><h3 id=counter-法-自然-直覺>Counter 法: 自然, 直覺</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cpp data-lang=cpp><span style=display:flex><span><span style=color:#75715e>#define SZ 4
+</span></span></code></pre></div><p>Semaphore does: lock, conditional variable, and counter.</p><h1 id=memory>Memory</h1><h2 id=text>text</h2><h2 id=bss-data>bss, data</h2><h2 id=stack-heap>stack, heap</h2><h1 id=rtos>RTOS</h1><h2 id=task>Task</h2><p>RTOS 裡的 task 與 Linux 最大的不同點, 在於 memory. 由於 MPU 沒有 MMU, 因此也沒有所謂 virtual memory.</p><p>所有的 task 共享一個 memory space. 因此可能寫壞別的 task 的 stack, heap, bss, data.</p><p>RTOS program 更接近一個 multi-threaded program. 每個 task 就是一個 thread.</p><h1 id=ring-buffer>Ring Buffer</h1><h2 id=implementation>Implementation</h2><h3 id=counter-法-自然-直覺>Counter 法: 自然, 直覺</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cpp data-lang=cpp><span style=display:flex><span><span style=color:#75715e>#define SZ 4
 </span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>typedef</span> <span style=color:#66d9ef>struct</span> {
 </span></span><span style=display:flex><span>  <span style=color:#66d9ef>int</span> r_idx;
 </span></span><span style=display:flex><span>  <span style=color:#66d9ef>int</span> w_idx;

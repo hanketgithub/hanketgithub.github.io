@@ -154,6 +154,64 @@ while (worker() != 0) {
 
 or conditional variable 來避免固定時間等待.
 
+使用 conditional variable:
+```cpp
+int resourceCnt = 16;
+cond_t cond;
+mutex_t lock;
+
+mutex_lock(&lock); // lock 1
+while (1) {
+  if (resourceCnt > 0) {
+    break;
+  }
+  else {
+    cond_wait(&cond, &lock);
+  }
+}
+
+resourceCnt--;
+mutex_unlock(&lock); // unlock 1
+
+encodeTask();
+
+mutex_lock(&lock); // lock 2
+resourceCnt++;
+cond_signal(&cond);
+mutex_unlock(&lock); // unlock 2
+```
+
+```
+Thread A                                  Thread B
+-----------------------------------------------------------------------
+mutex_lock(&lock);                        mutex_lock(&lock); // blocked
+// own lock
+
+resourceCnt--;
+mutex_unlock(&lock);                      mutex_lock() returns
+                                          // B now owns lock
+
+encodeTask();                             if (resourceCnt == 0) {
+                                            cond_wait(&cond, &lock);
+                                            // atomically:
+                                            // 1. release lock
+                                            // 2. sleep
+                                          }
+
+mutex_lock(&lock);
+// A owns lock again
+
+resourceCnt++;
+cond_signal(&cond);                       // B is awakened
+                                          // but cond_wait does not return yet
+                                          // because B must re-acquire lock first
+
+mutex_unlock(&lock);                      // lock released by A
+                                          // B re-acquires lock
+                                          // cond_wait returns
+```
+
+
 然而 Semaphore comes to rescure:
 
 ```cpp
@@ -168,7 +226,7 @@ int worker() {
 }
 ```
 
-Semaphore does: lock, conditional wait, and counter.
+Semaphore does: lock, conditional variable, and counter.
 
 
 # Memory

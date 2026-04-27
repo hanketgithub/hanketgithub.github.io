@@ -1,5 +1,5 @@
 ---
-title: "TN"
+title: "Traveler Notebook"
 date: 2026-04-05
 draft: false
 ---
@@ -81,6 +81,14 @@ draft: false
 2. 赤坂見附 → 東京站, 搭 丸之內線（M Line）, 約 10 分鐘
 3. 重要: 上手扶梯後 刷右側閘門出去(八重州, 丸之內南北口); 絕不可刷左側!
 4. 之後順丸之內北口方向, all set!
+
+
+
+# Business Hour
+- 中目黑: 1200-2000
+- Tokyo Station: 1000-2100
+- NRT: 0900-1900
+- Kyoto: 1100-2000
 
 
 

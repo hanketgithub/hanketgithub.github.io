@@ -229,6 +229,50 @@ int worker() {
 Semaphore does: lock, conditional variable, and counter.
 
 
+## Lock Free
+核心概念: CAS (Compare and Swap)
+CAS(ptr_to_var, old_val, new_val):
+ptr_to_var: var is the target you want to update, such as tail of queue
+old_val: the var expected value.
+new_val: the new value you want var to be
+
+old_val = tail; // copy the address of last element
+CAS(&tail, old_val, node) // if success, tail == node
+old_val->next = node;
+
+### Difference of lock version.
+
+```
+mutex_t lock;
+mutex_lock(&lock);
+
+Node *old_tail = tail;
+tail = node;
+old_tail->next = node;
+
+mutex_unlock(&lock);
+```
+
+vs
+
+
+```
+Node *old_tail = tail;
+
+while ( !CAS(&tail, old_tail, node) ) {
+  // retry until we can put node to tail
+}
+// If CAS return true, tail is already == node
+
+old_tail->next = node;
+
+```
+
+The difference is, one is using mutex lock to lock whole queue and operate; the lock-free version is only spin CAS on 'tail' of the queue, because when you enqueue, tail is the only thing you care.
+
+So, you can fetch front data in lock-free version because it have nothing to do with tail. But if you lock the whole queue, then you can't fetch front.
+
+
 # Memory
 
 ## text

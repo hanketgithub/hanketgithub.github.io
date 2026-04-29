@@ -11,9 +11,9 @@ draft: false
 - [ ] 002 Grid #01, using (Black)
 - [ ] 003 Blank #02, using  (Tokyo Station)
 - [ ] 003 Blank #04
-- [ ] 014 牛皮紙 #01, using (Cream)
+- [ ] 014 牛皮紙 #01, using (Camel)
 - [ ] 014 牛皮紙 #02
-- [ ] 025 MD Cream #01, using (Cream)
+- [ ] 025 MD Cream #01, using (Camel)
 - [ ] 025 MD Cream #03
 - [ ] 2026 Diary, using
 - [ ] 牛皮紙 黑色 #01
@@ -64,14 +64,14 @@ draft: false
 
 
 # TN Leather
-- [x] Cream - Daily
+- [x] Camel - Daily
 - [x] Black - Office
 - [x] Olive - Europe
 - [x] Blue - US, UK, NZ
 - [x] Red - Japan
 - [x] NRT
 - [x] Tokyo Station
-- [x] Cream sbux
+- [x] Camel sbux
 - [x] Blue Kyoto
 
 
@@ -96,13 +96,13 @@ draft: false
 - [ ] La Riserva BIO Riserva Bio (558 mg/kg) 2026-04-14 ~ 2026-
 - [ ] Frantoio Paolocci (500 mg/kg)  2026-04-14 ~ 2026-
 - [ ] Ganga Lupo (954 mg/kg)
+- [ ] Hacienda Vadolivo (596 mg/kg)
 - [x] Sabor D'oro (526 mg/kg)  2026-02-02 ~ 2026-03-22
 - [x] Finca Cortijo Guadiana Summer 2025-10-08 ~ 2026-01-28
 
 
 
 # 橄欖油 - to buy
-- [ ] Hacienda Vadolivo (596 mg/kg)
 - [ ] 30TH HARVEST – Olio Visconti (520 mg/kg)
 
 

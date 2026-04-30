@@ -1,12 +1,13 @@
 ---
-title: "Todo"
+title: "TODO"
 date: 2026-01-01
-draft: false
----
+--- 
+
 
 ## Mission  
 - [ ] ANA 115000 miles -> currently 82583 + 7575 = 90158  
-- [x] BR Upg EC 2026-02-28
+- [ ] Ask Zoe for 10/10 - 13 Aman Sveti Stefan  
+- [x] BR Upg EC 2026-02-28  
 
 
 ## 庫存  
@@ -14,13 +15,13 @@ draft: false
 - [ ] 中村 新書判 Using
 - [ ] 中村 B5 Using  
 - [ ] 中村 B5 x 4  
-- [ ] Dingbats A4 鹿 空白  
 - [ ] Dingbats A6 熊 方格  
 - [ ] Muji B6 方格 Using 
 - [ ] 誠品 A5 方格 薄型 Using  
 - [ ] Leuchturm A5 藍 - Diary Collection Using  
-  
-  
+- [x] Dingbats A4 鹿 空白  
+
+
 ### Home  
 - [ ] MD A6 方格 Using  
 - [ ] MD A6 方格  

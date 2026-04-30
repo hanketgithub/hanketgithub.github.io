@@ -85,10 +85,10 @@ draft: false
 
 
 # Business Hour
-- 中目黑: 1200-2000
-- Tokyo Station: 1000-2100
-- NRT: 0900-1900
-- Kyoto: 1100-2000
+- 中目黑: 12:00-20:00
+- Tokyo Station: 10:00-21:00
+- NRT: 09:00-19:00
+- Kyoto: 11:00-20:00
 
 
 

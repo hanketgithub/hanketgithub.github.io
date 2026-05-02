@@ -137,13 +137,16 @@ mutex_unlock(&amp;lock);                      // lock released by A
 </span></span><span style=display:flex><span>  
 </span></span><span style=display:flex><span>  availableChs.signal();
 </span></span><span style=display:flex><span>}
-</span></span></code></pre></div><p>Semaphore does: lock, conditional variable, and counter.</p><h2 id=lock-free>Lock Free</h2><p>核心概念: CAS (Compare and Swap)
-CAS(ptr_to_var, old_val, new_val):
+</span></span></code></pre></div><p>Semaphore does: lock, conditional variable, and counter.</p><h2 id=lock-free>Lock Free</h2><p>核心概念: CAS (Compare and Swap)</p><pre tabindex=0><code>CAS(ptr_to_var, old_val, new_val):
+
 ptr_to_var: var is the target you want to update, such as tail of queue
 old_val: the var expected value.
-new_val: the new value you want var to be</p><p>old_val = tail; // copy the address of last element
+new_val: the new value you want var to be
+
+old_val = tail; // copy the address of last element
 CAS(&amp;tail, old_val, node) // if success, tail == node
-old_val->next = node;</p><h3 id=difference-of-lock-version>Difference of lock version.</h3><pre tabindex=0><code>mutex_t lock;
+old_val-&gt;next = node;
+</code></pre><h3 id=difference-of-lock-version>Difference of lock version.</h3><pre tabindex=0><code>mutex_t lock;
 mutex_lock(&amp;lock);
 
 Node *old_tail = tail;
@@ -159,7 +162,12 @@ while ( !CAS(&amp;tail, old_tail, node) ) {
 // If CAS return true, tail is already == node
 
 old_tail-&gt;next = node;
-</code></pre><p>The difference is, one is using mutex lock to lock whole queue and operate; the lock-free version is only spin CAS on &rsquo;tail&rsquo; of the queue, because when you enqueue, tail is the only thing you care.</p><p>So, you can fetch front data in lock-free version because it have nothing to do with tail. But if you lock the whole queue, then you can&rsquo;t fetch front.</p><h1 id=memory>Memory</h1><h2 id=text>text</h2><h2 id=bss-data>bss, data</h2><h2 id=stack-heap>stack, heap</h2><h1 id=rtos>RTOS</h1><h2 id=task>Task</h2><p>RTOS 裡的 task 與 Linux 最大的不同點, 在於 memory. 由於 MPU 沒有 MMU, 因此也沒有所謂 virtual memory.</p><p>所有的 task 共享一個 memory space. 因此可能寫壞別的 task 的 stack, heap, bss, data.</p><p>RTOS program 更接近一個 multi-threaded program. 每個 task 就是一個 thread.</p><h1 id=ring-buffer>Ring Buffer</h1><h2 id=implementation>Implementation</h2><h3 id=counter-法-自然-直覺>Counter 法: 自然, 直覺</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cpp data-lang=cpp><span style=display:flex><span><span style=color:#75715e>#define SZ 4
+</code></pre><p>The difference is, one is using mutex lock to lock whole queue and operate; the lock-free version is only spin CAS on &rsquo;tail&rsquo; of the queue, because when you enqueue, tail is the only thing you care.</p><p>So, you can fetch front data in lock-free version because it have nothing to do with tail. But if you lock the whole queue, then you can&rsquo;t fetch front.</p><h1 id=memory>Memory</h1><h2 id=text>text</h2><h2 id=bss-data>bss, data</h2><h2 id=stack-heap>stack, heap</h2><h1 id=dma>DMA</h1><pre tabindex=0><code>CPU -&gt; DMA -&gt; Memory Controller -&gt; DDR
+</code></pre><p>DMA Engine is a logic nearby CPU. It helps CPU to move data.</p><p>Every Logic can attach a DMA engine to it. VCU can have one, A53 has one, even FPGA can &lsquo;make one&rsquo;.</p><ol><li>CPU sends DMA a descriptor to move data, DMA engine takes the task and talks to Memory controller to finish the job.</li><li>Meanwhile, CPU can do other jobs.</li><li>When task is done, DMA sends interrupts to inform CPU.</li></ol><p>DMA engine can implement clever way to move data. For example:</p><ol><li>The task is to move 1KB from dst A to dst B</li><li>The cache line of DMA engine is 256B, it can split 1KB -> 256B x 4, pipeline 4 requests.</li><li>Obviously, the order doesn&rsquo;t matter.</li></ol><pre tabindex=0><code>--- 256B: A[0]   -&gt; B[0]
+--- 256B: A[256] -&gt; B[256]
+--- 256B: A[512] -&gt; B[512]
+--- 256B: A[768] -&gt; B[768]
+</code></pre><ol start=4><li>Because cache line fixed. Pay attention to memory address alignment.</li></ol><h1 id=rtos>RTOS</h1><h2 id=task>Task</h2><p>RTOS 裡的 task 與 Linux 最大的不同點, 在於 memory. 由於 MPU 沒有 MMU, 因此也沒有所謂 virtual memory.</p><p>所有的 task 共享一個 memory space. 因此可能寫壞別的 task 的 stack, heap, bss, data.</p><p>RTOS program 更接近一個 multi-threaded program. 每個 task 就是一個 thread.</p><h1 id=ring-buffer>Ring Buffer</h1><h2 id=implementation>Implementation</h2><h3 id=counter-法-自然-直覺>Counter 法: 自然, 直覺</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cpp data-lang=cpp><span style=display:flex><span><span style=color:#75715e>#define SZ 4
 </span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>typedef</span> <span style=color:#66d9ef>struct</span> {
 </span></span><span style=display:flex><span>  <span style=color:#66d9ef>int</span> r_idx;
 </span></span><span style=display:flex><span>  <span style=color:#66d9ef>int</span> w_idx;

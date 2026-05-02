@@ -231,7 +231,10 @@ Semaphore does: lock, conditional variable, and counter.
 
 ## Lock Free
 核心概念: CAS (Compare and Swap)
+
+```
 CAS(ptr_to_var, old_val, new_val):
+
 ptr_to_var: var is the target you want to update, such as tail of queue
 old_val: the var expected value.
 new_val: the new value you want var to be
@@ -239,6 +242,7 @@ new_val: the new value you want var to be
 old_val = tail; // copy the address of last element
 CAS(&tail, old_val, node) // if success, tail == node
 old_val->next = node;
+```
 
 ### Difference of lock version.
 
@@ -280,6 +284,35 @@ So, you can fetch front data in lock-free version because it have nothing to do 
 ## bss, data
 
 ## stack, heap
+
+
+# DMA
+
+```
+CPU -> DMA -> Memory Controller -> DDR
+```
+
+DMA Engine is a logic nearby CPU. It helps CPU to move data.
+
+Every Logic can attach a DMA engine to it. VCU can have one, A53 has one, even FPGA can 'make one'.
+
+1. CPU sends DMA a descriptor to move data, DMA engine takes the task and talks to Memory controller to finish the job.
+2. Meanwhile, CPU can do other jobs.
+3. When task is done, DMA sends interrupts to inform CPU.
+
+DMA engine can implement clever way to move data. For example:
+1. The task is to move 1KB from dst A to dst B
+2. The cache line of DMA engine is 256B, it can split 1KB -> 256B x 4, pipeline 4 requests.
+3. Obviously, the order doesn't matter.
+
+```
+--- 256B: A[0]   -> B[0]
+--- 256B: A[256] -> B[256]
+--- 256B: A[512] -> B[512]
+--- 256B: A[768] -> B[768]
+```
+
+4. Because cache line fixed. Pay attention to memory address alignment.
 
 
 # RTOS

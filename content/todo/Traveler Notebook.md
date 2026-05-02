@@ -15,12 +15,13 @@ draft: false
 - [ ] 014 牛皮紙 #02
 - [ ] 025 MD Cream #01, using (Camel)
 - [ ] 025 MD Cream #03
+- [ ] 026 Dot Grid #02 
 - [ ] 2026 Diary, using
 - [ ] 牛皮紙 黑色 #01
 - [ ] 牛皮紙 Tiffany #01, using (Blue)
 - [ ] Blank Tokyo
 - [ ] Green Tea Leaf
-- [ ] Dot Grid SBUX
+- [ ] Dot Grid SBUX, using (Olive)
 - [ ] Kraft SBUX
 - [ ] MD Cream NRT #01, using
 - [ ] MD Cream NRT #02
@@ -64,15 +65,17 @@ draft: false
 
 
 # TN Leather
-- [x] Camel - Daily
-- [x] Black - Office
-- [x] Olive - Europe
-- [x] Blue - US, UK, NZ
-- [x] Red - Japan
-- [x] NRT
-- [x] Tokyo Station
-- [x] Camel sbux
-- [x] Blue Kyoto
+- Regular Black - Office
+- Regular Camel - Daily
+- Regular Blue - US, UK, NZ
+- Regular Olive - Europe
+- Regular Red - Japan
+- Regular Tokyo Station
+- Regular Kyoto
+- Passport Olive - Daily
+- Passport Camel sbux
+- Passport NRT
+- Card Black
 
 
 

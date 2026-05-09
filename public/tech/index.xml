@@ -6,8 +6,15 @@
     <description>Recent content in Teches on Hank Tech Lab</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 01 May 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Behavioral Question</title>
+      <link>http://localhost:1313/tech/bq/</link>
+      <pubDate>Fri, 01 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tech/bq/</guid>
+      <description>&lt;h2 id=&#34;youtuber---matt-huang&#34;&gt;Youtuber - Matt Huang&lt;/h2&gt;&#xA;&lt;h2 id=&#34;demo-3-things&#34;&gt;Demo 3 things:&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Leadership - how do you move the team to believe your way&lt;/li&gt;&#xA;&lt;li&gt;Resillence - biggest failure / success.&#xA;This question is interesting. Although you are asked your biggest failure or success, completely opposite, but the funny thing is the response is exactly the same! It shall have such a format:&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;the backgound: you are your manage is in Samsung to solve a problem which can take 36 hours to reproduce; you have only 1 night.&lt;/li&gt;&#xA;&lt;li&gt;the action: you figure out a clever way to reproduce it by fixing PC, now you can reproduce it any time you want.&lt;/li&gt;&#xA;&lt;li&gt;the reaction: your customer is impressed.&lt;/li&gt;&#xA;&lt;li&gt;the takeway: what you learned.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;ol start=&#34;3&#34;&gt;&#xA;&lt;li&gt;Teamwork - if you have conflict with your team member, how to settle&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Of course, if you are asked &amp;ldquo;failfure&amp;rdquo;, put emotional emphasis on how nervous you and your team member are, not how happy end it is.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Embedded Question</title>
       <link>http://localhost:1313/tech/embedded/</link>

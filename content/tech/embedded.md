@@ -327,15 +327,145 @@ RTOS program 更接近一個 multi-threaded program. 每個 task 就是一個 th
 
 # Ring Buffer
 
-## Implementation
+## Interview 成功的心法: 冷靜. 有步驟
+
+## 第一步: 正確的定義 strcture and function
+
+```cpp
+typedef struct {
+  // TBA
+} ring_buf_t;
+
+int ring_read(ring_buf_t &buf, uint8_t &rb_data) {
+}
+
+int ring_write(ring_buf_t &buf, uint8_t &wr_data) {
+}
+```
+
+接下來, 我們需要兩個 pointer 分別記錄 read & write. 然後一個 array 紀錄真正寫入的 data. 因此, 正確的 ring_buf_t 為:
+
+```cpp
+const int SZ = 4;
+
+typedef struct {
+  int head;
+  int tail
+  uint8_t data[SZ];
+} ring_buf_t;
+```
+
+至此, 第一步就大功告成了. 當然此時還可以做一些準備工作來降低摩擦, 如 return 0.
+
+```cpp
+int ring_read(ring_buf_t &buf, uint8_t &rb_data) {
+  return 0;
+}
+
+int ring_write(ring_buf_t &buf, uint8_t &wr_data) {
+  return 0;
+}
+```
+
+## 第二步: 快速寫出 ring_read & ring_write
+
+這一步就是快速寫完此兩 function 的主體. 不要多想特殊狀況.
+
+```
+int ring_read(ring_buf_t &buf, uint8_t &rb_data) {
+  rb_data = buf.data[ buf.tail ];
+  buf.tail = (buf.tail + 1) % SZ;
+
+  return 0;
+}
+
+int ring_write(ring_buf_t &buf, uint8_t wr_data) {
+  buf.data[ buf.head ] = wr_data;
+  buf.head = (buf.head + 1) % SZ;
+
+  return 0;
+}
+```
+
+## 第三步: 解決考點 underflow & overflow
+
+先寫好 framework:
+
+```
+int ring_read(ring_buf_t &buf, uint8_t &rb_data) {
+  // chk for underflow
+  if (...) { return -1; }
+
+  rb_data = buf.data[ buf.tail ];
+  buf.tail = (buf.tail + 1) % SZ;
+
+  return 0;
+}
+
+int ring_write(ring_buf_t &buf, uint8_t wr_data) {
+  // chk for overflow
+  if (...) { return -1; }
+
+  buf.data[ buf.head ] = wr_data;
+  buf.head = (buf.head + 1) % SZ;
+
+  return 0;
+}
+```
+
+至此. 就要進入真正的主題: 處理 underflow & overflow.
+
+先畫出圖
+
+```
+initial case:
+
+0 1 2 3
+- - - -
+h
+t
+```
+
+首先處理 ring_read. 由於剛開始 head and tail 都是 0. 他倆重疊, 並且因為 buffer 是空的, ring_read 為不合理, 因此 if 的條件可以簡單地寫成
+if (head == tail) { return }
+
+再來處理 ring_write, 先讓 write 寫入 3 次, 分別為 'A', 'B', 'C':
+
+```
+0 1 2 3
+A B C -
+      h
+t
+```
+
+這是最難的地方, 就是我們是否可允許寫入 'D'. 理論上因為 buffer size = 4, 所以我們勇敢的寫入 'D'.
+
+```
+0 1 2 3
+A B C D
+h
+t
+```
+
+這時 buffer 已滿. 不能再寫. 因此 if 的條件簡單地寫下 if (head == tail) { return }. 但是 這會跟 initial case 衝突. 如果 head == tail 就要 return, 那麼一開始就完全不能動.
+
+這時我們就要想到另一種解法, 那就是無一法. 最多 head 只能多寫 (size-1) 次. 也就是說, 寫到 'C' 就得停止.
+
+if condition 就變成:
+
+```cpp
+if ( ((buf.head + 1) % SZ) == buf.tail) { return -1; }
+```
+
+
 ### Counter 法: 自然, 直覺
 
 ```cpp
 #define SZ 4
 typedef struct {
-  int r_idx;
-  int w_idx;
-  char queue[SZ];
+  int head;
+  int tail;
+  uint8_t data[SZ];
   
   int counter;
 } ring_buffer_t;
@@ -363,23 +493,30 @@ int write_data(ring_buffer_t &buf, char c) {
 }
 ```
 
-### 缺一格法: 無需 counter. 所以無需保護 counter
+### 無一法: 無需 counter. 所以無需保護 counter
 
 ```cpp
-int read_data(ring_buffer_t &buf, char &ret) {
-  if ( buf.r_idx == buf.w_idx ) { return -1; }
+#define SZ 4
+typedef struct {
+  int head;
+  int tail;
+  uint8_t data[SZ];
+} ring_buffer_t;
+
+int ring_read(ring_buffer_t &buf, uint8_t &rb_data) {
+  if ( buf.tail == buf.head ) { return -1; }
   
-  ret = buf.queue[ buf.r_idx ];
-  buf.r_idx = (buf.r_idx + 1) % SZ;
+  rb_data = buf.data[ buf.tail ];
+  buf.tail = (buf.tail + 1) % SZ;
 
   return 0;
 }
 
-int write_data(ring_buffer_t &buf, char c) {
-  if ( (buf.w_idx + 1) % SZ == buf.r_idx ) { return -1; }
+int ring_write(ring_buffer_t &buf, uint8_t data) {
+  if ( (buf.head + 1) % SZ == buf.tail ) { return -1; }
   
-  buf.queue[ buf.w_idx ] = c;
-  buf.w_idx = (buf.w_idx + 1) % SZ;
+  buf.data[ buf.head ] = data;
+  buf.head = (buf.head + 1) % SZ;
 
   return 0;
 }

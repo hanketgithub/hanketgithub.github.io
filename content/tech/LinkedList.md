@@ -40,21 +40,21 @@ Node *np = new Node(5); // in heap
 
 推薦：
 
-1. LC 206 Reverse Linked List
-2. LC 21 Merge Two Sorted Lists
-3. LC 83 Remove Duplicates from Sorted List
-4. LC 203 Remove Linked List Elements
-5. LC 876 Middle of the Linked List
+- [x] LC 206 Reverse Linked List
+- [x] LC 21 Merge Two Sorted Lists
+- [x] LC 83 Remove Duplicates from Sorted List
+- [x] LC 203 Remove Linked List Elements
+- [x] LC 876 Middle of the Linked List
 
 
 ## 第二階段：pointer choreography
 
 推薦：
 
-1. LC 19 Remove Nth Node From End
-2. LC 24 Swap Nodes in Pairs
-3. LC 92 Reverse Linked List II
-4. LC 143 Reorder List
+- [x] LC 19 Remove Nth Node From End
+- [x] LC 24 Swap Nodes in Pairs
+- [x] LC 92 Reverse Linked List II
+- [x] LC 143 Reorder List
 
 
 

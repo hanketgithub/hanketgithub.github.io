@@ -51,27 +51,27 @@ x & (x-1)
 
 Easy
 
-* LC 190 Reverse Bits
-* LC 191 Number of 1 Bits
-* LC 231 Power of Two
-* LC 338 Counting Bits
+- [x] LC 190 Reverse Bits
+- [ ] LC 191 Number of 1 Bits
+- [ ] LC 231 Power of Two
+- [ ] LC 338 Counting Bits
 
 ⸻
 
 Medium
 
-* LC 78 Subsets
-* LC 90 Subsets II
-* LC 137 Single Number II
-* LC 260 Single Number III
-* LC 201 Bitwise AND of Numbers Range
-* LC 421 Maximum XOR of Two Numbers
-* LC 1310 XOR Queries
+- [ ] LC 78 Subsets
+- [ ] LC 90 Subsets II
+- [ ] LC 137 Single Number II
+- [ ] LC 260 Single Number III
+- [ ] LC 201 Bitwise AND of Numbers Range
+- [ ] LC 421 Maximum XOR of Two Numbers
+- [ ] LC 1310 XOR Queries
 
 ⸻
 
 Hard-ish but worth
 
-* LC 982 Triples with Bitwise AND Equal To Zero
-* LC 2172 Maximum AND Sum
-* LC 1799 Maximize Score After N Operations
+- [ ] LC 982 Triples with Bitwise AND Equal To Zero
+- [ ] LC 2172 Maximum AND Sum
+- [ ] LC 1799 Maximize Score After N Operations

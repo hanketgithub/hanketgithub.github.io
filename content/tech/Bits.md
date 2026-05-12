@@ -52,9 +52,9 @@ x & (x-1)
 Easy
 
 - [x] LC 190 Reverse Bits
-- [ ] LC 191 Number of 1 Bits
-- [ ] LC 231 Power of Two
-- [ ] LC 338 Counting Bits
+- [x] LC 191 Number of 1 Bits
+- [x] LC 231 Power of Two
+- [x] LC 338 Counting Bits
 
 ⸻
 

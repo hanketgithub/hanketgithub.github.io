@@ -47,7 +47,6 @@ draft: false
 
 ## TN Inserts - Passport
 - [ ] 002 Grid #03
-- [ ] 003 Blank #01, using
 - [ ] 003 Blank #02
 - [ ] 005 薄紙, using
 - [ ] 005 薄紙
@@ -59,6 +58,7 @@ draft: false
 - [ ] MD Cream 東京地下鐵
 - [ ] MD Cream SBUX
 - [ ] 2026 Diary, using
+- [x] 003 Blank #01
 - [x] 002 Grid #01
 - [x] 002 Grid #02
 

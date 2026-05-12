@@ -8,12 +8,17 @@ draft: false
 ## Youtuber - Matt Huang
 
 
+## Focus on how you think, not what you do
+- Break problem down. Ask for clarification.
+- Address the thinking process.
+
+
 
 ## Demo 3 things:
 1. Leadership - how do you move the team to believe your way
 2. Resillence - biggest failure / success.
 This question is interesting. Although you are asked your biggest failure or success, completely opposite, but the funny thing is the response is exactly the same! It shall have such a format:
-- the backgound: you are your manage is in Samsung to solve a problem which can take 36 hours to reproduce; you have only 1 night.
+- the backgound: you are your manager was in Samsung to solve a problem which can take 36 hours to reproduce; you have only 1 night.
 - the action: you figure out a clever way to reproduce it by fixing PC, now you can reproduce it any time you want.
 - the reaction: your customer is impressed.
 - the takeway: what you learned.

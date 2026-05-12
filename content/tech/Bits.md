@@ -60,8 +60,8 @@ Easy
 
 Medium
 
-- [ ] LC 78 Subsets
-- [ ] LC 90 Subsets II
+- [x] LC 78 Subsets
+- [x] LC 90 Subsets II
 - [ ] LC 137 Single Number II
 - [ ] LC 260 Single Number III
 - [ ] LC 201 Bitwise AND of Numbers Range

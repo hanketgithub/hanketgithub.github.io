@@ -24,11 +24,171 @@ draft: false
 
 ---
 
-## 更新概要（2026-04-20）
+## 更新概要（2026-05-15）
 
-理解 stream_app 裡 VCU 如何接收 input source frame.
+增加 USB boot
 
 ---
+
+### VEGA3006 Golden Image Recovery Guide 
+
+Use the `usb_boot_3006_recovery` folder to recover and update the golden image.
+
+
+
+#### 1. Set VEGA3006 to USB Boot Mode
+
+Configure `SW2` as follows.
+
+#### eMMC Boot Mode
+
+```text
+L   R
+x
+    x
+    x
+x
+````
+
+#### USB Boot Mode
+
+```text
+L   R
+X
+    X
+    X
+    X
+```
+
+After setting USB boot mode:
+
+* Connect the USB cable.
+* Connect the UART cable.
+* Connect both cables to the same Ubuntu machine.
+
+Power on VEGA3006 after all cables are connected.
+
+
+
+#### 2. Check USB DFU Device Path
+
+Run the following command on the Ubuntu machine:
+
+```bash
+sudo ./dfu-util -l
+```
+
+Example output:
+
+```text
+Found DFU: [03fd:0050] ver=0100, devnum=3, cfg=1, intf=0, path="5-2", alt=0, name="Xilinx DFU Downloader"
+```
+
+Find the USB DFU path from the output.
+
+Example:
+
+```text
+path="5-2"
+```
+
+Update the `-p` argument in the following scripts:
+
+```text
+load_fsbl_uboot.sh
+load_kernl_ramfs.sh
+```
+
+Example:
+
+Original:
+
+```bash
+-p "1-11"
+```
+
+Updated:
+
+```bash
+-p "5-2"
+```
+
+
+
+#### 3. Load FSBL and U-Boot
+
+Run:
+
+```bash
+sudo ./load_fsbl_uboot.sh
+```
+
+
+
+#### 4. Start USB DFU Boot from UART Console
+
+Open the PS UART console on the Ubuntu machine.
+
+Run:
+
+```bash
+setenv script_size_f 0x20000000
+run bootcmd_usb_dfu0
+```
+
+If the command does not work:
+
+1. Press `Ctrl+C` to stop autoboot.
+2. Run the commands again:
+
+```bash
+setenv script_size_f 0x20000000
+run bootcmd_usb_dfu0
+```
+
+
+
+#### 5. Load Kernel and Ramfs
+
+Run:
+
+```bash
+sudo ./load_kernl_ramfs.sh
+```
+
+After the download completes, return to the UART console and run:
+
+```bash
+bootm 0x20000000
+```
+
+VEGA3006 will boot into the Linux recovery system.
+
+
+
+#### 6. Login to Linux Recovery System
+
+Use the PS UART console to login.
+
+Credentials:
+
+```text
+ID: petalinux
+Password: adv123456
+```
+
+
+
+#### 7. Power Off VEGA3006
+
+After the update finishes:
+
+1. Power off VEGA3006.
+2. Restore `SW2` to normal eMMC boot mode if required.
+3. Power on the system again.
+
+---
+
 
 ### stream_app 裡 VCU 如何接收 input source frame?（2026-04-20）
 

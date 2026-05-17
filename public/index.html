@@ -100,6 +100,8 @@
   
     <li><a href="/tech/vcu_progress/">VCU 開發進度總結 — 2026-04-01</a></li>
   
+    <li><a href="/tech/bits/">Bits</a></li>
+  
     <li><a href="/tech/linkedlist/">Linked List</a></li>
   
     <li><a href="/tech/docker/">使用 docker 作為 petalinux build</a></li>
@@ -111,8 +113,6 @@
     <li><a href="/tech/hugo_setup/">新機 GitHub SSH Clone &#43; Hugo 環境 Setup 小抄</a></li>
   
     <li><a href="/tech/hdmi_aux/">HDMI AUX Data</a></li>
-  
-    <li><a href="/tech/swinir_experiment_2025_0331/">SwinIR Experiment Summary — March 31, 2025</a></li>
   
 </ul>
 
@@ -171,6 +171,11 @@
   <br><div class="description">
 	
 	<h2 id="youtuber---matt-huang">Youtuber - Matt Huang</h2>
+<h2 id="focus-on-how-you-think-not-what-you-do">Focus on how you think, not what you do</h2>
+<ul>
+<li>Break problem down. Ask for clarification.</li>
+<li>Address the thinking process.</li>
+</ul>
 <h2 id="demo-3-things">Demo 3 things:</h2>
 <ol>
 <li>Leadership - how do you move the team to believe your way</li>
@@ -178,7 +183,7 @@
 This question is interesting. Although you are asked your biggest failure or success, completely opposite, but the funny thing is the response is exactly the same! It shall have such a format:</li>
 </ol>
 <ul>
-<li>the backgound: you are your manage is in Samsung to solve a problem which can take 36 hours to reproduce; you have only 1 night.</li>
+<li>the backgound: you are your manager was in Samsung to solve a problem which can take 36 hours to reproduce; you have only 1 night.</li>
 <li>the action: you figure out a clever way to reproduce it by fixing PC, now you can reproduce it any time you want.</li>
 <li>the reaction: your customer is impressed.</li>
 <li>the takeway: what you learned.</li>
@@ -213,7 +218,7 @@ This question is interesting. Although you are asked your biggest failure or suc
   <br><div class="description">
 	
 	<h2 id="編譯步驟"><strong>編譯步驟</strong>：</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Setup cross compile environment</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Setup cross compile environment</span>
 </span></span><span style="display:flex;"><span>$ source ~/vega3006_zynq/xilinx_sdk_r5_vega3006/sdk/environment-setup-cortexa72-cortexa53-xilinx-linux
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 進入正確版本的 source tree</span>
@@ -226,14 +231,63 @@ This question is interesting. Although you are asked your biggest failure or suc
 </span></span><span style="display:flex;"><span>$ file bin/AL_Encoder.exe
 </span></span><span style="display:flex;"><span>bin/AL_Encoder.exe: ELF 64-bit LSB pie executable, ARM aarch64, version <span style="color:#ae81ff">1</span> <span style="color:#f92672">(</span>GNU/Linux<span style="color:#f92672">)</span>, dynamically linked, interpreter /lib/ld-linux-aarch64.so.1, BuildID<span style="color:#f92672">[</span>sha1<span style="color:#f92672">]=</span>60c7aab8c2506fecbb00e0200aa072ca73393cab, <span style="color:#66d9ef">for</span> GNU/Linux 3.14.0, with debug_info, not stripped
 </span></span></code></pre></div><hr>
-<h2 id="更新概要2026-04-20">更新概要（2026-04-20）</h2>
-<p>理解 stream_app 裡 VCU 如何接收 input source frame.</p>
+<h2 id="更新概要2026-05-15">更新概要（2026-05-15）</h2>
+<p>增加 USB boot</p>
 <hr>
-<h3 id="stream_app-裡-vcu-如何接收-input-source-frame2026-04-20">stream_app 裡 VCU 如何接收 input source frame?（2026-04-20）</h3>
-<p>短答: fpga 並未直接送 input source frame 給 VCU, VCU 該 encode 哪張 frame, 完全靠自己猜出來.</p>&hellip;
+<h3 id="vega3006-golden-image-recovery-guide">VEGA3006 Golden Image Recovery Guide</h3>
+<p>Use the <code>usb_boot_3006_recovery</code> folder to recover and update the golden image.</p>&hellip;
 	
 </div>
   <a class="readmore" href="/tech/vcu_progress/">Read more ⟶</a>
+</section>
+
+<section class="list-item">
+  <h1 class="title"><a href="/tech/bits/">Bits</a></h1>
+  <time>Jan 1, 2026</time>
+  <br><div class="description">
+	
+	<h2 id="basic-operations">Basic operations</h2>
+<ul>
+<li>Get bit k</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>(x <span style="color:#f92672">&gt;&gt;</span> k) <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">0x1</span>
+</span></span></code></pre></div><ul>
+<li>Set bit k</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>x <span style="color:#f92672">|=</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> k);
+</span></span></code></pre></div><ul>
+<li>Clear bit k</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>x <span style="color:#f92672">&amp;=</span> <span style="color:#f92672">~</span>(<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> k);
+</span></span></code></pre></div><ul>
+<li>Toggle bit k</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>x <span style="color:#f92672">^=</span> <span style="color:#f92672">~</span>(<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> k);
+</span></span></code></pre></div><p>判斷 power of two</p>
+<h2 id="level-1--interview-超常見">Level 1 — Interview 超常見</h2>
+<ul>
+<li>判斷 power of two</li>
+</ul>
+<p>(x &gt; 0) &amp;&amp; (x &amp; (x-1) == 0)</p>
+<ul>
+<li>Clear lowest set bit</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>x <span style="color:#f92672">&amp;</span> (x<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+</span></span></code></pre></div><ul>
+<li>4-byte alignment:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>(x <span style="color:#f92672">+</span> <span style="color:#ae81ff">3</span>) <span style="color:#f92672">&amp;</span> <span style="color:#f92672">~</span><span style="color:#ae81ff">3</span>
+</span></span></code></pre></div><p>Easy</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> LC 190 Reverse Bits</li>
+<li><input checked="" disabled="" type="checkbox"> LC 191 Number of 1 Bits</li>
+<li><input checked="" disabled="" type="checkbox"> LC 231 Power of Two</li>
+<li><input checked="" disabled="" type="checkbox"> LC 338 Counting Bits</li>
+</ul>
+<p>⸻</p>&hellip;
+	
+</div>
+  <a class="readmore" href="/tech/bits/">Read more ⟶</a>
 </section>
 
 <section class="list-item">
@@ -242,7 +296,7 @@ This question is interesting. Although you are asked your biggest failure or suc
   <br><div class="description">
 	
 	<h2 id="define">Define</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Node</span> {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Node</span> {
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">int</span> val;
 </span></span><span style="display:flex;"><span>  Node <span style="color:#f92672">*</span>next;
@@ -253,8 +307,8 @@ This question is interesting. Although you are asked your biggest failure or suc
 </span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span>};
 </span></span></code></pre></div><h2 id="declare">Declare</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>Node <span style="color:#a6e22e">n</span>(<span style="color:#ae81ff">3</span>); <span style="color:#75715e">// in stack
-</span></span></span><span style="display:flex;"><span>Node <span style="color:#f92672">*</span>np <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Node(<span style="color:#ae81ff">5</span>); <span style="color:#75715e">// in heap
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>Node <span style="color:#a6e22e">n</span>(<span style="color:#ae81ff">3</span>); <span style="color:#75715e">// in stack
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Node <span style="color:#f92672">*</span>np <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Node(<span style="color:#ae81ff">5</span>); <span style="color:#75715e">// in heap
 </span></span></span></code></pre></div><h2 id="第一階段單向-linked-list-手感">第一階段：單向 linked list 手感</h2>
 <p>先把：</p>
 <ul>
@@ -266,13 +320,13 @@ This question is interesting. Although you are asked your biggest failure or suc
 </ul>
 <p>練熟。</p>
 <p>推薦：</p>
-<ol>
-<li>LC 206 Reverse Linked List</li>
-<li>LC 21 Merge Two Sorted Lists</li>
-<li>LC 83 Remove Duplicates from Sorted List</li>
-<li>LC 203 Remove Linked List Elements</li>
-<li>LC 876 Middle of the Linked List</li>
-</ol>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> LC 206 Reverse Linked List</li>
+<li><input checked="" disabled="" type="checkbox"> LC 21 Merge Two Sorted Lists</li>
+<li><input checked="" disabled="" type="checkbox"> LC 83 Remove Duplicates from Sorted List</li>
+<li><input checked="" disabled="" type="checkbox"> LC 203 Remove Linked List Elements</li>
+<li><input checked="" disabled="" type="checkbox"> LC 876 Middle of the Linked List</li>
+</ul>
 <h2 id="第二階段pointer-choreography">第二階段：pointer choreography</h2>
 <p>推薦：</p>&hellip;
 	
@@ -293,16 +347,16 @@ This question is interesting. Although you are asked your biggest failure or suc
 <p>在 <code>Dockerfile</code> 所在目錄建立新的 image，使用以下指令進行 build，完成後可用 <code>docker images</code> 確認 image 是否成功建立。</p>
 </li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker build -t xyz .
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker build -t xyz .
 </span></span><span style="display:flex;"><span>$ docker images
 </span></span></code></pre></div><ol start="3">
 <li>使用以下指令啟動 container，指定固定名稱 <code>kuma</code>，並將 host 的 <code>$HOME</code> 目錄掛載到 container 內相同路徑，方便重複進入同一個開發環境且保留所有使用者資料。</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker run -it -v <span style="color:#e6db74">&#34;</span>$HOME<span style="color:#e6db74">:</span>$HOME<span style="color:#e6db74">&#34;</span> --name kuma xyz
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker run -it -v <span style="color:#e6db74">&#34;</span>$HOME<span style="color:#e6db74">:</span>$HOME<span style="color:#e6db74">&#34;</span> --name kuma xyz
 </span></span></code></pre></div><ol start="4">
 <li>重啟 container。</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker start -ai kuma
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker start -ai kuma
 </span></span></code></pre></div><hr>
 <p>PS: Dockerfile 範例</p>
 <pre tabindex="0"><code># -----------------------------------------------------------------------------
@@ -530,20 +584,20 @@ return L;
 將 Hugo 專案 clone 到 <code>~/Projects/</code> 目錄下。</p>
 <hr>
 <h2 id="1-確認-ssh-金鑰是否已存在">1. 確認 SSH 金鑰是否已存在</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls -al ~/.ssh
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls -al ~/.ssh
 </span></span></code></pre></div><p>有看到 id_ed25519 / id_ed25519.pub 就可以跳到 Step 3</p>
 <p>如果沒有，執行：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keygen -t ed25519 -C hanketgithub@email.com
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keygen -t ed25519 -C hanketgithub@email.com
 </span></span></code></pre></div><p>一路按 Enter，不用改檔名或密碼。</p>
 <h2 id="2-將公鑰加到-github-帳戶">2. 將公鑰加到 GitHub 帳戶</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat ~/.ssh/id_ed25519.pub
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat ~/.ssh/id_ed25519.pub
 </span></span></code></pre></div><p>複製那一整行內容 ➔ 到 GitHub：</p>
 <p>Settings → SSH and GPG keys → New SSH key ➔ 貼上。</p>
 <p>Title 建議：「MacBook 2025」</p>
 <h3 id="3-測試-ssh-連線是否成功">3. 測試 SSH 連線是否成功</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -T git@github.com
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -T git@github.com
 </span></span></code></pre></div><p>看到：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Hi hanketgithub! You<span style="color:#960050;background-color:#1e0010">&#39;</span>ve successfully authenticated, but GitHub does not provide shell access.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Hi hanketgithub! You<span style="color:#960050;background-color:#1e0010">&#39;</span>ve successfully authenticated, but GitHub does not provide shell access.
 </span></span></code></pre></div><p>✅ 表示 SSH OK！</p>&hellip;
 	
 </div>
@@ -793,66 +847,19 @@ return L;
   <a class="readmore" href="/tech/hdmi_aux/">Read more ⟶</a>
 </section>
 
-<section class="list-item">
-  <h1 class="title"><a href="/tech/swinir_experiment_2025_0331/">SwinIR Experiment Summary — March 31, 2025</a></h1>
-  <time>Mar 31, 2025</time>
-  <br><div class="description">
+
+
+
+<ul class="pagination">
+	<span class="page-item page-prev">
 	
-	<p>🧪 SwinIR Experiment Summary — March 31, 2025</p>
-<h2 id="1-environment-setup">1. Environment Setup</h2>
-<ul>
-<li>OS: Ubuntu 24.04.2 LTS (noble)</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>lsb_release -a
-</span></span></code></pre></div><ul>
-<li>Python: 3.12.3</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python3 --version
-</span></span></code></pre></div><ul>
-<li>GPU: NVIDIA GeForce RTX 4090
-<ul>
-<li>Driver: 570.124.06</li>
-<li>CUDA: 12.8</li>
-</ul>
-</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nvidia-smi
-</span></span></code></pre></div><ul>
-<li>PyTorch: 2.5.1+cu121
-<ul>
-<li>CUDA Available: True</li>
-</ul>
-</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> torch
-</span></span><span style="display:flex;"><span>print(torch<span style="color:#f92672">.</span>__version__)
-</span></span><span style="display:flex;"><span>print(torch<span style="color:#f92672">.</span>cuda<span style="color:#f92672">.</span>is_available())
-</span></span></code></pre></div><h2 id="2-project-setup">2. Project Setup</h2>
-<ul>
-<li>Install Python venv and create environment:</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install python3.12-venv
-</span></span><span style="display:flex;"><span>python3 -m venv ~/venvs/swinir
-</span></span><span style="display:flex;"><span>source ~/venvs/swinir/bin/activate
-</span></span></code></pre></div><ul>
-<li>Install PyTorch (CUDA 12.1):</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
-</span></span></code></pre></div><ul>
-<li>Clone SwinIR repo and install dependencies:</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/JingyunLiang/SwinIR.git
-</span></span><span style="display:flex;"><span>cd SwinIR
-</span></span><span style="display:flex;"><span>pip install numpy opencv-python matplotlib tqdm yacs timm einops
-</span></span></code></pre></div><h2 id="3-inference--set5-benchmark">3. Inference — Set5 Benchmark</h2>
-<p>Lightweight SR (Scale ×2):</p>&hellip;
+	</span>
+	<span class="page-item page-next">
 	
-</div>
-  <a class="readmore" href="/tech/swinir_experiment_2025_0331/">Read more ⟶</a>
-</section>
-
-
-
+    <a href="/page/2/" class="page-link" aria-label="Next"><span aria-hidden="true">Next →</span></a>
+	
+	</span>
+</ul>
 
 
 

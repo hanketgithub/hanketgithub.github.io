@@ -1,0 +1,106 @@
+<!doctype html><html><head lang=en><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><title>ISP 與 Encoder 整體感知品質最佳化之研究心得 - Hank Tech Lab</title><meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="結合 ISP 增進 Encoder Quality 的方式 ISP (Image Signal Processor) 與 Encoder 並非完全獨立系統。
+許多 ISP 處理結果會直接影響：
+Motion Estimation 精度 Residual Energy Skip Mode 使用率 Bitrate 分布 Temporal Prediction 穩定性 主觀畫質 (Subjective Quality) 因此現代手機 SoC 中，ISP 與 Video Encoder 往往會共享：
+Motion information Gyro data Scene analysis ROI metadata Noise estimation HDR statistics 目的並非單純「畫面變漂亮」，而是：
+在有限 bitrate / power 下，提高 perceived quality。
+ISP Pipeline Sensor ↓ Black Level Correction ↓ Demosaic ↓ Denoise ↓ Deblur ↓ Sharpen ↓ HDR Merge ↓ Tone Mapping ↓ Color Correction ↓ Stabilization ↓ Encoder Denoise 感光元件亂數會出現雜點。"><meta property="og:image" content><meta property="og:url" content="https://hanketgithub.github.io/tech/isp/"><meta property="og:site_name" content="Hank Tech Lab"><meta property="og:title" content="ISP 與 Encoder 整體感知品質最佳化之研究心得"><meta property="og:description" content="結合 ISP 增進 Encoder Quality 的方式 ISP (Image Signal Processor) 與 Encoder 並非完全獨立系統。
+許多 ISP 處理結果會直接影響：
+Motion Estimation 精度 Residual Energy Skip Mode 使用率 Bitrate 分布 Temporal Prediction 穩定性 主觀畫質 (Subjective Quality) 因此現代手機 SoC 中，ISP 與 Video Encoder 往往會共享：
+Motion information Gyro data Scene analysis ROI metadata Noise estimation HDR statistics 目的並非單純「畫面變漂亮」，而是：
+在有限 bitrate / power 下，提高 perceived quality。
+ISP Pipeline Sensor ↓ Black Level Correction ↓ Demosaic ↓ Denoise ↓ Deblur ↓ Sharpen ↓ HDR Merge ↓ Tone Mapping ↓ Color Correction ↓ Stabilization ↓ Encoder Denoise 感光元件亂數會出現雜點。"><meta property="og:locale" content="en-us"><meta property="og:type" content="article"><meta property="article:section" content="tech"><meta property="article:published_time" content="2026-01-01T00:00:00+00:00"><meta property="article:modified_time" content="2026-01-01T00:00:00+00:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="ISP 與 Encoder 整體感知品質最佳化之研究心得"><meta name=twitter:description content="結合 ISP 增進 Encoder Quality 的方式 ISP (Image Signal Processor) 與 Encoder 並非完全獨立系統。
+許多 ISP 處理結果會直接影響：
+Motion Estimation 精度 Residual Energy Skip Mode 使用率 Bitrate 分布 Temporal Prediction 穩定性 主觀畫質 (Subjective Quality) 因此現代手機 SoC 中，ISP 與 Video Encoder 往往會共享：
+Motion information Gyro data Scene analysis ROI metadata Noise estimation HDR statistics 目的並非單純「畫面變漂亮」，而是：
+在有限 bitrate / power 下，提高 perceived quality。
+ISP Pipeline Sensor ↓ Black Level Correction ↓ Demosaic ↓ Denoise ↓ Deblur ↓ Sharpen ↓ HDR Merge ↓ Tone Mapping ↓ Color Correction ↓ Stabilization ↓ Encoder Denoise 感光元件亂數會出現雜點。"><link href=https://hanketgithub.github.io/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css rel=stylesheet><link rel=stylesheet type=text/css media=screen href=https://hanketgithub.github.io/css/main.6a0f23ea50fd34b46fee262a5a68e17d458c51a2bc99ba1ba018065de6b180c3.css><link id=darkModeStyle rel=stylesheet type=text/css href=https://hanketgithub.github.io/css/dark.50b57e12d401420df23965fed157368aba37b76df0ecefd0b1ecd4da664f01a0.css disabled><style>@media print{body{font-family:pingfang tc,helvetica neue,sans-serif;font-size:12pt;line-height:1.6;color:#000}table,th,td{border:1px solid #666;border-collapse:collapse}th,td{padding:8px 12px;text-align:left}h1,h2{page-break-before:always}h1:first-of-type,h2:first-of-type{page-break-before:auto}img{max-width:100%;height:auto;page-break-inside:avoid}p{page-break-inside:avoid}a{color:#000;text-decoration:none}}</style></head><body><div class=content><header><div class=main><a href=https://hanketgithub.github.io/>Hank Tech Lab</a></div><nav><a href=/posts/>Posts</a>
+| <span id=dark-mode-toggle onclick=toggleTheme()><svg class="feather"><use href="/svg/feather-sprite.51cf5647cb1987f769b616558f2620fd9423d72058490231b391bf6aa3744b55.svg#sun"/></svg></span>
+<script src=https://hanketgithub.github.io/js/themetoggle.js></script></nav></header><main><article><div class=post-container><div class=post-content><div class=title><h1 class=title>ISP 與 Encoder 整體感知品質最佳化之研究心得</h1><div class=meta>Posted on Jan 1, 2026</div></div><section class=body><h1 id=結合-isp-增進-encoder-quality-的方式>結合 ISP 增進 Encoder Quality 的方式</h1><p>ISP (Image Signal Processor) 與 Encoder 並非完全獨立系統。</p><p>許多 ISP 處理結果會直接影響：</p><ul><li>Motion Estimation 精度</li><li>Residual Energy</li><li>Skip Mode 使用率</li><li>Bitrate 分布</li><li>Temporal Prediction 穩定性</li><li>主觀畫質 (Subjective Quality)</li></ul><p>因此現代手機 SoC 中，ISP 與 Video Encoder 往往會共享：</p><ul><li>Motion information</li><li>Gyro data</li><li>Scene analysis</li><li>ROI metadata</li><li>Noise estimation</li><li>HDR statistics</li></ul><p>目的並非單純「畫面變漂亮」，而是：</p><blockquote><p>在有限 bitrate / power 下，提高 perceived quality。</p></blockquote><hr><h1 id=isp-pipeline>ISP Pipeline</h1><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>Sensor
+</span></span><span style=display:flex><span>  ↓
+</span></span><span style=display:flex><span>Black Level Correction
+</span></span><span style=display:flex><span>  ↓
+</span></span><span style=display:flex><span>Demosaic
+</span></span><span style=display:flex><span>  ↓
+</span></span><span style=display:flex><span>Denoise
+</span></span><span style=display:flex><span>  ↓
+</span></span><span style=display:flex><span>Deblur
+</span></span><span style=display:flex><span>  ↓
+</span></span><span style=display:flex><span>Sharpen
+</span></span><span style=display:flex><span>  ↓
+</span></span><span style=display:flex><span>HDR Merge
+</span></span><span style=display:flex><span>  ↓
+</span></span><span style=display:flex><span>Tone Mapping
+</span></span><span style=display:flex><span>  ↓
+</span></span><span style=display:flex><span>Color Correction
+</span></span><span style=display:flex><span>  ↓
+</span></span><span style=display:flex><span>Stabilization
+</span></span><span style=display:flex><span>  ↓
+</span></span><span style=display:flex><span>Encoder
+</span></span></code></pre></div><hr><h1 id=denoise>Denoise</h1><p>感光元件亂數會出現雜點。</p><p>比如在一片背景中：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>100 100 100 100
+</span></span><span style=display:flex><span>100 250 100 100
+</span></span><span style=display:flex><span>100 100 100 100
+</span></span></code></pre></div><p>其中 <code>250</code> 很可能是 sensor noise。</p><p>高 ISO 時尤其明顯。</p><hr><h2 id=如何判斷是雜點或是細節>如何判斷是雜點或是細節</h2><h3 id=spatial-denoise>Spatial Denoise</h3><p>觀察鄰近 pixel。</p><p>若：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>100 100 100
+</span></span><span style=display:flex><span>100 250 100
+</span></span><span style=display:flex><span>100 100 100
+</span></span></code></pre></div><p>中心值與周圍差異極大，可能是 noise。</p><hr><h3 id=temporal-denoise>Temporal Denoise</h3><p>前後 frame 比較：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>frame 0:
+</span></span><span style=display:flex><span>100 250 100
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>frame 1:
+</span></span><span style=display:flex><span>100 100 100
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>frame 2:
+</span></span><span style=display:flex><span>100 100 100
+</span></span></code></pre></div><p>若只存在單 frame，高機率是 noise。</p><p>若多 frame 穩定存在：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>frame 0:
+</span></span><span style=display:flex><span>100 250 100
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>frame 1:
+</span></span><span style=display:flex><span>100 248 101
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>frame 2:
+</span></span><span style=display:flex><span>101 251 100
+</span></span></code></pre></div><p>則可能是真實細節。</p><hr><h2 id=如何影響-encoder>如何影響 Encoder</h2><p>Noise 會增加：</p><ul><li>Residual</li><li>Motion Estimation complexity</li><li>False motion vector</li><li>Bitrate consumption</li></ul><hr><h3 id=example>Example</h3><p>本來靜止背景：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>frame 0:
+</span></span><span style=display:flex><span>100 100 100
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>frame 1:
+</span></span><span style=display:flex><span>100 100 100
+</span></span></code></pre></div><p>最佳模式：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>SKIP
+</span></span><span style=display:flex><span>MV = 0
+</span></span><span style=display:flex><span>Residual = 0
+</span></span></code></pre></div><p>但若出現 noise：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>frame 1:
+</span></span><span style=display:flex><span>100 250 100
+</span></span></code></pre></div><p>Encoder 可能：</p><ul><li>認為此 block 發生變化</li><li>嘗試搜尋其他 block</li><li>產生錯誤 MV</li><li>增加 residual bits</li></ul><p>結果：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>MV != 0
+</span></span><span style=display:flex><span>Residual &gt; 0
+</span></span></code></pre></div><p>浪費 bitrate。</p><hr><h2 id=denoise-與-subjective-quality-的-trade-off>Denoise 與 Subjective Quality 的 Trade-off</h2><p>Denoise 太強：</p><ul><li>細節流失</li><li>皮膚像蠟</li><li>草地變成油畫</li></ul><p>Denoise 太弱：</p><ul><li>Encoder bitrate 爆炸</li><li>Block artifacts 增加</li><li>Low light 品質崩潰</li></ul><p>因此 ISP 常做：</p><ul><li>Adaptive denoise</li><li>Motion-aware denoise</li><li>ROI-based denoise</li></ul><p>例如：</p><ul><li>人臉保留細節</li><li>天空強力 denoise</li></ul><hr><h1 id=deblur>Deblur</h1><p>Shutter speed 過慢或手震造成：</p><ul><li>Motion Blur</li><li>Rolling Shutter Distortion</li></ul><hr><h2 id=blur-對-encoder-的問題>Blur 對 Encoder 的問題</h2><p>Blur 並不是單純「變模糊」。</p><p>而是：</p><blockquote><p>特徵被破壞。</p></blockquote><p>例如：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>原本:
+</span></span><span style=display:flex><span>||||||||
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Blur 後:
+</span></span><span style=display:flex><span>////////
+</span></span></code></pre></div><p>Block matching 變困難。</p><p>因此：</p><ul><li>MV 不穩定</li><li>Residual 增加</li><li>Prediction accuracy 降低</li></ul><hr><h2 id=如何修復>如何修復</h2><p>傳統方法：</p><ul><li>Wiener Filter</li><li>Deconvolution</li><li>Optical model inverse</li></ul><p>但效果有限。</p><p>現代大多：</p><ul><li>AI Deblur</li><li>CNN-based Restoration</li><li>Temporal Reconstruction</li></ul><p>本質上：</p><blockquote><p>AI 根據 training data 腦補「合理細節」。</p></blockquote><hr><h2 id=deblur-如何幫助-encoder>Deblur 如何幫助 Encoder</h2><p>Deblur 後：</p><ul><li>Edge clearer</li><li>Texture more stable</li><li>Motion estimation easier</li></ul><p>因此：</p><ul><li>MV 更準</li><li>Residual 更低</li><li>Prediction 更穩</li></ul><p>尤其：</p><ul><li>文字</li><li>人臉</li><li>動物毛髮</li><li>樹葉</li></ul><p>差異非常大。</p><hr><h1 id=sharpen>Sharpen</h1><p>Sharpen 並非增加真實細節。</p><p>而是：</p><blockquote><p>增強 edge contrast。</p></blockquote><p>例如：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>100 101 102 103
+</span></span></code></pre></div><p>Sharpen 後：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>95 100 110 115
+</span></span></code></pre></div><p>邊界更明顯。</p><hr><h2 id=對-encoder-的影響>對 Encoder 的影響</h2><p>優點：</p><ul><li>Subjective quality 提升</li><li>細節看起來更多</li></ul><p>缺點：</p><ul><li>High frequency 增加</li><li>Residual 增加</li><li>壓縮效率下降</li></ul><p>因此：</p><blockquote><p>Sharpen 太強會讓 bitrate 爆炸。</p></blockquote><hr><h2 id=現代做法>現代做法</h2><p>Adaptive Sharpen：</p><ul><li>Flat area 少 sharpen</li><li>Edge area 強 sharpen</li></ul><p>甚至：</p><ul><li>Encode-aware sharpen</li><li>Bitrate-aware sharpen</li></ul><p>根據 target bitrate 動態調整 sharpen strength。</p><hr><h1 id=hdr>HDR</h1><p>HDR (High Dynamic Range) 目的：</p><blockquote><p>保留亮部與暗部細節。</p></blockquote><p>傳統 SDR：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>暗部黑掉
+</span></span><span style=display:flex><span>亮部爆掉
+</span></span></code></pre></div><p>HDR 可同時保留：</p><ul><li>陰影細節</li><li>高亮細節</li></ul><hr><h2 id=hdr-capture>HDR Capture</h2><p>常見方法：</p><h3 id=multi-exposure-merge>Multi Exposure Merge</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>Short exposure:
+</span></span><span style=display:flex><span>保留亮部
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Long exposure:
+</span></span><span style=display:flex><span>保留暗部
+</span></span></code></pre></div><p>再 merge。</p><hr><h3 id=interleaved-sensor-readout>Interleaved Sensor Readout</h3><p>Sensor 不同 pixel / line 使用不同 exposure。</p><p>手機常見。</p><hr><h1 id=hdr-對-encoder-的影響>HDR 對 Encoder 的影響</h1><p>HDR 會增加：</p><ul><li>Dynamic range</li><li>Local contrast</li><li>High frequency detail</li></ul><p>因此：</p><ul><li>Encoder complexity 上升</li><li>Residual 增加</li></ul><p>尤其：</p><ul><li>火焰</li><li>太陽反射</li><li>夜景燈光</li></ul><p>非常難壓。</p><hr><h2 id=hdr-metadata>HDR Metadata</h2><p>Encoder 常需傳遞：</p><ul><li>MaxCLL</li><li>MaxFALL</li><li>Color Primaries</li><li>Transfer Function</li><li>Tone Mapping Info</li></ul><p>讓 decoder 正確顯示 HDR。</p><hr><h1 id=tone-mapping>Tone Mapping</h1><p>HDR Display 與 SDR Display 能力不同。</p><p>Tone Mapping 目的：</p><blockquote><p>將 HDR luminance mapping 到 target display。</p></blockquote><hr><h2 id=example-1>Example</h2><p>HDR：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>0 ~ 4000 nit
+</span></span></code></pre></div><p>SDR monitor：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>0 ~ 300 nit
+</span></span></code></pre></div><p>因此必須壓縮亮度範圍。</p><hr><h2 id=local-tone-mapping>Local Tone Mapping</h2><p>不是整張圖同一條 curve。</p><p>而是：</p><ul><li>天空一條 curve</li><li>人臉一條 curve</li><li>陰影另一條 curve</li></ul><p>類似：</p><blockquote><p>每區域不同 gamma。</p></blockquote><hr><h2 id=對-encoder-的影響-1>對 Encoder 的影響</h2><p>Tone mapping 可：</p><ul><li>降低 extreme contrast</li><li>減少 residual</li><li>降低 bitrate</li></ul><p>但過強會：</p><ul><li>Halo</li><li>Artificial look</li><li>Flicker</li></ul><hr><h1 id=stabilization>Stabilization</h1><p>假設使用 600mm 錄影：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>frame 0 = 0
+</span></span><span style=display:flex><span>frame 1 = -5 pixel
+</span></span><span style=display:flex><span>frame 2 = +3 pixel
+</span></span><span style=display:flex><span>frame 3 = -6 pixel
+</span></span></code></pre></div><p>手抖會造成：</p><ul><li>整張畫面亂動</li><li>Encoder 認為發生 global motion</li></ul><hr><h2 id=如何修復-1>如何修復</h2><p>ISP / Stabilization engine：</p><ul><li>分析 frame motion</li><li>Gyro integration</li><li>Optical flow estimation</li></ul><p>再將畫面反向平移：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>-5 -&gt; +5 correction
+</span></span></code></pre></div><p>讓主體穩定。</p><hr><h2 id=對-encoder-的幫助>對 Encoder 的幫助</h2><p>若不做 stabilization：</p><p>Encoder MV：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>background:
+</span></span><span style=display:flex><span>MV = huge
+</span></span></code></pre></div><p>即使背景根本沒動。</p><p>結果：</p><ul><li>Motion vector 增大</li><li>Residual 增加</li><li>Bitrate 浪費</li></ul><hr><h2 id=stabilization-本質>Stabilization 本質</h2><p>它其實是一種：</p><blockquote><p>Global motion removal。</p></blockquote><p>將：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>Camera motion
+</span></span></code></pre></div><p>與：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>Object motion
+</span></span></code></pre></div><p>分離。</p><hr><h1 id=isp-與-encoder-shared-motion-information>ISP 與 Encoder Shared Motion Information</h1><p>現代 SoC 常共享：</p><ul><li>ISP optical flow</li><li>Gyro motion</li><li>Global motion</li><li>ROI map</li></ul><p>給 encoder。</p><hr><h2 id=為何有效>為何有效</h2><p>Encoder Motion Estimation 最耗：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>Search Range
+</span></span></code></pre></div><p>例如：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>(-64, +64)
+</span></span></code></pre></div><p>若 ISP 已知：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>global motion = (+5, -3)
+</span></span></code></pre></div><p>Encoder 可直接：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>search around (+5, -3)
+</span></span></code></pre></div><p>而不是 full search。</p><hr><h2 id=好處>好處</h2><ul><li>降低 power</li><li>降低 latency</li><li>提升 encode fps</li><li>提高 MV accuracy</li></ul><hr><h1 id=roi-region-of-interest>ROI (Region of Interest)</h1><p>ISP 可辨識：</p><ul><li>人臉</li><li>動物</li><li>車牌</li><li>主體</li></ul><p>並通知 encoder：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>此區重要
+</span></span></code></pre></div><p>Encoder 可：</p><ul><li>Lower QP</li><li>Preserve detail</li></ul><p>背景則：</p><ul><li>Higher QP</li><li>Aggressive compression</li></ul><hr><h1 id=ai-與未來方向>AI 與未來方向</h1><p>未來 ISP 與 Encoder 越來越模糊。</p><p>AI 可直接：</p><ul><li>Denoise</li><li>Deblur</li><li>Super Resolution</li><li>Frame Generation</li><li>Artifact Removal</li></ul><p>甚至：</p><blockquote><p>Encode-aware ISP</p></blockquote><p>與：</p><blockquote><p>ISP-aware Encoder</p></blockquote><p>共同最佳化。</p><p>方向已經逐漸從：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>獨立模組
+</span></span></code></pre></div><p>變成：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>整體感知品質最佳化
+</span></span></code></pre></div></section><div class=post-tags></div></div></div></article></main><footer><div style=display:flex></div><div class=footer-info>2026 <a href=https://github.com/athul/archie>Archie Theme</a> | Built with <a href=https://gohugo.io>Hugo</a></div></footer></div></body></html>

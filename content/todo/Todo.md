@@ -58,10 +58,10 @@ date: 2026-01-01
 - [ ] Hilton Pt - 21673 pt  
 - [ ] 旭集 x 4  
 - [ ] 旭集 $1529 x 3
-- [ ] 旭集 $1199 x 3
 - [ ] Marriott Gift Card USD 1000  
 - [x] Marriott 85k FNA - 王子畫廊
 - [x] 旭集 x 2 
+- [x] 旭集 $1199 x 3
   
 
 ---

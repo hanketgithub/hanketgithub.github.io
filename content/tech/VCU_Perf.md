@@ -5,7 +5,7 @@ date: 2026-06-01
 
 ## Situation (情境背景)
 
-在進行 Zynq UltraScale+ MPSoC（7EV/5EV）的 HEVC 高負載影像編碼串流測試時，系統面臨嚴重的效能瓶頸。
+在進行 Zynq UltraScale+ MPSoC 7EV 的 HEVC 高負載影像編碼串流測試時，系統面臨嚴重的效能瓶頸。
 
 預期表現： 根據晶片規格與硬體算力，該 VCU 影像流水線應能輕鬆達到 86 fps 的極限吞吐量。
 

@@ -1,6 +1,6 @@
 ---
-title: "Technical Debug Report: Zynq MPSoC VCU 30% Performance Bottleneck Elimination"
-date: 2026-06-01
+title: "The Hunt for the Missing 30%: A Cross-Layer VCU Debugging Case Study"
+date: 2026-06-11
 ---
 
 ## Situation (情境背景)

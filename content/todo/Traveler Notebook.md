@@ -16,7 +16,7 @@ draft: false
 - [ ] 025 MD Cream #03
 - [ ] 026 Dot Grid #02 
 - [ ] 2026 Diary, using
-- [ ] 牛皮紙 黑色 #01
+- [ ] 牛皮紙 黑色 #01, using
 - [ ] 牛皮紙 Tiffany #01, using (Blue)
 - [ ] Blank Tokyo
 - [ ] Green Tea Leaf
@@ -48,19 +48,20 @@ draft: false
 ## TN Inserts - Passport
 - [ ] 002 Grid #03
 - [ ] 003 Blank #02
-- [ ] 005 薄紙, using
-- [ ] 005 薄紙
+- [ ] 005 薄紙 #02
 - [ ] 009 牛皮紙 #01, using
-- [ ] 014 Dot Grid, using
 - [ ] 015 水彩紙
 - [ ] 1/2 Short Trip 牛皮紙
-- [ ] MD Cream NRT
+- [ ] MD Cream NRT #01, using
+- [ ] MD Cream NRT #02
 - [ ] MD Cream 東京地下鐵
-- [ ] MD Cream SBUX
+- [ ] MD Cream SBUX #01, using
 - [ ] 2026 Diary, using
-- [x] 003 Blank #01
 - [x] 002 Grid #01
 - [x] 002 Grid #02
+- [x] 003 Blank #01 
+- [x] 005 薄紙 #01
+- [x] 014 Dot Grid
 
 
 
@@ -97,11 +98,11 @@ draft: false
 
 # 橄欖油
 - [ ] La Riserva BIO Riserva Bio (558 mg/kg) 2026-04-14 ~ 2026-
-- [ ] Frantoio Paolocci (500 mg/kg)  2026-04-14 ~ 2026-
 - [ ] Ganga Lupo (954 mg/kg)
 - [ ] Hacienda Vadolivo (596 mg/kg)
 - [x] Sabor D'oro (526 mg/kg)  2026-02-02 ~ 2026-03-22
 - [x] Finca Cortijo Guadiana Summer 2025-10-08 ~ 2026-01-28
+- [x] Frantoio Paolocci (500 mg/kg)  2026-04-14 ~ 2026-06-11
 
 
 

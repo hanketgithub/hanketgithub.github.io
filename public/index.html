@@ -94,7 +94,7 @@
 <h2>📌 Tech</h2>
 <ul>
   
-    <li><a href="/tech/vcu_issue/">Technical Debug Report: Zynq MPSoC VCU 30% Performance Bottleneck Elimination</a></li>
+    <li><a href="/tech/how-a-333mhz-assumption-cost-us-30-percent-performance/">The Hunt for the Missing 30%: A Cross-Layer VCU Debugging Case Study</a></li>
   
     <li><a href="/tech/bq/">Behavioral Question</a></li>
   
@@ -110,9 +110,9 @@
   
     <li><a href="/tech/docker/">使用 docker 作為 petalinux build</a></li>
   
-    <li><a href="/tech/lc/">LeetCode 每日打卡 RPG 🎯💻</a></li>
+    <li><a href="/tech/qcom-onboarding/">QCOM</a></li>
   
-    <li><a href="/tech/cpp_std/">C&#43;&#43; STL</a></li>
+    <li><a href="/tech/lc/">LeetCode 每日打卡 RPG 🎯💻</a></li>
   
 </ul>
 
@@ -166,12 +166,12 @@
 
 
 <section class="list-item">
-  <h1 class="title"><a href="/tech/vcu_issue/">Technical Debug Report: Zynq MPSoC VCU 30% Performance Bottleneck Elimination</a></h1>
-  <time>Jun 1, 2026</time>
+  <h1 class="title"><a href="/tech/how-a-333mhz-assumption-cost-us-30-percent-performance/">The Hunt for the Missing 30%: A Cross-Layer VCU Debugging Case Study</a></h1>
+  <time>Jun 11, 2026</time>
   <br><div class="description">
 	
 	<h2 id="situation-情境背景">Situation (情境背景)</h2>
-<p>在進行 Zynq UltraScale+ MPSoC（7EV/5EV）的 HEVC 高負載影像編碼串流測試時，系統面臨嚴重的效能瓶頸。</p>
+<p>在進行 Zynq UltraScale+ MPSoC 7EV 的 HEVC 高負載影像編碼串流測試時，系統面臨嚴重的效能瓶頸。</p>
 <p>預期表現： 根據晶片規格與硬體算力，該 VCU 影像流水線應能輕鬆達到 86 fps 的極限吞吐量。</p>
 <p>實際表象： 系統幀率被死死卡在 58 fps，效能平白損失了約 30%。即使軟體端完全不填入實體資料、只跑空訊號，幀率依然毫無起色，排除軟體層面記憶體塞車的可能。</p>
 <h2 id="task-面臨任務">Task (面臨任務)</h2>
@@ -186,7 +186,7 @@
 <p>源頭的硬體誤填： 經追查，FPGA 工程師先前在 Vivado 配置 VCU IP 屬性（Property）時，將 VCU_REF_CLK 誤填成了整數的 33000000 (33.00 MHz)。</p>&hellip;
 	
 </div>
-  <a class="readmore" href="/tech/vcu_issue/">Read more ⟶</a>
+  <a class="readmore" href="/tech/how-a-333mhz-assumption-cost-us-30-percent-performance/">Read more ⟶</a>
 </section>
 
 <section class="list-item">
@@ -504,6 +504,38 @@ CMD [&#34;bash&#34;]
 </section>
 
 <section class="list-item">
+  <h1 class="title"><a href="/tech/qcom-onboarding/">QCOM</a></h1>
+  <time>Jun 22, 2025</time>
+  <br><div class="description">
+	
+	<h2 id="-當前狀態與核心進度">📌 當前狀態與核心進度</h2>
+<ul>
+<li><strong>高通 (QCOM) 進度</strong>：Offer Letter 薪資福利 PDF 已確認、簽名並回傳成功（萬無一失度 99%）。</li>
+<li><strong>Fiona 來信</strong>：今日上午收到通知，約定下午或明天核對細節（On-board date 與後續行政流程）。</li>
+<li><strong>作戰策略</strong>：採取最高防禦與最高狂妄的平衡。中午前維持「雙水壺裝水排毒模式」，下午與 Fiona 鎖死最後一塊拼圖後，即刻 Submit。</li>
+</ul>
+<hr>
+<h2 id="-具體時程表-timeline">📅 具體時程表 (Timeline)</h2>
+<ul>
+<li><strong>6/22 (一)</strong>：正式提出辭呈，30 天法定預告期開始。</li>
+<li><strong>7/22 (三)</strong>：原公司 Last Day，正式登出。</li>
+<li><strong>7/23 ~ 8/2</strong>：人間蒸發 10 天。旅行、睡覺、慶祝、重塑自我。</li>
+<li><strong>8/3 (一)</strong>：新公司（Qualcomm）報到，優雅開啟新篇章。</li>
+</ul>
+<h2 id="信">信</h2>
+<blockquote>
+<p><strong>主旨：</strong> Offer Acception</p>
+<p><strong>內文：</strong></p>
+<p>Hi Fiona,
+Thanks for waiting.</p>
+<p>After giving it serious thought over the holiday, I have decided to join Qualcomm. I am very excited about this opportunity.</p>
+<p>I submitted the requested documents through the online system today and will also give notice to my current manager today.</p>&hellip;
+	
+</div>
+  <a class="readmore" href="/tech/qcom-onboarding/">Read more ⟶</a>
+</section>
+
+<section class="list-item">
   <h1 class="title"><a href="/tech/lc/">LeetCode 每日打卡 RPG 🎯💻</a></h1>
   <time>Apr 14, 2025</time>
   <br><div class="description">
@@ -629,33 +661,6 @@ CMD [&#34;bash&#34;]
 	
 </div>
   <a class="readmore" href="/tech/lc/">Read more ⟶</a>
-</section>
-
-<section class="list-item">
-  <h1 class="title"><a href="/tech/cpp_std/">C&#43;&#43; STL</a></h1>
-  <time>Apr 10, 2025</time>
-  <br><div class="description">
-	
-	<h2 id="binary-search">Binary Search</h2>
-<h3 id="int-version">int version</h3>
-<pre tabindex="0"><code>while (L &lt; R) {
-  int M = L + (R-L)/2;
-  if (check(M)) { return M; }
-  else if (A[M] &lt; target) { L = M+1; }
-  else { R = M; }
-}
-return L;
-</code></pre><h3 id="double-version">double version</h3>
-<pre tabindex="0"><code>while (R - L &gt; 1e-6) {
-  double M = L + (R-L) / 2.0;
-  if (M &lt; target) { L = M; }
-  else { R = M; }
-}
-return L;
-</code></pre><p>L X X X M X T X R</p>&hellip;
-	
-</div>
-  <a class="readmore" href="/tech/cpp_std/">Read more ⟶</a>
 </section>
 
 

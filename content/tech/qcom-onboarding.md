@@ -43,13 +43,13 @@ draft: false
 ---
 
 ## 📥 最終版離職信 (已定稿)
-> **主旨：** 【離職預告】Hank — 最後工作日為 7/22/2026
+> **主旨：** 【離職預告】Hank — 最後工作日為 2026-07-23
 >
 > **內文：**
 >
 > Eager 您好，
 >
-> 考量個人職涯，預計於 7/22/2026 正式離職。今 6/22/2026 起算 30 日預告期。
+> 考量個人職涯，預計於 2026-07-23 正式離職。今 2026-06-23 起算 30 日預告期。
 >
 > 本人會盡力交辦現有的工作。謝謝。
 >
@@ -60,4 +60,13 @@ draft: false
 
 
 ## Todo:
-1. Office 電腦器材 sell.
+- [ ] GIGABYTE 技嘉 GeForce RTX 5060 OC Low Profile 8GB 顯示卡
+- [ ] Logitech Pro X Superlight 2
+- [ ] AMD 超微 Ryzen 5-7600 3.8GHz 6核心 中央處理器
+- [ ] 全漢FSP VITA GM MIT 1000W ATX3.1 PCle5.1 雙金牌全模組電源 純白
+- [ ] NZXT N7 B650E
+- [ ] Filco Majastic 3 青軸 英版
+
+
+
+

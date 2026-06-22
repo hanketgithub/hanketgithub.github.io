@@ -6,8 +6,15 @@
     <description>Recent content on Hank Tech Lab</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 11 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jun 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>QCOM</title>
+      <link>http://localhost:1313/tech/qcom-onboarding/</link>
+      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tech/qcom-onboarding/</guid>
+      <description>&lt;h2 id=&#34;-當前狀態與核心進度&#34;&gt;📌 當前狀態與核心進度&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;QCOM 進度&lt;/strong&gt;：Offer Letter 薪資福利 PDF 已確認、簽名並回傳成功（萬無一失度 99%）。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Fiona 來信&lt;/strong&gt;：今日上午收到通知，約定下午或明天核對細節（On-board date 與後續行政流程）。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;作戰策略&lt;/strong&gt;：採取最高防禦與最高狂妄的平衡。中午前維持「雙水壺裝水排毒模式」，下午與 Fiona 鎖死最後一塊拼圖後，即刻 Submit。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-具體時程表-timeline&#34;&gt;📅 具體時程表 (Timeline)&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;6/22 (一)&lt;/strong&gt;：正式提出辭呈，30 天法定預告期開始。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;7/22 (三)&lt;/strong&gt;：原公司 Last Day，正式登出。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;7/23 ~ 8/2&lt;/strong&gt;：人間蒸發 10 天。旅行、睡覺、慶祝、重塑自我。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;8/3 (一)&lt;/strong&gt;：新公司（Qualcomm）報到，優雅開啟新篇章。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;信&#34;&gt;信&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;主旨：&lt;/strong&gt; Offer Acception&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;內文：&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Hi Fiona,&#xA;Thanks for waiting.&lt;/p&gt;&#xA;&lt;p&gt;After giving it serious thought over the holiday, I have decided to join Qualcomm. I am very excited about this opportunity.&lt;/p&gt;&#xA;&lt;p&gt;I submitted the requested documents through the online system today and will also give notice to my current manager today.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>The Hunt for the Missing 30%: A Cross-Layer VCU Debugging Case Study</title>
       <link>http://localhost:1313/tech/how-a-333mhz-assumption-cost-us-30-percent-performance/</link>
@@ -140,13 +147,6 @@
       <pubDate>Fri, 01 Aug 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/misc/%E7%AD%86%E8%A8%98%E6%9C%AC%E9%81%B8%E6%93%87%E6%8C%87%E5%8D%97/</guid>
       <description>&lt;h2 id=&#34;size&#34;&gt;Size&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;B5: 適合用於思考與繪圖. 空間大.&lt;/li&gt;&#xA;&lt;li&gt;A5: 最常見. 無單手握持, 不如 B6 方便. 不合適.&lt;/li&gt;&#xA;&lt;li&gt;B6: 主力. 可單手握持. 空間 ok. 攜帶方便. 難買.&lt;/li&gt;&#xA;&lt;li&gt;A6: 寬度不足故必須打橫使用. 不可買橫線版.&lt;/li&gt;&#xA;&lt;li&gt;B7: Passport Size. 寬度不足故必須打橫使用.&lt;/li&gt;&#xA;&lt;li&gt;A7: 便條紙可放長夾.&lt;/li&gt;&#xA;&lt;li&gt;A5 slim: 為一種混合. B6 寬度 + A5 高度.&lt;/li&gt;&#xA;&lt;li&gt;B6 slim: 為一種混合, 本質上就是新書判. A6 寬度 + B6 高度. 寬度不足故必須打橫使用.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;&lt;/th&gt;&#xA;          &lt;th&gt;W x H(mm)&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;B6&lt;/td&gt;&#xA;          &lt;td&gt;125 x 176&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;B7&lt;/td&gt;&#xA;          &lt;td&gt;88  x 125&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;A5&lt;/td&gt;&#xA;          &lt;td&gt;148 x 210&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;A6&lt;/td&gt;&#xA;          &lt;td&gt;105 x 148&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;A5 為 B6 之 1.414 倍面積&lt;/li&gt;&#xA;&lt;li&gt;如印 A4 相片, 適合用大一號的 B4 裱框&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;feature&#34;&gt;Feature&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;可攤平很重要. Fabrino 需要壓住才能讀寫, 不好用.&lt;/li&gt;&#xA;&lt;li&gt;攤平橫寫必選方格 or 點格. 橫線不可!&lt;/li&gt;&#xA;&lt;li&gt;A6: 方格，可攤平.&lt;/li&gt;&#xA;&lt;li&gt;B6: 橫線&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;空白: 自由度大, 畫圖方便. 不利於文字多的情況&#xA;點格: 自由度大, 點可做對齊. 美觀&#xA;方格: 文字, 圖案皆可. 唯一缺點是看起來較雜亂&#xA;橫線: 最適合文字. 無法橫寫. A6 一定要避開!&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>QCOM</title>
-      <link>http://localhost:1313/tech/qcom-onboarding/</link>
-      <pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tech/qcom-onboarding/</guid>
-      <description>&lt;h2 id=&#34;-當前狀態與核心進度&#34;&gt;📌 當前狀態與核心進度&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;高通 (QCOM) 進度&lt;/strong&gt;：Offer Letter 薪資福利 PDF 已確認、簽名並回傳成功（萬無一失度 99%）。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Fiona 來信&lt;/strong&gt;：今日上午收到通知，約定下午或明天核對細節（On-board date 與後續行政流程）。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;作戰策略&lt;/strong&gt;：採取最高防禦與最高狂妄的平衡。中午前維持「雙水壺裝水排毒模式」，下午與 Fiona 鎖死最後一塊拼圖後，即刻 Submit。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-具體時程表-timeline&#34;&gt;📅 具體時程表 (Timeline)&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;6/22 (一)&lt;/strong&gt;：正式提出辭呈，30 天法定預告期開始。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;7/22 (三)&lt;/strong&gt;：原公司 Last Day，正式登出。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;7/23 ~ 8/2&lt;/strong&gt;：人間蒸發 10 天。旅行、睡覺、慶祝、重塑自我。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;8/3 (一)&lt;/strong&gt;：新公司（Qualcomm）報到，優雅開啟新篇章。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;信&#34;&gt;信&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;主旨：&lt;/strong&gt; Offer Acception&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;內文：&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Hi Fiona,&#xA;Thanks for waiting.&lt;/p&gt;&#xA;&lt;p&gt;After giving it serious thought over the holiday, I have decided to join Qualcomm. I am very excited about this opportunity.&lt;/p&gt;&#xA;&lt;p&gt;I submitted the requested documents through the online system today and will also give notice to my current manager today.&lt;/p&gt;</description>
     </item>
     <item>
       <title>【芝加哥首遊】Trump Hotel Chicago 值得住嗎？</title>

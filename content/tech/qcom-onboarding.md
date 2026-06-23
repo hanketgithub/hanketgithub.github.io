@@ -44,7 +44,7 @@ draft: false
 ---
 
 ## 📥 最終版離職信 (定稿)
-> **主旨：** 【離職通知】Hank
+> **主旨：** 【離職通知】Resignation Notice - Hank
 >
 > **收信者：** 直屬主管 & cc 自己私人信箱(超級重要)
 >
@@ -58,6 +58,21 @@ draft: false
 >
 > 謝謝。
 >
+> Hank
+
+
+---
+
+> Hi Eager,
+>
+> Please accept this email as formal notification that I am resigning from my position, effective today (June 23, 2026).
+> 
+> I am fully committed to working with the team to ensure a thorough handover and a smooth transition during this period.
+> 
+> Thank you for your understanding.
+>
+> Best regards,
+> 
 > Hank
 
 

@@ -18,6 +18,42 @@ draft: false
 - **7/24 ~ 8/1**：人間蒸發 10 天。旅行、睡覺、慶祝、重塑自我。
 - **8/3 (一)**：新公司（Qualcomm）報到，優雅開啟新篇章。
 
+| Day | Date       | Milestone             |
+|-----|------------|-----------------------|
+| D-1 | 2026-06-23 | Fiona Final Confirm   |
+| D0  | 2026-06-24 | Resignation Submitted |
+| D1  | 2026-06-25 | |
+| D2  | 2026-06-26 | |
+| D3  | 2026-06-27 | |
+| D4  | 2026-06-28 | |
+| D5  | 2026-06-29 | |
+| D6  | 2026-06-30 | |
+| D7  | 2026-07-01 | Week 1 Complete      |
+| D14 | 2026-07-08 | Week 2 Complete      |
+| D21 | 2026-07-15 | Week 3 Complete      |
+| D23 | 2026-07-17 | Trip 1 - Day off 1   |
+| D24 | 2026-07-18 | Trip 2               |
+| D25 | 2026-07-19 | Trip 3               |
+| D26 | 2026-07-20 | Trip 4 - Day off 2   |
+| D27 | 2026-07-21 | Trip 5 - Day off 3   |
+| D28 | 2026-07-22 | Trip 6 - Day off 4   |
+| D29 | 2026-07-23 | Trip 7 - Day off 5   |
+| D30 | 2026-07-24 | Trip 8 - Day off 6 - Last Working Day |
+| D32 | 2026-07-25 | Trip 9               |
+| D33 | 2026-07-26 | Trip 10              |
+| D34 | 2026-07-27 | Trip 11              |
+| D35 | 2026-07-28 | Trip 12              |
+| D36 | 2026-07-29 | Trip 13              |
+| D37 | 2026-07-30 | Trip 14              |
+| D38 | 2026-07-31 | Trip 15              |
+| D39 | 2026-08-01 | Trip 16              |
+| D40 | 2026-08-02 | Trip 17              |
+| D41 | 2026-08-03 | Qualcomm Day 1       |
+
+
+---
+
+
 ## 信
 > **主旨：** Offer Acception
 >
@@ -52,7 +88,7 @@ draft: false
 >
 > Eager 您好，
 >
-> 基於個人職涯規劃，本人今日（2026-06-23）正式提出離職通知。
+> 基於個人職涯規劃，本人今日（2026-06-24）正式提出離職通知。
 >
 > 後續將配合公司相關程序，並盡力完成現有工作及交接事項。
 >
@@ -65,7 +101,7 @@ draft: false
 
 > Hi Eager,
 >
-> Please accept this email as formal notification that I am resigning from my position, effective today (June 23, 2026).
+> Please accept this email as formal notification that I am resigning from my position, effective today (June 24, 2026).
 > 
 > I am fully committed to working with the team to ensure a thorough handover and a smooth transition during this period.
 > 
@@ -85,9 +121,10 @@ draft: false
 - [ ] AMD 超微 Ryzen 5-7600 3.8GHz 6核心 中央處理器
 - [ ] 全漢FSP VITA GM MIT 1000W ATX3.1 PCle5.1 雙金牌全模組電源 純白
 - [ ] NZXT N7 B650E
-- [ ] Filco Majastic 3 青軸 英版
-- [ ] Okamura
-- [ ] Eizo x 2
+- [ ] Filco Majestouch Convertible 3 Tenkeyless 青軸・藍芽・英文
+- [ ] Okamura Baron
+- [ ] Eizo S1933
+- [ ] Eizo CS2740
 
 
 

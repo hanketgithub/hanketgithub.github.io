@@ -60,6 +60,7 @@ draft: false
 > **內文：**
 >
 > Hi Fiona,
+>
 > Thanks for waiting.
 >
 > After giving it serious thought over the holiday, I have decided to join Qualcomm. I am very excited about this opportunity.
@@ -88,7 +89,7 @@ draft: false
 >
 > Eager 您好，
 >
-> 基於個人職涯規劃，本人今日（2026-06-24）正式提出離職通知。
+> 基於個人職涯規劃，本人今日（2026-06-23）正式提出離職通知。
 >
 > 後續將配合公司相關程序，並盡力完成現有工作及交接事項。
 >
@@ -101,7 +102,7 @@ draft: false
 
 > Hi Eager,
 >
-> Please accept this email as formal notification that I am resigning from my position, effective today (June 24, 2026).
+> Please accept this email as formal notification that I am resigning from my position, effective today (June 23, 2026).
 > 
 > I am fully committed to working with the team to ensure a thorough handover and a smooth transition during this period.
 > 

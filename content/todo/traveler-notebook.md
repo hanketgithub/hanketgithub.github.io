@@ -17,6 +17,7 @@ draft: false
 - [ ] 026 Dot Grid #02 
 - [ ] 2026 Diary, using
 - [ ] 牛皮紙 黑色 #01, using
+- [ ] 牛皮紙 黑色 #02
 - [ ] 牛皮紙 Tiffany #01, using (Blue)
 - [ ] Blank Tokyo
 - [ ] Green Tea Leaf
@@ -26,6 +27,7 @@ draft: false
 - [ ] MD Cream NRT #02
 - [ ] MD Cream Marunouchi #01, using
 - [ ] MD Cream Marunouchi #02
+- [ ] MD Cream Marunouchi #03
 - [ ] MD Cream Love and Trip #01, using (Olive)
 - [ ] MD Cream Love and Trip #02
 - [ ] MD Cream Metro #01

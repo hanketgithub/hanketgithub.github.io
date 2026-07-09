@@ -14,9 +14,9 @@ draft: false
 
 ## 📅 具體時程表 (Timeline)
 - **6/23 (二)**：正式提出辭呈，30 天法定預告期開始。
-- **7/23 (四)**：原公司 Last Day，正式登出。
-- **7/24 ~ 8/1**：人間蒸發 10 天。旅行、睡覺、慶祝、重塑自我。
-- **8/3 (一)**：新公司（Qualcomm）報到，優雅開啟新篇章。
+- **7/10 (五)**：原公司 Last Day，正式登出。
+- **7/15 ~ 7/25**：人間蒸發 11 天。旅行、睡覺、慶祝、重塑自我。
+- **7/27 (一)**：新公司（Qualcomm）報到，優雅開啟新篇章。
 
 | Day | Date       | Milestone             |
 |-----|------------|-----------------------|
@@ -28,28 +28,8 @@ draft: false
 | D4  | 2026-06-28 | |
 | D5  | 2026-06-29 | |
 | D6  | 2026-06-30 | |
-| D7  | 2026-07-01 | Week 1 Complete      |
-| D14 | 2026-07-08 | Week 2 Complete      |
-| D21 | 2026-07-15 | Week 3 Complete      |
-| D23 | 2026-07-17 | Trip 1 - Day off 1   |
-| D24 | 2026-07-18 | Trip 2               |
-| D25 | 2026-07-19 | Trip 3               |
-| D26 | 2026-07-20 | Trip 4 - Day off 2   |
-| D27 | 2026-07-21 | Trip 5 - Day off 3   |
-| D28 | 2026-07-22 | Trip 6 - Day off 4   |
-| D29 | 2026-07-23 | Trip 7 - Day off 5   |
-| D30 | 2026-07-24 | Trip 8 - Day off 6 - Last Working Day |
-| D32 | 2026-07-25 | Trip 9               |
-| D33 | 2026-07-26 | Trip 10              |
-| D34 | 2026-07-27 | Trip 11              |
-| D35 | 2026-07-28 | Trip 12              |
-| D36 | 2026-07-29 | Trip 13              |
-| D37 | 2026-07-30 | Trip 14              |
-| D38 | 2026-07-31 | Trip 15              |
-| D39 | 2026-08-01 | Trip 16              |
-| D40 | 2026-08-02 | Trip 17              |
-| D41 | 2026-08-03 | Qualcomm Day 1       |
-
+| D16 | 2026-07-10 | Last Working Day     |
+| D33 | 2026-07-27 | Qualcomm Onboard     |
 
 ---
 
@@ -117,15 +97,15 @@ draft: false
 
 
 ## Todo:
-- [ ] GIGABYTE 技嘉 GeForce RTX 5060 OC Low Profile 8GB 顯示卡
-- [ ] Logitech Pro X Superlight 2
 - [ ] AMD 超微 Ryzen 5-7600 3.8GHz 6核心 中央處理器
-- [ ] 全漢FSP VITA GM MIT 1000W ATX3.1 PCle5.1 雙金牌全模組電源 純白
 - [ ] NZXT N7 B650E
 - [ ] Filco Majestouch Convertible 3 Tenkeyless 青軸・藍芽・英文
+- [ ] Logitech Pro X Superlight 2
 - [ ] Okamura Baron
 - [ ] Eizo S1933
 - [ ] Eizo CS2740
+- [x] GIGABYTE 技嘉 GeForce RTX 5060 OC Low Profile 8GB 顯示卡
+- [x] 全漢FSP VITA GM MIT 1000W ATX3.1 PCle5.1 雙金牌全模組電源 純白
 
 
 

@@ -97,16 +97,13 @@ draft: false
 
 
 ## Todo:
-- [ ] AMD 超微 Ryzen 5-7600 3.8GHz 6核心 中央處理器
-- [ ] NZXT N7 B650E
-- [ ] Filco Majestouch Convertible 3 Tenkeyless 青軸・藍芽・英文
+- [x] AMD 超微 Ryzen 5-7600 3.8GHz 6核心 中央處理器
+- [x] NZXT N7 B650E
+- [x] Filco Majestouch Convertible 3 Tenkeyless 青軸・藍芽・英文
 - [ ] Logitech Pro X Superlight 2
-- [ ] Okamura Baron
+- [x] Okamura Baron
 - [ ] Eizo S1933
 - [ ] Eizo CS2740
 - [x] GIGABYTE 技嘉 GeForce RTX 5060 OC Low Profile 8GB 顯示卡
 - [x] 全漢FSP VITA GM MIT 1000W ATX3.1 PCle5.1 雙金牌全模組電源 純白
-
-
-
 

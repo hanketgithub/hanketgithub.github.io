@@ -274,5 +274,15 @@
   </url><url>
     <loc>http://localhost:1313/tags/%E9%A3%9B%E8%A1%8C%E7%B4%80%E9%8C%84/</loc>
     <lastmod>2023-04-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/qcom-onboarding/00_inbox/</loc>
+  </url><url>
+    <loc>http://localhost:1313/qcom-onboarding/01_daily_journal/</loc>
+  </url><url>
+    <loc>http://localhost:1313/qcom-onboarding/02_terminology/</loc>
+  </url><url>
+    <loc>http://localhost:1313/qcom-onboarding/09_todo/</loc>
+  </url><url>
+    <loc>http://localhost:1313/qcom-onboarding/</loc>
   </url>
 </urlset>

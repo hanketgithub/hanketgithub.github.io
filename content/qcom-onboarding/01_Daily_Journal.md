@@ -1,4 +1,10 @@
-
+---
+title: "01 Daily Journal"
+date: 2026-07-25
+tags: []
+categories: ["Qcom"]
+draft: false
+---
 
 
 # 2026-07-27 (Day 1)

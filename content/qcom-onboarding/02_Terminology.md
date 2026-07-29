@@ -29,7 +29,7 @@ Purpose
 - preprocessing
 
 Owner
-- TBD
+- Claire ?
 
 ---
 
@@ -41,3 +41,19 @@ Multi-view HEVC
 
 Successor
 - MVC
+
+---
+
+# Q
+
+## QI
+
+Qualcomm Israel
+
+---
+
+# S
+
+## SD
+
+Qualcomm San Diego

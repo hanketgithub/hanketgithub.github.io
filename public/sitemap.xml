@@ -2,8 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/qcom-onboarding/01_daily_journal/</loc>
+    <lastmod>2026-07-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/qcom-onboarding/02_terminology/</loc>
+    <lastmod>2026-07-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/qcom-onboarding/09_todo/</loc>
+    <lastmod>2026-07-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2026-07-25T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2026-06-22T00:00:00+00:00</lastmod>
+    <lastmod>2026-07-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/qcom/</loc>
+    <lastmod>2026-07-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/qcom-onboarding/</loc>
+    <lastmod>2026-07-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tech/qcom-onboarding/</loc>
     <lastmod>2026-06-22T00:00:00+00:00</lastmod>
@@ -42,9 +60,6 @@
     <lastmod>2026-03-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/br87/</loc>
-    <lastmod>2026-03-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/</loc>
     <lastmod>2026-03-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/eva-air/</loc>
@@ -276,13 +291,5 @@
     <lastmod>2023-04-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/qcom-onboarding/00_inbox/</loc>
-  </url><url>
-    <loc>http://localhost:1313/qcom-onboarding/01_daily_journal/</loc>
-  </url><url>
-    <loc>http://localhost:1313/qcom-onboarding/02_terminology/</loc>
-  </url><url>
-    <loc>http://localhost:1313/qcom-onboarding/09_todo/</loc>
-  </url><url>
-    <loc>http://localhost:1313/qcom-onboarding/</loc>
   </url>
 </urlset>

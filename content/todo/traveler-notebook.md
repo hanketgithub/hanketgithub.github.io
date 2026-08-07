@@ -21,7 +21,6 @@ draft: false
 - [ ] 牛皮紙 Tiffany #01, using (Blue)
 - [ ] Blank Tokyo
 - [ ] Green Tea Leaf
-- [ ] Dot Grid SBUX, using (Olive)
 - [ ] Kraft SBUX
 - [ ] MD Cream NRT #01, using
 - [ ] MD Cream NRT #02
@@ -44,6 +43,7 @@ draft: false
 - [x] 025 MD Cream #01
 - [x] 025 MD Cream #02
 - [x] 026 Dot Grid #01
+- [x] Dot Grid SBUX
 
 
 

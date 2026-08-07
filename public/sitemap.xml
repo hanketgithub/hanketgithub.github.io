@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2026-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tech/python/</loc>
+    <lastmod>2026-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tech/</loc>
+    <lastmod>2026-08-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/qcom-onboarding/01_daily_journal/</loc>
     <lastmod>2026-07-25T00:00:00+00:00</lastmod>
   </url><url>
@@ -14,9 +23,6 @@
     <loc>http://localhost:1313/categories/</loc>
     <lastmod>2026-07-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2026-07-25T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/categories/qcom/</loc>
     <lastmod>2026-07-25T00:00:00+00:00</lastmod>
   </url><url>
@@ -24,9 +30,6 @@
     <lastmod>2026-07-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tech/qcom-onboarding/</loc>
-    <lastmod>2026-06-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tech/</loc>
     <lastmod>2026-06-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tech/how-a-333mhz-assumption-cost-us-30-percent-performance/</loc>

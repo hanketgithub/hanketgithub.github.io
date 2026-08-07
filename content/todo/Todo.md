@@ -1,8 +1,8 @@
 ---
 title: "TODO"
 date: 2026-01-01
---- 
-
+draft: false
+---
 
 ## Mission  
 - [ ] ANA 115000 miles -> currently 82583 + 7575 = 90158  

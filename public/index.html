@@ -107,6 +107,8 @@
 <h2>📌 Tech</h2>
 <ul>
   
+    <li><a href="/tech/python/">Python 學習筆記</a></li>
+  
     <li><a href="/tech/qcom-onboarding/">QCOM</a></li>
   
     <li><a href="/tech/how-a-333mhz-assumption-cost-us-30-percent-performance/">The Hunt for the Missing 30%: A Cross-Layer VCU Debugging Case Study</a></li>
@@ -124,8 +126,6 @@
     <li><a href="/tech/linkedlist/">Linked List</a></li>
   
     <li><a href="/tech/docker/">使用 docker 作為 petalinux build</a></li>
-  
-    <li><a href="/tech/lc/">LeetCode 每日打卡 RPG 🎯💻</a></li>
   
 </ul>
 
@@ -177,6 +177,46 @@
 
 
 
+
+<section class="list-item">
+  <h1 class="title"><a href="/tech/python/">Python 學習筆記</a></h1>
+  <time>Aug 1, 2026</time>
+  <br><div class="description">
+	
+	<h2 id="variable">Variable</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>b <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>a <span style="color:#f92672">+</span> b
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>pi <span style="color:#f92672">=</span> <span style="color:#ae81ff">3.14</span>
+</span></span><span style="display:flex;"><span>a <span style="color:#f92672">+</span> pi
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;hello&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>s <span style="color:#f92672">+</span> a         <span style="color:#75715e"># error!</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>s <span style="color:#f92672">+</span> str(a)    <span style="color:#75715e"># &#34;hello3&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>A <span style="color:#f92672">=</span> [<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">4</span>] <span style="color:#75715e">#array</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>D <span style="color:#f92672">=</span> { <span style="color:#e6db74">&#34;hello&#34;</span>:<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">5</span>:<span style="color:#e6db74">&#34;world&#34;</span> }
+</span></span></code></pre></div><hr>
+<h2 id="for-loop">for loop</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range( len(A) ):   <span style="color:#75715e">## for i = 0, 1, ... to len(A)-1</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">...</span>
+</span></span></code></pre></div><hr>
+<h2 id="useful-function">Useful function</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>str( x )  <span style="color:#75715e"># turn x to string</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>type( c ) <span style="color:#75715e"># chk type</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>len( A )  <span style="color:#75715e"># length of list</span>
+</span></span><span style="display:flex;"><span>len( s )   <span style="color:#75715e"># length of a string</span>
+</span></span></code></pre></div>&hellip;
+	
+</div>
+  <a class="readmore" href="/tech/python/">Read more ⟶</a>
+</section>
 
 <section class="list-item">
   <h1 class="title"><a href="/tech/qcom-onboarding/">QCOM</a></h1>
@@ -603,134 +643,6 @@ CMD [&#34;bash&#34;]
 	
 </div>
   <a class="readmore" href="/tech/docker/">Read more ⟶</a>
-</section>
-
-<section class="list-item">
-  <h1 class="title"><a href="/tech/lc/">LeetCode 每日打卡 RPG 🎯💻</a></h1>
-  <time>Apr 14, 2025</time>
-  <br><div class="description">
-	
-	<p><a href="https://leetcode.com/" target="_blank">LeetCode</a></p>
-<h2 id="apr">Apr</h2>
-<table>
-  <thead>
-      <tr>
-          <th>Mon</th>
-          <th>Tue</th>
-          <th>Wed</th>
-          <th>Thu</th>
-          <th>Fri</th>
-          <th>Sat</th>
-          <th>Sun</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>14 (32)</td>
-          <td>15 (17)</td>
-          <td>16 (17)</td>
-          <td>17 (0)</td>
-          <td>18 (0)</td>
-          <td>19 (0)</td>
-          <td>20 (0)</td>
-      </tr>
-      <tr>
-          <td>21 (42)</td>
-          <td>22 (XXX)</td>
-          <td>23 (XXX)</td>
-          <td>24 (XXX)</td>
-          <td>25 (XXX)</td>
-          <td>26 (XXX)</td>
-          <td>27 (XXX)</td>
-      </tr>
-      <tr>
-          <td>28 (XXX)</td>
-          <td>29 (XXX)</td>
-          <td>30 (XXX)</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-      </tr>
-  </tbody>
-</table>
-<h2 id="may">May</h2>
-<table>
-  <thead>
-      <tr>
-          <th>Mon</th>
-          <th>Tue</th>
-          <th>Wed</th>
-          <th>Thu</th>
-          <th>Fri</th>
-          <th>Sat</th>
-          <th>Sun</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>1 (XXX)</td>
-          <td>2 (XXX)</td>
-          <td>3 (XXX)</td>
-          <td>4 (XXX)</td>
-      </tr>
-      <tr>
-          <td>5 (XXX)</td>
-          <td>6 (XXX)</td>
-          <td>7 (XXX)</td>
-          <td>8 (XXX)</td>
-          <td>9 (XXX)</td>
-          <td>10 (XXX)</td>
-          <td>11 (XXX)</td>
-      </tr>
-      <tr>
-          <td>12 (XXX)</td>
-          <td>13 (XXX)</td>
-          <td>14 (XXX)</td>
-          <td>15 (XXX)</td>
-          <td>16 (XXX)</td>
-          <td>17 (XXX)</td>
-          <td>18 (XXX)</td>
-      </tr>
-      <tr>
-          <td>19 (XXX)</td>
-          <td>20 (XXX)</td>
-          <td>21 (XXX)</td>
-          <td>22 (XXX)</td>
-          <td>23 (XXX)</td>
-          <td>24 (XXX)</td>
-          <td>25 (XXX)</td>
-      </tr>
-      <tr>
-          <td>26 (XXX)</td>
-          <td>27 (XXX)</td>
-          <td>28 (XXX)</td>
-          <td>29 (XXX)</td>
-          <td>30 (XXX)</td>
-          <td>31 (XXX)</td>
-          <td></td>
-      </tr>
-  </tbody>
-</table>
-<h4 id="3186-maximum-total-damage-with-spell-casting-1840"><a href="https://leetcode.com/problems/maximum-total-damage-with-spell-casting/" target="_blank">3186 Maximum Total Damage With Spell Casting, 1840</a></h4>
-<ul>
-<li>4/15</li>
-<li>Figure out why previous solution doesn&rsquo;t work. Lack consideration of 1 case. Pay attention to consider all!</li>
-<li>Follow up: what if power[i] - range?</li>
-</ul>
-<h2 id="今天你的刷題活動打卡-">今天你的刷題活動打卡 ✅</h2>
-<form id="lc-activity-form">
-<h3 id="-每日任務">✅ 每日任務</h3>
-<p><input type="checkbox" id="daily_checkin"> 打卡 (+2)<br>
-<input type="checkbox" id="easy_solved"> 解 Easy 題 (+5)<br>
-<input type="checkbox" id="medium_solved"> 解 Medium 題 (+15)<br>
-<input type="checkbox" id="hard_solved"> 解 Hard 題 (+60)<br></p>&hellip;
-	
-</div>
-  <a class="readmore" href="/tech/lc/">Read more ⟶</a>
 </section>
 
 

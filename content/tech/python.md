@@ -21,9 +21,9 @@ s + a         # error!
 
 s + str(a)    # "hello3"
 
-A = [3, 2, 4] #array
+A = [3, 2, 4] # array
 
-D = { "hello":3, 5:"world" }
+D = { "hello": 3, 5: "world" }
 ```
 
 ---
@@ -31,8 +31,19 @@ D = { "hello":3, 5:"world" }
 ## for loop
 
 ```python
-for i in range( len(A) ):   ## for i = 0, 1, ... to len(A)-1
+for i in range( len(A) ):   # for i = 0, 1, ... to len(A)-1
   ...
+```
+
+---
+
+## if
+
+Check if key exists:
+
+```python
+if D.get("name") is not None:
+  print( D.get("name") )
 ```
 
 ---

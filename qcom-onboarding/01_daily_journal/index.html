@@ -1,10 +1,63 @@
 <!doctype html><html><head lang=en><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><title>01 Daily Journal - Hank Tech Lab</title><meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=description content="2026-08-04 (Day 9) Self Intro Likability - 很好溝通（Easy to work with） Mentor & hq - contact window Tasks - docs, code, etc&mldr; VVC spec ES Analyzer Chroma QP Offset Chroma QP = Luma QP + Chroma QP Offset
-Negative value only(in qualcomm platform) Small value improves color. Like HDR or Anime. Inline Decode Downscalar Decoder -> 4k -> downscalar -> 1080p -> frame buffer -> Display Reduce memory bandwidth, save power."><meta property="og:image" content><meta property="og:url" content="https://hanketgithub.github.io/qcom-onboarding/01_daily_journal/"><meta property="og:site_name" content="Hank Tech Lab"><meta property="og:title" content="01 Daily Journal"><meta property="og:description" content="2026-08-04 (Day 9) Self Intro Likability - 很好溝通（Easy to work with） Mentor & hq - contact window Tasks - docs, code, etc… VVC spec ES Analyzer Chroma QP Offset Chroma QP = Luma QP + Chroma QP Offset
-Negative value only(in qualcomm platform) Small value improves color. Like HDR or Anime. Inline Decode Downscalar Decoder -> 4k -> downscalar -> 1080p -> frame buffer -> Display Reduce memory bandwidth, save power."><meta property="og:locale" content="en-us"><meta property="og:type" content="article"><meta property="article:section" content="qcom-onboarding"><meta property="article:published_time" content="2026-07-25T00:00:00+00:00"><meta property="article:modified_time" content="2026-07-25T00:00:00+00:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="01 Daily Journal"><meta name=twitter:description content="2026-08-04 (Day 9) Self Intro Likability - 很好溝通（Easy to work with） Mentor & hq - contact window Tasks - docs, code, etc&mldr; VVC spec ES Analyzer Chroma QP Offset Chroma QP = Luma QP + Chroma QP Offset
-Negative value only(in qualcomm platform) Small value improves color. Like HDR or Anime. Inline Decode Downscalar Decoder -> 4k -> downscalar -> 1080p -> frame buffer -> Display Reduce memory bandwidth, save power."><link href=https://hanketgithub.github.io/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css rel=stylesheet><link rel=stylesheet type=text/css media=screen href=https://hanketgithub.github.io/css/main.6a0f23ea50fd34b46fee262a5a68e17d458c51a2bc99ba1ba018065de6b180c3.css><link id=darkModeStyle rel=stylesheet type=text/css href=https://hanketgithub.github.io/css/dark.50b57e12d401420df23965fed157368aba37b76df0ecefd0b1ecd4da664f01a0.css disabled><style>@media print{body{font-family:pingfang tc,helvetica neue,sans-serif;font-size:12pt;line-height:1.6;color:#000}table,th,td{border:1px solid #666;border-collapse:collapse}th,td{padding:8px 12px;text-align:left}h1,h2{page-break-before:always}h1:first-of-type,h2:first-of-type{page-break-before:auto}img{max-width:100%;height:auto;page-break-inside:avoid}p{page-break-inside:avoid}a{color:#000;text-decoration:none}}</style></head><body><div class=content><header><div class=main><a href=https://hanketgithub.github.io/>Hank Tech Lab</a></div><nav><a href=/posts/>Posts</a>
+<meta name=description content="2026-08-12 Secure Code I I don&rsquo;t believe you shall always check input parameter like pointer or buffer size. It quickly makes the code unreadable to have if (ptr == NULL || XYZ) everywhere.
+My proposal is to separate task into checking and operating:
+input parameter -> check -> ok -> parsing -> processing | ng | v return /** * @brief 內部核心業務 logic (Data flow / Core algorithm) * @note Contract: 呼叫者必須保證 'in' 已通過驗證且合法。 * 內部不重複做 Defensive Check，專注於執行任務。 */ static ERR_CODE_E doRealWork(const Input_T *in) { // 開發階段 (Debug Build) 用的防線：違約直接抓出呼叫者 Bug，Release 版零開銷 assert(in !"><meta property="og:image" content><meta property="og:url" content="https://hanketgithub.github.io/qcom-onboarding/01_daily_journal/"><meta property="og:site_name" content="Hank Tech Lab"><meta property="og:title" content="01 Daily Journal"><meta property="og:description" content="2026-08-12 Secure Code I I don’t believe you shall always check input parameter like pointer or buffer size. It quickly makes the code unreadable to have if (ptr == NULL || XYZ) everywhere.
+My proposal is to separate task into checking and operating:
+input parameter -> check -> ok -> parsing -> processing | ng | v return /** * @brief 內部核心業務 logic (Data flow / Core algorithm) * @note Contract: 呼叫者必須保證 'in' 已通過驗證且合法。 * 內部不重複做 Defensive Check，專注於執行任務。 */ static ERR_CODE_E doRealWork(const Input_T *in) { // 開發階段 (Debug Build) 用的防線：違約直接抓出呼叫者 Bug，Release 版零開銷 assert(in !"><meta property="og:locale" content="en-us"><meta property="og:type" content="article"><meta property="article:section" content="qcom-onboarding"><meta property="article:published_time" content="2026-08-13T00:00:00+00:00"><meta property="article:modified_time" content="2026-08-13T00:00:00+00:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="01 Daily Journal"><meta name=twitter:description content="2026-08-12 Secure Code I I don&rsquo;t believe you shall always check input parameter like pointer or buffer size. It quickly makes the code unreadable to have if (ptr == NULL || XYZ) everywhere.
+My proposal is to separate task into checking and operating:
+input parameter -> check -> ok -> parsing -> processing | ng | v return /** * @brief 內部核心業務 logic (Data flow / Core algorithm) * @note Contract: 呼叫者必須保證 'in' 已通過驗證且合法。 * 內部不重複做 Defensive Check，專注於執行任務。 */ static ERR_CODE_E doRealWork(const Input_T *in) { // 開發階段 (Debug Build) 用的防線：違約直接抓出呼叫者 Bug，Release 版零開銷 assert(in !"><link href=https://hanketgithub.github.io/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css rel=stylesheet><link rel=stylesheet type=text/css media=screen href=https://hanketgithub.github.io/css/main.6a0f23ea50fd34b46fee262a5a68e17d458c51a2bc99ba1ba018065de6b180c3.css><link id=darkModeStyle rel=stylesheet type=text/css href=https://hanketgithub.github.io/css/dark.50b57e12d401420df23965fed157368aba37b76df0ecefd0b1ecd4da664f01a0.css disabled><style>@media print{body{font-family:pingfang tc,helvetica neue,sans-serif;font-size:12pt;line-height:1.6;color:#000}table,th,td{border:1px solid #666;border-collapse:collapse}th,td{padding:8px 12px;text-align:left}h1,h2{page-break-before:always}h1:first-of-type,h2:first-of-type{page-break-before:auto}img{max-width:100%;height:auto;page-break-inside:avoid}p{page-break-inside:avoid}a{color:#000;text-decoration:none}}</style></head><body><div class=content><header><div class=main><a href=https://hanketgithub.github.io/>Hank Tech Lab</a></div><nav><a href=/posts/>Posts</a>
 | <span id=dark-mode-toggle onclick=toggleTheme()><svg class="feather"><use href="/svg/feather-sprite.51cf5647cb1987f769b616558f2620fd9423d72058490231b391bf6aa3744b55.svg#sun"/></svg></span>
-<script src=https://hanketgithub.github.io/js/themetoggle.js></script></nav></header><main><article><div class=post-container><div class=post-content><div class=title><h1 class=title>01 Daily Journal</h1><div class=meta>Posted on Jul 25, 2026</div></div><section class=body><h1 id=2026-08-04-day-9>2026-08-04 (Day 9)</h1><h2 id=self-intro>Self Intro</h2><ul><li>Likability - 很好溝通（Easy to work with）</li><li>Mentor & hq - contact window</li><li>Tasks - docs, code, etc&mldr;</li><li>VVC spec</li><li>ES Analyzer</li></ul><h2 id=chroma-qp-offset>Chroma QP Offset</h2><p>Chroma QP = Luma QP + Chroma QP Offset</p><ul><li>Negative value only(in qualcomm platform)</li><li>Small value improves color. Like HDR or Anime.</li></ul><h2 id=inline-decode-downscalar>Inline Decode Downscalar</h2><ul><li>Decoder -> 4k -> downscalar -> 1080p -> frame buffer -> Display</li><li>Reduce memory bandwidth, save power.</li></ul><h2 id=slice-base-encoder>Slice base encoder</h2><p>Byte Mode: set number of byte per slice.</p><pre tabindex=0><code>[NALU] [NALU] [NALU] [..] -&gt; [MTU]
+<script src=https://hanketgithub.github.io/js/themetoggle.js></script></nav></header><main><article><div class=post-container><div class=post-content><div class=title><h1 class=title>01 Daily Journal</h1><div class=meta>Posted on Aug 13, 2026</div></div><section class=body><h1 id=2026-08-12>2026-08-12</h1><h2 id=secure-code-i>Secure Code I</h2><p>I don&rsquo;t believe you shall always check input parameter like pointer or buffer size. It quickly makes the code unreadable to have if (ptr == NULL || XYZ) everywhere.</p><p>My proposal is to separate task into checking and operating:</p><pre tabindex=0><code>
+input parameter -&gt; check -&gt; ok -&gt; parsing -&gt; processing
+                     |
+                    ng       
+                     |
+                     v
+                  return
+
+
+/**
+ * @brief 內部核心業務 logic (Data flow / Core algorithm)
+ * @note  Contract: 呼叫者必須保證 &#39;in&#39; 已通過驗證且合法。
+ *        內部不重複做 Defensive Check，專注於執行任務。
+ */
+static ERR_CODE_E doRealWork(const Input_T *in) {
+    // 開發階段 (Debug Build) 用的防線：違約直接抓出呼叫者 Bug，Release 版零開銷
+    assert(in != NULL);
+
+    // --------------------------------------------------
+    // 乾乾淨淨的主業務邏輯 (極致連續性，無任何雜訊)
+    // --------------------------------------------------
+    process_payload(in-&gt;buffer, in-&gt;size);
+    update_internal_state(in-&gt;flags);
+
+    return STATUS_OK;
+}
+
+/**
+ * @brief  對外暴露的 API 邊界 (Trust Boundary)
+ * @details 負責門禁控制，將防禦、特例、邊界條件與主邏輯完全解耦。
+ */
+ERR_CODE_E doSomething(Input_T *in) {
+    ERR_CODE_E status = STATUS_OK;
+
+    // 1. Gatekeeper: 邊界檢查與特例處理
+    //    所有的 input 驗證、版本相容、硬體 Workaround 全部塞在這裡
+    status = validate_and_sanitize_input(in);
+    if (status != STATUS_OK) {
+        // 在門口精準攔截並記錄 Log，不影響核心 logic
+        LOG_ERROR(&#34;Input validation failed: 0x%X&#34;, status);
+        return status;
+    }
+
+    // 2. Core Business Logic: 暢行無阻的主邏輯
+    if (doRealWork(in) != STATUS_OK) { ... }
+
+    return STATUS_OK;
+}
+</code></pre><h1 id=2026-08-11>2026-08-11</h1><h2 id=video-preprocessing-subsystem>Video Preprocessing Subsystem</h2><ul><li>Downscaling</li><li>Color Space Conversion</li><li>Rotation: landscape &lt;-> protrait</li><li>Flip</li><li>&mldr;</li></ul><h2 id=vpss_m2m-memory-to-memory-basically-store-pre-processed-image-to-buffer>vpss_m2m: memory to memory. Basically, store pre-processed image to buffer.</h2><pre tabindex=0><code>Addr[x]              Addr[y]
+landscape -&gt; VPSS -&gt; portrait
+</code></pre><h1 id=2026-08-04-day-9>2026-08-04 (Day 9)</h1><h2 id=self-intro>Self Intro</h2><ul><li>Likability - 很好溝通（Easy to work with）</li><li>Mentor & hq - contact window</li><li>Tasks - docs, code, etc&mldr;</li><li>VVC spec</li><li>ES Analyzer</li></ul><h2 id=chroma-qp-offset>Chroma QP Offset</h2><p>Chroma QP = Luma QP + Chroma QP Offset</p><ul><li>Negative value only(in qualcomm platform)</li><li>Small value improves color. Like HDR or Anime.</li></ul><h2 id=inline-decode-downscalar>Inline Decode Downscalar</h2><ul><li>Decoder -> 4k -> downscalar -> 1080p -> frame buffer -> Display</li><li>Reduce memory bandwidth, save power.</li></ul><h2 id=slice-base-encoder>Slice base encoder</h2><p>Byte Mode: set number of byte per slice.</p><pre tabindex=0><code>[NALU] [NALU] [NALU] [..] -&gt; [MTU]
 </code></pre><p>Alignment: stuffing byte and the end of MTU(?) Ask</p><h2 id=noise-reduction-impact-for-motion-estimation>Noise Reduction Impact for motion estimation</h2><pre tabindex=0><code>- - - -     - - - -
 - - - -     - - - -
 - - - -  →  - - - -

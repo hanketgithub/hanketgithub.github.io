@@ -50,6 +50,10 @@ Successor
 
 Qualcomm Israel
 
+## QIPL
+
+Qualcomm India
+
 ---
 
 # S
@@ -57,3 +61,13 @@ Qualcomm Israel
 ## SD
 
 Qualcomm San Diego
+
+---
+
+# V
+
+## VPSS
+
+Video Preprocessing Subsystem
+
+---

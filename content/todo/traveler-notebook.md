@@ -10,7 +10,6 @@ draft: false
 ## TN Inserts - Regular  
 - [ ] 002 Grid #01, using (Black)
 - [ ] 003 Blank #02, using  (Tokyo Station)
-- [ ] 003 Blank #04, using (Camel)
 - [ ] 014 牛皮紙 #01, using (Camel)
 - [ ] 014 牛皮紙 #02
 - [ ] 025 MD Cream #03
@@ -40,6 +39,7 @@ draft: false
 - [x] 1/2 Short Trip 牛皮紙
 - [x] 003 Blank #01
 - [x] 003 Blank #03
+- [x] 003 Blank #04
 - [x] 025 MD Cream #01
 - [x] 025 MD Cream #02
 - [x] 026 Dot Grid #01
@@ -103,6 +103,7 @@ draft: false
 - [ ] La Riserva BIO Riserva Bio (558 mg/kg) 2026-04-14 ~ 2026-
 - [ ] Ganga Lupo (954 mg/kg)
 - [ ] Hacienda Vadolivo (596 mg/kg)
+- [ ] 30TH HARVEST – Uljara Baioco (445 mg/kg)
 - [x] Sabor D'oro (526 mg/kg)  2026-02-02 ~ 2026-03-22
 - [x] Finca Cortijo Guadiana Summer 2025-10-08 ~ 2026-01-28
 - [x] Frantoio Paolocci (500 mg/kg)  2026-04-14 ~ 2026-06-11
@@ -110,7 +111,6 @@ draft: false
 
 
 # 橄欖油 - to buy
-- [ ] 30TH HARVEST – Olio Visconti (520 mg/kg)
 
 
 

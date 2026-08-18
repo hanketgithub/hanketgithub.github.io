@@ -6,8 +6,6 @@ draft: false
 
 ## Mission  
 - [ ] ANA 115000 miles -> currently 82583 + 7575 = 90158  
-- [ ] Ask Zoe for 10/10 - 13 Aman Sveti Stefan  
-- [ ] Cancel seats.aero 6/25  
 - [x] BR Upg EC 2026-02-28  
 
 
@@ -70,7 +68,7 @@ draft: false
 
 | Date       | Task                   | Progress | Remark |
 | ---------- | ---------------------- | -------- | ------ |
-| 2026-01-31 | Book Read: 1984        | 0%       |        |
+| 2026-01-31 | Book Read: 1984        | 80%      |        |
 
 
 ---

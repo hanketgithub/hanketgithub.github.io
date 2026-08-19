@@ -54,8 +54,8 @@ draft: false
 - [ ] 秀泰 x 1 - Dated  
 - [ ] 秀泰 x 9 - 2026-07-31  
 - [ ] Hilton Pt - 21673 pt  
-- [ ] 旭集 x 4  
-- [ ] 旭集 $1529 x 3
+- [ ] 旭集 x 4 
+- [ ] 旭集 $1529 x 3 
 - [ ] Marriott Gift Card USD 1000  
 - [x] Marriott 85k FNA - 王子畫廊
 - [x] 旭集 x 2 
@@ -68,7 +68,7 @@ draft: false
 
 | Date       | Task                   | Progress | Remark |
 | ---------- | ---------------------- | -------- | ------ |
-| 2026-01-31 | Book Read: 1984        | 80%      |        |
+| 2026-01-31 | Book Read: 1984        | 100%     |        |
 
 
 ---

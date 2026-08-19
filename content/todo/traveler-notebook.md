@@ -30,8 +30,8 @@ draft: false
 - [ ] MD Cream Love and Trip #02
 - [ ] MD Cream Metro #01
 - [ ] MD Cream SBUX #01
-- [ ] MD Cream Train #01, using (Camel)
-- [ ] MD Cream Train #02
+- [ ] MD Cream Station #01, using (Camel)
+- [ ] MD Cream Station #02
 - [ ] 1/2 Short Trip MD Cream #02
 - [ ] MD Cream Kyoto #01 (Kyoto)
 - [ ] MD Cream Eslite

@@ -7,6 +7,76 @@ draft: false
 ---
 
 
+
+
+
+# 2026-08-19
+
+## Codec Firmware
+
+- Firmware is running on Tensilica
+- AP = Application Processor
+
+```
++----+                 +-----------+                 +----+
+|    | --(1) Send -->  |           | --(2) Pop  -->  |    |
+| AP |                 | Msg Queue |                 | FW |
+|    | <-- (4) Pop --  |           | <-- (3) Send -- |    |
++----+                 +-----------+                 +----+
+
+```
+
+AP:
+- Power on Tensilica
+- Load firmware code to memory(where?)
+- Reset(set PC)?
+- Create codec session by sending message to FW
+
+Communication: HFI protocol, in msg queue.
+
+
+Arch:
+
+```
+   +-------------------------------------+
+   |                 HFI                 |
+   +-------------------------------------+
+                      |
+                      v
+   +-------------------------------------+
+   |             Codec Layer             |
+   |   (H264e/d, H265e/d, AV1d, ...)     |
+   +-------------------------------------+
+                      |
+                      v
+   +-------------------------------------+
+   |              SWI Layer              |
+   +-------------------------------------+
+                      |
+                      v
+   +-------------------------------------+
+   |                 Iris                |
+   +-------------------------------------+
+
+```
+
+
+
+## 數字唸法
+
+```
+|           | Speaking                      | 
+| --------- | ----------------------------- |
+| 1/2       | one half                      |
+| 1/3       | one third                     |
+| 1/24      | one twenty-four               |
+| 1/60      | one sixty                     |
+| 1/23.98   | one twenty-three ninety-eight |
+| 1/29.97   | one twenty-nine ninety-seven  |
+| 1/59.94   | one fifty-nine ninety-four    |
+```
+
+
 # 2026-08-12
 
 ## Secure Code I

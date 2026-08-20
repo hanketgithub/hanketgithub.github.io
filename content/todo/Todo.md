@@ -41,7 +41,6 @@ draft: false
 - [ ] Fabriano A5 black 橫線 - Italy 日記  
 - [ ] Fabriano A5 brown 橫線 - Spain 日記  
 - [ ] Fabriano A6 green 格點  
-- [ ] Leuchturm A6 藍  
 - [ ] Life B6 橫線  
   
   
@@ -69,6 +68,8 @@ draft: false
 | Date       | Task                   | Progress | Remark |
 | ---------- | ---------------------- | -------- | ------ |
 | 2026-01-31 | Book Read: 1984        | 100%     |        |
+| 2026-08-20 | Managing Up            | 0%       |        |                
+
 
 
 ---

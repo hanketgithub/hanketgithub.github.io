@@ -14,8 +14,9 @@ draft: false
 
 ## Codec Firmware
 
-- Firmware is running on Tensilica
+- FW: code running on Tensilica
 - AP = Application Processor
+- SW: code running on AP
 
 ```
 +----+                 +-----------+                 +----+
@@ -26,11 +27,13 @@ draft: false
 
 ```
 
-AP:
-- Power on Tensilica
-- Load firmware code to memory(where?)
-- Reset(set PC)?
-- Create codec session by sending message to FW
+SW:
+1. Power on video subsystem(Tensilica and Iris)
+2. Load firmware image to Tensilica system memory
+3. SW resets Tensilica. FW kicks off.
+4. SW establish encode session Config encoder type(H.264 / HEVC). By sending message to message queue.
+5. SW config encoder parameters such as FPS, bitrate.
+
 
 Communication: HFI protocol, in msg queue.
 

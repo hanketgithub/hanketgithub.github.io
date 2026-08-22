@@ -59,7 +59,27 @@ draft: false
 - [x] Marriott 85k FNA - 王子畫廊
 - [x] 旭集 x 2 
 - [x] 旭集 $1199 x 3
-  
+
+
+
+### 橄欖油
+- [ ] 30TH HARVEST – Uljara Baioco (445 mg/kg) 2026-08-22 ~ 2026-
+- [ ] Ganga Lupo (954 mg/kg)
+- [ ] Hacienda Vadolivo (596 mg/kg) 
+- [x] Sabor D'oro (526 mg/kg)  2026-02-02 ~ 2026-03-22
+- [x] Finca Cortijo Guadiana Summer 2025-10-08 ~ 2026-01-28
+- [x] Frantoio Paolocci (500 mg/kg)  2026-04-14 ~ 2026-06-11
+- [x] La Riserva BIO Riserva Bio (558 mg/kg) 2026-04-14 ~ 2026-08-22
+
+
+### 橄欖油 - to buy
+
+
+
+### 咖啡
+- [ ] GG 古估估
+
+
 
 ---
 

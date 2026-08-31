@@ -36,7 +36,6 @@ draft: false
 - [ ] Dingbats A6 象 方格 x 5  
 - [ ] Dingbats A6 熊 方格 Using  
 - [ ] Dingbats A6 熊 方格  
-- [ ] 中村 新書判  
 - [ ] 中村 B5 x 15  
 - [ ] Fabriano A5 black 橫線 - Italy 日記  
 - [ ] Fabriano A5 brown 橫線 - Spain 日記  
@@ -88,7 +87,7 @@ draft: false
 | Date       | Task                   | Progress | Remark |
 | ---------- | ---------------------- | -------- | ------ |
 | 2026-01-31 | Book Read: 1984        | 100%     |        |
-| 2026-08-20 | Managing Up            | 0%       |        |                
+| 2026-08-20 | Managing Up            | 100%     |        |                
 
 
 

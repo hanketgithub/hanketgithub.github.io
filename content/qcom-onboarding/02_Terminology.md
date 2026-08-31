@@ -31,6 +31,16 @@ Purpose
 Owner
 - Claire ?
 
+
+## ELC
+
+Engineering Login Control.
+
+Purpose
+- Resource Access Control. Need to be very careful. Blocker!
+
+
+
 ---
 
 # M

@@ -9,6 +9,17 @@ draft: false
 
 
 
+# 2026-08-31
+
+## Onboarding Expr.
+
+Norman told me he is the first FD(Face/Feature Detection?) engineer in TSS. He joined meetings in SD & QIPL at beginning, try to understand their jargons. Then after 3 months, he took the first assignment from SD team.
+
+His techlead is in SD, which is the one who actually feedback his work during AR. Therefore, it is making a lot of sense to refer his path, since I am also the first one who is working on Video Codec.
+
+Although I are still in the ramp up, need to join VEQ meeting to see what exactly happened.
+
+
 
 # 2026-08-19
 

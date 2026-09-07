@@ -7,11 +7,11 @@ draft: false
 
 ## Go Links
 
-- [myQ](http://go/myQ)
-- [Qtime](http://go/qtimes/)
-- [QPeople](http://go/qpeople/)
-- [QGenie](http://go/qgenie/)
-- [Payroll / Myview](http://go/myview/)  
-- [Wrokday](http://go/workday/)  
-- [QualNet](http://go/qualnet/)
-- [XXX]()
+- [QualNet](http://go/qualnet/) — Qualcomm internal network
+- [myQ](http://go/myQ/) — Employee portal
+- [Qtime](http://go/qtimes/) — Time clock
+- [Qpeople](http://go/qpeople/) — Employee directory
+- [QGenie](http://go/qgenie/) — AI assistant
+- [MyView](http://go/myview/) — Bank & Address Info
+- [Workday](http://go/workday/) — HR / employee management
+- [EWCTW](http://go/EWCTW) — Taiwan Joint Employee Welfare Committees 

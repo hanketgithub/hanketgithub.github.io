@@ -7,8 +7,8 @@ draft: false
 
 ## Go Links
 
-- [myQ](//go/myQ)
-- [打卡 go/qtimes](//go/qtimes/)
+- [myQ](http://go/myQ)
+- [打卡 go/qtimes](http://go/qtimes/)
 - [QPeople go/qpeople](//go/qpeople/)
 - [QGenie: go/qgenie](//go/qgenie/)
 - [Payroll](go/??/)  

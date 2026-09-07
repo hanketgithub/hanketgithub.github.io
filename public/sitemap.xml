@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/qcom-onboarding/01_daily_journal/</loc>
+    <loc>http://localhost:1313/qcom/01_daily_journal/</loc>
     <lastmod>2026-08-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
@@ -14,7 +14,7 @@
     <loc>http://localhost:1313/categories/qcom/</loc>
     <lastmod>2026-08-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/qcom-onboarding/</loc>
+    <loc>http://localhost:1313/qcom/</loc>
     <lastmod>2026-08-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tech/python/</loc>
@@ -23,13 +23,13 @@
     <loc>http://localhost:1313/tech/</loc>
     <lastmod>2026-08-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/qcom-onboarding/02_terminology/</loc>
+    <loc>http://localhost:1313/qcom/02_terminology/</loc>
     <lastmod>2026-07-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/qcom-onboarding/09_todo/</loc>
+    <loc>http://localhost:1313/qcom/09_todo/</loc>
     <lastmod>2026-07-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/qcom-onboarding/qcom-offering/</loc>
+    <loc>http://localhost:1313/qcom/qcom-offering/</loc>
     <lastmod>2026-06-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tech/how-a-333mhz-assumption-cost-us-30-percent-performance/</loc>
@@ -293,6 +293,6 @@
     <loc>http://localhost:1313/tags/%E9%A3%9B%E8%A1%8C%E7%B4%80%E9%8C%84/</loc>
     <lastmod>2023-04-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/qcom-onboarding/00_inbox/</loc>
+    <loc>http://localhost:1313/qcom/00_inbox/</loc>
   </url>
 </urlset>

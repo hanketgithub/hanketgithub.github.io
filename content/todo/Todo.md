@@ -5,8 +5,10 @@ draft: false
 ---
 
 ## Mission  
+- [ ] Centurion get -> Cathy EVA cancel
 - [ ] ANA 115000 miles -> currently 82583 + 7575 = 90158  
 - [x] BR Upg EC 2026-02-28  
+
 
 
 ## 庫存  

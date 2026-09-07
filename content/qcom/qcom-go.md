@@ -8,9 +8,10 @@ draft: false
 ## Go Links
 
 - [myQ](http://go/myQ)
-- [打卡 go/qtimes](http://go/qtimes/)
-- [QPeople go/qpeople](//go/qpeople/)
-- [QGenie: go/qgenie](//go/qgenie/)
-- [Payroll](go/??/)  
-- [XYZ](go/xyz/)  
-- [MyView](//go/myview/)  
+- [Qtime](http://go/qtimes/)
+- [QPeople](http://go/qpeople/)
+- [QGenie](http://go/qgenie/)
+- [Payroll / Myview](http://go/myview/)  
+- [Wrokday](http://go/workday/)  
+- [QualNet](http://go/qualnet/)
+- [XXX]()

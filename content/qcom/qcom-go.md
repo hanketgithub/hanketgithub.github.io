@@ -7,8 +7,10 @@ draft: false
 
 ## Go Links
 
-- 打卡: go/qtimes/
-- QPeople: go/qpeople/
-- QGenie: go/qgenie/
-- Payroll: go/??/
-- XYZ: go/xyz/
+- [myQ](go/myQ)
+- [打卡 go/qtimes/](go/qtimes/)
+- [QPeople go/qpeople](go/qpeople/)
+- [QGenie: go/qgenie](go/qgenie/)
+- [Payroll](go/??/)  
+- [XYZ](go/xyz/)  
+- [MyView](https://go/myview)  

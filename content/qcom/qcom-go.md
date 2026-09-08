@@ -15,3 +15,5 @@ draft: false
 - [MyView](http://go/myview/) — Bank & Address Info
 - [Workday](http://go/workday/) — HR / employee management
 - [EWCTW](http://go/EWCTW) — Taiwan Joint Employee Welfare Committees 
+- [MDCP](http://go/mdcp) - DevCompute
+- [QVDSS](http://go/...) - ???

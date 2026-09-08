@@ -28,6 +28,17 @@ D = { "hello": 3, 5: "world" }
 
 ---
 
+## Math
+
+```python
+
+(0.5) ** 1.2  # 0.5 的 1.2 次方
+
+```
+
+
+---
+
 ## for loop
 
 ```python

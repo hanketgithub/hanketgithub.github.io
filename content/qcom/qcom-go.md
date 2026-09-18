@@ -17,3 +17,4 @@ draft: false
 - [EWCTW](http://go/EWCTW) — Taiwan Joint Employee Welfare Committees 
 - [MDCP](http://go/mdcp) - DevCompute
 - [QVDSS](http://go/...) - ???
+- [VEQ](https://qualcomm-confluence.atlassian.net/wiki/spaces/VEQ) - VEQ Confluence

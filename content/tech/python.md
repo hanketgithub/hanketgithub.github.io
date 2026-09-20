@@ -57,6 +57,20 @@ if D.get("name") is not None:
   print( D.get("name") )
 ```
 
+## if-elif-else
+
+```python
+def get_letter_grade(score):
+  if (score >= 80):
+    return "A"
+  elif (score >= 70):
+    return "B"
+  elif (score >= 60):
+    return "C"
+  else:
+    return "F"
+```
+
 ---
 
 ## Useful function

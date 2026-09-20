@@ -52,9 +52,8 @@ draft: false
 - [ ] 003 Blank #02
 - [ ] 005 薄紙 #02
 - [ ] 005 薄紙 #03, using
-- [ ] 009 牛皮紙 #01, using
 - [ ] 015 水彩紙
-- [ ] 1/2 Short Trip 牛皮紙
+- [ ] 1/2 Short Trip 牛皮紙, using
 - [ ] MD Cream NRT #01, using
 - [ ] MD Cream NRT #02
 - [ ] MD Cream 東京地下鐵
@@ -64,6 +63,7 @@ draft: false
 - [x] 002 Grid #02
 - [x] 003 Blank #01 
 - [x] 005 薄紙 #01
+- [x] 009 牛皮紙 #01
 - [x] 014 Dot Grid
 
 

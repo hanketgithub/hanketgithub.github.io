@@ -19,9 +19,12 @@ draft: false
 |---------|-------------------------------------------------|---------------------|---------------------------|
 | QualNet | (https://qualcomm.sharepoint.com/sites/QualNet) | http://go/qualnet/  | Qualcomm internal network |
 | myQ     | (https://qualcomm.service-now.com/myq)          | http://go/myQ/      | Employee portal           |
-| Qtime   |   | http://go/qtimes/  | Time card |
-| Qpeople |   | http://go/qpeople/  | Employee directory |
-| EWCTW   |   | http://go/EWCTW/  | Taiwan Joint Employee Welfare Committees |
+| Qtime   | (https://qtime.qualcomm.com/)                   | http://go/qtimes/   | Time card                 |
+| Qpeople | (https://people.qualcomm.com/)                  | http://go/qpeople/  | Employee directory        |
+| EWCTW   | (https://qualcomm.sharepoint.com/teams/EWC2022-24/) | http://go/EWCTW/  | Taiwan Joint Employee Welfare Committees |
+| MyView  | (https://portal.people.adp.com/oneux/ui/)       | http://go/myview/   | Bank & Address Info        |
+| Workday | (https://wd12.myworkday.com/qualcomm/)          | http://go/workday/  | HR / employee management        |
+
 
 
 ## Links
@@ -30,10 +33,11 @@ draft: false
 - [myQ](http://go/myQ/) — Employee portal
 - [Qtime](http://go/qtimes/) — Time card
 - [Qpeople](http://go/qpeople/) — Employee directory
-- [QGenie](http://go/qgenie/) — AI assistant
 - [MyView](http://go/myview/) — Bank & Address Info
 - [Workday](http://go/workday/) — HR / employee management
-- [EWCTW](http://go/EWCTW) — Taiwan Joint Employee Welfare Committees 
+- [EWCTW](http://go/EWCTW) — Taiwan Joint Employee Welfare Committees
+
 - [MDCP](http://go/mdcp) - DevCompute
 - [QVDSS](http://go/...) - ???
+- [QGenie](http://go/qgenie/) — AI assistant
 - [VEQ](https://qualcomm-confluence.atlassian.net/wiki/spaces/VEQ) - VEQ Confluence

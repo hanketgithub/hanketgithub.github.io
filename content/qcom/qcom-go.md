@@ -6,21 +6,22 @@ draft: false
 
 
 ## Engineering
-| Name    | URL                                                         | Go | Remark |
-|---------|-------------------------------------------------------------|---|---|
-| VEQ     | (https://qualcomm-confluence.atlassian.net/wiki/spaces/VEQ) | ?                 | Video Encoder Quality Confluence |
-| QGenie  | (https://qgenie-chat.qualcomm.com)                          | http://go/qgenie/ | AI assistant |
-| MDCP    | (https://qualcomm-confluence.atlassian.net/wiki/spaces/VEQ) | http://go/mdcp | DevCompute |
-| QVDSS   | (https://qualcomm-confluence.atlassian.net/wiki/spaces/VEQ) | http://go/??  | ??? |
+| Name    | URL                                                         | Go                | Remark                            |
+|---------|-------------------------------------------------------------|-------------------|-----------------------------------|
+| VEQ     | (https://qualcomm-confluence.atlassian.net/wiki/spaces/VEQ) | ?                 | Video Encoder Quality Confluence  |
+| QGenie  | (https://qgenie-chat.qualcomm.com)                          | http://go/qgenie/ | AI assistant                      |
+| MDCP    | (https://mdcp.qualcomm.com)                                 | http://go/mdcp/   | DevCompute                        |
+| QVDSS   | (https://qualcomm-confluence.atlassian.net/wiki/spaces/VEQ) | http://go/??      | ???                               |
 
 
 ## HR
-| Name | URL | Go | Remark |
-|---|---|---|---|
-| QualNet |   | http://go/qualnet/ | Qualcomm internal network |
-| myQ   | (https://qualcomm.service-now.com/myq)  | http://go/myQ/ | Employee portal |
-| Qtime |   | http://go/qtimes/  | Time card |
+| Name    | URL                                             | Go                  | Remark                    |
+|---------|-------------------------------------------------|---------------------|---------------------------|
+| QualNet | (https://qualcomm.sharepoint.com/sites/QualNet) | http://go/qualnet/  | Qualcomm internal network |
+| myQ     | (https://qualcomm.service-now.com/myq)          | http://go/myQ/      | Employee portal           |
+| Qtime   |   | http://go/qtimes/  | Time card |
 | Qpeople |   | http://go/qpeople/  | Employee directory |
+| EWCTW   |   | http://go/EWCTW/  | Taiwan Joint Employee Welfare Committees |
 
 
 ## Links

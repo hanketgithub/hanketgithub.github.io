@@ -12,6 +12,7 @@ draft: false
 | QGenie  | (https://qgenie-chat.qualcomm.com)                          | http://go/qgenie/       | AI assistant                    |
 | MDCP    | (https://mdcp.qualcomm.com)                                 | http://go/mdcp/         | DevCompute                      |
 | QVDSS   | (https://lvss-next.qualcomm.com)                            | http://go/qvdss/        | ???                             |
+| Lists   | (https://lists.qualcomm.com)                                | http://go/lists/        | List Manager                    |
 
 
 ## HR

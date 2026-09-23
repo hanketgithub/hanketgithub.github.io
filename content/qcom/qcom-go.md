@@ -11,7 +11,7 @@ draft: false
 | VEQ     | (https://qualcomm-confluence.atlassian.net/wiki/spaces/VEQ) | http://go/videoquality/ | Video Encoder Quality Confluence|
 | QGenie  | (https://qgenie-chat.qualcomm.com)                          | http://go/qgenie/       | AI assistant                    |
 | MDCP    | (https://mdcp.qualcomm.com)                                 | http://go/mdcp/         | DevCompute                      |
-| QVDSS   | (https://lvss-next.qualcomm.com)                            | http://go/qvdss/        | ???                             |
+| QVDSS   | (https://lvss-next.qualcomm.com)                            | http://go/qvdss/        | Qualcomm Virtual Desktop Self Service for LinuxView |
 | Lists   | (https://lists.qualcomm.com)                                | http://go/lists/        | List Manager                    |
 
 

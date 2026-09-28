@@ -5,10 +5,10 @@ draft: false
 ---
 
 ## Mission  
-- [ ] Centurion get -> Cathy EVA cancel
+- [ ] BR Gold 需 14277 status miles; BR55 + BR56 為 7449 + 8566 = 16015
+- [ ] BR 升等券 2027-02-28 - BR55 Waitlist
 - [ ] ANA 115000 miles -> currently 82583 + 7575 = 90158  
-- [x] BR Upg EC 2026-02-28  
-
+- [ ] Centurion get -> 等信用白淘汰換耀金卡?  
 
 
 ## 庫存  
@@ -90,7 +90,7 @@ draft: false
 | ---------- | ---------------------- | -------- | ------ |
 | 2026-01-31 | Book Read: 1984        | 100%     |        |
 | 2026-08-20 | Managing Up            | 100%     |        |                
-
+| 2026-09-22 | Centurion Get          | 100%     |        |
 
 
 ---

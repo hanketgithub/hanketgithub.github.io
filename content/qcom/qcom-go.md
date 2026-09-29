@@ -23,6 +23,7 @@ draft: false
 | Qtime   | (https://qtime.qualcomm.com/)                   | http://go/qtimes/   | Time card                 |
 | Qpeople | (https://people.qualcomm.com/)                  | http://go/qpeople/  | Employee directory        |
 | EWCTW   | (https://qualcomm.sharepoint.com/teams/EWC2022-24/) | http://go/EWCTW/  | Taiwan Joint Employee Welfare Committees |
+| Finance | (https://qualcomm.sharepoint.com/teams/SitePages/TWFIN_Homepage.aspx) | http://go/TWFIN/  | Taiwan Finance  |
 | Workday | (https://wd12.myworkday.com/qualcomm/)          | http://go/workday/  | HR / employee management  |
 | MyView  | (https://portal.people.adp.com/oneux/ui/)       | http://go/myview/   | Bank & Address Info       |
 

@@ -24,6 +24,7 @@ draft: false
 | Qpeople | (https://people.qualcomm.com/)                  | http://go/qpeople/  | Employee directory        |
 | EWCTW   | (https://qualcomm.sharepoint.com/teams/EWC2022-24/) | http://go/EWCTW/  | Taiwan Joint Employee Welfare Committees |
 | Finance | (https://qualcomm.sharepoint.com/teams/TWFIN/SitePages/TWFIN_Homepage.aspx) | http://go/TWFIN/  | Taiwan Finance  |
+| Concur  | ()                                              | http://go/sapconcur | 報帳                      |
 | Workday | (https://wd12.myworkday.com/qualcomm/)          | http://go/workday/  | HR / employee management  |
 | MyView  | (https://portal.people.adp.com/oneux/ui/)       | http://go/myview/   | Bank & Address Info       |
 

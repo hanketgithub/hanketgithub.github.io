@@ -81,5 +81,34 @@ str( x )  # turn x to string
 type( c ) # chk type
 
 len( A )  # length of list
-len( s )   # length of a string
+len( s )  # length of a string
+```
+
+---
+
+## File
+
+Open
+
+```python
+f = open("/home/hank/foo.txt")
+```
+
+Close
+
+```python
+f.close()
+```
+
+Read
+
+```python
+content = f.read()
+```
+
+Write
+
+```python
+f = open("w")
+f.write("Hello World")
 ```

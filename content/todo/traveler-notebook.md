@@ -10,12 +10,11 @@ draft: false
 ## TN Inserts - Regular  
 - [ ] 002 Grid #01, using (Black)
 - [ ] 003 Blank #02, using  (Tokyo Station)
-- [ ] 014 牛皮紙 #01, using (Camel)
 - [ ] 014 牛皮紙 #02
 - [ ] 025 MD Cream #03
 - [ ] 026 Dot Grid #02 
 - [ ] 2026 Diary, using
-- [ ] 牛皮紙 黑色 #01, using
+- [ ] 牛皮紙 黑色 #01, using (Red)
 - [ ] 牛皮紙 黑色 #02
 - [ ] 牛皮紙 Tiffany #01, using (Blue)
 - [ ] Blank Tokyo
@@ -40,6 +39,7 @@ draft: false
 - [x] 003 Blank #01
 - [x] 003 Blank #03
 - [x] 003 Blank #04
+- [x] 014 牛皮紙 #01
 - [x] 025 MD Cream #01
 - [x] 025 MD Cream #02
 - [x] 026 Dot Grid #01

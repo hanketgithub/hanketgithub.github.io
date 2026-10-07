@@ -8,25 +8,25 @@ draft: false
 - [ ] BR Gold 需 14277 status miles; BR55 + BR56 為 7449 + 8566 = 16015
 - [ ] BR 升等券 2027-02-28 - BR55 Waitlist
 - [ ] ANA 115000 miles -> currently 82583 + 7575 = 90158  
-- [ ] Centurion get -> 等信用白淘汰換耀金卡?  
+- [ ] Centurion get -> 勿取消信用白 等淘汰換耀金卡  
 
 
 ## 庫存  
 ### Office  
+- [ ] MD B6 slim Using  
 - [ ] 中村 新書判 Using
 - [ ] 中村 B5 Using  
 - [ ] 中村 B5 x 4  
-- [ ] Dingbats A6 熊 方格  
 - [ ] Muji B6 方格 Using 
 - [ ] 誠品 A5 方格 薄型 Using  
 - [ ] Leuchturm A5 藍 - Diary Collection Using  
+- [x] Dingbats A6 熊 方眼 
 - [x] Dingbats A4 鹿 空白  
 
 
 ### Home  
 - [ ] MD A6 方格 Using  
-- [ ] MD A6 方格  
-- [ ] MD B6 slim  
+- [ ] MD A6 方格    
 - [ ] MD A5 橫線  
 - [ ] MD A5 格點  
 - [ ] Muji B6 橫線 x 2  
@@ -35,14 +35,14 @@ draft: false
 - [ ] 誠品 A5 方格 薄型 x 2  
 - [ ] 誠品 A5 橫線 薄型  
 - [ ] Dingbats A5 象 方格  
-- [ ] Dingbats A6 象 方格 x 5  
-- [ ] Dingbats A6 熊 方格 Using  
-- [ ] Dingbats A6 熊 方格  
+- [ ] Dingbats A6 象 方格 x 5    
+- [ ] Dingbats A6 熊 方眼  
 - [ ] 中村 B5 x 15  
 - [ ] Fabriano A5 black 橫線 - Italy 日記  
 - [ ] Fabriano A5 brown 橫線 - Spain 日記  
 - [ ] Fabriano A6 green 格點  
 - [ ] Life B6 橫線  
+- [x] Dingbats A6 熊 方眼  
   
   
 ### To Sell  

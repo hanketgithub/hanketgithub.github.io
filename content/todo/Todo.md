@@ -8,7 +8,7 @@ draft: false
 - [ ] BR Gold 需 14277 status miles; BR55 + BR56 為 7449 + 8566 = 16015
 - [ ] BR 升等券 2027-02-28 - BR55 Waitlist
 - [ ] ANA 115000 miles -> currently 82583 + 7575 = 90158  
-- [ ] Centurion get -> 勿取消信用白 等淘汰換耀金卡  
+ 
 
 
 ## 庫存  

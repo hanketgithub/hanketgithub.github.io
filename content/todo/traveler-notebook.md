@@ -33,7 +33,7 @@ draft: false
 - [ ] MD Cream Station #02
 - [ ] 1/2 Short Trip MD Cream #02
 - [ ] MD Cream Kyoto #01 (Kyoto)
-- [ ] MD Cream Eslite
+- [ ] MD Cream Eslite, using
 - [x] 1/2 Short Trip MD Cream #01
 - [x] 1/2 Short Trip 牛皮紙
 - [x] 003 Blank #01
@@ -48,16 +48,14 @@ draft: false
 
 
 ## TN Inserts - Passport
-- [ ] 002 Grid #03
+- [ ] 002 Grid #03, using
 - [ ] 003 Blank #02
 - [ ] 005 薄紙 #02
 - [ ] 005 薄紙 #03, using
 - [ ] 015 水彩紙
 - [ ] 1/2 Short Trip 牛皮紙, using
-- [ ] MD Cream NRT #01, using
 - [ ] MD Cream NRT #02
-- [ ] MD Cream 東京地下鐵
-- [ ] MD Cream SBUX #01, using
+- [ ] MD Cream 東京地下鐵, using
 - [ ] 2026 Diary, using
 - [x] 002 Grid #01
 - [x] 002 Grid #02
@@ -65,6 +63,8 @@ draft: false
 - [x] 005 薄紙 #01
 - [x] 009 牛皮紙 #01
 - [x] 014 Dot Grid
+- [x] MD Cream NRT #01
+- [x] MD Cream SBUX #01
 
 
 

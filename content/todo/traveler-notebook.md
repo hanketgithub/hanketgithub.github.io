@@ -8,12 +8,12 @@ draft: false
 
 
 ## TN Inserts - Regular  
-- [ ] 002 Grid #01, using (Black)
 - [ ] 003 Blank #02, using  (Tokyo Station)
 - [ ] 014 牛皮紙 #02
 - [ ] 025 MD Cream #03
 - [ ] 026 Dot Grid #02 
 - [ ] 2026 Diary, using
+- [ ] 2027 Diary
 - [ ] 牛皮紙 黑色 #01, using (Red)
 - [ ] 牛皮紙 黑色 #02
 - [ ] 牛皮紙 Tiffany #01, using (Blue)
@@ -36,6 +36,7 @@ draft: false
 - [ ] MD Cream Eslite, using
 - [x] 1/2 Short Trip MD Cream #01
 - [x] 1/2 Short Trip 牛皮紙
+- [x] 002 Grid #01
 - [x] 003 Blank #01
 - [x] 003 Blank #03
 - [x] 003 Blank #04
@@ -57,6 +58,7 @@ draft: false
 - [ ] MD Cream NRT #02
 - [ ] MD Cream 東京地下鐵, using
 - [ ] 2026 Diary, using
+- [ ] 2027 Diary
 - [x] 002 Grid #01
 - [x] 002 Grid #02
 - [x] 003 Blank #01 
